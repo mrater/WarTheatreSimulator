@@ -1,0 +1,41 @@
+\hypertarget{calculateexampleinfantryfire_8py_source}{}\doxysection{calculateexampleinfantryfire.\+py}
+\label{calculateexampleinfantryfire_8py_source}\index{tools/calculateexampleinfantryfire.py@{tools/calculateexampleinfantryfire.py}}
+\mbox{\hyperlink{calculateexampleinfantryfire_8py}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{calculateexampleinfantryfire_8py_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{calculateexampleinfantryfire_8py_source_l00003}00003 }
+\DoxyCodeLine{\Hypertarget{calculateexampleinfantryfire_8py_source_l00004}00004 ATTACKER\_ORG = 100}
+\DoxyCodeLine{\Hypertarget{calculateexampleinfantryfire_8py_source_l00005}00005 ATTACKER\_SUPPLY\_LVL = 100}
+\DoxyCodeLine{\Hypertarget{calculateexampleinfantryfire_8py_source_l00006}00006 }
+\DoxyCodeLine{\Hypertarget{calculateexampleinfantryfire_8py_source_l00007}00007 DEFENDER\_ORG = 100}
+\DoxyCodeLine{\Hypertarget{calculateexampleinfantryfire_8py_source_l00008}00008 DEFENDER\_SUPPLY\_LVL = 100}
+\DoxyCodeLine{\Hypertarget{calculateexampleinfantryfire_8py_source_l00009}00009 }
+\DoxyCodeLine{\Hypertarget{calculateexampleinfantryfire_8py_source_l00010}00010 PLAIN\_DEFENCE\_PUNISHMENT = 1.0}
+\DoxyCodeLine{\Hypertarget{calculateexampleinfantryfire_8py_source_l00011}00011 }
+\DoxyCodeLine{\Hypertarget{calculateexampleinfantryfire_8py_source_l00012}00012 TERRAIN\_COEFFICIENT = PLAIN\_DEFENCE\_PUNISHMENT \textcolor{comment}{\#plain -\/ best to attack}}
+\DoxyCodeLine{\Hypertarget{calculateexampleinfantryfire_8py_source_l00013}00013 }
+\DoxyCodeLine{\Hypertarget{calculateexampleinfantryfire_8py_source_l00014}00014 baseIIAttack = 60 \textcolor{comment}{\#base Infantry-\/to-\/infantry attack}}
+\DoxyCodeLine{\Hypertarget{calculateexampleinfantryfire_8py_source_l00015}00015 }
+\DoxyCodeLine{\Hypertarget{calculateexampleinfantryfire_8py_source_l00016}00016 \textcolor{comment}{\#base attack -\/ best conditions for both sides (but no terrain bonus)}}
+\DoxyCodeLine{\Hypertarget{calculateexampleinfantryfire_8py_source_l00017}00017 }
+\DoxyCodeLine{\Hypertarget{calculateexampleinfantryfire_8py_source_l00018}00018 \textcolor{comment}{\#to start an attack unit needs org >= 25}}
+\DoxyCodeLine{\Hypertarget{calculateexampleinfantryfire_8py_source_l00019}00019 MINIMUM\_ATTACKER\_ORG = 25}
+\DoxyCodeLine{\Hypertarget{calculateexampleinfantryfire_8py_source_l00020}00020 }
+\DoxyCodeLine{\Hypertarget{calculateexampleinfantryfire_8py_source_l00021}00021 ATTACKER\_ORG\_IMPORTANCE = 0.05}
+\DoxyCodeLine{\Hypertarget{calculateexampleinfantryfire_8py_source_l00022}00022 DEFENDER\_ORG\_IMPORTANCE = 0.3}
+\DoxyCodeLine{\Hypertarget{calculateexampleinfantryfire_8py_source_l00023}00023 ATTACKER\_SUPPLY\_LVL\_IMPORTANCE = 0.4}
+\DoxyCodeLine{\Hypertarget{calculateexampleinfantryfire_8py_source_l00024}00024 DEFENDER\_SUPPLY\_LVL\_IMPORTANCE = 0.25}
+\DoxyCodeLine{\Hypertarget{calculateexampleinfantryfire_8py_source_l00025}00025 }
+\DoxyCodeLine{\Hypertarget{calculateexampleinfantryfire_8py_source_l00026}00026 damage = baseIIAttack*BIOME\_COEFFICIENT \(\backslash\)}
+\DoxyCodeLine{\Hypertarget{calculateexampleinfantryfire_8py_source_l00027}00027  -\/ (100-\/ATTACKER\_ORG)*ATTACKER\_ORG\_IMPORTANCE \(\backslash\)}
+\DoxyCodeLine{\Hypertarget{calculateexampleinfantryfire_8py_source_l00028}00028  + (100-\/DEFENDER\_ORG)*DEFENDER\_ORG\_IMPORTANCE \(\backslash\)}
+\DoxyCodeLine{\Hypertarget{calculateexampleinfantryfire_8py_source_l00029}00029  -\/ (100-\/ATTACKER\_SUPPLY\_LVL)*ATTACKER\_SUPPLY\_LVL\_IMPORTANCE \(\backslash\)}
+\DoxyCodeLine{\Hypertarget{calculateexampleinfantryfire_8py_source_l00030}00030  + (100-\/DEFENDER\_SUPPLY\_LVL)*DEFENDER\_SUPPLY\_LVL\_IMPORTANCE}
+\DoxyCodeLine{\Hypertarget{calculateexampleinfantryfire_8py_source_l00031}00031 }
+\DoxyCodeLine{\Hypertarget{calculateexampleinfantryfire_8py_source_l00032}00032 \textcolor{keywordflow}{if} ATTACKER\_ORG <= MINIMUM\_ATTACKER\_ORG:}
+\DoxyCodeLine{\Hypertarget{calculateexampleinfantryfire_8py_source_l00033}00033     damage = 0.0}
+\DoxyCodeLine{\Hypertarget{calculateexampleinfantryfire_8py_source_l00034}00034 }
+\DoxyCodeLine{\Hypertarget{calculateexampleinfantryfire_8py_source_l00035}00035 }
+\DoxyCodeLine{\Hypertarget{calculateexampleinfantryfire_8py_source_l00036}00036 print(f\textcolor{stringliteral}{'Attack=\{damage\}'})}
+
+\end{DoxyCode}

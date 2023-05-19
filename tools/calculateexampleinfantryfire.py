@@ -1,3 +1,6 @@
+## @file calculateexampleinfantryfire.py
+# do example calculations of what damage will be dealt towards the enemy
+
 ATTACKER_ORG = 100
 ATTACKER_SUPPLY_LVL = 100
 
@@ -20,14 +23,14 @@ DEFENDER_ORG_IMPORTANCE = 0.3
 ATTACKER_SUPPLY_LVL_IMPORTANCE = 0.4
 DEFENDER_SUPPLY_LVL_IMPORTANCE = 0.25
 
-attack = baseIIAttack*BIOME_COEFFICIENT \
+damage = baseIIAttack*BIOME_COEFFICIENT \
  - (100-ATTACKER_ORG)*ATTACKER_ORG_IMPORTANCE \
  + (100-DEFENDER_ORG)*DEFENDER_ORG_IMPORTANCE \
  - (100-ATTACKER_SUPPLY_LVL)*ATTACKER_SUPPLY_LVL_IMPORTANCE \
  + (100-DEFENDER_SUPPLY_LVL)*DEFENDER_SUPPLY_LVL_IMPORTANCE
 
 if ATTACKER_ORG <= MINIMUM_ATTACKER_ORG:
-    attack = 0.0
+    damage = 0.0
 
 
-print(f'Attack={attack}')
+print(f'Attack={damage}')

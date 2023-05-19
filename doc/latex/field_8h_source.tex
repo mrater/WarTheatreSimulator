@@ -1,0 +1,52 @@
+\hypertarget{field_8h_source}{}\doxysection{field.\+h}
+\label{field_8h_source}\index{include/field.h@{include/field.h}}
+\mbox{\hyperlink{field_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00009}00009 \textcolor{preprocessor}{\#include<utility>}}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00010}00010 }
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00011}00011 \textcolor{keyword}{typedef} \textcolor{keywordtype}{int} TerrainType;}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00012}00012 }
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00014}\mbox{\hyperlink{namespaceTerrain}{00014}} \textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceTerrain}{Terrain}} \{}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00015}00015     \textcolor{keyword}{const} TerrainType NONE = 0;}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00016}00016     \textcolor{keyword}{const} TerrainType FOREST = 1;}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00017}00017     \textcolor{keyword}{const} TerrainType URBAN = 2;}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00018}00018     \textcolor{keyword}{const} TerrainType PLAIN = 3;}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00019}00019 \}}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00020}00020 }
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00026}\mbox{\hyperlink{classPosition}{00026}} \textcolor{keyword}{class }\mbox{\hyperlink{classPosition}{Position}}\{}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00027}00027     \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00028}00028         \textcolor{keywordtype}{int} q,r;}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00029}00029 }
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00032}00032         \textcolor{keyword}{const} \textcolor{keywordtype}{int} s();}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00033}00033     \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00034}00034         \mbox{\hyperlink{classPosition}{Position}} (\textcolor{keyword}{const} \textcolor{keywordtype}{int} \&\_q, \textcolor{keyword}{const} \textcolor{keywordtype}{int} \&\_r);}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00035}00035 \};}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00036}00036 }
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00037}00037 }
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00039}\mbox{\hyperlink{classFieldType}{00039}} \textcolor{keyword}{class }\mbox{\hyperlink{classFieldType}{FieldType}}\{}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00040}00040     \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00043}\mbox{\hyperlink{classFieldType_a9234520c3d200c3ddbf3cb145c5436f5}{00043}}         \textcolor{keyword}{virtual} \textcolor{keyword}{const} TerrainType \mbox{\hyperlink{classFieldType_a9234520c3d200c3ddbf3cb145c5436f5}{getTerrainType}}();}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00044}00044 \};}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00045}00045 }
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00046}\mbox{\hyperlink{classForestTerrain}{00046}} \textcolor{keyword}{class }\mbox{\hyperlink{classForestTerrain}{ForestTerrain}} : \textcolor{keyword}{public} \mbox{\hyperlink{classFieldType}{FieldType}}\{}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00049}00049     \textcolor{keyword}{const} TerrainType getTerrainType();}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00050}00050 \};}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00051}\mbox{\hyperlink{classUrbanTerrain}{00051}} \textcolor{keyword}{class }\mbox{\hyperlink{classUrbanTerrain}{UrbanTerrain}} : \textcolor{keyword}{public} \mbox{\hyperlink{classFieldType}{FieldType}}\{}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00054}00054     \textcolor{keyword}{const} TerrainType getTerrainType();}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00055}00055 \};}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00056}\mbox{\hyperlink{classPlainTerrain}{00056}} \textcolor{keyword}{class }\mbox{\hyperlink{classPlainTerrain}{PlainTerrain}} : \textcolor{keyword}{public} \mbox{\hyperlink{classFieldType}{FieldType}}\{}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00059}00059     \textcolor{keyword}{const} TerrainType getTerrainType();}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00060}00060 \};}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00061}00061 }
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00062}00062 }
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00063}\mbox{\hyperlink{classField}{00063}} \textcolor{keyword}{class }\mbox{\hyperlink{classField}{Field}}\{}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00064}00064     \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00065}00065         \mbox{\hyperlink{classPosition}{Position}} position;}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00066}00066         \mbox{\hyperlink{classFieldType}{FieldType}} fieldType;}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00067}00067 }
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00068}00068     \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00069}00069         \mbox{\hyperlink{classPosition}{Position}} getPosition();}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00070}00070 \};}
+
+\end{DoxyCode}

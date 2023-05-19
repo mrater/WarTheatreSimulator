@@ -1,0 +1,89 @@
+\hypertarget{field_8h}{}\doxysection{include/field.h File Reference}
+\label{field_8h}\index{include/field.h@{include/field.h}}
+
+
+File with field classes. \mbox{\hyperlink{classField}{Field}} is characterized with position (q,r, -\/q-\/r) and terrain type (forest, urban etc.)  
+
+
+{\ttfamily \#include $<$utility$>$}\newline
+Include dependency graph for field.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=165pt]{field_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=168pt]{field_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classPosition}{Position}}
+\begin{DoxyCompactList}\small\item\em Class to store position of a field. Coordinate systems which is going to be used for this hexagonal simulation is q, r for two axes and s for the third (however, s is \char`\"{}artificial\char`\"{} since s = -\/q -\/ r) \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classFieldType}{Field\+Type}}
+\begin{DoxyCompactList}\small\item\em All fields will give certain punishments for movement and attack thus need to be distinguished. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classForestTerrain}{Forest\+Terrain}}
+\item 
+class \mbox{\hyperlink{classUrbanTerrain}{Urban\+Terrain}}
+\item 
+class \mbox{\hyperlink{classPlainTerrain}{Plain\+Terrain}}
+\item 
+class \mbox{\hyperlink{classField}{Field}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespaceTerrain}{Terrain}}
+\begin{DoxyCompactList}\small\item\em namespace consisting of terrain types IDs \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef int \mbox{\hyperlink{field_8h_a496c6f2af5e0112082a649499236d4fb}{Terrain\+Type}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const Terrain\+Type \mbox{\hyperlink{namespaceTerrain_a55087733e5cca8d6ad346b96e8d97997}{Terrain\+::\+NONE}} = 0
+\item 
+const Terrain\+Type \mbox{\hyperlink{namespaceTerrain_a2a3a957decfd6b7350506b724359d4e4}{Terrain\+::\+FOREST}} = 1
+\item 
+const Terrain\+Type \mbox{\hyperlink{namespaceTerrain_a6244524b78a1a7f12213ae6922f1b47d}{Terrain\+::\+URBAN}} = 2
+\item 
+const Terrain\+Type \mbox{\hyperlink{namespaceTerrain_ae0108418c88d0ce50fd0155b337872f2}{Terrain\+::\+PLAIN}} = 3
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+File with field classes. \mbox{\hyperlink{classField}{Field}} is characterized with position (q,r, -\/q-\/r) and terrain type (forest, urban etc.) 
+
+\begin{DoxyAuthor}{Author}
+Maciej Sikorski 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2023-\/05-\/19 
+\end{DoxyDate}
+
+
+Definition in file \mbox{\hyperlink{field_8h_source}{field.\+h}}.
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{field_8h_a496c6f2af5e0112082a649499236d4fb}\label{field_8h_a496c6f2af5e0112082a649499236d4fb}} 
+\index{field.h@{field.h}!TerrainType@{TerrainType}}
+\index{TerrainType@{TerrainType}!field.h@{field.h}}
+\doxysubsubsection{\texorpdfstring{TerrainType}{TerrainType}}
+{\footnotesize\ttfamily typedef int Terrain\+Type}
+
+
+
+Definition at line \mbox{\hyperlink{field_8h_source_l00011}{11}} of file \mbox{\hyperlink{field_8h_source}{field.\+h}}.
+

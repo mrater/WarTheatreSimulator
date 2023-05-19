@@ -8,7 +8,6 @@
 
 #include<utility>
 
-
 typedef int TerrainType;
 
 /// @brief namespace consisting of terrain types IDs
@@ -22,7 +21,7 @@ namespace Terrain {
 /**
  * @brief Class to store position of a field.
  * Coordinate systems which is going to be used for this hexagonal simulation is 
- * q, r for two axes and s for the third (however, q is "artificial" as always s = -q - r) 
+ * q, r for two axes and s for the third (however, s is "artificial" since s = -q - r) 
  */
 class Position{
     private:
@@ -38,9 +37,10 @@ class Position{
 
 /// @brief All fields will give certain punishments for movement and attack thus need to be distinguished
 class FieldType{
-    /// @brief get ID of terrain type of this field
-    /// @return ID of terrain type for this field
-    virtual const TerrainType getTerrainType();
+    public:
+        /// @brief get ID of terrain type of this field
+        /// @return ID of terrain type for this field
+        virtual const TerrainType getTerrainType();
 };
 
 class ForestTerrain : public FieldType{
@@ -63,6 +63,7 @@ class PlainTerrain : public FieldType{
 class Field{
     private:
         Position position;
+        FieldType fieldType;
 
     public:
         Position getPosition();

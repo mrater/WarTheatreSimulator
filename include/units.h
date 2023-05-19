@@ -1,8 +1,11 @@
 /**
  * @file units.h
- * @brief This file consists of 
+ * @brief This file consists of classes of Units, i.e. Infantry, Tank, Artillery
  */
+#include "field.h"
 typedef int UnitType;
+
+/// @brief namespace with unit types category IDs
 namespace UnitCategory{
     constexpr UnitType NONE = 0;
     constexpr UnitType INFANTRY = 1;
@@ -10,27 +13,39 @@ namespace UnitCategory{
     constexpr UnitType ARTILLERY = 3;
 };
 
-class Unit{
+
+/**
+ * @brief Basic class for all unit types
+ * 
+ */
+class Unit : Field{
     int organization;
     int supplyLevel;
     int baseStrength;
-    const virtual UnitType getType(){};
+
+    public:
+        /// @brief get type ID of a unit
+        /// @return ID of unit type
+        const virtual UnitType getType(){};
 };
 
 class Infantry : Unit {
-    const UnitType getType(){
-        return UnitCategory::INFANTRY;
-    }
+    public:
+        const UnitType getType(){
+            return UnitCategory::INFANTRY;
+        }
 };
 
 class Tank : Unit {
-    const UnitType getType(){
-        return UnitCategory::TANK;
-    }
+    public:
+        const UnitType getType(){
+            return UnitCategory::TANK;
+        }
 };
 
 class Artillery : Unit{
-    const UnitType getType(){
-        return UnitCategory::ARTILLERY;
-    }
+    public:
+        const UnitType getType(){
+            return UnitCategory::ARTILLERY;
+        }
 };
