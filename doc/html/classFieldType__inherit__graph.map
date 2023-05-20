@@ -1,6 +1,6 @@
 <map id="FieldType" name="FieldType">
-<area shape="rect" id="node1" title="All fields will give certain punishments for movement and attack thus need to be distinguished." alt="" coords="144,5,227,32"/>
-<area shape="rect" id="node2" href="$classForestTerrain.html" title=" " alt="" coords="5,80,112,107"/>
-<area shape="rect" id="node3" href="$classPlainTerrain.html" title=" " alt="" coords="136,80,235,107"/>
-<area shape="rect" id="node4" href="$classUrbanTerrain.html" title=" " alt="" coords="259,80,365,107"/>
+<area shape="rect" id="node1" title="All fields will give certain punishments for movement and attack thus need to be distinguished." alt="" coords="114,5,257,83"/>
+<area shape="rect" id="node2" href="$classForestTerrain.html" title=" " alt="" coords="5,131,112,208"/>
+<area shape="rect" id="node3" href="$classPlainTerrain.html" title=" " alt="" coords="136,131,235,208"/>
+<area shape="rect" id="node4" href="$classUrbanTerrain.html" title=" " alt="" coords="259,131,365,208"/>
 </map>

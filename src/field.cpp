@@ -5,7 +5,6 @@ Position Field::getPosition()
     return this->position;
 }
 
-
 const int Position::s()
 {
     return -this->q - this->r;

@@ -8,6 +8,7 @@
 
 #include<utility>
 
+/// @brief  type for identifiers of terrain
 typedef int TerrainType;
 
 /// @brief namespace consisting of terrain types IDs
@@ -66,5 +67,14 @@ class Field{
         FieldType fieldType;
 
     public:
+        /**
+         * @brief get position of a field
+         * @returns position as (q,r,s)
+        */
         Position getPosition();
+
+        /**
+         * @returns type of terrain of the field
+        */
+        virtual const FieldType getTerrainType();
 };

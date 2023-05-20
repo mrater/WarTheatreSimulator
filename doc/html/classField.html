@@ -21,9 +21,9 @@
 <link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
-<script type="text/javascript">
-    DoxygenAwesomeDarkModeToggle.init()
-</script>
+       <script type="text/javascript">
+           DoxygenAwesomeDarkModeToggle.init()
+       </script>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -96,28 +96,73 @@ $(document).ready(function(){initNavTree('classField.html',''); initResizable();
 </div><!--header-->
 <div class="contents">
 <div class="dynheader">
-Inheritance diagram for Field:</div>
+Collaboration diagram for Field:</div>
 <div class="dyncontent">
-<div class="center"><img src="classField__inherit__graph.png" border="0" usemap="#aField_inherit__map" alt="Inheritance graph"/></div>
-<map name="aField_inherit__map" id="aField_inherit__map">
-<area shape="rect" title=" " alt="" coords="115,5,168,32"/>
-<area shape="rect" href="classUnit.html" title="Basic class for all unit types." alt="" coords="117,80,166,107"/>
-<area shape="rect" href="classArtillery.html" title=" " alt="" coords="5,155,80,181"/>
-<area shape="rect" href="classInfantry.html" title=" " alt="" coords="105,155,178,181"/>
-<area shape="rect" href="classTank.html" title=" " alt="" coords="202,155,254,181"/>
+<div class="center"><img src="classField__coll__graph.png" border="0" usemap="#aField_coll__map" alt="Collaboration graph"/></div>
+<map name="aField_coll__map" id="aField_coll__map">
+<area shape="rect" title=" " alt="" coords="5,5,148,97"/>
 </map>
-<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:af1ffc3b324b77b22dcf86309ab9863c5"><td class="memItemLeft" align="right" valign="top"><a id="af1ffc3b324b77b22dcf86309ab9863c5" name="af1ffc3b324b77b22dcf86309ab9863c5"></a>
-<a class="el" href="classPosition.html">Position</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getPosition</b> ()</td></tr>
+<tr class="memitem:af1ffc3b324b77b22dcf86309ab9863c5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPosition.html">Position</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classField.html#af1ffc3b324b77b22dcf86309ab9863c5">getPosition</a> ()</td></tr>
+<tr class="memdesc:af1ffc3b324b77b22dcf86309ab9863c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">get position of a field  <a href="classField.html#af1ffc3b324b77b22dcf86309ab9863c5">More...</a><br /></td></tr>
 <tr class="separator:af1ffc3b324b77b22dcf86309ab9863c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affe2aefefc759ce7249986832c7e2c17"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classFieldType.html">FieldType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classField.html#affe2aefefc759ce7249986832c7e2c17">getTerrainType</a> ()</td></tr>
+<tr class="separator:affe2aefefc759ce7249986832c7e2c17"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="field_8h_source.html#l00063">63</a> of file <a class="el" href="field_8h_source.html">field.h</a>.</p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+<p class="definition">Definition at line <a class="el" href="field_8h_source.html#l00064">64</a> of file <a class="el" href="field_8h_source.html">field.h</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="af1ffc3b324b77b22dcf86309ab9863c5" name="af1ffc3b324b77b22dcf86309ab9863c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1ffc3b324b77b22dcf86309ab9863c5">&#9670;&nbsp;</a></span>getPosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classPosition.html">Position</a> Field::getPosition </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>get position of a field </p>
+<dl class="section return"><dt>Returns</dt><dd>position as (q,r,s) </dd></dl>
+
+</div>
+</div>
+<a id="affe2aefefc759ce7249986832c7e2c17" name="affe2aefefc759ce7249986832c7e2c17"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affe2aefefc759ce7249986832c7e2c17">&#9670;&nbsp;</a></span>getTerrainType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual const <a class="el" href="classFieldType.html">FieldType</a> Field::getTerrainType </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>type of terrain of the field </dd></dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>include/<a class="el" href="field_8h_source.html">field.h</a></li>
 </ul>
 </div><!-- contents -->

@@ -21,9 +21,9 @@
 <link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
-<script type="text/javascript">
-    DoxygenAwesomeDarkModeToggle.init()
-</script>
+       <script type="text/javascript">
+           DoxygenAwesomeDarkModeToggle.init()
+       </script>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -91,6 +91,7 @@ $(document).ready(function(){initNavTree('classUnit.html',''); initResizable(); 
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classUnit-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">Unit Class Reference</div></div>
 </div><!--header-->
@@ -105,33 +106,53 @@ Inheritance diagram for Unit:</div>
 <div class="dyncontent">
 <div class="center"><img src="classUnit__inherit__graph.png" border="0" usemap="#aUnit_inherit__map" alt="Inheritance graph"/></div>
 <map name="aUnit_inherit__map" id="aUnit_inherit__map">
-<area shape="rect" title="Basic class for all unit types." alt="" coords="117,80,166,107"/>
-<area shape="rect" href="classArtillery.html" title=" " alt="" coords="5,155,80,181"/>
-<area shape="rect" href="classInfantry.html" title=" " alt="" coords="105,155,178,181"/>
-<area shape="rect" href="classTank.html" title=" " alt="" coords="202,155,254,181"/>
-<area shape="rect" href="classField.html" title=" " alt="" coords="115,5,168,32"/>
+<area shape="rect" title="Basic class for all unit types." alt="" coords="116,5,239,156"/>
+<area shape="rect" href="classArtillery.html" title=" " alt="" coords="5,204,104,281"/>
+<area shape="rect" href="classInfantry.html" title=" " alt="" coords="128,204,227,281"/>
+<area shape="rect" href="classTank.html" title=" " alt="" coords="251,204,349,281"/>
 </map>
-<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+</div>
 <div class="dynheader">
 Collaboration diagram for Unit:</div>
 <div class="dyncontent">
 <div class="center"><img src="classUnit__coll__graph.png" border="0" usemap="#aUnit_coll__map" alt="Collaboration graph"/></div>
 <map name="aUnit_coll__map" id="aUnit_coll__map">
-<area shape="rect" title="Basic class for all unit types." alt="" coords="7,80,57,107"/>
-<area shape="rect" href="classField.html" title=" " alt="" coords="5,5,59,32"/>
+<area shape="rect" title="Basic class for all unit types." alt="" coords="5,145,128,281"/>
+<area shape="rect" href="classPosition.html" title="Class to store position of a field. Coordinate systems which is going to be used for this hexagonal s..." alt="" coords="17,5,116,83"/>
 </map>
-<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a208d354a0ca6f4adc9a24f9913129ca9"><td class="memItemLeft" align="right" valign="top">virtual const UnitType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnit.html#a208d354a0ca6f4adc9a24f9913129ca9">getType</a> ()</td></tr>
 <tr class="memdesc:a208d354a0ca6f4adc9a24f9913129ca9"><td class="mdescLeft">&#160;</td><td class="mdescRight">get type ID of a unit  <a href="classUnit.html#a208d354a0ca6f4adc9a24f9913129ca9">More...</a><br /></td></tr>
 <tr class="separator:a208d354a0ca6f4adc9a24f9913129ca9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:abf9daa438c2896e00f47b75d0f23b16e"><td class="memItemLeft" align="right" valign="top">UnitID&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnit.html#abf9daa438c2896e00f47b75d0f23b16e">ID</a></td></tr>
+<tr class="memdesc:abf9daa438c2896e00f47b75d0f23b16e"><td class="mdescLeft">&#160;</td><td class="mdescRight">individual identifier for a unit  <a href="classUnit.html#abf9daa438c2896e00f47b75d0f23b16e">More...</a><br /></td></tr>
+<tr class="separator:abf9daa438c2896e00f47b75d0f23b16e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5074bce3536b87fed960a8a6415c7e9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnit.html#ad5074bce3536b87fed960a8a6415c7e9">organization</a></td></tr>
+<tr class="memdesc:ad5074bce3536b87fed960a8a6415c7e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">organization stat of a unit.  <a href="classUnit.html#ad5074bce3536b87fed960a8a6415c7e9">More...</a><br /></td></tr>
+<tr class="separator:ad5074bce3536b87fed960a8a6415c7e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c8bedcf377b774e5fd057b4da438e28"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnit.html#a1c8bedcf377b774e5fd057b4da438e28">supplyLevel</a></td></tr>
+<tr class="memdesc:a1c8bedcf377b774e5fd057b4da438e28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Level of logistic supply of a unit.  <a href="classUnit.html#a1c8bedcf377b774e5fd057b4da438e28">More...</a><br /></td></tr>
+<tr class="separator:a1c8bedcf377b774e5fd057b4da438e28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9ff205b8669a9466d88ebb60d7ec7e4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnit.html#af9ff205b8669a9466d88ebb60d7ec7e4">baseStrength</a></td></tr>
+<tr class="memdesc:af9ff205b8669a9466d88ebb60d7ec7e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">basic strength of a unit (it is determined only by type of unit)  <a href="classUnit.html#af9ff205b8669a9466d88ebb60d7ec7e4">More...</a><br /></td></tr>
+<tr class="separator:af9ff205b8669a9466d88ebb60d7ec7e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27e74ea818f26a5dba884564bc44c7de"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPosition.html">Position</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnit.html#a27e74ea818f26a5dba884564bc44c7de">position</a></td></tr>
+<tr class="memdesc:a27e74ea818f26a5dba884564bc44c7de"><td class="mdescLeft">&#160;</td><td class="mdescRight">position of a unit  <a href="classUnit.html#a27e74ea818f26a5dba884564bc44c7de">More...</a><br /></td></tr>
+<tr class="separator:a27e74ea818f26a5dba884564bc44c7de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90868f03f29dbf345f91d82b2d9e6513"><td class="memItemLeft" align="right" valign="top">UnitFactionID&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnit.html#a90868f03f29dbf345f91d82b2d9e6513">unitFactionId</a></td></tr>
+<tr class="memdesc:a90868f03f29dbf345f91d82b2d9e6513"><td class="mdescLeft">&#160;</td><td class="mdescRight">ID of faction that owns the unit`.  <a href="classUnit.html#a90868f03f29dbf345f91d82b2d9e6513">More...</a><br /></td></tr>
+<tr class="separator:a90868f03f29dbf345f91d82b2d9e6513"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Basic class for all unit types. </p>
 
-<p class="definition">Definition at line <a class="el" href="units_8h_source.html#l00021">21</a> of file <a class="el" href="units_8h_source.html">units.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="units_8h_source.html#l00023">23</a> of file <a class="el" href="units_8h_source.html">units.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a208d354a0ca6f4adc9a24f9913129ca9" name="a208d354a0ca6f4adc9a24f9913129ca9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a208d354a0ca6f4adc9a24f9913129ca9">&#9670;&nbsp;</a></span>getType()</h2>
@@ -161,7 +182,166 @@ Public Member Functions</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classInfantry.html#a8bdc8ccd9a81f3cb6ad73b1eaeea658a">Infantry</a>, <a class="el" href="classTank.html#af13cd247c4acbb84138ef5c09f653bfa">Tank</a>, and <a class="el" href="classArtillery.html#a012b1abf931ed58f3c83a3029b3bd963">Artillery</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="units_8h_source.html#l00029">29</a> of file <a class="el" href="units_8h_source.html">units.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="units_8h_source.html#l00053">53</a> of file <a class="el" href="units_8h_source.html">units.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="af9ff205b8669a9466d88ebb60d7ec7e4" name="af9ff205b8669a9466d88ebb60d7ec7e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9ff205b8669a9466d88ebb60d7ec7e4">&#9670;&nbsp;</a></span>baseStrength</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Unit::baseStrength</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>basic strength of a unit (it is determined only by type of unit) </p>
+
+<p class="definition">Definition at line <a class="el" href="units_8h_source.html#l00042">42</a> of file <a class="el" href="units_8h_source.html">units.h</a>.</p>
+
+</div>
+</div>
+<a id="abf9daa438c2896e00f47b75d0f23b16e" name="abf9daa438c2896e00f47b75d0f23b16e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf9daa438c2896e00f47b75d0f23b16e">&#9670;&nbsp;</a></span>ID</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">UnitID Unit::ID</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>individual identifier for a unit </p>
+
+<p class="definition">Definition at line <a class="el" href="units_8h_source.html#l00026">26</a> of file <a class="el" href="units_8h_source.html">units.h</a>.</p>
+
+</div>
+</div>
+<a id="ad5074bce3536b87fed960a8a6415c7e9" name="ad5074bce3536b87fed960a8a6415c7e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5074bce3536b87fed960a8a6415c7e9">&#9670;&nbsp;</a></span>organization</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Unit::organization</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>organization stat of a unit. </p>
+<p >It is similar to HP in strategy games. When organization is below 0, a unit dissolves. Movement, attack and defence cost some degree of organization </p>
+
+<p class="definition">Definition at line <a class="el" href="units_8h_source.html#l00032">32</a> of file <a class="el" href="units_8h_source.html">units.h</a>.</p>
+
+</div>
+</div>
+<a id="a27e74ea818f26a5dba884564bc44c7de" name="a27e74ea818f26a5dba884564bc44c7de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27e74ea818f26a5dba884564bc44c7de">&#9670;&nbsp;</a></span>position</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classPosition.html">Position</a> Unit::position</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>position of a unit </p>
+
+<p class="definition">Definition at line <a class="el" href="units_8h_source.html#l00045">45</a> of file <a class="el" href="units_8h_source.html">units.h</a>.</p>
+
+</div>
+</div>
+<a id="a1c8bedcf377b774e5fd057b4da438e28" name="a1c8bedcf377b774e5fd057b4da438e28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c8bedcf377b774e5fd057b4da438e28">&#9670;&nbsp;</a></span>supplyLevel</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Unit::supplyLevel</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Level of logistic supply of a unit. </p>
+<p >Level of supply is determined by fuel source nearby. It decreases during: defence, attack, movement. 100 supply level is considered enough (more gives no bonuses nor punishments) </p>
+
+<p class="definition">Definition at line <a class="el" href="units_8h_source.html#l00039">39</a> of file <a class="el" href="units_8h_source.html">units.h</a>.</p>
+
+</div>
+</div>
+<a id="a90868f03f29dbf345f91d82b2d9e6513" name="a90868f03f29dbf345f91d82b2d9e6513"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90868f03f29dbf345f91d82b2d9e6513">&#9670;&nbsp;</a></span>unitFactionId</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">UnitFactionID Unit::unitFactionId</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ID of faction that owns the unit`. </p>
+
+<p class="definition">Definition at line <a class="el" href="units_8h_source.html#l00048">48</a> of file <a class="el" href="units_8h_source.html">units.h</a>.</p>
 
 </div>
 </div>

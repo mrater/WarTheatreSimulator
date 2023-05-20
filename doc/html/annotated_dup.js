@@ -1,7 +1,7 @@
 var annotated_dup =
 [
     [ "Artillery", "classArtillery.html", "classArtillery" ],
-    [ "Field", "classField.html", null ],
+    [ "Field", "classField.html", "classField" ],
     [ "FieldType", "classFieldType.html", "classFieldType" ],
     [ "ForestTerrain", "classForestTerrain.html", null ],
     [ "Infantry", "classInfantry.html", "classInfantry" ],
