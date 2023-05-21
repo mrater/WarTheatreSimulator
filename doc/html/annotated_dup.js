@@ -1,5 +1,6 @@
 var annotated_dup =
 [
+    [ "Area", "classArea.html", null ],
     [ "Artillery", "classArtillery.html", "classArtillery" ],
     [ "Field", "classField.html", "classField" ],
     [ "FieldType", "classFieldType.html", "classFieldType" ],

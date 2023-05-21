@@ -64,6 +64,8 @@ class PlainTerrain : public FieldType{
 class Field{
     private:
         Position position;
+    
+    protected:
         FieldType fieldType;
 
     public:
@@ -71,7 +73,7 @@ class Field{
          * @brief get position of a field
          * @returns position as (q,r,s)
         */
-        Position getPosition();
+        const Position getPosition();
 
         /**
          * @returns type of terrain of the field

@@ -1,5 +1,7 @@
 var classUnit =
 [
+    [ "getBaseAttack", "classUnit.html#aa57b5dd199d341820e3fe3c7c7125d80", null ],
+    [ "getPosition", "classUnit.html#ae8f305525726c49988b99e16e053bf1f", null ],
     [ "getType", "classUnit.html#a208d354a0ca6f4adc9a24f9913129ca9", null ],
     [ "baseStrength", "classUnit.html#af9ff205b8669a9466d88ebb60d7ec7e4", null ],
     [ "ID", "classUnit.html#abf9daa438c2896e00f47b75d0f23b16e", null ],

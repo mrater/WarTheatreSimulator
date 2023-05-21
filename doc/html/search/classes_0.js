@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['artillery_0',['Artillery',['../classArtillery.html',1,'']]]
+  ['area_0',['Area',['../classArea.html',1,'']]],
+  ['artillery_1',['Artillery',['../classArtillery.html',1,'']]]
 ];

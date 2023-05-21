@@ -1,6 +1,6 @@
 <map id="Unit" name="Unit">
-<area shape="rect" id="node1" title="Basic class for all unit types." alt="" coords="116,5,239,156"/>
-<area shape="rect" id="node2" href="$classArtillery.html" title=" " alt="" coords="5,204,104,281"/>
-<area shape="rect" id="node3" href="$classInfantry.html" title=" " alt="" coords="128,204,227,281"/>
-<area shape="rect" id="node4" href="$classTank.html" title=" " alt="" coords="251,204,349,281"/>
+<area shape="rect" id="node1" title="Basic class for all unit types." alt="" coords="106,5,249,185"/>
+<area shape="rect" id="node2" href="$classArtillery.html" title=" " alt="" coords="5,233,104,311"/>
+<area shape="rect" id="node3" href="$classInfantry.html" title=" " alt="" coords="128,233,227,311"/>
+<area shape="rect" id="node4" href="$classTank.html" title=" " alt="" coords="251,233,349,311"/>
 </map>

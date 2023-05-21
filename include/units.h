@@ -3,6 +3,8 @@
  * @brief This file consists of classes of Units, i.e. Infantry, Tank, Artillery
  */
 #include"field.h"
+
+
 typedef int UnitType;
 typedef int UnitID;
 typedef int UnitFactionID;
@@ -50,7 +52,20 @@ class Unit{
     public:
         /// @brief get type ID of a unit
         /// @return ID of unit type
-        const virtual UnitType getType(){};
+        const virtual UnitType getType();
+
+        /// @return Position of unit
+        const Position getPosition() const;
+
+        /// @brief  Get base attack, a value that might be unique for every pair (UNIT_TYPE, DEFENDER_UNIT_TYPE)
+        /// @param defenderUnit - enemy unit that is under our attack
+        /// @return base attack of this unit type
+        virtual int getBaseAttack(const Unit &defenderUnit);
+
+
+        /// @brief get ID of unit faction
+        /// @return ID of a faction of unit
+        virtual const UnitFactionID getUnitFactionID() const; 
 };
 
 class Infantry : Unit {

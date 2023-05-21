@@ -1,5 +1,6 @@
 var hierarchy =
 [
+    [ "Area", "classArea.html", null ],
     [ "Field", "classField.html", null ],
     [ "FieldType", "classFieldType.html", [
       [ "ForestTerrain", "classForestTerrain.html", null ],
