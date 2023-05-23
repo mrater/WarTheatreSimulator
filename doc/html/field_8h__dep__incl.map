@@ -1,5 +1,6 @@
 <map id="include/field.h" name="include/field.h">
-<area shape="rect" id="node1" title="File with field classes. Field is characterized with position (q,r, &#45;q&#45;r) and terrain type (forest,..." alt="" coords="15,5,128,32"/>
-<area shape="rect" id="node2" href="$units_8h.html" title="This file consists of classes of Units, i.e. Infantry, Tank, Artillery." alt="" coords="13,80,130,107"/>
-<area shape="rect" id="node3" href="$units_8cpp_source.html" title=" " alt="" coords="5,155,137,181"/>
+<area shape="rect" id="node1" title="File with field classes. Field is characterized with position (q,r, &#45;q&#45;r) and terrain type (forest,..." alt="" coords="34,5,147,32"/>
+<area shape="rect" id="node2" href="$units_8h.html" title="This file consists of classes of Units, i.e. Infantry, Tank, Artillery." alt="" coords="32,80,149,107"/>
+<area shape="rect" id="node3" href="$area_8h.html" title="This class manages whole war area This manages states of a world, including units stats,..." alt="" coords="33,155,148,181"/>
+<area shape="rect" id="node4" href="$areamanager_8h.html" title="This file manages the game area and its metadadata It has no safeguards, so it should not be used in ..." alt="" coords="5,229,176,256"/>
 </map>

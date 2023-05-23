@@ -1,0 +1,9 @@
+<map id="include/areamanager.h" name="include/areamanager.h">
+<area shape="rect" id="node1" title="This file manages the game area and its metadadata It has no safeguards, so it should not be used in ..." alt="" coords="33,5,203,32"/>
+<area shape="rect" id="node2" href="$area_8h.html" title="This class manages whole war area This manages states of a world, including units stats,..." alt="" coords="87,80,149,107"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,155,68,181"/>
+<area shape="rect" id="node4" title=" " alt="" coords="93,155,143,181"/>
+<area shape="rect" id="node5" href="$units_8h.html" title="This file consists of classes of Units, i.e. Infantry, Tank, Artillery." alt="" coords="167,155,234,181"/>
+<area shape="rect" id="node6" href="$field_8h.html" title="File with field classes. Field is characterized with position (q,r, &#45;q&#45;r) and terrain type (forest,..." alt="" coords="169,229,232,256"/>
+<area shape="rect" id="node7" title=" " alt="" coords="171,304,231,331"/>
+</map>

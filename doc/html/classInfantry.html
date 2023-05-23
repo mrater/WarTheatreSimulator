@@ -100,8 +100,8 @@ Inheritance diagram for Infantry:</div>
 <div class="dyncontent">
 <div class="center"><img src="classInfantry__inherit__graph.png" border="0" usemap="#aInfantry_inherit__map" alt="Inheritance graph"/></div>
 <map name="aInfantry_inherit__map" id="aInfantry_inherit__map">
-<area shape="rect" title=" " alt="" coords="27,233,126,311"/>
-<area shape="rect" href="classUnit.html" title="Basic class for all unit types." alt="" coords="5,5,148,185"/>
+<area shape="rect" title=" " alt="" coords="21,277,163,369"/>
+<area shape="rect" href="classUnit.html" title="Basic class for all unit types." alt="" coords="5,5,179,229"/>
 </map>
 </div>
 <div class="dynheader">
@@ -109,9 +109,9 @@ Collaboration diagram for Infantry:</div>
 <div class="dyncontent">
 <div class="center"><img src="classInfantry__coll__graph.png" border="0" usemap="#aInfantry_coll__map" alt="Collaboration graph"/></div>
 <map name="aInfantry_coll__map" id="aInfantry_coll__map">
-<area shape="rect" title=" " alt="" coords="27,360,126,437"/>
-<area shape="rect" href="classUnit.html" title="Basic class for all unit types." alt="" coords="5,145,148,311"/>
-<area shape="rect" href="classPosition.html" title="Class to store position of a field. Coordinate systems which is going to be used for this hexagonal s..." alt="" coords="27,5,126,83"/>
+<area shape="rect" title=" " alt="" coords="21,404,163,496"/>
+<area shape="rect" href="classUnit.html" title="Basic class for all unit types." alt="" coords="5,145,179,355"/>
+<area shape="rect" href="classPosition.html" title="Class to store position of a field. Coordinate systems which is going to be used for this hexagonal s..." alt="" coords="43,5,141,83"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -119,11 +119,51 @@ Collaboration diagram for Infantry:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a8bdc8ccd9a81f3cb6ad73b1eaeea658a"><td class="memItemLeft" align="right" valign="top">const UnitType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInfantry.html#a8bdc8ccd9a81f3cb6ad73b1eaeea658a">getType</a> ()</td></tr>
 <tr class="separator:a8bdc8ccd9a81f3cb6ad73b1eaeea658a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7aa7d3ecd6d53a5e02517553fbe69d4"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInfantry.html#ab7aa7d3ecd6d53a5e02517553fbe69d4">getBaseAttack</a> (const UnitID &amp;unitType)</td></tr>
+<tr class="memdesc:ab7aa7d3ecd6d53a5e02517553fbe69d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">get Base attack of infantry  <a href="classInfantry.html#ab7aa7d3ecd6d53a5e02517553fbe69d4">More...</a><br /></td></tr>
+<tr class="separator:ab7aa7d3ecd6d53a5e02517553fbe69d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="units_8h_source.html#l00066">66</a> of file <a class="el" href="units_8h_source.html">units.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="units_8h_source.html#l00090">90</a> of file <a class="el" href="units_8h_source.html">units.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="ab7aa7d3ecd6d53a5e02517553fbe69d4" name="ab7aa7d3ecd6d53a5e02517553fbe69d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7aa7d3ecd6d53a5e02517553fbe69d4">&#9670;&nbsp;</a></span>getBaseAttack()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int Infantry::getBaseAttack </td>
+          <td>(</td>
+          <td class="paramtype">const UnitID &amp;&#160;</td>
+          <td class="paramname"><em>unitType</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>get Base attack of infantry </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">unitType</td><td>type of enemy uniut </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>base attack for infantry when dealing with certain enemy </dd></dl>
+
+<p>Reimplemented from <a class="el" href="classUnit.html#afac61778dffec3c7d9f517c0767f7d9e">Unit</a>.</p>
+
+</div>
+</div>
 <a id="a8bdc8ccd9a81f3cb6ad73b1eaeea658a" name="a8bdc8ccd9a81f3cb6ad73b1eaeea658a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8bdc8ccd9a81f3cb6ad73b1eaeea658a">&#9670;&nbsp;</a></span>getType()</h2>
 
@@ -150,7 +190,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classUnit.html#a208d354a0ca6f4adc9a24f9913129ca9">Unit</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="units_8h_source.html#l00069">69</a> of file <a class="el" href="units_8h_source.html">units.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="units_8h_source.html#l00093">93</a> of file <a class="el" href="units_8h_source.html">units.h</a>.</p>
 
 </div>
 </div>

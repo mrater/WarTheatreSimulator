@@ -116,8 +116,9 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="units_8h__dep__incl.png" border="0" usemap="#ainclude_2units_8hdep" alt=""/></div>
 <map name="ainclude_2units_8hdep" id="ainclude_2units_8hdep">
-<area shape="rect" title="This file consists of classes of Units, i.e. Infantry, Tank, Artillery." alt="" coords="13,5,130,32"/>
-<area shape="rect" href="units_8cpp_source.html" title=" " alt="" coords="5,80,137,107"/>
+<area shape="rect" title="This file consists of classes of Units, i.e. Infantry, Tank, Artillery." alt="" coords="32,5,149,32"/>
+<area shape="rect" href="area_8h.html" title="This class manages whole war area This manages states of a world, including units stats,..." alt="" coords="33,80,148,107"/>
+<area shape="rect" href="areamanager_8h.html" title="This file manages the game area and its metadadata It has no safeguards, so it should not be used in ..." alt="" coords="5,155,176,181"/>
 </map>
 </div>
 </div>
@@ -140,6 +141,9 @@ Namespaces</h2></td></tr>
 <tr class="memitem:namespaceUnitCategory"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceUnitCategory.html">UnitCategory</a></td></tr>
 <tr class="memdesc:namespaceUnitCategory"><td class="mdescLeft">&#160;</td><td class="mdescRight">namespace with unit types category IDs <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespacebaseAttack"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebaseAttack.html">baseAttack</a></td></tr>
+<tr class="memdesc:namespacebaseAttack"><td class="mdescLeft">&#160;</td><td class="mdescRight">namespace with constants of X_Y attack. X_Y means that X attacks Y with this basic damage <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
@@ -160,6 +164,17 @@ Variables</h2></td></tr>
 <tr class="separator:a6252c7062e54c34350dd2d39bd8ef575"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a80538708847ddd392f55fcf50a5f6f6f"><td class="memItemLeft" align="right" valign="top">constexpr UnitType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceUnitCategory.html#a80538708847ddd392f55fcf50a5f6f6f">UnitCategory::ARTILLERY</a> = 3</td></tr>
 <tr class="separator:a80538708847ddd392f55fcf50a5f6f6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a592dd1bea4163e45ab01c98890160eb4"><td class="memItemLeft" align="right" valign="top">constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebaseAttack.html#a592dd1bea4163e45ab01c98890160eb4">baseAttack::ERROR_PAIR</a> = -1</td></tr>
+<tr class="memdesc:a592dd1bea4163e45ab01c98890160eb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">base attack when type of units are wrong  <a href="namespacebaseAttack.html#a592dd1bea4163e45ab01c98890160eb4">More...</a><br /></td></tr>
+<tr class="separator:a592dd1bea4163e45ab01c98890160eb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17090fcd77e41c9c3fd34c60fa1c0af0"><td class="memItemLeft" align="right" valign="top">constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebaseAttack.html#a17090fcd77e41c9c3fd34c60fa1c0af0">baseAttack::INFRANTRY_TO_INFANTRY</a> = 60</td></tr>
+<tr class="separator:a17090fcd77e41c9c3fd34c60fa1c0af0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a662eb62f04fe18aac25d1c019a3ca7e0"><td class="memItemLeft" align="right" valign="top">constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebaseAttack.html#a662eb62f04fe18aac25d1c019a3ca7e0">baseAttack::INFANTRY_TO_ARTILLERY</a> = 100</td></tr>
+<tr class="separator:a662eb62f04fe18aac25d1c019a3ca7e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e702510ec20d1b15c331017e74625d3"><td class="memItemLeft" align="right" valign="top">constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebaseAttack.html#a3e702510ec20d1b15c331017e74625d3">baseAttack::ARTILLERY_TO_ARTILLERY</a> = 100</td></tr>
+<tr class="separator:a3e702510ec20d1b15c331017e74625d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a652fb5e86c65fae4ef1064b4b508efc3"><td class="memItemLeft" align="right" valign="top">constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebaseAttack.html#a652fb5e86c65fae4ef1064b4b508efc3">baseAttack::ARTILLERY_TO_INFANTRY</a> = 100</td></tr>
+<tr class="separator:a652fb5e86c65fae4ef1064b4b508efc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >This file consists of classes of Units, i.e. <a class="el" href="classInfantry.html">Infantry</a>, <a class="el" href="classTank.html">Tank</a>, <a class="el" href="classArtillery.html">Artillery</a>. </p>

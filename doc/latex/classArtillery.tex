@@ -2,37 +2,63 @@
 \label{classArtillery}\index{Artillery@{Artillery}}
 
 
-Inheritance diagram for Artillery\+:\nopagebreak
+Inheritance diagram for Artillery\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=187pt]{classArtillery__inherit__graph}
+\includegraphics[width=210pt]{classArtillery__inherit__graph}
 \end{center}
 \end{figure}
 
 
-Collaboration diagram for Artillery\+:\nopagebreak
+Collaboration diagram for Artillery\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=187pt]{classArtillery__coll__graph}
+\includegraphics[width=210pt]{classArtillery__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 const Unit\+Type \mbox{\hyperlink{classArtillery_a012b1abf931ed58f3c83a3029b3bd963}{get\+Type}} ()
-\end{DoxyCompactItemize}
+\item 
+const int \mbox{\hyperlink{classArtillery_a4b0b939f47184f986422010d0ebcc741}{get\+Base\+Attack}} (const Unit\+ID \&unit\+Type)
+\begin{DoxyCompactList}\small\item\em get Base attack of artillery \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 
 
-Definition at line \mbox{\hyperlink{units_8h_source_l00082}{82}} of file \mbox{\hyperlink{units_8h_source}{units.\+h}}.
+Definition at line \mbox{\hyperlink{units_8h_source_l00115}{115}} of file \mbox{\hyperlink{units_8h_source}{units.\+h}}.
 
 
 
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classArtillery_a4b0b939f47184f986422010d0ebcc741}\label{classArtillery_a4b0b939f47184f986422010d0ebcc741}} 
+\index{Artillery@{Artillery}!getBaseAttack@{getBaseAttack}}
+\index{getBaseAttack@{getBaseAttack}!Artillery@{Artillery}}
+\doxysubsubsection{\texorpdfstring{getBaseAttack()}{getBaseAttack()}}
+{\footnotesize\ttfamily const int Artillery\+::get\+Base\+Attack (\begin{DoxyParamCaption}\item[{const Unit\+ID \&}]{unit\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+get Base attack of artillery 
+
+
+\begin{DoxyParams}{Parameters}
+{\em unit\+Type} & type of enemy uniut \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+base attack for artillery when dealing with certain enemy 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classUnit_afac61778dffec3c7d9f517c0767f7d9e}{Unit}}.
+
 \mbox{\Hypertarget{classArtillery_a012b1abf931ed58f3c83a3029b3bd963}\label{classArtillery_a012b1abf931ed58f3c83a3029b3bd963}} 
 \index{Artillery@{Artillery}!getType@{getType}}
 \index{getType@{getType}!Artillery@{Artillery}}
@@ -48,7 +74,7 @@ Reimplemented from \mbox{\hyperlink{classUnit_a208d354a0ca6f4adc9a24f9913129ca9}
 
 
 
-Definition at line \mbox{\hyperlink{units_8h_source_l00085}{85}} of file \mbox{\hyperlink{units_8h_source}{units.\+h}}.
+Definition at line \mbox{\hyperlink{units_8h_source_l00118}{118}} of file \mbox{\hyperlink{units_8h_source}{units.\+h}}.
 
 
 

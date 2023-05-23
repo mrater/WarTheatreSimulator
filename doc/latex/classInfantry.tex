@@ -2,37 +2,63 @@
 \label{classInfantry}\index{Infantry@{Infantry}}
 
 
-Inheritance diagram for Infantry\+:\nopagebreak
+Inheritance diagram for Infantry\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=187pt]{classInfantry__inherit__graph}
+\includegraphics[width=210pt]{classInfantry__inherit__graph}
 \end{center}
 \end{figure}
 
 
-Collaboration diagram for Infantry\+:\nopagebreak
+Collaboration diagram for Infantry\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=187pt]{classInfantry__coll__graph}
+\includegraphics[width=210pt]{classInfantry__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 const Unit\+Type \mbox{\hyperlink{classInfantry_a8bdc8ccd9a81f3cb6ad73b1eaeea658a}{get\+Type}} ()
-\end{DoxyCompactItemize}
+\item 
+const int \mbox{\hyperlink{classInfantry_ab7aa7d3ecd6d53a5e02517553fbe69d4}{get\+Base\+Attack}} (const Unit\+ID \&unit\+Type)
+\begin{DoxyCompactList}\small\item\em get Base attack of infantry \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 
 
-Definition at line \mbox{\hyperlink{units_8h_source_l00066}{66}} of file \mbox{\hyperlink{units_8h_source}{units.\+h}}.
+Definition at line \mbox{\hyperlink{units_8h_source_l00090}{90}} of file \mbox{\hyperlink{units_8h_source}{units.\+h}}.
 
 
 
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classInfantry_ab7aa7d3ecd6d53a5e02517553fbe69d4}\label{classInfantry_ab7aa7d3ecd6d53a5e02517553fbe69d4}} 
+\index{Infantry@{Infantry}!getBaseAttack@{getBaseAttack}}
+\index{getBaseAttack@{getBaseAttack}!Infantry@{Infantry}}
+\doxysubsubsection{\texorpdfstring{getBaseAttack()}{getBaseAttack()}}
+{\footnotesize\ttfamily const int Infantry\+::get\+Base\+Attack (\begin{DoxyParamCaption}\item[{const Unit\+ID \&}]{unit\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+get Base attack of infantry 
+
+
+\begin{DoxyParams}{Parameters}
+{\em unit\+Type} & type of enemy uniut \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+base attack for infantry when dealing with certain enemy 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classUnit_afac61778dffec3c7d9f517c0767f7d9e}{Unit}}.
+
 \mbox{\Hypertarget{classInfantry_a8bdc8ccd9a81f3cb6ad73b1eaeea658a}\label{classInfantry_a8bdc8ccd9a81f3cb6ad73b1eaeea658a}} 
 \index{Infantry@{Infantry}!getType@{getType}}
 \index{getType@{getType}!Infantry@{Infantry}}
@@ -48,7 +74,7 @@ Reimplemented from \mbox{\hyperlink{classUnit_a208d354a0ca6f4adc9a24f9913129ca9}
 
 
 
-Definition at line \mbox{\hyperlink{units_8h_source_l00069}{69}} of file \mbox{\hyperlink{units_8h_source}{units.\+h}}.
+Definition at line \mbox{\hyperlink{units_8h_source_l00093}{93}} of file \mbox{\hyperlink{units_8h_source}{units.\+h}}.
 
 
 

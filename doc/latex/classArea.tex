@@ -2,20 +2,134 @@
 \label{classArea}\index{Area@{Area}}
 
 
+Inheritance diagram for Area\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=204pt]{classArea__inherit__graph}
+\end{center}
+\end{figure}
+
+
 Collaboration diagram for Area\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=119pt]{classArea__coll__graph}
+\includegraphics[width=204pt]{classArea__coll__graph}
 \end{center}
 \end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classArea_a42882573d7921655aa8349275f1cca01}{is\+Real\+Position}} (const \mbox{\hyperlink{classPosition}{Position}} \&position)
+\begin{DoxyCompactList}\small\item\em Check if given position exists in the area. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classUnit}{Unit}} \& \mbox{\hyperlink{classArea_a8a1c8e009b728fb3954c6b2784660850}{get\+Unit\+On\+Position}} (const \mbox{\hyperlink{classPosition}{Position}} \&position)
+\begin{DoxyCompactList}\small\item\em get unit on position \end{DoxyCompactList}\item 
+std\+::vector$<$ Unit\+ID $>$ \mbox{\hyperlink{classArea_abf4433ad48209c1c7740f383ad802089}{get\+Units\+Of\+Faction}} (const Unit\+Faction\+ID \&unit\+Faction\+ID) const
+\begin{DoxyCompactList}\small\item\em get units of faction \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::map$<$ \mbox{\hyperlink{field_8h_acbbc44300fc357bd36d61f64d8b35d96}{Field\+ID}}, \mbox{\hyperlink{classField}{Field}} $>$ \mbox{\hyperlink{classArea_a1d19c973d4b0aa9c59e89edf6eb8e6f8}{fields}}
+\begin{DoxyCompactList}\small\item\em Array with fields of the area. \end{DoxyCompactList}\item 
+std\+::map$<$ Unit\+ID, \mbox{\hyperlink{classUnit}{Unit}} $>$ \mbox{\hyperlink{classArea_ab768a3f6d74e699dab8e9f26aa7d0b92}{units}}
+\begin{DoxyCompactList}\small\item\em Units present in arrea. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 
 
-Definition at line \mbox{\hyperlink{area_8h_source_l00011}{11}} of file \mbox{\hyperlink{area_8h_source}{area.\+h}}.
+Definition at line \mbox{\hyperlink{area_8h_source_l00014}{14}} of file \mbox{\hyperlink{area_8h_source}{area.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classArea_a8a1c8e009b728fb3954c6b2784660850}\label{classArea_a8a1c8e009b728fb3954c6b2784660850}} 
+\index{Area@{Area}!getUnitOnPosition@{getUnitOnPosition}}
+\index{getUnitOnPosition@{getUnitOnPosition}!Area@{Area}}
+\doxysubsubsection{\texorpdfstring{getUnitOnPosition()}{getUnitOnPosition()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classUnit}{Unit}} \& Area\+::get\+Unit\+On\+Position (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classPosition}{Position}} \&}]{position }\end{DoxyParamCaption})}
+
+
+
+get unit on position 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & -\/ position to search unit on \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer to unit on a given position. units.\+end() is returned if none is available 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classArea_abf4433ad48209c1c7740f383ad802089}\label{classArea_abf4433ad48209c1c7740f383ad802089}} 
+\index{Area@{Area}!getUnitsOfFaction@{getUnitsOfFaction}}
+\index{getUnitsOfFaction@{getUnitsOfFaction}!Area@{Area}}
+\doxysubsubsection{\texorpdfstring{getUnitsOfFaction()}{getUnitsOfFaction()}}
+{\footnotesize\ttfamily std\+::vector$<$ Unit\+ID $>$ Area\+::get\+Units\+Of\+Faction (\begin{DoxyParamCaption}\item[{const Unit\+Faction\+ID \&}]{unit\+Faction\+ID }\end{DoxyParamCaption}) const}
+
+
+
+get units of faction 
+
+
+\begin{DoxyParams}{Parameters}
+{\em unit\+Faction\+ID} & faction of unit \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vector of units that belong to faction 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classArea_a42882573d7921655aa8349275f1cca01}\label{classArea_a42882573d7921655aa8349275f1cca01}} 
+\index{Area@{Area}!isRealPosition@{isRealPosition}}
+\index{isRealPosition@{isRealPosition}!Area@{Area}}
+\doxysubsubsection{\texorpdfstring{isRealPosition()}{isRealPosition()}}
+{\footnotesize\ttfamily bool Area\+::is\+Real\+Position (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classPosition}{Position}} \&}]{position }\end{DoxyParamCaption})}
+
+
+
+Check if given position exists in the area. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & -\/ checked position \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if field of given position exists 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classArea_a1d19c973d4b0aa9c59e89edf6eb8e6f8}\label{classArea_a1d19c973d4b0aa9c59e89edf6eb8e6f8}} 
+\index{Area@{Area}!fields@{fields}}
+\index{fields@{fields}!Area@{Area}}
+\doxysubsubsection{\texorpdfstring{fields}{fields}}
+{\footnotesize\ttfamily std\+::map$<$\mbox{\hyperlink{field_8h_acbbc44300fc357bd36d61f64d8b35d96}{Field\+ID}}, \mbox{\hyperlink{classField}{Field}}$>$ Area\+::fields\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Array with fields of the area. 
+
+
+
+Definition at line \mbox{\hyperlink{area_8h_source_l00018}{18}} of file \mbox{\hyperlink{area_8h_source}{area.\+h}}.
+
+\mbox{\Hypertarget{classArea_ab768a3f6d74e699dab8e9f26aa7d0b92}\label{classArea_ab768a3f6d74e699dab8e9f26aa7d0b92}} 
+\index{Area@{Area}!units@{units}}
+\index{units@{units}!Area@{Area}}
+\doxysubsubsection{\texorpdfstring{units}{units}}
+{\footnotesize\ttfamily std\+::map$<$Unit\+ID, \mbox{\hyperlink{classUnit}{Unit}}$>$ Area\+::units\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Units present in arrea. 
+
+
+
+Definition at line \mbox{\hyperlink{area_8h_source_l00021}{21}} of file \mbox{\hyperlink{area_8h_source}{area.\+h}}.
 
 
 

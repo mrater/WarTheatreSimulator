@@ -11,20 +11,22 @@ Basic class for all unit types.
 
 
 
-Inheritance diagram for Unit\+:\nopagebreak
+Inheritance diagram for Unit\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=338pt]{classUnit__inherit__graph}
+\includegraphics[width=350pt]{classUnit__inherit__graph}
 \end{center}
 \end{figure}
 
 
-Collaboration diagram for Unit\+:\nopagebreak
+Collaboration diagram for Unit\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=187pt]{classUnit__coll__graph}
+\includegraphics[width=210pt]{classUnit__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Member Functions}
@@ -32,10 +34,15 @@ Collaboration diagram for Unit\+:\nopagebreak
 \item 
 virtual const Unit\+Type \mbox{\hyperlink{classUnit_a208d354a0ca6f4adc9a24f9913129ca9}{get\+Type}} ()
 \begin{DoxyCompactList}\small\item\em get type ID of a unit \end{DoxyCompactList}\item 
-const \mbox{\hyperlink{classPosition}{Position}} \mbox{\hyperlink{classUnit_ae8f305525726c49988b99e16e053bf1f}{get\+Position}} ()
+const \mbox{\hyperlink{classPosition}{Position}} \mbox{\hyperlink{classUnit_af06b9ca36121262bd3d50e849ee23075}{get\+Position}} () const
 \item 
-virtual const int \mbox{\hyperlink{classUnit_aa57b5dd199d341820e3fe3c7c7125d80}{get\+Base\+Attack}} (const \mbox{\hyperlink{classUnit}{Unit}} \&defender\+Unit)
-\begin{DoxyCompactList}\small\item\em Get base attack, a value that might be unique for every pair (UNIT\+\_\+\+TYPE, DEFENDER\+\_\+\+UNIT\+\_\+\+TYPE) \end{DoxyCompactList}\end{DoxyCompactItemize}
+virtual const int \mbox{\hyperlink{classUnit_afac61778dffec3c7d9f517c0767f7d9e}{get\+Base\+Attack}} (const Unit\+Type \&unit\+Type)
+\begin{DoxyCompactList}\small\item\em Get base attack, a value that might be unique for every pair (UNIT\+\_\+\+TYPE, DEFENDER\+\_\+\+UNIT\+\_\+\+TYPE) \end{DoxyCompactList}\item 
+virtual const Unit\+Faction\+ID \mbox{\hyperlink{classUnit_ac5c22f1af33f39d355efbe0406db222e}{get\+Unit\+Faction\+ID}} () const
+\begin{DoxyCompactList}\small\item\em get ID of unit faction \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classUnit_aa61f17c71d76dcafac4391812d110a3c}\label{classUnit_aa61f17c71d76dcafac4391812d110a3c}} 
+void {\bfseries change\+Unit\+Position} (const \mbox{\hyperlink{classPosition}{Position}} \&\mbox{\hyperlink{classUnit_a27e74ea818f26a5dba884564bc44c7de}{position}})
+\begin{DoxyCompactList}\small\item\em change position of a unit \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -50,22 +57,24 @@ int \mbox{\hyperlink{classUnit_af9ff205b8669a9466d88ebb60d7ec7e4}{base\+Strength
 \mbox{\hyperlink{classPosition}{Position}} \mbox{\hyperlink{classUnit_a27e74ea818f26a5dba884564bc44c7de}{position}}
 \begin{DoxyCompactList}\small\item\em position of a unit \end{DoxyCompactList}\item 
 Unit\+Faction\+ID \mbox{\hyperlink{classUnit_a90868f03f29dbf345f91d82b2d9e6513}{unit\+Faction\+Id}}
-\begin{DoxyCompactList}\small\item\em ID of faction that owns the unit\`{}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em ID of faction that owns the unit\`{}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classUnit_a2550ac61e672621ed7a14939cce281e0}{unit\+Range}}
+\begin{DoxyCompactList}\small\item\em range of an attack of a unit unit\+Range = X means that every enemy unit in (manhattan distance) X of our unit can be attacked \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 Basic class for all unit types. 
 
-Definition at line \mbox{\hyperlink{units_8h_source_l00025}{25}} of file \mbox{\hyperlink{units_8h_source}{units.\+h}}.
+Definition at line \mbox{\hyperlink{units_8h_source_l00037}{37}} of file \mbox{\hyperlink{units_8h_source}{units.\+h}}.
 
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{classUnit_aa57b5dd199d341820e3fe3c7c7125d80}\label{classUnit_aa57b5dd199d341820e3fe3c7c7125d80}} 
+\mbox{\Hypertarget{classUnit_afac61778dffec3c7d9f517c0767f7d9e}\label{classUnit_afac61778dffec3c7d9f517c0767f7d9e}} 
 \index{Unit@{Unit}!getBaseAttack@{getBaseAttack}}
 \index{getBaseAttack@{getBaseAttack}!Unit@{Unit}}
 \doxysubsubsection{\texorpdfstring{getBaseAttack()}{getBaseAttack()}}
-{\footnotesize\ttfamily virtual const int Unit\+::get\+Base\+Attack (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classUnit}{Unit}} \&}]{defender\+Unit }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+{\footnotesize\ttfamily virtual const int Unit\+::get\+Base\+Attack (\begin{DoxyParamCaption}\item[{const Unit\+Type \&}]{unit\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
@@ -73,30 +82,30 @@ Get base attack, a value that might be unique for every pair (UNIT\+\_\+\+TYPE, 
 
 
 \begin{DoxyParams}{Parameters}
-{\em defender\+Unit} & -\/ enemy unit that is under our attack \\
+{\em unit\+Type} & -\/ type of enemy unit that we deal with \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 base attack of this unit type 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classUnit_ae8f305525726c49988b99e16e053bf1f}\label{classUnit_ae8f305525726c49988b99e16e053bf1f}} 
+
+
+Reimplemented in \mbox{\hyperlink{classInfantry_ab7aa7d3ecd6d53a5e02517553fbe69d4}{Infantry}}, \mbox{\hyperlink{classTank_a322d56d7e2368d3a25e3501b78a72dfd}{Tank}}, and \mbox{\hyperlink{classArtillery_a4b0b939f47184f986422010d0ebcc741}{Artillery}}.
+
+\mbox{\Hypertarget{classUnit_af06b9ca36121262bd3d50e849ee23075}\label{classUnit_af06b9ca36121262bd3d50e849ee23075}} 
 \index{Unit@{Unit}!getPosition@{getPosition}}
 \index{getPosition@{getPosition}!Unit@{Unit}}
 \doxysubsubsection{\texorpdfstring{getPosition()}{getPosition()}}
-{\footnotesize\ttfamily const \mbox{\hyperlink{classPosition}{Position}} Unit\+::get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classPosition}{Position}} Unit\+::get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 \begin{DoxyReturn}{Returns}
 \mbox{\hyperlink{classPosition}{Position}} of unit 
 \end{DoxyReturn}
-
-
-Definition at line \mbox{\hyperlink{units_8cpp_source_l00003}{3}} of file \mbox{\hyperlink{units_8cpp_source}{units.\+cpp}}.
-
 \mbox{\Hypertarget{classUnit_a208d354a0ca6f4adc9a24f9913129ca9}\label{classUnit_a208d354a0ca6f4adc9a24f9913129ca9}} 
 \index{Unit@{Unit}!getType@{getType}}
 \index{getType@{getType}!Unit@{Unit}}
 \doxysubsubsection{\texorpdfstring{getType()}{getType()}}
-{\footnotesize\ttfamily virtual const Unit\+Type Unit\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily virtual const Unit\+Type Unit\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
@@ -109,10 +118,19 @@ ID of unit type
 
 Reimplemented in \mbox{\hyperlink{classInfantry_a8bdc8ccd9a81f3cb6ad73b1eaeea658a}{Infantry}}, \mbox{\hyperlink{classTank_af13cd247c4acbb84138ef5c09f653bfa}{Tank}}, and \mbox{\hyperlink{classArtillery_a012b1abf931ed58f3c83a3029b3bd963}{Artillery}}.
 
+\mbox{\Hypertarget{classUnit_ac5c22f1af33f39d355efbe0406db222e}\label{classUnit_ac5c22f1af33f39d355efbe0406db222e}} 
+\index{Unit@{Unit}!getUnitFactionID@{getUnitFactionID}}
+\index{getUnitFactionID@{getUnitFactionID}!Unit@{Unit}}
+\doxysubsubsection{\texorpdfstring{getUnitFactionID()}{getUnitFactionID()}}
+{\footnotesize\ttfamily virtual const Unit\+Faction\+ID Unit\+::get\+Unit\+Faction\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
-Definition at line \mbox{\hyperlink{units_8h_source_l00055}{55}} of file \mbox{\hyperlink{units_8h_source}{units.\+h}}.
 
+get ID of unit faction 
+
+\begin{DoxyReturn}{Returns}
+ID of a faction of unit 
+\end{DoxyReturn}
 
 
 \doxysubsection{Member Data Documentation}
@@ -128,7 +146,7 @@ basic strength of a unit (it is determined only by type of unit)
 
 
 
-Definition at line \mbox{\hyperlink{units_8h_source_l00044}{44}} of file \mbox{\hyperlink{units_8h_source}{units.\+h}}.
+Definition at line \mbox{\hyperlink{units_8h_source_l00056}{56}} of file \mbox{\hyperlink{units_8h_source}{units.\+h}}.
 
 \mbox{\Hypertarget{classUnit_abf9daa438c2896e00f47b75d0f23b16e}\label{classUnit_abf9daa438c2896e00f47b75d0f23b16e}} 
 \index{Unit@{Unit}!ID@{ID}}
@@ -142,7 +160,7 @@ individual identifier for a unit
 
 
 
-Definition at line \mbox{\hyperlink{units_8h_source_l00028}{28}} of file \mbox{\hyperlink{units_8h_source}{units.\+h}}.
+Definition at line \mbox{\hyperlink{units_8h_source_l00040}{40}} of file \mbox{\hyperlink{units_8h_source}{units.\+h}}.
 
 \mbox{\Hypertarget{classUnit_ad5074bce3536b87fed960a8a6415c7e9}\label{classUnit_ad5074bce3536b87fed960a8a6415c7e9}} 
 \index{Unit@{Unit}!organization@{organization}}
@@ -156,7 +174,7 @@ organization stat of a unit.
 
 It is similar to HP in strategy games. When organization is below 0, a unit dissolves. Movement, attack and defence cost some degree of organization 
 
-Definition at line \mbox{\hyperlink{units_8h_source_l00034}{34}} of file \mbox{\hyperlink{units_8h_source}{units.\+h}}.
+Definition at line \mbox{\hyperlink{units_8h_source_l00046}{46}} of file \mbox{\hyperlink{units_8h_source}{units.\+h}}.
 
 \mbox{\Hypertarget{classUnit_a27e74ea818f26a5dba884564bc44c7de}\label{classUnit_a27e74ea818f26a5dba884564bc44c7de}} 
 \index{Unit@{Unit}!position@{position}}
@@ -170,7 +188,7 @@ position of a unit
 
 
 
-Definition at line \mbox{\hyperlink{units_8h_source_l00047}{47}} of file \mbox{\hyperlink{units_8h_source}{units.\+h}}.
+Definition at line \mbox{\hyperlink{units_8h_source_l00059}{59}} of file \mbox{\hyperlink{units_8h_source}{units.\+h}}.
 
 \mbox{\Hypertarget{classUnit_a1c8bedcf377b774e5fd057b4da438e28}\label{classUnit_a1c8bedcf377b774e5fd057b4da438e28}} 
 \index{Unit@{Unit}!supplyLevel@{supplyLevel}}
@@ -184,7 +202,7 @@ Level of logistic supply of a unit.
 
 Level of supply is determined by fuel source nearby. It decreases during\+: defence, attack, movement. 100 supply level is considered enough (more gives no bonuses nor punishments) 
 
-Definition at line \mbox{\hyperlink{units_8h_source_l00041}{41}} of file \mbox{\hyperlink{units_8h_source}{units.\+h}}.
+Definition at line \mbox{\hyperlink{units_8h_source_l00053}{53}} of file \mbox{\hyperlink{units_8h_source}{units.\+h}}.
 
 \mbox{\Hypertarget{classUnit_a90868f03f29dbf345f91d82b2d9e6513}\label{classUnit_a90868f03f29dbf345f91d82b2d9e6513}} 
 \index{Unit@{Unit}!unitFactionId@{unitFactionId}}
@@ -198,11 +216,24 @@ ID of faction that owns the unit\`{}.
 
 
 
-Definition at line \mbox{\hyperlink{units_8h_source_l00050}{50}} of file \mbox{\hyperlink{units_8h_source}{units.\+h}}.
+Definition at line \mbox{\hyperlink{units_8h_source_l00062}{62}} of file \mbox{\hyperlink{units_8h_source}{units.\+h}}.
+
+\mbox{\Hypertarget{classUnit_a2550ac61e672621ed7a14939cce281e0}\label{classUnit_a2550ac61e672621ed7a14939cce281e0}} 
+\index{Unit@{Unit}!unitRange@{unitRange}}
+\index{unitRange@{unitRange}!Unit@{Unit}}
+\doxysubsubsection{\texorpdfstring{unitRange}{unitRange}}
+{\footnotesize\ttfamily int Unit\+::unit\+Range\hspace{0.3cm}{\ttfamily [protected]}}
 
 
 
-The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+range of an attack of a unit unit\+Range = X means that every enemy unit in (manhattan distance) X of our unit can be attacked 
+
+
+
+Definition at line \mbox{\hyperlink{units_8h_source_l00066}{66}} of file \mbox{\hyperlink{units_8h_source}{units.\+h}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-include/\mbox{\hyperlink{units_8h}{units.\+h}}\item 
-include/units.\+cpp\end{DoxyCompactItemize}
+include/\mbox{\hyperlink{units_8h}{units.\+h}}\end{DoxyCompactItemize}

@@ -2,37 +2,63 @@
 \label{classTank}\index{Tank@{Tank}}
 
 
-Inheritance diagram for Tank\+:\nopagebreak
+Inheritance diagram for Tank\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=187pt]{classTank__inherit__graph}
+\includegraphics[width=210pt]{classTank__inherit__graph}
 \end{center}
 \end{figure}
 
 
-Collaboration diagram for Tank\+:\nopagebreak
+Collaboration diagram for Tank\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=187pt]{classTank__coll__graph}
+\includegraphics[width=210pt]{classTank__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 const Unit\+Type \mbox{\hyperlink{classTank_af13cd247c4acbb84138ef5c09f653bfa}{get\+Type}} ()
-\end{DoxyCompactItemize}
+\item 
+const int \mbox{\hyperlink{classTank_a322d56d7e2368d3a25e3501b78a72dfd}{get\+Base\+Attack}} (const Unit\+ID \&unit\+Type)
+\begin{DoxyCompactList}\small\item\em get Base attack of tank \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 
 
-Definition at line \mbox{\hyperlink{units_8h_source_l00074}{74}} of file \mbox{\hyperlink{units_8h_source}{units.\+h}}.
+Definition at line \mbox{\hyperlink{units_8h_source_l00102}{102}} of file \mbox{\hyperlink{units_8h_source}{units.\+h}}.
 
 
 
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTank_a322d56d7e2368d3a25e3501b78a72dfd}\label{classTank_a322d56d7e2368d3a25e3501b78a72dfd}} 
+\index{Tank@{Tank}!getBaseAttack@{getBaseAttack}}
+\index{getBaseAttack@{getBaseAttack}!Tank@{Tank}}
+\doxysubsubsection{\texorpdfstring{getBaseAttack()}{getBaseAttack()}}
+{\footnotesize\ttfamily const int Tank\+::get\+Base\+Attack (\begin{DoxyParamCaption}\item[{const Unit\+ID \&}]{unit\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+get Base attack of tank 
+
+
+\begin{DoxyParams}{Parameters}
+{\em unit\+Type} & type of enemy uniut \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+base attack for tank when dealing with certain enemy 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classUnit_afac61778dffec3c7d9f517c0767f7d9e}{Unit}}.
+
 \mbox{\Hypertarget{classTank_af13cd247c4acbb84138ef5c09f653bfa}\label{classTank_af13cd247c4acbb84138ef5c09f653bfa}} 
 \index{Tank@{Tank}!getType@{getType}}
 \index{getType@{getType}!Tank@{Tank}}
@@ -48,7 +74,7 @@ Reimplemented from \mbox{\hyperlink{classUnit_a208d354a0ca6f4adc9a24f9913129ca9}
 
 
 
-Definition at line \mbox{\hyperlink{units_8h_source_l00077}{77}} of file \mbox{\hyperlink{units_8h_source}{units.\+h}}.
+Definition at line \mbox{\hyperlink{units_8h_source_l00105}{105}} of file \mbox{\hyperlink{units_8h_source}{units.\+h}}.
 
 
 

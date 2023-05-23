@@ -89,21 +89,191 @@ $(document).ready(function(){initNavTree('classArea.html',''); initResizable(); 
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="classArea-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">Area Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Area:</div>
+<div class="dyncontent">
+<div class="center"><img src="classArea__inherit__graph.png" border="0" usemap="#aArea_inherit__map" alt="Inheritance graph"/></div>
+<map name="aArea_inherit__map" id="aArea_inherit__map">
+<area shape="rect" title=" " alt="" coords="5,5,171,127"/>
+<area shape="rect" href="classAreaManager.html" title=" " alt="" coords="33,175,143,252"/>
+</map>
+</div>
 <div class="dynheader">
 Collaboration diagram for Area:</div>
 <div class="dyncontent">
 <div class="center"><img src="classArea__coll__graph.png" border="0" usemap="#aArea_coll__map" alt="Collaboration graph"/></div>
 <map name="aArea_coll__map" id="aArea_coll__map">
-<area shape="rect" title=" " alt="" coords="5,5,57,83"/>
+<area shape="rect" title=" " alt="" coords="5,5,171,127"/>
 </map>
 </div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a42882573d7921655aa8349275f1cca01"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArea.html#a42882573d7921655aa8349275f1cca01">isRealPosition</a> (const <a class="el" href="classPosition.html">Position</a> &amp;position)</td></tr>
+<tr class="memdesc:a42882573d7921655aa8349275f1cca01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if given position exists in the area.  <a href="classArea.html#a42882573d7921655aa8349275f1cca01">More...</a><br /></td></tr>
+<tr class="separator:a42882573d7921655aa8349275f1cca01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a1c8e009b728fb3954c6b2784660850"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classUnit.html">Unit</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArea.html#a8a1c8e009b728fb3954c6b2784660850">getUnitOnPosition</a> (const <a class="el" href="classPosition.html">Position</a> &amp;position)</td></tr>
+<tr class="memdesc:a8a1c8e009b728fb3954c6b2784660850"><td class="mdescLeft">&#160;</td><td class="mdescRight">get unit on position  <a href="classArea.html#a8a1c8e009b728fb3954c6b2784660850">More...</a><br /></td></tr>
+<tr class="separator:a8a1c8e009b728fb3954c6b2784660850"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf4433ad48209c1c7740f383ad802089"><td class="memItemLeft" align="right" valign="top">std::vector&lt; UnitID &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArea.html#abf4433ad48209c1c7740f383ad802089">getUnitsOfFaction</a> (const UnitFactionID &amp;unitFactionID) const</td></tr>
+<tr class="memdesc:abf4433ad48209c1c7740f383ad802089"><td class="mdescLeft">&#160;</td><td class="mdescRight">get units of faction  <a href="classArea.html#abf4433ad48209c1c7740f383ad802089">More...</a><br /></td></tr>
+<tr class="separator:abf4433ad48209c1c7740f383ad802089"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:a1d19c973d4b0aa9c59e89edf6eb8e6f8"><td class="memItemLeft" align="right" valign="top">std::map&lt; <a class="el" href="field_8h.html#acbbc44300fc357bd36d61f64d8b35d96">FieldID</a>, <a class="el" href="classField.html">Field</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArea.html#a1d19c973d4b0aa9c59e89edf6eb8e6f8">fields</a></td></tr>
+<tr class="memdesc:a1d19c973d4b0aa9c59e89edf6eb8e6f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array with fields of the area.  <a href="classArea.html#a1d19c973d4b0aa9c59e89edf6eb8e6f8">More...</a><br /></td></tr>
+<tr class="separator:a1d19c973d4b0aa9c59e89edf6eb8e6f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab768a3f6d74e699dab8e9f26aa7d0b92"><td class="memItemLeft" align="right" valign="top">std::map&lt; UnitID, <a class="el" href="classUnit.html">Unit</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArea.html#ab768a3f6d74e699dab8e9f26aa7d0b92">units</a></td></tr>
+<tr class="memdesc:ab768a3f6d74e699dab8e9f26aa7d0b92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Units present in arrea.  <a href="classArea.html#ab768a3f6d74e699dab8e9f26aa7d0b92">More...</a><br /></td></tr>
+<tr class="separator:ab768a3f6d74e699dab8e9f26aa7d0b92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="area_8h_source.html#l00011">11</a> of file <a class="el" href="area_8h_source.html">area.h</a>.</p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+<p class="definition">Definition at line <a class="el" href="area_8h_source.html#l00014">14</a> of file <a class="el" href="area_8h_source.html">area.h</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a8a1c8e009b728fb3954c6b2784660850" name="a8a1c8e009b728fb3954c6b2784660850"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a1c8e009b728fb3954c6b2784660850">&#9670;&nbsp;</a></span>getUnitOnPosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classUnit.html">Unit</a> &amp; Area::getUnitOnPosition </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classPosition.html">Position</a> &amp;&#160;</td>
+          <td class="paramname"><em>position</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>get unit on position </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>- position to search unit on </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>pointer to unit on a given position. units.end() is returned if none is available </dd></dl>
+
+</div>
+</div>
+<a id="abf4433ad48209c1c7740f383ad802089" name="abf4433ad48209c1c7740f383ad802089"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf4433ad48209c1c7740f383ad802089">&#9670;&nbsp;</a></span>getUnitsOfFaction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; UnitID &gt; Area::getUnitsOfFaction </td>
+          <td>(</td>
+          <td class="paramtype">const UnitFactionID &amp;&#160;</td>
+          <td class="paramname"><em>unitFactionID</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>get units of faction </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">unitFactionID</td><td>faction of unit </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>vector of units that belong to faction </dd></dl>
+
+</div>
+</div>
+<a id="a42882573d7921655aa8349275f1cca01" name="a42882573d7921655aa8349275f1cca01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42882573d7921655aa8349275f1cca01">&#9670;&nbsp;</a></span>isRealPosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Area::isRealPosition </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classPosition.html">Position</a> &amp;&#160;</td>
+          <td class="paramname"><em>position</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Check if given position exists in the area. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>- checked position </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if field of given position exists </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a1d19c973d4b0aa9c59e89edf6eb8e6f8" name="a1d19c973d4b0aa9c59e89edf6eb8e6f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d19c973d4b0aa9c59e89edf6eb8e6f8">&#9670;&nbsp;</a></span>fields</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::map&lt;<a class="el" href="field_8h.html#acbbc44300fc357bd36d61f64d8b35d96">FieldID</a>, <a class="el" href="classField.html">Field</a>&gt; Area::fields</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Array with fields of the area. </p>
+
+<p class="definition">Definition at line <a class="el" href="area_8h_source.html#l00018">18</a> of file <a class="el" href="area_8h_source.html">area.h</a>.</p>
+
+</div>
+</div>
+<a id="ab768a3f6d74e699dab8e9f26aa7d0b92" name="ab768a3f6d74e699dab8e9f26aa7d0b92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab768a3f6d74e699dab8e9f26aa7d0b92">&#9670;&nbsp;</a></span>units</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::map&lt;UnitID, <a class="el" href="classUnit.html">Unit</a>&gt; Area::units</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Units present in arrea. </p>
+
+<p class="definition">Definition at line <a class="el" href="area_8h_source.html#l00021">21</a> of file <a class="el" href="area_8h_source.html">area.h</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>include/<a class="el" href="area_8h_source.html">area.h</a></li>
 </ul>
 </div><!-- contents -->

@@ -11,6 +11,9 @@
 /// @brief  type for identifiers of terrain
 typedef int TerrainType;
 
+/// @brief unique identifier of a field
+typedef int FieldID;
+
 /// @brief namespace consisting of terrain types IDs
 namespace Terrain {
     const TerrainType NONE = 0;
@@ -64,6 +67,7 @@ class PlainTerrain : public FieldType{
 class Field{
     private:
         Position position;
+        FieldID fieldID;
     
     protected:
         FieldType fieldType;

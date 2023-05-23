@@ -1,8 +1,10 @@
 var searchData=
 [
-  ['tank_0',['Tank',['../classTank.html',1,'']]],
-  ['tank_1',['TANK',['../namespaceUnitCategory.html#a6252c7062e54c34350dd2d39bd8ef575',1,'UnitCategory']]],
-  ['terrain_2',['Terrain',['../namespaceTerrain.html',1,'']]],
-  ['terrain_5fcoefficient_3',['TERRAIN_COEFFICIENT',['../namespacecalculateexampleinfantryfire.html#aadca55c9e54ba7301436edcedd7ae464',1,'calculateexampleinfantryfire']]],
-  ['terraintype_4',['TerrainType',['../field_8h.html#a496c6f2af5e0112082a649499236d4fb',1,'field.h']]]
+  ['unit_0',['Unit',['../classUnit.html',1,'']]],
+  ['unitcategory_1',['UnitCategory',['../namespaceUnitCategory.html',1,'']]],
+  ['unitfactionid_2',['unitFactionId',['../classUnit.html#a90868f03f29dbf345f91d82b2d9e6513',1,'Unit']]],
+  ['unitrange_3',['unitRange',['../classUnit.html#a2550ac61e672621ed7a14939cce281e0',1,'Unit']]],
+  ['units_4',['units',['../classArea.html#ab768a3f6d74e699dab8e9f26aa7d0b92',1,'Area']]],
+  ['units_2eh_5',['units.h',['../units_8h.html',1,'']]],
+  ['urbanterrain_6',['UrbanTerrain',['../classUrbanTerrain.html',1,'']]]
 ];

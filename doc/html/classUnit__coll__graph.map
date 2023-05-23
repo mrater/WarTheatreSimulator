@@ -1,4 +1,4 @@
 <map id="Unit" name="Unit">
-<area shape="rect" id="node1" title="Basic class for all unit types." alt="" coords="5,145,148,311"/>
-<area shape="rect" id="node2" href="$classPosition.html" title="Class to store position of a field. Coordinate systems which is going to be used for this hexagonal s..." alt="" coords="27,5,126,83"/>
+<area shape="rect" id="node1" title="Basic class for all unit types." alt="" coords="5,145,179,355"/>
+<area shape="rect" id="node2" href="$classPosition.html" title="Class to store position of a field. Coordinate systems which is going to be used for this hexagonal s..." alt="" coords="43,5,141,83"/>
 </map>

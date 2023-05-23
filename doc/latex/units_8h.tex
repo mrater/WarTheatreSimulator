@@ -13,11 +13,12 @@ Include dependency graph for units.\+h\+:\nopagebreak
 \includegraphics[width=168pt]{units_8h__incl}
 \end{center}
 \end{figure}
-This graph shows which files directly or indirectly include this file\+:\nopagebreak
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=179pt]{units_8h__dep__incl}
+\includegraphics[width=208pt]{units_8h__dep__incl}
 \end{center}
 \end{figure}
 \doxysubsection*{Classes}
@@ -35,7 +36,9 @@ class \mbox{\hyperlink{classArtillery}{Artillery}}
 \begin{DoxyCompactItemize}
 \item 
 namespace \mbox{\hyperlink{namespaceUnitCategory}{Unit\+Category}}
-\begin{DoxyCompactList}\small\item\em namespace with unit types category IDs \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em namespace with unit types category IDs \end{DoxyCompactList}\item 
+namespace \mbox{\hyperlink{namespacebaseAttack}{base\+Attack}}
+\begin{DoxyCompactList}\small\item\em namespace with constants of X\+\_\+Y attack. X\+\_\+Y means that X attacks Y with this basic damage \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Typedefs}
 \begin{DoxyCompactItemize}
 \item 
@@ -55,6 +58,16 @@ constexpr Unit\+Type \mbox{\hyperlink{namespaceUnitCategory_a485383fde688ad5acab
 constexpr Unit\+Type \mbox{\hyperlink{namespaceUnitCategory_a6252c7062e54c34350dd2d39bd8ef575}{Unit\+Category\+::\+TANK}} = 2
 \item 
 constexpr Unit\+Type \mbox{\hyperlink{namespaceUnitCategory_a80538708847ddd392f55fcf50a5f6f6f}{Unit\+Category\+::\+ARTILLERY}} = 3
+\item 
+constexpr int \mbox{\hyperlink{namespacebaseAttack_a592dd1bea4163e45ab01c98890160eb4}{base\+Attack\+::\+ERROR\+\_\+\+PAIR}} = -\/1
+\begin{DoxyCompactList}\small\item\em base attack when type of units are wrong \end{DoxyCompactList}\item 
+constexpr int \mbox{\hyperlink{namespacebaseAttack_a17090fcd77e41c9c3fd34c60fa1c0af0}{base\+Attack\+::\+INFRANTRY\+\_\+\+TO\+\_\+\+INFANTRY}} = 60
+\item 
+constexpr int \mbox{\hyperlink{namespacebaseAttack_a662eb62f04fe18aac25d1c019a3ca7e0}{base\+Attack\+::\+INFANTRY\+\_\+\+TO\+\_\+\+ARTILLERY}} = 100
+\item 
+constexpr int \mbox{\hyperlink{namespacebaseAttack_a3e702510ec20d1b15c331017e74625d3}{base\+Attack\+::\+ARTILLERY\+\_\+\+TO\+\_\+\+ARTILLERY}} = 100
+\item 
+constexpr int \mbox{\hyperlink{namespacebaseAttack_a652fb5e86c65fae4ef1064b4b508efc3}{base\+Attack\+::\+ARTILLERY\+\_\+\+TO\+\_\+\+INFANTRY}} = 100
 \end{DoxyCompactItemize}
 
 

@@ -17,6 +17,18 @@ namespace UnitCategory{
     constexpr UnitType ARTILLERY = 3;
 };
 
+/// @brief namespace with constants of X_Y attack.
+/// X_Y means that X attacks Y with this basic damage
+namespace baseAttack{
+    /// @brief base attack when type of units are wrong
+    constexpr int ERROR_PAIR = -1;
+
+    constexpr int INFRANTRY_TO_INFANTRY = 60;
+    constexpr int INFANTRY_TO_ARTILLERY = 100;
+    
+    constexpr int ARTILLERY_TO_ARTILLERY = 100;
+    constexpr int ARTILLERY_TO_INFANTRY = 100;
+}
 
 /**
  * @brief Basic class for all unit types
@@ -49,6 +61,10 @@ class Unit{
         /// @brief ID of faction that owns the unit`
         UnitFactionID unitFactionId;
 
+        /// @brief range of an attack of a unit
+        /// unitRange = X means that every enemy unit in (manhattan distance) X of our unit can be attacked
+        int unitRange;
+
     public:
         /// @brief get type ID of a unit
         /// @return ID of unit type
@@ -58,14 +74,17 @@ class Unit{
         const Position getPosition() const;
 
         /// @brief  Get base attack, a value that might be unique for every pair (UNIT_TYPE, DEFENDER_UNIT_TYPE)
-        /// @param defenderUnit - enemy unit that is under our attack
+        /// @param unitType - type of enemy unit that we deal with
         /// @return base attack of this unit type
-        virtual int getBaseAttack(const Unit &defenderUnit);
+        virtual const int getBaseAttack(const UnitType &unitType);
 
 
         /// @brief get ID of unit faction
         /// @return ID of a faction of unit
         virtual const UnitFactionID getUnitFactionID() const; 
+
+        /// @brief change position of a unit
+        void changeUnitPosition(const Position &position);
 };
 
 class Infantry : Unit {
@@ -74,6 +93,10 @@ class Infantry : Unit {
         const UnitType getType(){
             return UnitCategory::INFANTRY;
         }
+        /// @brief get Base attack of infantry
+        /// @param unitType type of enemy uniut
+        /// @return base attack for infantry when dealing with certain enemy
+        const int getBaseAttack(const UnitID &unitType);
 };
 
 class Tank : Unit {
@@ -82,6 +105,11 @@ class Tank : Unit {
         const UnitType getType(){
             return UnitCategory::TANK;
         }
+        /// @brief get Base attack of tank
+        /// @param unitType type of enemy uniut
+        /// @return base attack for tank when dealing with certain enemy
+        const int getBaseAttack(const UnitID &unitType);
+        
 };
 
 class Artillery : Unit{
@@ -90,4 +118,9 @@ class Artillery : Unit{
         const UnitType getType(){
             return UnitCategory::ARTILLERY;
         }
+        
+        /// @brief get Base attack of artillery
+        /// @param unitType type of enemy uniut
+        /// @return base attack for artillery when dealing with certain enemy
+        const int getBaseAttack(const UnitID &unitType);
 };

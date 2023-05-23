@@ -1,4 +1,4 @@
 <map id="Tank" name="Tank">
-<area shape="rect" id="node1" title=" " alt="" coords="27,233,126,311"/>
-<area shape="rect" id="node2" href="$classUnit.html" title="Basic class for all unit types." alt="" coords="5,5,148,185"/>
+<area shape="rect" id="node1" title=" " alt="" coords="21,277,163,369"/>
+<area shape="rect" id="node2" href="$classUnit.html" title="Basic class for all unit types." alt="" coords="5,5,179,229"/>
 </map>

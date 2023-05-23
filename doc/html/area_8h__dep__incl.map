@@ -1,0 +1,4 @@
+<map id="include/area.h" name="include/area.h">
+<area shape="rect" id="node1" title="This class manages whole war area This manages states of a world, including units stats,..." alt="" coords="33,5,148,32"/>
+<area shape="rect" id="node2" href="$areamanager_8h.html" title="This file manages the game area and its metadadata It has no safeguards, so it should not be used in ..." alt="" coords="5,80,176,107"/>
+</map>

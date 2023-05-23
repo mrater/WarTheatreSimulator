@@ -7,50 +7,53 @@
 \DoxyCodeLine{\Hypertarget{field_8h_source_l00010}00010 }
 \DoxyCodeLine{\Hypertarget{field_8h_source_l00012}\mbox{\hyperlink{field_8h_a496c6f2af5e0112082a649499236d4fb}{00012}} \textcolor{keyword}{typedef} \textcolor{keywordtype}{int} \mbox{\hyperlink{field_8h_a496c6f2af5e0112082a649499236d4fb}{TerrainType}};}
 \DoxyCodeLine{\Hypertarget{field_8h_source_l00013}00013 }
-\DoxyCodeLine{\Hypertarget{field_8h_source_l00015}\mbox{\hyperlink{namespaceTerrain}{00015}} \textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceTerrain}{Terrain}} \{}
-\DoxyCodeLine{\Hypertarget{field_8h_source_l00016}00016     \textcolor{keyword}{const} \mbox{\hyperlink{field_8h_a496c6f2af5e0112082a649499236d4fb}{TerrainType}} NONE = 0;}
-\DoxyCodeLine{\Hypertarget{field_8h_source_l00017}00017     \textcolor{keyword}{const} \mbox{\hyperlink{field_8h_a496c6f2af5e0112082a649499236d4fb}{TerrainType}} FOREST = 1;}
-\DoxyCodeLine{\Hypertarget{field_8h_source_l00018}00018     \textcolor{keyword}{const} \mbox{\hyperlink{field_8h_a496c6f2af5e0112082a649499236d4fb}{TerrainType}} URBAN = 2;}
-\DoxyCodeLine{\Hypertarget{field_8h_source_l00019}00019     \textcolor{keyword}{const} \mbox{\hyperlink{field_8h_a496c6f2af5e0112082a649499236d4fb}{TerrainType}} PLAIN = 3;}
-\DoxyCodeLine{\Hypertarget{field_8h_source_l00020}00020 \}}
-\DoxyCodeLine{\Hypertarget{field_8h_source_l00021}00021 }
-\DoxyCodeLine{\Hypertarget{field_8h_source_l00027}\mbox{\hyperlink{classPosition}{00027}} \textcolor{keyword}{class }\mbox{\hyperlink{classPosition}{Position}}\{}
-\DoxyCodeLine{\Hypertarget{field_8h_source_l00028}00028     \textcolor{keyword}{private}:}
-\DoxyCodeLine{\Hypertarget{field_8h_source_l00029}00029         \textcolor{keywordtype}{int} q,r;}
-\DoxyCodeLine{\Hypertarget{field_8h_source_l00030}00030 }
-\DoxyCodeLine{\Hypertarget{field_8h_source_l00033}00033         \textcolor{keyword}{const} \textcolor{keywordtype}{int} s();}
-\DoxyCodeLine{\Hypertarget{field_8h_source_l00034}00034     \textcolor{keyword}{public}:}
-\DoxyCodeLine{\Hypertarget{field_8h_source_l00035}00035         \mbox{\hyperlink{classPosition}{Position}} (\textcolor{keyword}{const} \textcolor{keywordtype}{int} \&\_q, \textcolor{keyword}{const} \textcolor{keywordtype}{int} \&\_r);}
-\DoxyCodeLine{\Hypertarget{field_8h_source_l00036}00036 \};}
-\DoxyCodeLine{\Hypertarget{field_8h_source_l00037}00037 }
-\DoxyCodeLine{\Hypertarget{field_8h_source_l00038}00038 }
-\DoxyCodeLine{\Hypertarget{field_8h_source_l00040}\mbox{\hyperlink{classFieldType}{00040}} \textcolor{keyword}{class }\mbox{\hyperlink{classFieldType}{FieldType}}\{}
-\DoxyCodeLine{\Hypertarget{field_8h_source_l00041}00041     \textcolor{keyword}{public}:}
-\DoxyCodeLine{\Hypertarget{field_8h_source_l00044}\mbox{\hyperlink{classFieldType_a9234520c3d200c3ddbf3cb145c5436f5}{00044}}         \textcolor{keyword}{virtual} \textcolor{keyword}{const} \mbox{\hyperlink{field_8h_a496c6f2af5e0112082a649499236d4fb}{TerrainType}} \mbox{\hyperlink{classFieldType_a9234520c3d200c3ddbf3cb145c5436f5}{getTerrainType}}();}
-\DoxyCodeLine{\Hypertarget{field_8h_source_l00045}00045 \};}
-\DoxyCodeLine{\Hypertarget{field_8h_source_l00046}00046 }
-\DoxyCodeLine{\Hypertarget{field_8h_source_l00047}\mbox{\hyperlink{classForestTerrain}{00047}} \textcolor{keyword}{class }\mbox{\hyperlink{classForestTerrain}{ForestTerrain}} : \textcolor{keyword}{public} \mbox{\hyperlink{classFieldType}{FieldType}}\{}
-\DoxyCodeLine{\Hypertarget{field_8h_source_l00050}00050     \textcolor{keyword}{const} \mbox{\hyperlink{field_8h_a496c6f2af5e0112082a649499236d4fb}{TerrainType}} getTerrainType();}
-\DoxyCodeLine{\Hypertarget{field_8h_source_l00051}00051 \};}
-\DoxyCodeLine{\Hypertarget{field_8h_source_l00052}\mbox{\hyperlink{classUrbanTerrain}{00052}} \textcolor{keyword}{class }\mbox{\hyperlink{classUrbanTerrain}{UrbanTerrain}} : \textcolor{keyword}{public} \mbox{\hyperlink{classFieldType}{FieldType}}\{}
-\DoxyCodeLine{\Hypertarget{field_8h_source_l00055}00055     \textcolor{keyword}{const} \mbox{\hyperlink{field_8h_a496c6f2af5e0112082a649499236d4fb}{TerrainType}} getTerrainType();}
-\DoxyCodeLine{\Hypertarget{field_8h_source_l00056}00056 \};}
-\DoxyCodeLine{\Hypertarget{field_8h_source_l00057}\mbox{\hyperlink{classPlainTerrain}{00057}} \textcolor{keyword}{class }\mbox{\hyperlink{classPlainTerrain}{PlainTerrain}} : \textcolor{keyword}{public} \mbox{\hyperlink{classFieldType}{FieldType}}\{}
-\DoxyCodeLine{\Hypertarget{field_8h_source_l00060}00060     \textcolor{keyword}{const} \mbox{\hyperlink{field_8h_a496c6f2af5e0112082a649499236d4fb}{TerrainType}} getTerrainType();}
-\DoxyCodeLine{\Hypertarget{field_8h_source_l00061}00061 \};}
-\DoxyCodeLine{\Hypertarget{field_8h_source_l00062}00062 }
-\DoxyCodeLine{\Hypertarget{field_8h_source_l00063}00063 }
-\DoxyCodeLine{\Hypertarget{field_8h_source_l00064}\mbox{\hyperlink{classField}{00064}} \textcolor{keyword}{class }\mbox{\hyperlink{classField}{Field}}\{}
-\DoxyCodeLine{\Hypertarget{field_8h_source_l00065}00065     \textcolor{keyword}{private}:}
-\DoxyCodeLine{\Hypertarget{field_8h_source_l00066}00066         \mbox{\hyperlink{classPosition}{Position}} position;}
-\DoxyCodeLine{\Hypertarget{field_8h_source_l00067}00067     }
-\DoxyCodeLine{\Hypertarget{field_8h_source_l00068}00068     \textcolor{keyword}{protected}:}
-\DoxyCodeLine{\Hypertarget{field_8h_source_l00069}00069         \mbox{\hyperlink{classFieldType}{FieldType}} fieldType;}
-\DoxyCodeLine{\Hypertarget{field_8h_source_l00070}00070 }
-\DoxyCodeLine{\Hypertarget{field_8h_source_l00071}00071     \textcolor{keyword}{public}:}
-\DoxyCodeLine{\Hypertarget{field_8h_source_l00076}\mbox{\hyperlink{classField_af1ffc3b324b77b22dcf86309ab9863c5}{00076}}         \mbox{\hyperlink{classPosition}{Position}} \mbox{\hyperlink{classField_af1ffc3b324b77b22dcf86309ab9863c5}{getPosition}}();}
-\DoxyCodeLine{\Hypertarget{field_8h_source_l00077}00077 }
-\DoxyCodeLine{\Hypertarget{field_8h_source_l00081}\mbox{\hyperlink{classField_affe2aefefc759ce7249986832c7e2c17}{00081}}         \textcolor{keyword}{virtual} \textcolor{keyword}{const} \mbox{\hyperlink{classFieldType}{FieldType}} \mbox{\hyperlink{classField_affe2aefefc759ce7249986832c7e2c17}{getTerrainType}}();}
-\DoxyCodeLine{\Hypertarget{field_8h_source_l00082}00082 \};}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00015}\mbox{\hyperlink{field_8h_acbbc44300fc357bd36d61f64d8b35d96}{00015}} \textcolor{keyword}{typedef} \textcolor{keywordtype}{int} \mbox{\hyperlink{field_8h_acbbc44300fc357bd36d61f64d8b35d96}{FieldID}};}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00016}00016 }
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00018}\mbox{\hyperlink{namespaceTerrain}{00018}} \textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceTerrain}{Terrain}} \{}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00019}00019     \textcolor{keyword}{const} \mbox{\hyperlink{field_8h_a496c6f2af5e0112082a649499236d4fb}{TerrainType}} NONE = 0;}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00020}00020     \textcolor{keyword}{const} \mbox{\hyperlink{field_8h_a496c6f2af5e0112082a649499236d4fb}{TerrainType}} FOREST = 1;}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00021}00021     \textcolor{keyword}{const} \mbox{\hyperlink{field_8h_a496c6f2af5e0112082a649499236d4fb}{TerrainType}} URBAN = 2;}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00022}00022     \textcolor{keyword}{const} \mbox{\hyperlink{field_8h_a496c6f2af5e0112082a649499236d4fb}{TerrainType}} PLAIN = 3;}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00023}00023 \}}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00024}00024 }
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00030}\mbox{\hyperlink{classPosition}{00030}} \textcolor{keyword}{class }\mbox{\hyperlink{classPosition}{Position}}\{}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00031}00031     \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00032}00032         \textcolor{keywordtype}{int} q,r;}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00033}00033 }
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00036}00036         \textcolor{keyword}{const} \textcolor{keywordtype}{int} s();}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00037}00037     \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00038}00038         \mbox{\hyperlink{classPosition}{Position}} (\textcolor{keyword}{const} \textcolor{keywordtype}{int} \&\_q, \textcolor{keyword}{const} \textcolor{keywordtype}{int} \&\_r);}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00039}00039 \};}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00040}00040 }
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00041}00041 }
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00043}\mbox{\hyperlink{classFieldType}{00043}} \textcolor{keyword}{class }\mbox{\hyperlink{classFieldType}{FieldType}}\{}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00044}00044     \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00047}\mbox{\hyperlink{classFieldType_a9234520c3d200c3ddbf3cb145c5436f5}{00047}}         \textcolor{keyword}{virtual} \textcolor{keyword}{const} \mbox{\hyperlink{field_8h_a496c6f2af5e0112082a649499236d4fb}{TerrainType}} \mbox{\hyperlink{classFieldType_a9234520c3d200c3ddbf3cb145c5436f5}{getTerrainType}}();}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00048}00048 \};}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00049}00049 }
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00050}\mbox{\hyperlink{classForestTerrain}{00050}} \textcolor{keyword}{class }\mbox{\hyperlink{classForestTerrain}{ForestTerrain}} : \textcolor{keyword}{public} \mbox{\hyperlink{classFieldType}{FieldType}}\{}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00053}00053     \textcolor{keyword}{const} \mbox{\hyperlink{field_8h_a496c6f2af5e0112082a649499236d4fb}{TerrainType}} getTerrainType();}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00054}00054 \};}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00055}\mbox{\hyperlink{classUrbanTerrain}{00055}} \textcolor{keyword}{class }\mbox{\hyperlink{classUrbanTerrain}{UrbanTerrain}} : \textcolor{keyword}{public} \mbox{\hyperlink{classFieldType}{FieldType}}\{}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00058}00058     \textcolor{keyword}{const} \mbox{\hyperlink{field_8h_a496c6f2af5e0112082a649499236d4fb}{TerrainType}} getTerrainType();}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00059}00059 \};}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00060}\mbox{\hyperlink{classPlainTerrain}{00060}} \textcolor{keyword}{class }\mbox{\hyperlink{classPlainTerrain}{PlainTerrain}} : \textcolor{keyword}{public} \mbox{\hyperlink{classFieldType}{FieldType}}\{}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00063}00063     \textcolor{keyword}{const} \mbox{\hyperlink{field_8h_a496c6f2af5e0112082a649499236d4fb}{TerrainType}} getTerrainType();}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00064}00064 \};}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00065}00065 }
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00066}00066 }
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00067}\mbox{\hyperlink{classField}{00067}} \textcolor{keyword}{class }\mbox{\hyperlink{classField}{Field}}\{}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00068}00068     \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00069}00069         \mbox{\hyperlink{classPosition}{Position}} position;}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00070}00070         \mbox{\hyperlink{field_8h_acbbc44300fc357bd36d61f64d8b35d96}{FieldID}} fieldID;}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00071}00071     }
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00072}00072     \textcolor{keyword}{protected}:}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00073}00073         \mbox{\hyperlink{classFieldType}{FieldType}} fieldType;}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00074}00074 }
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00075}00075     \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00080}\mbox{\hyperlink{classField_a712f9c53d1411f90ad9e6731ab94a262}{00080}}         \textcolor{keyword}{const} \mbox{\hyperlink{classPosition}{Position}} \mbox{\hyperlink{classField_a712f9c53d1411f90ad9e6731ab94a262}{getPosition}}();}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00081}00081 }
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00085}\mbox{\hyperlink{classField_affe2aefefc759ce7249986832c7e2c17}{00085}}         \textcolor{keyword}{virtual} \textcolor{keyword}{const} \mbox{\hyperlink{classFieldType}{FieldType}} \mbox{\hyperlink{classField_affe2aefefc759ce7249986832c7e2c17}{getTerrainType}}();}
+\DoxyCodeLine{\Hypertarget{field_8h_source_l00086}00086 \};}
 
 \end{DoxyCode}
