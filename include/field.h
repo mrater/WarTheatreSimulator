@@ -1,9 +1,7 @@
 /**
  * @file field.h
- * @author Maciej Sikorski
- * @brief File with field classes. Field is characterized with position (q,r, -q-r) and terrain type (forest, urban etc.)
- * @version 0.1
- * @date 2023-05-19
+ * @brief File with field classes. 
+ * @details Field is characterized with position (q,r, -q-r) and terrain type (forest, urban etc.)
  */
 
 #include<utility>
@@ -24,7 +22,7 @@ namespace Terrain {
 
 /**
  * @brief Class to store position of a field.
- * Coordinate systems which is going to be used for this hexagonal simulation is 
+ * @details Coordinate systems which is going to be used for this hexagonal simulation is 
  * q, r for two axes and s for the third (however, s is "artificial" since s = -q - r) 
  */
 class Position{

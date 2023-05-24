@@ -2,86 +2,87 @@
 \label{units_8h_source}\index{include/units.h@{include/units.h}}
 \mbox{\hyperlink{units_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\Hypertarget{units_8h_source_l00001}00001 }
-\DoxyCodeLine{\Hypertarget{units_8h_source_l00005}00005 \textcolor{preprocessor}{\#include"{}\mbox{\hyperlink{field_8h}{field.h}}"{}}}
-\DoxyCodeLine{\Hypertarget{units_8h_source_l00006}00006 }
-\DoxyCodeLine{\Hypertarget{units_8h_source_l00007}00007 }
-\DoxyCodeLine{\Hypertarget{units_8h_source_l00008}00008 \textcolor{keyword}{typedef} \textcolor{keywordtype}{int} UnitType;}
-\DoxyCodeLine{\Hypertarget{units_8h_source_l00009}00009 \textcolor{keyword}{typedef} \textcolor{keywordtype}{int} UnitID;}
-\DoxyCodeLine{\Hypertarget{units_8h_source_l00010}00010 \textcolor{keyword}{typedef} \textcolor{keywordtype}{int} UnitFactionID;}
-\DoxyCodeLine{\Hypertarget{units_8h_source_l00011}00011 }
-\DoxyCodeLine{\Hypertarget{units_8h_source_l00013}\mbox{\hyperlink{namespaceUnitCategory}{00013}} \textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceUnitCategory}{UnitCategory}}\{}
-\DoxyCodeLine{\Hypertarget{units_8h_source_l00014}00014     \textcolor{keyword}{constexpr} UnitType NONE = 0;}
-\DoxyCodeLine{\Hypertarget{units_8h_source_l00015}00015     \textcolor{keyword}{constexpr} UnitType INFANTRY = 1;}
-\DoxyCodeLine{\Hypertarget{units_8h_source_l00016}00016     \textcolor{keyword}{constexpr} UnitType TANK = 2;}
-\DoxyCodeLine{\Hypertarget{units_8h_source_l00017}00017     \textcolor{keyword}{constexpr} UnitType ARTILLERY = 3;}
-\DoxyCodeLine{\Hypertarget{units_8h_source_l00018}00018 \};}
-\DoxyCodeLine{\Hypertarget{units_8h_source_l00019}00019 }
-\DoxyCodeLine{\Hypertarget{units_8h_source_l00022}\mbox{\hyperlink{namespacebaseAttack}{00022}} \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacebaseAttack}{baseAttack}}\{}
-\DoxyCodeLine{\Hypertarget{units_8h_source_l00024}\mbox{\hyperlink{namespacebaseAttack_a592dd1bea4163e45ab01c98890160eb4}{00024}}     \textcolor{keyword}{constexpr} \textcolor{keywordtype}{int} \mbox{\hyperlink{namespacebaseAttack_a592dd1bea4163e45ab01c98890160eb4}{ERROR\_PAIR}} = -\/1;}
-\DoxyCodeLine{\Hypertarget{units_8h_source_l00025}00025 }
-\DoxyCodeLine{\Hypertarget{units_8h_source_l00026}00026     \textcolor{keyword}{constexpr} \textcolor{keywordtype}{int} INFRANTRY\_TO\_INFANTRY = 60;}
-\DoxyCodeLine{\Hypertarget{units_8h_source_l00027}00027     \textcolor{keyword}{constexpr} \textcolor{keywordtype}{int} INFANTRY\_TO\_ARTILLERY = 100;}
-\DoxyCodeLine{\Hypertarget{units_8h_source_l00028}00028     }
-\DoxyCodeLine{\Hypertarget{units_8h_source_l00029}00029     \textcolor{keyword}{constexpr} \textcolor{keywordtype}{int} ARTILLERY\_TO\_ARTILLERY = 100;}
-\DoxyCodeLine{\Hypertarget{units_8h_source_l00030}00030     \textcolor{keyword}{constexpr} \textcolor{keywordtype}{int} ARTILLERY\_TO\_INFANTRY = 100;}
-\DoxyCodeLine{\Hypertarget{units_8h_source_l00031}00031 \}}
-\DoxyCodeLine{\Hypertarget{units_8h_source_l00032}00032 }
-\DoxyCodeLine{\Hypertarget{units_8h_source_l00037}\mbox{\hyperlink{classUnit}{00037}} \textcolor{keyword}{class }\mbox{\hyperlink{classUnit}{Unit}}\{}
-\DoxyCodeLine{\Hypertarget{units_8h_source_l00038}00038     \textcolor{keyword}{protected}:}
-\DoxyCodeLine{\Hypertarget{units_8h_source_l00040}\mbox{\hyperlink{classUnit_abf9daa438c2896e00f47b75d0f23b16e}{00040}}         UnitID \mbox{\hyperlink{classUnit_abf9daa438c2896e00f47b75d0f23b16e}{ID}};}
-\DoxyCodeLine{\Hypertarget{units_8h_source_l00041}00041 }
-\DoxyCodeLine{\Hypertarget{units_8h_source_l00043}00043 }
-\DoxyCodeLine{\Hypertarget{units_8h_source_l00046}\mbox{\hyperlink{classUnit_ad5074bce3536b87fed960a8a6415c7e9}{00046}}         \textcolor{keywordtype}{int} \mbox{\hyperlink{classUnit_ad5074bce3536b87fed960a8a6415c7e9}{organization}};}
-\DoxyCodeLine{\Hypertarget{units_8h_source_l00047}00047 }
-\DoxyCodeLine{\Hypertarget{units_8h_source_l00049}00049 }
-\DoxyCodeLine{\Hypertarget{units_8h_source_l00053}\mbox{\hyperlink{classUnit_a1c8bedcf377b774e5fd057b4da438e28}{00053}}         \textcolor{keywordtype}{int} \mbox{\hyperlink{classUnit_a1c8bedcf377b774e5fd057b4da438e28}{supplyLevel}};}
-\DoxyCodeLine{\Hypertarget{units_8h_source_l00054}00054 }
-\DoxyCodeLine{\Hypertarget{units_8h_source_l00056}\mbox{\hyperlink{classUnit_af9ff205b8669a9466d88ebb60d7ec7e4}{00056}}         \textcolor{keywordtype}{int} \mbox{\hyperlink{classUnit_af9ff205b8669a9466d88ebb60d7ec7e4}{baseStrength}};}
-\DoxyCodeLine{\Hypertarget{units_8h_source_l00057}00057 }
-\DoxyCodeLine{\Hypertarget{units_8h_source_l00059}\mbox{\hyperlink{classUnit_a27e74ea818f26a5dba884564bc44c7de}{00059}}         \mbox{\hyperlink{classPosition}{Position}} \mbox{\hyperlink{classUnit_a27e74ea818f26a5dba884564bc44c7de}{position}};}
-\DoxyCodeLine{\Hypertarget{units_8h_source_l00060}00060 }
-\DoxyCodeLine{\Hypertarget{units_8h_source_l00062}\mbox{\hyperlink{classUnit_a90868f03f29dbf345f91d82b2d9e6513}{00062}}         UnitFactionID \mbox{\hyperlink{classUnit_a90868f03f29dbf345f91d82b2d9e6513}{unitFactionId}};}
-\DoxyCodeLine{\Hypertarget{units_8h_source_l00063}00063 }
-\DoxyCodeLine{\Hypertarget{units_8h_source_l00066}\mbox{\hyperlink{classUnit_a2550ac61e672621ed7a14939cce281e0}{00066}}         \textcolor{keywordtype}{int} \mbox{\hyperlink{classUnit_a2550ac61e672621ed7a14939cce281e0}{unitRange}};}
-\DoxyCodeLine{\Hypertarget{units_8h_source_l00067}00067 }
-\DoxyCodeLine{\Hypertarget{units_8h_source_l00068}00068     \textcolor{keyword}{public}:}
-\DoxyCodeLine{\Hypertarget{units_8h_source_l00071}\mbox{\hyperlink{classUnit_a208d354a0ca6f4adc9a24f9913129ca9}{00071}}         \textcolor{keyword}{const} \textcolor{keyword}{virtual} UnitType \mbox{\hyperlink{classUnit_a208d354a0ca6f4adc9a24f9913129ca9}{getType}}();}
-\DoxyCodeLine{\Hypertarget{units_8h_source_l00072}00072 }
-\DoxyCodeLine{\Hypertarget{units_8h_source_l00074}\mbox{\hyperlink{classUnit_af06b9ca36121262bd3d50e849ee23075}{00074}}         \textcolor{keyword}{const} \mbox{\hyperlink{classPosition}{Position}} \mbox{\hyperlink{classUnit_af06b9ca36121262bd3d50e849ee23075}{getPosition}}() \textcolor{keyword}{const};}
-\DoxyCodeLine{\Hypertarget{units_8h_source_l00075}00075 }
-\DoxyCodeLine{\Hypertarget{units_8h_source_l00079}\mbox{\hyperlink{classUnit_afac61778dffec3c7d9f517c0767f7d9e}{00079}}         \textcolor{keyword}{virtual} \textcolor{keyword}{const} \textcolor{keywordtype}{int} \mbox{\hyperlink{classUnit_afac61778dffec3c7d9f517c0767f7d9e}{getBaseAttack}}(\textcolor{keyword}{const} UnitType \&unitType);}
-\DoxyCodeLine{\Hypertarget{units_8h_source_l00080}00080 }
-\DoxyCodeLine{\Hypertarget{units_8h_source_l00081}00081 }
-\DoxyCodeLine{\Hypertarget{units_8h_source_l00084}\mbox{\hyperlink{classUnit_ac5c22f1af33f39d355efbe0406db222e}{00084}}         \textcolor{keyword}{virtual} \textcolor{keyword}{const} UnitFactionID \mbox{\hyperlink{classUnit_ac5c22f1af33f39d355efbe0406db222e}{getUnitFactionID}}() \textcolor{keyword}{const}; }
-\DoxyCodeLine{\Hypertarget{units_8h_source_l00085}00085 }
-\DoxyCodeLine{\Hypertarget{units_8h_source_l00087}\mbox{\hyperlink{classUnit_aa61f17c71d76dcafac4391812d110a3c}{00087}}         \textcolor{keywordtype}{void} \mbox{\hyperlink{classUnit_aa61f17c71d76dcafac4391812d110a3c}{changeUnitPosition}}(\textcolor{keyword}{const} \mbox{\hyperlink{classPosition}{Position}} \&\mbox{\hyperlink{classUnit_a27e74ea818f26a5dba884564bc44c7de}{position}});}
-\DoxyCodeLine{\Hypertarget{units_8h_source_l00088}00088 \};}
-\DoxyCodeLine{\Hypertarget{units_8h_source_l00089}00089 }
-\DoxyCodeLine{\Hypertarget{units_8h_source_l00090}\mbox{\hyperlink{classInfantry}{00090}} \textcolor{keyword}{class }\mbox{\hyperlink{classInfantry}{Infantry}} : \mbox{\hyperlink{classUnit}{Unit}} \{}
-\DoxyCodeLine{\Hypertarget{units_8h_source_l00091}00091     \textcolor{keyword}{public}:}
-\DoxyCodeLine{\Hypertarget{units_8h_source_l00093}\mbox{\hyperlink{classInfantry_a8bdc8ccd9a81f3cb6ad73b1eaeea658a}{00093}}         \textcolor{keyword}{const} UnitType \mbox{\hyperlink{classInfantry_a8bdc8ccd9a81f3cb6ad73b1eaeea658a}{getType}}()\{}
-\DoxyCodeLine{\Hypertarget{units_8h_source_l00094}00094             \textcolor{keywordflow}{return} UnitCategory::INFANTRY;}
-\DoxyCodeLine{\Hypertarget{units_8h_source_l00095}00095         \}}
-\DoxyCodeLine{\Hypertarget{units_8h_source_l00099}\mbox{\hyperlink{classInfantry_ab7aa7d3ecd6d53a5e02517553fbe69d4}{00099}}         \textcolor{keyword}{const} \textcolor{keywordtype}{int} \mbox{\hyperlink{classInfantry_ab7aa7d3ecd6d53a5e02517553fbe69d4}{getBaseAttack}}(\textcolor{keyword}{const} UnitID \&unitType);}
-\DoxyCodeLine{\Hypertarget{units_8h_source_l00100}00100 \};}
-\DoxyCodeLine{\Hypertarget{units_8h_source_l00101}00101 }
-\DoxyCodeLine{\Hypertarget{units_8h_source_l00102}\mbox{\hyperlink{classTank}{00102}} \textcolor{keyword}{class }\mbox{\hyperlink{classTank}{Tank}} : \mbox{\hyperlink{classUnit}{Unit}} \{}
-\DoxyCodeLine{\Hypertarget{units_8h_source_l00103}00103     \textcolor{keyword}{public}:}
-\DoxyCodeLine{\Hypertarget{units_8h_source_l00105}\mbox{\hyperlink{classTank_af13cd247c4acbb84138ef5c09f653bfa}{00105}}         \textcolor{keyword}{const} UnitType \mbox{\hyperlink{classTank_af13cd247c4acbb84138ef5c09f653bfa}{getType}}()\{}
-\DoxyCodeLine{\Hypertarget{units_8h_source_l00106}00106             \textcolor{keywordflow}{return} UnitCategory::TANK;}
-\DoxyCodeLine{\Hypertarget{units_8h_source_l00107}00107         \}}
-\DoxyCodeLine{\Hypertarget{units_8h_source_l00111}\mbox{\hyperlink{classTank_a322d56d7e2368d3a25e3501b78a72dfd}{00111}}         \textcolor{keyword}{const} \textcolor{keywordtype}{int} \mbox{\hyperlink{classTank_a322d56d7e2368d3a25e3501b78a72dfd}{getBaseAttack}}(\textcolor{keyword}{const} UnitID \&unitType);}
-\DoxyCodeLine{\Hypertarget{units_8h_source_l00112}00112         }
-\DoxyCodeLine{\Hypertarget{units_8h_source_l00113}00113 \};}
-\DoxyCodeLine{\Hypertarget{units_8h_source_l00114}00114 }
-\DoxyCodeLine{\Hypertarget{units_8h_source_l00115}\mbox{\hyperlink{classArtillery}{00115}} \textcolor{keyword}{class }\mbox{\hyperlink{classArtillery}{Artillery}} : \mbox{\hyperlink{classUnit}{Unit}}\{}
-\DoxyCodeLine{\Hypertarget{units_8h_source_l00116}00116     \textcolor{keyword}{public}:}
-\DoxyCodeLine{\Hypertarget{units_8h_source_l00118}\mbox{\hyperlink{classArtillery_a012b1abf931ed58f3c83a3029b3bd963}{00118}}         \textcolor{keyword}{const} UnitType \mbox{\hyperlink{classArtillery_a012b1abf931ed58f3c83a3029b3bd963}{getType}}()\{}
-\DoxyCodeLine{\Hypertarget{units_8h_source_l00119}00119             \textcolor{keywordflow}{return} UnitCategory::ARTILLERY;}
-\DoxyCodeLine{\Hypertarget{units_8h_source_l00120}00120         \}}
-\DoxyCodeLine{\Hypertarget{units_8h_source_l00121}00121         }
-\DoxyCodeLine{\Hypertarget{units_8h_source_l00125}\mbox{\hyperlink{classArtillery_a4b0b939f47184f986422010d0ebcc741}{00125}}         \textcolor{keyword}{const} \textcolor{keywordtype}{int} \mbox{\hyperlink{classArtillery_a4b0b939f47184f986422010d0ebcc741}{getBaseAttack}}(\textcolor{keyword}{const} UnitID \&unitType);}
-\DoxyCodeLine{\Hypertarget{units_8h_source_l00126}00126 \};}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include"{}\mbox{\hyperlink{field_8h}{field.h}}"{}}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{keyword}{typedef} \textcolor{keywordtype}{int} UnitType;}
+\DoxyCodeLine{10 \textcolor{keyword}{typedef} \textcolor{keywordtype}{int} UnitID;}
+\DoxyCodeLine{11 \textcolor{keyword}{typedef} \textcolor{keywordtype}{int} UnitFactionID;}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{14 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceUnitCategory}{UnitCategory}}\{}
+\DoxyCodeLine{15     \textcolor{keyword}{constexpr} UnitType NONE = 0;}
+\DoxyCodeLine{16     \textcolor{keyword}{constexpr} UnitType INFANTRY = 1;}
+\DoxyCodeLine{17     \textcolor{keyword}{constexpr} UnitType TANK = 2;}
+\DoxyCodeLine{18     \textcolor{keyword}{constexpr} UnitType ARTILLERY = 3;}
+\DoxyCodeLine{19 \};}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{23 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacebaseAttack}{baseAttack}}\{}
+\DoxyCodeLine{25     \textcolor{keyword}{constexpr} \textcolor{keywordtype}{int} \mbox{\hyperlink{namespacebaseAttack_a592dd1bea4163e45ab01c98890160eb4}{ERROR\_PAIR}} = -\/1;}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27     \textcolor{keyword}{constexpr} \textcolor{keywordtype}{int} INFRANTRY\_TO\_INFANTRY = 60;}
+\DoxyCodeLine{28     \textcolor{keyword}{constexpr} \textcolor{keywordtype}{int} INFANTRY\_TO\_ARTILLERY = 100;}
+\DoxyCodeLine{29     }
+\DoxyCodeLine{30     \textcolor{keyword}{constexpr} \textcolor{keywordtype}{int} ARTILLERY\_TO\_ARTILLERY = 100;}
+\DoxyCodeLine{31     \textcolor{keyword}{constexpr} \textcolor{keywordtype}{int} ARTILLERY\_TO\_INFANTRY = 100;}
+\DoxyCodeLine{32 \}}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{38 \textcolor{keyword}{class }\mbox{\hyperlink{classUnit}{Unit}}\{}
+\DoxyCodeLine{39     \textcolor{keyword}{protected}:}
+\DoxyCodeLine{41         UnitID \mbox{\hyperlink{classUnit_abf9daa438c2896e00f47b75d0f23b16e}{ID}};}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{44 }
+\DoxyCodeLine{47         \textcolor{keywordtype}{int} \mbox{\hyperlink{classUnit_ad5074bce3536b87fed960a8a6415c7e9}{organization}};}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{50 }
+\DoxyCodeLine{54         \textcolor{keywordtype}{int} \mbox{\hyperlink{classUnit_a1c8bedcf377b774e5fd057b4da438e28}{supplyLevel}};}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{57         \textcolor{keywordtype}{int} \mbox{\hyperlink{classUnit_af9ff205b8669a9466d88ebb60d7ec7e4}{baseStrength}};}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{60         \mbox{\hyperlink{classPosition}{Position}} \mbox{\hyperlink{classUnit_a27e74ea818f26a5dba884564bc44c7de}{position}};}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{63         UnitFactionID \mbox{\hyperlink{classUnit_a90868f03f29dbf345f91d82b2d9e6513}{unitFactionId}};}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{67         \textcolor{keywordtype}{int} \mbox{\hyperlink{classUnit_a2550ac61e672621ed7a14939cce281e0}{unitRange}};}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{69     \textcolor{keyword}{public}:}
+\DoxyCodeLine{72         \textcolor{keyword}{const} \textcolor{keyword}{virtual} UnitType \mbox{\hyperlink{classUnit_a208d354a0ca6f4adc9a24f9913129ca9}{getType}}();}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{75         \textcolor{keyword}{const} \mbox{\hyperlink{classPosition}{Position}} \mbox{\hyperlink{classUnit_af06b9ca36121262bd3d50e849ee23075}{getPosition}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{76 }
+\DoxyCodeLine{80         \textcolor{keyword}{virtual} \textcolor{keyword}{const} \textcolor{keywordtype}{int} \mbox{\hyperlink{classUnit_afac61778dffec3c7d9f517c0767f7d9e}{getBaseAttack}}(\textcolor{keyword}{const} UnitType \&unitType);}
+\DoxyCodeLine{81 }
+\DoxyCodeLine{84         \textcolor{keyword}{virtual} \textcolor{keyword}{const} UnitFactionID \mbox{\hyperlink{classUnit_ac5c22f1af33f39d355efbe0406db222e}{getUnitFactionID}}() \textcolor{keyword}{const}; }
+\DoxyCodeLine{85 }
+\DoxyCodeLine{87         \textcolor{keywordtype}{void} \mbox{\hyperlink{classUnit_aa61f17c71d76dcafac4391812d110a3c}{changeUnitPosition}}(\textcolor{keyword}{const} \mbox{\hyperlink{classPosition}{Position}} \&\mbox{\hyperlink{classUnit_a27e74ea818f26a5dba884564bc44c7de}{position}});}
+\DoxyCodeLine{88 \};}
+\DoxyCodeLine{89 }
+\DoxyCodeLine{90 \textcolor{keyword}{class }\mbox{\hyperlink{classInfantry}{Infantry}} : \mbox{\hyperlink{classUnit}{Unit}} \{}
+\DoxyCodeLine{91     \textcolor{keyword}{public}:}
+\DoxyCodeLine{93         \textcolor{keyword}{const} UnitType \mbox{\hyperlink{classInfantry_a8bdc8ccd9a81f3cb6ad73b1eaeea658a}{getType}}();}
+\DoxyCodeLine{94 }
+\DoxyCodeLine{98         \textcolor{keyword}{const} \textcolor{keywordtype}{int} \mbox{\hyperlink{classInfantry_ab7aa7d3ecd6d53a5e02517553fbe69d4}{getBaseAttack}}(\textcolor{keyword}{const} UnitID \&unitType);}
+\DoxyCodeLine{99 \};}
+\DoxyCodeLine{100 }
+\DoxyCodeLine{101 \textcolor{keyword}{class }\mbox{\hyperlink{classTank}{Tank}} : \mbox{\hyperlink{classUnit}{Unit}} \{}
+\DoxyCodeLine{102     \textcolor{keyword}{public}:}
+\DoxyCodeLine{104         \textcolor{keyword}{const} UnitType \mbox{\hyperlink{classTank_af13cd247c4acbb84138ef5c09f653bfa}{getType}}()\{}
+\DoxyCodeLine{105             \textcolor{keywordflow}{return} UnitCategory::TANK;}
+\DoxyCodeLine{106         \}}
+\DoxyCodeLine{107 }
+\DoxyCodeLine{111         \textcolor{keyword}{const} \textcolor{keywordtype}{int} \mbox{\hyperlink{classTank_a322d56d7e2368d3a25e3501b78a72dfd}{getBaseAttack}}(\textcolor{keyword}{const} UnitID \&unitType);}
+\DoxyCodeLine{112         }
+\DoxyCodeLine{113 \};}
+\DoxyCodeLine{114 }
+\DoxyCodeLine{115 \textcolor{keyword}{class }\mbox{\hyperlink{classArtillery}{Artillery}} : \mbox{\hyperlink{classUnit}{Unit}}\{}
+\DoxyCodeLine{116     \textcolor{keyword}{public}:}
+\DoxyCodeLine{118         \textcolor{keyword}{const} UnitType \mbox{\hyperlink{classArtillery_a012b1abf931ed58f3c83a3029b3bd963}{getType}}()\{}
+\DoxyCodeLine{119             \textcolor{keywordflow}{return} UnitCategory::ARTILLERY;}
+\DoxyCodeLine{120         \}}
+\DoxyCodeLine{121         }
+\DoxyCodeLine{125         \textcolor{keyword}{const} \textcolor{keywordtype}{int} \mbox{\hyperlink{classArtillery_a4b0b939f47184f986422010d0ebcc741}{getBaseAttack}}(\textcolor{keyword}{const} UnitID \&unitType);}
+\DoxyCodeLine{126 \};}
+\DoxyCodeLine{127 }
+\DoxyCodeLine{128 }
 
 \end{DoxyCode}

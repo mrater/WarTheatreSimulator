@@ -1,6 +1,7 @@
 /**
  * @file units.h
  * @brief This file consists of classes of Units, i.e. Infantry, Tank, Artillery
+ * \{
  */
 #include"field.h"
 
@@ -74,10 +75,9 @@ class Unit{
         const Position getPosition() const;
 
         /// @brief  Get base attack, a value that might be unique for every pair (UNIT_TYPE, DEFENDER_UNIT_TYPE)
-        /// @param unitType - type of enemy unit that we deal with
+        /// @param unitType type of enemy unit that we deal with
         /// @return base attack of this unit type
         virtual const int getBaseAttack(const UnitType &unitType);
-
 
         /// @brief get ID of unit faction
         /// @return ID of a faction of unit
@@ -90,11 +90,10 @@ class Unit{
 class Infantry : Unit {
     public:
         /// @return UnitCategory::INFANTRY
-        const UnitType getType(){
-            return UnitCategory::INFANTRY;
-        }
+        const UnitType getType();
+
         /// @brief get Base attack of infantry
-        /// @param unitType type of enemy uniut
+        /// @param unitType type of enemy unit
         /// @return base attack for infantry when dealing with certain enemy
         const int getBaseAttack(const UnitID &unitType);
 };
@@ -105,8 +104,9 @@ class Tank : Unit {
         const UnitType getType(){
             return UnitCategory::TANK;
         }
+
         /// @brief get Base attack of tank
-        /// @param unitType type of enemy uniut
+        /// @param unitType type of enemy unit
         /// @return base attack for tank when dealing with certain enemy
         const int getBaseAttack(const UnitID &unitType);
         
@@ -120,7 +120,9 @@ class Artillery : Unit{
         }
         
         /// @brief get Base attack of artillery
-        /// @param unitType type of enemy uniut
+        /// @param unitType type of enemy unit
         /// @return base attack for artillery when dealing with certain enemy
         const int getBaseAttack(const UnitID &unitType);
 };
+
+//! \}

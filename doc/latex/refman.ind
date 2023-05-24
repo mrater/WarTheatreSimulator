@@ -1,181 +1,137 @@
 \begin{theindex}
 
-  \item {Area}, \hyperpage{15}
-    \subitem {fields}, \hyperpage{17}
-    \subitem {getUnitOnPosition}, \hyperpage{16}
-    \subitem {getUnitsOfFaction}, \hyperpage{17}
-    \subitem {isRealPosition}, \hyperpage{17}
-    \subitem {units}, \hyperpage{18}
-  \item {AreaManager}, \hyperpage{18}
-  \item {ARTILLERY}
-    \subitem {UnitCategory}, \hyperpage{14}
+  \item {Area}, \hyperpage{13}
+    \subitem {getUnit}, \hyperpage{14}
+    \subitem {getUnitOnPosition}, \hyperpage{15}
+    \subitem {getUnitsOfFaction}, \hyperpage{15}
+    \subitem {isRealPosition}, \hyperpage{15}
+  \item {AreaManager}, \hyperpage{17}
+    \subitem {createField}, \hyperpage{18}
+    \subitem {createUnit}, \hyperpage{19}
+    \subitem {moveUnit}, \hyperpage{19}
+    \subitem {removeUnit}, \hyperpage{19}
   \item {Artillery}, \hyperpage{20}
     \subitem {getBaseAttack}, \hyperpage{21}
-    \subitem {getType}, \hyperpage{22}
-  \item {ARTILLERY\_TO\_ARTILLERY}
-    \subitem {baseAttack}, \hyperpage{11}
-  \item {ARTILLERY\_TO\_INFANTRY}
-    \subitem {baseAttack}, \hyperpage{11}
+    \subitem {getType}, \hyperpage{23}
 
   \indexspace
 
   \item {baseAttack}, \hyperpage{11}
-    \subitem {ARTILLERY\_TO\_ARTILLERY}, \hyperpage{11}
-    \subitem {ARTILLERY\_TO\_INFANTRY}, \hyperpage{11}
-    \subitem {ERROR\_PAIR}, \hyperpage{12}
-    \subitem {INFANTRY\_TO\_ARTILLERY}, \hyperpage{12}
-    \subitem {INFRANTRY\_TO\_INFANTRY}, \hyperpage{12}
-  \item {baseStrength}
-    \subitem {Unit}, \hyperpage{38}
+  \item {BattleResult}, \hyperpage{23}
+    \subitem {calculateAttackerSupplyLoss}, \hyperpage{24}
+    \subitem {calculateBackslashDamage}, \hyperpage{24}
+    \subitem {calculateDamage}, \hyperpage{24}
+    \subitem {calculateDefenderSupplyLoss}, \hyperpage{25}
+    \subitem {getDefenderField}, \hyperpage{25}
 
   \indexspace
 
-  \item {ERROR\_PAIR}
-    \subitem {baseAttack}, \hyperpage{12}
+  \item {calculateAttackerSupplyLoss}
+    \subitem {BattleResult}, \hyperpage{24}
+  \item {calculateBackslashDamage}
+    \subitem {BattleResult}, \hyperpage{24}
+  \item {calculateDamage}
+    \subitem {BattleResult}, \hyperpage{24}
+  \item {calculateDefenderSupplyLoss}
+    \subitem {BattleResult}, \hyperpage{25}
+  \item {createField}
+    \subitem {AreaManager}, \hyperpage{18}
+  \item {createUnit}
+    \subitem {AreaManager}, \hyperpage{19}
 
   \indexspace
 
-  \item {Field}, \hyperpage{23}
-    \subitem {fieldType}, \hyperpage{24}
-    \subitem {getPosition}, \hyperpage{23}
-    \subitem {getTerrainType}, \hyperpage{24}
-  \item {field.h}
-    \subitem {FieldID}, \hyperpage{48}
-    \subitem {TerrainType}, \hyperpage{48}
-  \item {FieldID}
-    \subitem {field.h}, \hyperpage{48}
-  \item {fields}
-    \subitem {Area}, \hyperpage{17}
-  \item {FieldType}, \hyperpage{25}
+  \item {Field}, \hyperpage{26}
+    \subitem {getPosition}, \hyperpage{26}
     \subitem {getTerrainType}, \hyperpage{26}
-  \item {fieldType}
-    \subitem {Field}, \hyperpage{24}
-  \item {FOREST}
-    \subitem {Terrain}, \hyperpage{13}
-  \item {ForestTerrain}, \hyperpage{26}
+  \item {FieldType}, \hyperpage{27}
+    \subitem {getTerrainType}, \hyperpage{28}
+  \item {ForestTerrain}, \hyperpage{28}
 
   \indexspace
 
   \item {getBaseAttack}
     \subitem {Artillery}, \hyperpage{21}
-    \subitem {Infantry}, \hyperpage{29}
-    \subitem {Tank}, \hyperpage{33}
-    \subitem {Unit}, \hyperpage{37}
+    \subitem {Infantry}, \hyperpage{31}
+    \subitem {Tank}, \hyperpage{36}
+    \subitem {Unit}, \hyperpage{40}
+  \item {getDefenderField}
+    \subitem {BattleResult}, \hyperpage{25}
   \item {getPosition}
-    \subitem {Field}, \hyperpage{23}
-    \subitem {Unit}, \hyperpage{37}
+    \subitem {Field}, \hyperpage{26}
+    \subitem {Unit}, \hyperpage{40}
   \item {getTerrainType}
-    \subitem {Field}, \hyperpage{24}
-    \subitem {FieldType}, \hyperpage{26}
+    \subitem {Field}, \hyperpage{26}
+    \subitem {FieldType}, \hyperpage{28}
   \item {getType}
-    \subitem {Artillery}, \hyperpage{22}
-    \subitem {Infantry}, \hyperpage{30}
-    \subitem {Tank}, \hyperpage{34}
-    \subitem {Unit}, \hyperpage{37}
+    \subitem {Artillery}, \hyperpage{23}
+    \subitem {Infantry}, \hyperpage{33}
+    \subitem {Tank}, \hyperpage{38}
+    \subitem {Unit}, \hyperpage{40}
+  \item {getUnit}
+    \subitem {Area}, \hyperpage{14}
   \item {getUnitFactionID}
-    \subitem {Unit}, \hyperpage{38}
+    \subitem {Unit}, \hyperpage{41}
   \item {getUnitOnPosition}
-    \subitem {Area}, \hyperpage{16}
+    \subitem {Area}, \hyperpage{15}
   \item {getUnitsOfFaction}
-    \subitem {Area}, \hyperpage{17}
+    \subitem {Area}, \hyperpage{15}
 
   \indexspace
 
-  \item {ID}
-    \subitem {Unit}, \hyperpage{38}
-  \item {include/area.h}, \hyperpage{43, 44}
-  \item {include/areamanager.h}, \hyperpage{45, 46}
-  \item {include/field.h}, \hyperpage{46}, \hyperpage{49}
-  \item {include/units.h}, \hyperpage{49}, \hyperpage{52}
-  \item {INFANTRY}
-    \subitem {UnitCategory}, \hyperpage{14}
-  \item {Infantry}, \hyperpage{28}
-    \subitem {getBaseAttack}, \hyperpage{29}
-    \subitem {getType}, \hyperpage{30}
-  \item {INFANTRY\_TO\_ARTILLERY}
-    \subitem {baseAttack}, \hyperpage{12}
-  \item {INFRANTRY\_TO\_INFANTRY}
-    \subitem {baseAttack}, \hyperpage{12}
+  \item {include/area.h}, \hyperpage{43}
+  \item {include/areamanager.h}, \hyperpage{44}
+  \item {include/battle.h}, \hyperpage{45}
+  \item {include/field.h}, \hyperpage{46}
+  \item {include/units.h}, \hyperpage{48}
+  \item {Infantry}, \hyperpage{30}
+    \subitem {getBaseAttack}, \hyperpage{31}
+    \subitem {getType}, \hyperpage{33}
   \item {isRealPosition}
-    \subitem {Area}, \hyperpage{17}
+    \subitem {Area}, \hyperpage{15}
 
   \indexspace
 
-  \item {NONE}
-    \subitem {Terrain}, \hyperpage{13}
-    \subitem {UnitCategory}, \hyperpage{14}
+  \item {moveUnit}
+    \subitem {AreaManager}, \hyperpage{19}
 
   \indexspace
 
   \item {organization}
-    \subitem {Unit}, \hyperpage{38}
+    \subitem {Unit}, \hyperpage{41}
 
   \indexspace
 
-  \item {PLAIN}
-    \subitem {Terrain}, \hyperpage{13}
-  \item {PlainTerrain}, \hyperpage{30}
-  \item {Position}, \hyperpage{31}
-  \item {position}
-    \subitem {Unit}, \hyperpage{39}
+  \item {PlainTerrain}, \hyperpage{33}
+  \item {Position}, \hyperpage{34}
+
+  \indexspace
+
+  \item {removeUnit}
+    \subitem {AreaManager}, \hyperpage{19}
 
   \indexspace
 
   \item {supplyLevel}
-    \subitem {Unit}, \hyperpage{39}
+    \subitem {Unit}, \hyperpage{41}
 
   \indexspace
 
-  \item {TANK}
-    \subitem {UnitCategory}, \hyperpage{14}
-  \item {Tank}, \hyperpage{32}
-    \subitem {getBaseAttack}, \hyperpage{33}
-    \subitem {getType}, \hyperpage{34}
-  \item {Terrain}, \hyperpage{12}
-    \subitem {FOREST}, \hyperpage{13}
-    \subitem {NONE}, \hyperpage{13}
-    \subitem {PLAIN}, \hyperpage{13}
-    \subitem {URBAN}, \hyperpage{13}
-  \item {TerrainType}
-    \subitem {field.h}, \hyperpage{48}
+  \item {Tank}, \hyperpage{35}
+    \subitem {getBaseAttack}, \hyperpage{36}
+    \subitem {getType}, \hyperpage{38}
+  \item {Terrain}, \hyperpage{11}
 
   \indexspace
 
-  \item {Unit}, \hyperpage{34}
-    \subitem {baseStrength}, \hyperpage{38}
-    \subitem {getBaseAttack}, \hyperpage{37}
-    \subitem {getPosition}, \hyperpage{37}
-    \subitem {getType}, \hyperpage{37}
-    \subitem {getUnitFactionID}, \hyperpage{38}
-    \subitem {ID}, \hyperpage{38}
-    \subitem {organization}, \hyperpage{38}
-    \subitem {position}, \hyperpage{39}
-    \subitem {supplyLevel}, \hyperpage{39}
-    \subitem {unitFactionId}, \hyperpage{39}
-    \subitem {unitRange}, \hyperpage{39}
-  \item {UnitCategory}, \hyperpage{13}
-    \subitem {ARTILLERY}, \hyperpage{14}
-    \subitem {INFANTRY}, \hyperpage{14}
-    \subitem {NONE}, \hyperpage{14}
-    \subitem {TANK}, \hyperpage{14}
-  \item {UnitFactionID}
-    \subitem {units.h}, \hyperpage{51}
-  \item {unitFactionId}
-    \subitem {Unit}, \hyperpage{39}
-  \item {UnitID}
-    \subitem {units.h}, \hyperpage{51}
-  \item {unitRange}
-    \subitem {Unit}, \hyperpage{39}
-  \item {units}
-    \subitem {Area}, \hyperpage{18}
-  \item {units.h}
-    \subitem {UnitFactionID}, \hyperpage{51}
-    \subitem {UnitID}, \hyperpage{51}
-    \subitem {UnitType}, \hyperpage{52}
-  \item {UnitType}
-    \subitem {units.h}, \hyperpage{52}
-  \item {URBAN}
-    \subitem {Terrain}, \hyperpage{13}
-  \item {UrbanTerrain}, \hyperpage{40}
+  \item {Unit}, \hyperpage{38}
+    \subitem {getBaseAttack}, \hyperpage{40}
+    \subitem {getPosition}, \hyperpage{40}
+    \subitem {getType}, \hyperpage{40}
+    \subitem {getUnitFactionID}, \hyperpage{41}
+    \subitem {organization}, \hyperpage{41}
+    \subitem {supplyLevel}, \hyperpage{41}
+  \item {UnitCategory}, \hyperpage{12}
+  \item {UrbanTerrain}, \hyperpage{42}
 
 \end{theindex}

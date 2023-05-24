@@ -11,8 +11,7 @@ Basic class for all unit types.
 
 
 
-Inheritance diagram for Unit\+:
-\nopagebreak
+Inheritance diagram for Unit\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -21,8 +20,7 @@ Inheritance diagram for Unit\+:
 \end{figure}
 
 
-Collaboration diagram for Unit\+:
-\nopagebreak
+Collaboration diagram for Unit\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -46,28 +44,29 @@ void {\bfseries change\+Unit\+Position} (const \mbox{\hyperlink{classPosition}{P
 \doxysubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
-Unit\+ID \mbox{\hyperlink{classUnit_abf9daa438c2896e00f47b75d0f23b16e}{ID}}
+\mbox{\Hypertarget{classUnit_abf9daa438c2896e00f47b75d0f23b16e}\label{classUnit_abf9daa438c2896e00f47b75d0f23b16e}} 
+Unit\+ID {\bfseries ID}
 \begin{DoxyCompactList}\small\item\em individual identifier for a unit \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{classUnit_ad5074bce3536b87fed960a8a6415c7e9}{organization}}
 \begin{DoxyCompactList}\small\item\em organization stat of a unit. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{classUnit_a1c8bedcf377b774e5fd057b4da438e28}{supply\+Level}}
 \begin{DoxyCompactList}\small\item\em Level of logistic supply of a unit. \end{DoxyCompactList}\item 
-int \mbox{\hyperlink{classUnit_af9ff205b8669a9466d88ebb60d7ec7e4}{base\+Strength}}
+\mbox{\Hypertarget{classUnit_af9ff205b8669a9466d88ebb60d7ec7e4}\label{classUnit_af9ff205b8669a9466d88ebb60d7ec7e4}} 
+int {\bfseries base\+Strength}
 \begin{DoxyCompactList}\small\item\em basic strength of a unit (it is determined only by type of unit) \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classPosition}{Position}} \mbox{\hyperlink{classUnit_a27e74ea818f26a5dba884564bc44c7de}{position}}
+\mbox{\Hypertarget{classUnit_a27e74ea818f26a5dba884564bc44c7de}\label{classUnit_a27e74ea818f26a5dba884564bc44c7de}} 
+\mbox{\hyperlink{classPosition}{Position}} {\bfseries position}
 \begin{DoxyCompactList}\small\item\em position of a unit \end{DoxyCompactList}\item 
-Unit\+Faction\+ID \mbox{\hyperlink{classUnit_a90868f03f29dbf345f91d82b2d9e6513}{unit\+Faction\+Id}}
+\mbox{\Hypertarget{classUnit_a90868f03f29dbf345f91d82b2d9e6513}\label{classUnit_a90868f03f29dbf345f91d82b2d9e6513}} 
+Unit\+Faction\+ID {\bfseries unit\+Faction\+Id}
 \begin{DoxyCompactList}\small\item\em ID of faction that owns the unit\`{}. \end{DoxyCompactList}\item 
-int \mbox{\hyperlink{classUnit_a2550ac61e672621ed7a14939cce281e0}{unit\+Range}}
+\mbox{\Hypertarget{classUnit_a2550ac61e672621ed7a14939cce281e0}\label{classUnit_a2550ac61e672621ed7a14939cce281e0}} 
+int {\bfseries unit\+Range}
 \begin{DoxyCompactList}\small\item\em range of an attack of a unit unit\+Range = X means that every enemy unit in (manhattan distance) X of our unit can be attacked \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 Basic class for all unit types. 
-
-Definition at line \mbox{\hyperlink{units_8h_source_l00037}{37}} of file \mbox{\hyperlink{units_8h_source}{units.\+h}}.
-
-
 
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{classUnit_afac61778dffec3c7d9f517c0767f7d9e}\label{classUnit_afac61778dffec3c7d9f517c0767f7d9e}} 
@@ -82,7 +81,7 @@ Get base attack, a value that might be unique for every pair (UNIT\+\_\+\+TYPE, 
 
 
 \begin{DoxyParams}{Parameters}
-{\em unit\+Type} & -\/ type of enemy unit that we deal with \\
+{\em unit\+Type} & type of enemy unit that we deal with \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -134,34 +133,6 @@ ID of a faction of unit
 
 
 \doxysubsection{Member Data Documentation}
-\mbox{\Hypertarget{classUnit_af9ff205b8669a9466d88ebb60d7ec7e4}\label{classUnit_af9ff205b8669a9466d88ebb60d7ec7e4}} 
-\index{Unit@{Unit}!baseStrength@{baseStrength}}
-\index{baseStrength@{baseStrength}!Unit@{Unit}}
-\doxysubsubsection{\texorpdfstring{baseStrength}{baseStrength}}
-{\footnotesize\ttfamily int Unit\+::base\+Strength\hspace{0.3cm}{\ttfamily [protected]}}
-
-
-
-basic strength of a unit (it is determined only by type of unit) 
-
-
-
-Definition at line \mbox{\hyperlink{units_8h_source_l00056}{56}} of file \mbox{\hyperlink{units_8h_source}{units.\+h}}.
-
-\mbox{\Hypertarget{classUnit_abf9daa438c2896e00f47b75d0f23b16e}\label{classUnit_abf9daa438c2896e00f47b75d0f23b16e}} 
-\index{Unit@{Unit}!ID@{ID}}
-\index{ID@{ID}!Unit@{Unit}}
-\doxysubsubsection{\texorpdfstring{ID}{ID}}
-{\footnotesize\ttfamily Unit\+ID Unit\+::\+ID\hspace{0.3cm}{\ttfamily [protected]}}
-
-
-
-individual identifier for a unit 
-
-
-
-Definition at line \mbox{\hyperlink{units_8h_source_l00040}{40}} of file \mbox{\hyperlink{units_8h_source}{units.\+h}}.
-
 \mbox{\Hypertarget{classUnit_ad5074bce3536b87fed960a8a6415c7e9}\label{classUnit_ad5074bce3536b87fed960a8a6415c7e9}} 
 \index{Unit@{Unit}!organization@{organization}}
 \index{organization@{organization}!Unit@{Unit}}
@@ -172,25 +143,7 @@ Definition at line \mbox{\hyperlink{units_8h_source_l00040}{40}} of file \mbox{\
 
 organization stat of a unit. 
 
-It is similar to HP in strategy games. When organization is below 0, a unit dissolves. Movement, attack and defence cost some degree of organization 
-
-Definition at line \mbox{\hyperlink{units_8h_source_l00046}{46}} of file \mbox{\hyperlink{units_8h_source}{units.\+h}}.
-
-\mbox{\Hypertarget{classUnit_a27e74ea818f26a5dba884564bc44c7de}\label{classUnit_a27e74ea818f26a5dba884564bc44c7de}} 
-\index{Unit@{Unit}!position@{position}}
-\index{position@{position}!Unit@{Unit}}
-\doxysubsubsection{\texorpdfstring{position}{position}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classPosition}{Position}} Unit\+::position\hspace{0.3cm}{\ttfamily [protected]}}
-
-
-
-position of a unit 
-
-
-
-Definition at line \mbox{\hyperlink{units_8h_source_l00059}{59}} of file \mbox{\hyperlink{units_8h_source}{units.\+h}}.
-
-\mbox{\Hypertarget{classUnit_a1c8bedcf377b774e5fd057b4da438e28}\label{classUnit_a1c8bedcf377b774e5fd057b4da438e28}} 
+It is similar to HP in strategy games. When organization is below 0, a unit dissolves. Movement, attack and defence cost some degree of organization \mbox{\Hypertarget{classUnit_a1c8bedcf377b774e5fd057b4da438e28}\label{classUnit_a1c8bedcf377b774e5fd057b4da438e28}} 
 \index{Unit@{Unit}!supplyLevel@{supplyLevel}}
 \index{supplyLevel@{supplyLevel}!Unit@{Unit}}
 \doxysubsubsection{\texorpdfstring{supplyLevel}{supplyLevel}}
@@ -201,38 +154,6 @@ Definition at line \mbox{\hyperlink{units_8h_source_l00059}{59}} of file \mbox{\
 Level of logistic supply of a unit. 
 
 Level of supply is determined by fuel source nearby. It decreases during\+: defence, attack, movement. 100 supply level is considered enough (more gives no bonuses nor punishments) 
-
-Definition at line \mbox{\hyperlink{units_8h_source_l00053}{53}} of file \mbox{\hyperlink{units_8h_source}{units.\+h}}.
-
-\mbox{\Hypertarget{classUnit_a90868f03f29dbf345f91d82b2d9e6513}\label{classUnit_a90868f03f29dbf345f91d82b2d9e6513}} 
-\index{Unit@{Unit}!unitFactionId@{unitFactionId}}
-\index{unitFactionId@{unitFactionId}!Unit@{Unit}}
-\doxysubsubsection{\texorpdfstring{unitFactionId}{unitFactionId}}
-{\footnotesize\ttfamily Unit\+Faction\+ID Unit\+::unit\+Faction\+Id\hspace{0.3cm}{\ttfamily [protected]}}
-
-
-
-ID of faction that owns the unit\`{}. 
-
-
-
-Definition at line \mbox{\hyperlink{units_8h_source_l00062}{62}} of file \mbox{\hyperlink{units_8h_source}{units.\+h}}.
-
-\mbox{\Hypertarget{classUnit_a2550ac61e672621ed7a14939cce281e0}\label{classUnit_a2550ac61e672621ed7a14939cce281e0}} 
-\index{Unit@{Unit}!unitRange@{unitRange}}
-\index{unitRange@{unitRange}!Unit@{Unit}}
-\doxysubsubsection{\texorpdfstring{unitRange}{unitRange}}
-{\footnotesize\ttfamily int Unit\+::unit\+Range\hspace{0.3cm}{\ttfamily [protected]}}
-
-
-
-range of an attack of a unit unit\+Range = X means that every enemy unit in (manhattan distance) X of our unit can be attacked 
-
-
-
-Definition at line \mbox{\hyperlink{units_8h_source_l00066}{66}} of file \mbox{\hyperlink{units_8h_source}{units.\+h}}.
-
-
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 

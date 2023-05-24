@@ -2,8 +2,7 @@
 \label{classArea}\index{Area@{Area}}
 
 
-Inheritance diagram for Area\+:
-\nopagebreak
+Inheritance diagram for Area\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -12,8 +11,7 @@ Inheritance diagram for Area\+:
 \end{figure}
 
 
-Collaboration diagram for Area\+:
-\nopagebreak
+Collaboration diagram for Area\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -28,24 +26,39 @@ bool \mbox{\hyperlink{classArea_a42882573d7921655aa8349275f1cca01}{is\+Real\+Pos
 \mbox{\hyperlink{classUnit}{Unit}} \& \mbox{\hyperlink{classArea_a8a1c8e009b728fb3954c6b2784660850}{get\+Unit\+On\+Position}} (const \mbox{\hyperlink{classPosition}{Position}} \&position)
 \begin{DoxyCompactList}\small\item\em get unit on position \end{DoxyCompactList}\item 
 std\+::vector$<$ Unit\+ID $>$ \mbox{\hyperlink{classArea_abf4433ad48209c1c7740f383ad802089}{get\+Units\+Of\+Faction}} (const Unit\+Faction\+ID \&unit\+Faction\+ID) const
-\begin{DoxyCompactList}\small\item\em get units of faction \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em get units of faction \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classUnit}{Unit}} \& \mbox{\hyperlink{classArea_aecd82ce261b4b0daac74bf9db38500d4}{get\+Unit}} (const Unit\+ID \&unit\+ID)
+\begin{DoxyCompactList}\small\item\em get unit of certain ID \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
-std\+::map$<$ \mbox{\hyperlink{field_8h_acbbc44300fc357bd36d61f64d8b35d96}{Field\+ID}}, \mbox{\hyperlink{classField}{Field}} $>$ \mbox{\hyperlink{classArea_a1d19c973d4b0aa9c59e89edf6eb8e6f8}{fields}}
+\mbox{\Hypertarget{classArea_a1d19c973d4b0aa9c59e89edf6eb8e6f8}\label{classArea_a1d19c973d4b0aa9c59e89edf6eb8e6f8}} 
+std\+::map$<$ \mbox{\hyperlink{field_8h_acbbc44300fc357bd36d61f64d8b35d96}{Field\+ID}}, \mbox{\hyperlink{classField}{Field}} $>$ {\bfseries fields}
 \begin{DoxyCompactList}\small\item\em Array with fields of the area. \end{DoxyCompactList}\item 
-std\+::map$<$ Unit\+ID, \mbox{\hyperlink{classUnit}{Unit}} $>$ \mbox{\hyperlink{classArea_ab768a3f6d74e699dab8e9f26aa7d0b92}{units}}
+\mbox{\Hypertarget{classArea_ab768a3f6d74e699dab8e9f26aa7d0b92}\label{classArea_ab768a3f6d74e699dab8e9f26aa7d0b92}} 
+std\+::map$<$ Unit\+ID, \mbox{\hyperlink{classUnit}{Unit}} $>$ {\bfseries units}
 \begin{DoxyCompactList}\small\item\em Units present in arrea. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\doxysubsection{Detailed Description}
-
-
-Definition at line \mbox{\hyperlink{area_8h_source_l00014}{14}} of file \mbox{\hyperlink{area_8h_source}{area.\+h}}.
-
-
-
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classArea_aecd82ce261b4b0daac74bf9db38500d4}\label{classArea_aecd82ce261b4b0daac74bf9db38500d4}} 
+\index{Area@{Area}!getUnit@{getUnit}}
+\index{getUnit@{getUnit}!Area@{Area}}
+\doxysubsubsection{\texorpdfstring{getUnit()}{getUnit()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classUnit}{Unit}} \& Area\+::get\+Unit (\begin{DoxyParamCaption}\item[{const Unit\+ID \&}]{unit\+ID }\end{DoxyParamCaption})}
+
+
+
+get unit of certain ID 
+
+
+\begin{DoxyParams}{Parameters}
+{\em unit\+ID} & ID of wanted unit \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+constant pointer to unit or NULL if not found 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classArea_a8a1c8e009b728fb3954c6b2784660850}\label{classArea_a8a1c8e009b728fb3954c6b2784660850}} 
 \index{Area@{Area}!getUnitOnPosition@{getUnitOnPosition}}
 \index{getUnitOnPosition@{getUnitOnPosition}!Area@{Area}}
@@ -58,7 +71,7 @@ get unit on position
 
 
 \begin{DoxyParams}{Parameters}
-{\em position} & -\/ position to search unit on \\
+{\em position} & position to search unit on \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -94,43 +107,12 @@ Check if given position exists in the area.
 
 
 \begin{DoxyParams}{Parameters}
-{\em position} & -\/ checked position \\
+{\em position} & checked position \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 true if field of given position exists 
 \end{DoxyReturn}
-
-
-\doxysubsection{Member Data Documentation}
-\mbox{\Hypertarget{classArea_a1d19c973d4b0aa9c59e89edf6eb8e6f8}\label{classArea_a1d19c973d4b0aa9c59e89edf6eb8e6f8}} 
-\index{Area@{Area}!fields@{fields}}
-\index{fields@{fields}!Area@{Area}}
-\doxysubsubsection{\texorpdfstring{fields}{fields}}
-{\footnotesize\ttfamily std\+::map$<$\mbox{\hyperlink{field_8h_acbbc44300fc357bd36d61f64d8b35d96}{Field\+ID}}, \mbox{\hyperlink{classField}{Field}}$>$ Area\+::fields\hspace{0.3cm}{\ttfamily [protected]}}
-
-
-
-Array with fields of the area. 
-
-
-
-Definition at line \mbox{\hyperlink{area_8h_source_l00018}{18}} of file \mbox{\hyperlink{area_8h_source}{area.\+h}}.
-
-\mbox{\Hypertarget{classArea_ab768a3f6d74e699dab8e9f26aa7d0b92}\label{classArea_ab768a3f6d74e699dab8e9f26aa7d0b92}} 
-\index{Area@{Area}!units@{units}}
-\index{units@{units}!Area@{Area}}
-\doxysubsubsection{\texorpdfstring{units}{units}}
-{\footnotesize\ttfamily std\+::map$<$Unit\+ID, \mbox{\hyperlink{classUnit}{Unit}}$>$ Area\+::units\hspace{0.3cm}{\ttfamily [protected]}}
-
-
-
-Units present in arrea. 
-
-
-
-Definition at line \mbox{\hyperlink{area_8h_source_l00021}{21}} of file \mbox{\hyperlink{area_8h_source}{area.\+h}}.
-
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

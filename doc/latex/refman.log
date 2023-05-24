@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2023.5.19)  23 MAY 2023 12:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2023.5.19)  24 MAY 2023 13:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -562,11 +562,11 @@ Writing index file refman.idx
 Package: newunicodechar 2018/04/08 v1.2 Defining Unicode characters
 )
 
-Package newunicodechar Warning: Redefining Unicode character on input line 116.
-
-
-
 Package newunicodechar Warning: Redefining Unicode character on input line 117.
+
+
+
+Package newunicodechar Warning: Redefining Unicode character on input line 118.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
@@ -705,8 +705,8 @@ File: hpdftex.def 2022-11-13 v7.00u Hyperref driver for pdfTeX
 \c@bookmark@seq@number=\count332
 \Hy@SectionHShift=\skip128
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 136.
-Package hyperref Info: Option `unicode' set `true' on input line 136.
+Package hyperref Info: Option `colorlinks' set `true' on input line 137.
+Package hyperref Info: Option `unicode' set `true' on input line 137.
 
 (/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2022/03/01 v3.6b Customizing captions (AR)
@@ -741,42 +741,94 @@ Package: etoc 2023/01/20 v1.1c Completely customisable TOCs (JFB)
 \etoc@framed@contentsbox=\box121
 )
 LaTeX Font Info:    Trying to load font information for T1+phv on input line 15
-2.
+3.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1phv.fd
 File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
 )
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 8.99994pt on input line 152.
+(Font)              scaled to size 8.99994pt on input line 153.
 
 (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count337
 \l__pdf_internal_box=\box122
 )
-(./refman.aux)
+(./refman.aux
+
+LaTeX Warning: Label `namespaceTerrain_a55087733e5cca8d6ad346b96e8d97997' multi
+ply defined.
+
+
+LaTeX Warning: Label `namespaceTerrain_a2a3a957decfd6b7350506b724359d4e4' multi
+ply defined.
+
+
+LaTeX Warning: Label `namespaceTerrain_a6244524b78a1a7f12213ae6922f1b47d' multi
+ply defined.
+
+
+LaTeX Warning: Label `namespaceTerrain_ae0108418c88d0ce50fd0155b337872f2' multi
+ply defined.
+
+
+LaTeX Warning: Label `namespaceUnitCategory_a3d68fbf8d985ff2ef88b043b65ac8563' 
+multiply defined.
+
+
+LaTeX Warning: Label `namespaceUnitCategory_a485383fde688ad5acab7aad85d49d661' 
+multiply defined.
+
+
+LaTeX Warning: Label `namespaceUnitCategory_a6252c7062e54c34350dd2d39bd8ef575' 
+multiply defined.
+
+
+LaTeX Warning: Label `namespaceUnitCategory_a80538708847ddd392f55fcf50a5f6f6f' 
+multiply defined.
+
+
+LaTeX Warning: Label `namespacebaseAttack_a592dd1bea4163e45ab01c98890160eb4' mu
+ltiply defined.
+
+
+LaTeX Warning: Label `namespacebaseAttack_a17090fcd77e41c9c3fd34c60fa1c0af0' mu
+ltiply defined.
+
+
+LaTeX Warning: Label `namespacebaseAttack_a662eb62f04fe18aac25d1c019a3ca7e0' mu
+ltiply defined.
+
+
+LaTeX Warning: Label `namespacebaseAttack_a3e702510ec20d1b15c331017e74625d3' mu
+ltiply defined.
+
+
+LaTeX Warning: Label `namespacebaseAttack_a652fb5e86c65fae4ef1064b4b508efc3' mu
+ltiply defined.
+
+)
 \openout1 = `refman.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 152.
-LaTeX Font Info:    ... okay on input line 152.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 152.
-LaTeX Font Info:    ... okay on input line 152.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 152.
-LaTeX Font Info:    ... okay on input line 152.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 152.
-LaTeX Font Info:    ... okay on input line 152.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 152.
-LaTeX Font Info:    ... okay on input line 152.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 152.
-LaTeX Font Info:    ... okay on input line 152.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 152.
-LaTeX Font Info:    ... okay on input line 152.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 152.
-LaTeX Font Info:    ... okay on input line 152.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 152.
-LaTeX Font Info:    ... okay on input line 152.
-
-(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 153.
+LaTeX Font Info:    ... okay on input line 153.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 153.
+LaTeX Font Info:    ... okay on input line 153.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 153.
+LaTeX Font Info:    ... okay on input line 153.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 153.
+LaTeX Font Info:    ... okay on input line 153.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 153.
+LaTeX Font Info:    ... okay on input line 153.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 153.
+LaTeX Font Info:    ... okay on input line 153.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 153.
+LaTeX Font Info:    ... okay on input line 153.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 153.
+LaTeX Font Info:    ... okay on input line 153.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 153.
+LaTeX Font Info:    ... okay on input line 153.
+ (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count338
 \scratchdimen=\dimen266
@@ -832,8 +884,8 @@ e
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package backref Info: ** backref set up for natbib ** on input line 152.
-Package hyperref Info: Link coloring ON on input line 152.
+Package backref Info: ** backref set up for natbib ** on input line 153.
+Package hyperref Info: Link coloring ON on input line 153.
 (./refman.out) (./refman.out)
 \@outlinefile=\write5
 \openout5 = `refman.out'.
@@ -841,14 +893,12 @@ Package hyperref Info: Link coloring ON on input line 152.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 \Etoc@tf=\read4
-Package hyperref Info: Option `pageanchor' set `false' on input line 160.
-Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 160.
+Package hyperref Info: Option `pageanchor' set `false' on input line 161.
+Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 161.
 
-Package hyperref Info: Option `unicode' set `true' on input line 160.
+Package hyperref Info: Option `unicode' set `true' on input line 161.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 12.9599pt on input line 165.
-LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 10.79993pt on input line 167.
+(Font)              scaled to size 12.9599pt on input line 166.
  [1
 
 
@@ -859,46 +909,46 @@ LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 \openout6 = `refman.toc'.
 
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 8.99994pt on input line 173.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 173
+(Font)              scaled to size 8.99994pt on input line 175.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 175
 .
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 173
+LaTeX Font Info:    Trying to load font information for U+msb on input line 175
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for U+wasy on input line 17
-3.
+5.
 
 (/usr/share/texlive/texmf-dist/tex/latex/wasysym/uwasy.fd
 File: uwasy.fd 2020/01/19 v2.4 Wasy-2 symbol font definitions
 )
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 6.29996pt on input line 173.
+(Font)              scaled to size 6.29996pt on input line 175.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 6.29996pt on input line 173.
+(Font)              scaled to size 6.29996pt on input line 175.
  [1] [2] [3] [4
 
 ]
-Package hyperref Info: Option `pageanchor' set `true' on input line 176.
+Package hyperref Info: Option `pageanchor' set `true' on input line 178.
 
 Chapter 1.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 18.66588pt on input line 178.
+(Font)              scaled to size 18.66588pt on input line 180.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 18.66588pt on input line 178.
+(Font)              scaled to size 18.66588pt on input line 180.
 LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
-(Font)              scaled to size 18.66588pt on input line 178.
+(Font)              scaled to size 18.66588pt on input line 180.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 22.39185pt on input line 178.
+(Font)              scaled to size 22.39185pt on input line 180.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 22.39185pt on input line 178.
+(Font)              scaled to size 22.39185pt on input line 180.
 LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
-(Font)              scaled to size 22.39185pt on input line 178.
+(Font)              scaled to size 22.39185pt on input line 180.
 (./index.tex) [1
 
 ] [2
@@ -920,167 +970,221 @@ Chapter 4.
 
 ]
 Chapter 5.
-(./files.tex
-LaTeX Font Info:    Trying to load font information for TS1+phv on input line 4
-.
- (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1phv.fd
-File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
-)
-LaTeX Font Info:    Font shape `TS1/phv/m/n' will be
-(Font)              scaled to size 8.99994pt on input line 4.
-)
-[9] [10
+(./files.tex) [9] [10
 
 ]
 Chapter 6.
 (./namespacebaseAttack.tex
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 10.79993pt on input line 8.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 10.79993pt on input line 8.
-LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 8.09995pt on input line 12.
-LaTeX Font Info:    Font shape `T1/phv/m/it' in size <9> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 12.
-LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 8.09995pt on input line 12.
-LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 7.19995pt on input line 31.
-LaTeX Font Info:    Trying to load font information for T1+pcr on input line 31
-.
+LaTeX Font Info:    Trying to load font information for TS1+phv on input line 1
+1.
 
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
-File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-) [11])
-(./namespaceTerrain.tex [12]) (./namespaceUnitCategory.tex [13]) [14]
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1phv.fd
+File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
+)
+LaTeX Font Info:    Font shape `TS1/phv/m/n' will be
+(Font)              scaled to size 8.99994pt on input line 11.
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 8.09995pt on input line 13.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <9> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 13.
+LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
+(Font)              scaled to size 8.09995pt on input line 13.
+)
+(./namespaceTerrain.tex) (./namespaceUnitCategory.tex [11]) [12]
 Chapter 7.
 (./classArea.tex <./classArea__inherit__graph.pdf
 
 pdfTeX warning: pdflatex (file ./classArea__inherit__graph.pdf): PDF inclusion:
  multiple pdfs with page group included in a single page
 >
-<classArea__inherit__graph.pdf, id=817, 204.765pt x 265.99374pt>
+<classArea__inherit__graph.pdf, id=604, 204.765pt x 321.2pt>
 File: classArea__inherit__graph.pdf Graphic file (type pdf)
 <use classArea__inherit__graph.pdf>
-Package pdftex.def Info: classArea__inherit__graph.pdf  used on input line 10.
-(pdftex.def)             Requested size: 204.0pt x 265.01492pt.
+Package pdftex.def Info: classArea__inherit__graph.pdf  used on input line 9.
+(pdftex.def)             Requested size: 204.0pt x 320.01804pt.
  <./classArea__coll__graph.pdf
 
 pdfTeX warning: pdflatex (file ./classArea__coll__graph.pdf): PDF inclusion: mu
 ltiple pdfs with page group included in a single page
 >
-<classArea__coll__graph.pdf, id=832, 204.765pt x 171.64125pt>
+<classArea__coll__graph.pdf, id=619, 204.765pt x 182.6825pt>
 File: classArea__coll__graph.pdf Graphic file (type pdf)
 <use classArea__coll__graph.pdf>
-Package pdftex.def Info: classArea__coll__graph.pdf  used on input line 20.
-(pdftex.def)             Requested size: 204.0pt x 171.00961pt.
- [15
+Package pdftex.def Info: classArea__coll__graph.pdf  used on input line 18.
+(pdftex.def)             Requested size: 204.0pt x 182.01024pt.
+ [13
 
 ]
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 7.19995pt on input line 48.
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 48
+.
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+)
 LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <8> not available
-(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 53.
- [16]
-Underfull \hbox (badness 10000) detected at line 64
-[][][]
- []
-
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 48.
 LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <7> not available
-(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 71.
-
-Underfull \hbox (badness 10000) detected at line 82
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 48.
+ [14]
+Underfull \hbox (badness 10000) detected at line 59
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 100
+Underfull \hbox (badness 10000) detected at line 77
 [][][]
  []
 
-[17]) (./classAreaManager.tex <./classAreaManager__inherit__graph.pdf
+
+Underfull \hbox (badness 10000) detected at line 95
+[][][]
+ []
+
+[15] [16]
+Underfull \hbox (badness 10000) detected at line 113
+[][][]
+ []
+
+) (./classAreaManager.tex <./classAreaManager__inherit__graph.pdf
 
 pdfTeX warning: pdflatex (file ./classAreaManager__inherit__graph.pdf): PDF inc
 lusion: multiple pdfs with page group included in a single page
 >
-<classAreaManager__inherit__graph.pdf, id=904, 204.765pt x 265.99374pt>
+<classAreaManager__inherit__graph.pdf, id=687, 204.765pt x 321.2pt>
 File: classAreaManager__inherit__graph.pdf Graphic file (type pdf)
 <use classAreaManager__inherit__graph.pdf>
 Package pdftex.def Info: classAreaManager__inherit__graph.pdf  used on input li
-ne 10.
-(pdftex.def)             Requested size: 204.0pt x 265.01492pt.
+ne 9.
+(pdftex.def)             Requested size: 204.0pt x 320.01804pt.
  <./classAreaManager__coll__graph.pdf
 
 pdfTeX warning: pdflatex (file ./classAreaManager__coll__graph.pdf): PDF inclus
 ion: multiple pdfs with page group included in a single page
 >
-<classAreaManager__coll__graph.pdf, id=919, 204.765pt x 265.99374pt>
+<classAreaManager__coll__graph.pdf, id=702, 204.765pt x 321.2pt>
 File: classAreaManager__coll__graph.pdf Graphic file (type pdf)
 <use classAreaManager__coll__graph.pdf>
 Package pdftex.def Info: classAreaManager__coll__graph.pdf  used on input line 
-20.
-(pdftex.def)             Requested size: 204.0pt x 265.01492pt.
- [18]) (./classArtillery.tex <./classArtillery__inherit__graph.pdf>
-<classArtillery__inherit__graph.pdf, id=945, 210.7875pt x 354.32375pt>
+18.
+(pdftex.def)             Requested size: 204.0pt x 320.01804pt.
+ [17] [18] [19]) (./classArtillery.tex <./classArtillery__inherit__graph.pdf
+
+pdfTeX warning: pdflatex (file ./classArtillery__inherit__graph.pdf): PDF inclu
+sion: multiple pdfs with page group included in a single page
+>
+<classArtillery__inherit__graph.pdf, id=766, 210.7875pt x 354.32375pt>
 File: classArtillery__inherit__graph.pdf Graphic file (type pdf)
 <use classArtillery__inherit__graph.pdf>
 Package pdftex.def Info: classArtillery__inherit__graph.pdf  used on input line
- 10.
+ 9.
 (pdftex.def)             Requested size: 210.0pt x 353.00908pt.
- [19] <./classArtillery__coll__graph.pdf>
-<classArtillery__coll__graph.pdf, id=962, 210.7875pt x 449.68pt>
+ <./classArtillery__coll__graph.pdf
+
+pdfTeX warning: pdflatex (file ./classArtillery__coll__graph.pdf): PDF inclusio
+n: multiple pdfs with page group included in a single page
+>
+<classArtillery__coll__graph.pdf, id=774, 210.7875pt x 449.68pt>
 File: classArtillery__coll__graph.pdf Graphic file (type pdf)
 <use classArtillery__coll__graph.pdf>
-Package pdftex.def Info: classArtillery__coll__graph.pdf  used on input line 20
+Package pdftex.def Info: classArtillery__coll__graph.pdf  used on input line 18
 .
 (pdftex.def)             Requested size: 210.0pt x 448.01154pt.
- [20] [21]
-Underfull \hbox (badness 10000) detected at line 55
+ [20] [21] [22]
+Underfull \hbox (badness 10000) detected at line 46
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 68
+Underfull \hbox (badness 10000) detected at line 59
 [][][]
  []
 
-) (./classField.tex <./classField__coll__graph.pdf>
-<classField__coll__graph.pdf, id=995, 189.70876pt x 254.9525pt>
+) (./classBattleResult.tex <./classBattleResult__coll__graph.pdf
+
+pdfTeX warning: pdflatex (file ./classBattleResult__coll__graph.pdf): PDF inclu
+sion: multiple pdfs with page group included in a single page
+>
+<classBattleResult__coll__graph.pdf, id=807, 259.97125pt x 182.6825pt>
+File: classBattleResult__coll__graph.pdf Graphic file (type pdf)
+<use classBattleResult__coll__graph.pdf>
+Package pdftex.def Info: classBattleResult__coll__graph.pdf  used on input line
+ 18.
+(pdftex.def)             Requested size: 259.0pt x 181.99908pt.
+ [23]
+Underfull \hbox (badness 10000) detected at line 50
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 63
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 76
+[][][]
+ []
+
+[24]
+Underfull \hbox (badness 10000) detected at line 89
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 102
+[][][]
+ []
+
+) (./classField.tex <./classField__coll__graph.pdf
+
+pdfTeX warning: pdflatex (file ./classField__coll__graph.pdf): PDF inclusion: m
+ultiple pdfs with page group included in a single page
+>
+<classField__coll__graph.pdf, id=843, 189.70876pt x 254.9525pt>
 File: classField__coll__graph.pdf Graphic file (type pdf)
 <use classField__coll__graph.pdf>
 Package pdftex.def Info: classField__coll__graph.pdf  used on input line 9.
 (pdftex.def)             Requested size: 189.0pt x 254.00652pt.
- [22]
-Underfull \hbox (badness 10000) detected at line 44
+ [25]
+Underfull \hbox (badness 10000) detected at line 38
 [][][]
  []
 
-[23]
-Underfull \hbox (badness 10000) detected at line 53
+[26]
+Underfull \hbox (badness 10000) detected at line 47
 [][][]
  []
 
 ) (./classFieldType.tex <./classFieldType__inherit__graph.pdf>
-<classFieldType__inherit__graph.pdf, id=1045, 351.3125pt x 232.87pt>
+<classFieldType__inherit__graph.pdf, id=882, 351.3125pt x 232.87pt>
 File: classFieldType__inherit__graph.pdf Graphic file (type pdf)
 <use classFieldType__inherit__graph.pdf>
 Package pdftex.def Info: classFieldType__inherit__graph.pdf  used on input line
  18.
 (pdftex.def)             Requested size: 350.0pt x 232.01662pt.
- [24] <./classFieldType__coll__graph.pdf
+ <./classFieldType__coll__graph.pdf
 
 pdfTeX warning: pdflatex (file ./classFieldType__coll__graph.pdf): PDF inclusio
 n: multiple pdfs with page group included in a single page
 >
-<classFieldType__coll__graph.pdf, id=1058, 187.70125pt x 138.5175pt>
+<classFieldType__coll__graph.pdf, id=890, 187.70125pt x 138.5175pt>
 File: classFieldType__coll__graph.pdf Graphic file (type pdf)
 <use classFieldType__coll__graph.pdf>
 Package pdftex.def Info: classFieldType__coll__graph.pdf  used on input line 27
 .
 (pdftex.def)             Requested size: 187.0pt x 138.00777pt.
- [25]
-Underfull \hbox (badness 10000) detected at line 55
+ [27]
+Underfull \hbox (badness 10000) detected at line 51
 [][][]
  []
 
 ) (./classForestTerrain.tex <./classForestTerrain__inherit__graph.pdf>
-<classForestTerrain__inherit__graph.pdf, id=1083, 187.70125pt x 232.87pt>
+<classForestTerrain__inherit__graph.pdf, id=909, 187.70125pt x 232.87pt>
 File: classForestTerrain__inherit__graph.pdf Graphic file (type pdf)
 <use classForestTerrain__inherit__graph.pdf>
 Package pdftex.def Info: classForestTerrain__inherit__graph.pdf  used on input 
@@ -1091,38 +1195,42 @@ line 9.
 pdfTeX warning: pdflatex (file ./classForestTerrain__coll__graph.pdf): PDF incl
 usion: multiple pdfs with page group included in a single page
 >
-<classForestTerrain__coll__graph.pdf, id=1091, 187.70125pt x 232.87pt>
+<classForestTerrain__coll__graph.pdf, id=917, 187.70125pt x 232.87pt>
 File: classForestTerrain__coll__graph.pdf Graphic file (type pdf)
 <use classForestTerrain__coll__graph.pdf>
 Package pdftex.def Info: classForestTerrain__coll__graph.pdf  used on input lin
 e 18.
 (pdftex.def)             Requested size: 187.0pt x 232.01306pt.
- [26]) (./classInfantry.tex <./classInfantry__inherit__graph.pdf>
-<classInfantry__inherit__graph.pdf, id=1108, 210.7875pt x 354.32375pt>
+ [28]) (./classInfantry.tex <./classInfantry__inherit__graph.pdf>
+<classInfantry__inherit__graph.pdf, id=934, 210.7875pt x 354.32375pt>
 File: classInfantry__inherit__graph.pdf Graphic file (type pdf)
 <use classInfantry__inherit__graph.pdf>
 Package pdftex.def Info: classInfantry__inherit__graph.pdf  used on input line 
-10.
+9.
 (pdftex.def)             Requested size: 210.0pt x 353.00908pt.
- [27] <./classInfantry__coll__graph.pdf>
-<classInfantry__coll__graph.pdf, id=1125, 210.7875pt x 449.68pt>
+ [29] <./classInfantry__coll__graph.pdf>
+<classInfantry__coll__graph.pdf, id=950, 210.7875pt x 449.68pt>
 File: classInfantry__coll__graph.pdf Graphic file (type pdf)
 <use classInfantry__coll__graph.pdf>
-Package pdftex.def Info: classInfantry__coll__graph.pdf  used on input line 20.
+Package pdftex.def Info: classInfantry__coll__graph.pdf  used on input line 18.
 
 (pdftex.def)             Requested size: 210.0pt x 448.01154pt.
- [28] [29]
-Underfull \hbox (badness 10000) detected at line 55
+ [30] [31] [32]
+Underfull \hbox (badness 10000) detected at line 46
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 68
+Underfull \hbox (badness 10000) detected at line 59
 [][][]
  []
 
-) (./classPlainTerrain.tex <./classPlainTerrain__inherit__graph.pdf>
-<classPlainTerrain__inherit__graph.pdf, id=1158, 187.70125pt x 232.87pt>
+) (./classPlainTerrain.tex <./classPlainTerrain__inherit__graph.pdf
+
+pdfTeX warning: pdflatex (file ./classPlainTerrain__inherit__graph.pdf): PDF in
+clusion: multiple pdfs with page group included in a single page
+>
+<classPlainTerrain__inherit__graph.pdf, id=983, 187.70125pt x 232.87pt>
 File: classPlainTerrain__inherit__graph.pdf Graphic file (type pdf)
 <use classPlainTerrain__inherit__graph.pdf>
 Package pdftex.def Info: classPlainTerrain__inherit__graph.pdf  used on input l
@@ -1133,236 +1241,289 @@ ine 9.
 pdfTeX warning: pdflatex (file ./classPlainTerrain__coll__graph.pdf): PDF inclu
 sion: multiple pdfs with page group included in a single page
 >
-<classPlainTerrain__coll__graph.pdf, id=1166, 187.70125pt x 232.87pt>
+<classPlainTerrain__coll__graph.pdf, id=991, 187.70125pt x 232.87pt>
 File: classPlainTerrain__coll__graph.pdf Graphic file (type pdf)
 <use classPlainTerrain__coll__graph.pdf>
 Package pdftex.def Info: classPlainTerrain__coll__graph.pdf  used on input line
  18.
 (pdftex.def)             Requested size: 187.0pt x 232.01306pt.
- [30]) (./classPosition.tex <./classPosition__coll__graph.pdf>
-<classPosition__coll__graph.pdf, id=1185, 154.5775pt x 138.5175pt>
+ [33]) (./classPosition.tex <./classPosition__coll__graph.pdf>
+<classPosition__coll__graph.pdf, id=1007, 154.5775pt x 138.5175pt>
 File: classPosition__coll__graph.pdf Graphic file (type pdf)
 <use classPosition__coll__graph.pdf>
 Package pdftex.def Info: classPosition__coll__graph.pdf  used on input line 18.
 
 (pdftex.def)             Requested size: 154.0pt x 138.012pt.
- [31])
+ [34])
 (./classTank.tex <./classTank__inherit__graph.pdf>
-<classTank__inherit__graph.pdf, id=1206, 210.7875pt x 354.32375pt>
+<classTank__inherit__graph.pdf, id=1026, 210.7875pt x 354.32375pt>
 File: classTank__inherit__graph.pdf Graphic file (type pdf)
 <use classTank__inherit__graph.pdf>
-Package pdftex.def Info: classTank__inherit__graph.pdf  used on input line 10.
+Package pdftex.def Info: classTank__inherit__graph.pdf  used on input line 9.
 (pdftex.def)             Requested size: 210.0pt x 353.00908pt.
  <./classTank__coll__graph.pdf
 
 pdfTeX warning: pdflatex (file ./classTank__coll__graph.pdf): PDF inclusion: mu
 ltiple pdfs with page group included in a single page
 >
-<classTank__coll__graph.pdf, id=1214, 210.7875pt x 449.68pt>
+<classTank__coll__graph.pdf, id=1034, 210.7875pt x 449.68pt>
 File: classTank__coll__graph.pdf Graphic file (type pdf)
 <use classTank__coll__graph.pdf>
-Package pdftex.def Info: classTank__coll__graph.pdf  used on input line 20.
+Package pdftex.def Info: classTank__coll__graph.pdf  used on input line 18.
 (pdftex.def)             Requested size: 210.0pt x 448.01154pt.
- [32] [33]
-Underfull \hbox (badness 10000) detected at line 55
+ [35] [36] [37]
+Underfull \hbox (badness 10000) detected at line 46
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 68
+Underfull \hbox (badness 10000) detected at line 59
 [][][]
  []
 
-) (./classUnit.tex <./classUnit__inherit__graph.pdf>
-<classUnit__inherit__graph.pdf, id=1251, 438.63875pt x 354.32375pt>
+) (./classUnit.tex <./classUnit__inherit__graph.pdf
+
+pdfTeX warning: pdflatex (file ./classUnit__inherit__graph.pdf): PDF inclusion:
+ multiple pdfs with page group included in a single page
+>
+<classUnit__inherit__graph.pdf, id=1067, 438.63875pt x 354.32375pt>
 File: classUnit__inherit__graph.pdf Graphic file (type pdf)
 <use classUnit__inherit__graph.pdf>
-Package pdftex.def Info: classUnit__inherit__graph.pdf  used on input line 19.
+Package pdftex.def Info: classUnit__inherit__graph.pdf  used on input line 18.
 (pdftex.def)             Requested size: 350.0pt x 282.72949pt.
- [34] <./classUnit__coll__graph.pdf
+ <./classUnit__coll__graph.pdf
 
 pdfTeX warning: pdflatex (file ./classUnit__coll__graph.pdf): PDF inclusion: mu
 ltiple pdfs with page group included in a single page
 >
-<classUnit__coll__graph.pdf, id=1265, 210.7875pt x 343.2825pt>
+<classUnit__coll__graph.pdf, id=1076, 210.7875pt x 343.2825pt>
 File: classUnit__coll__graph.pdf Graphic file (type pdf)
 <use classUnit__coll__graph.pdf>
-Package pdftex.def Info: classUnit__coll__graph.pdf  used on input line 29.
+Package pdftex.def Info: classUnit__coll__graph.pdf  used on input line 27.
 (pdftex.def)             Requested size: 210.0pt x 342.00879pt.
- [35] [36]
-Underfull \hbox (badness 10000) detected at line 88
+ [38] [39]
+Underfull \hbox (badness 10000) detected at line 87
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 101
+Underfull \hbox (badness 10000) detected at line 100
 [][][]
  []
 
-[37]
-Underfull \hbox (badness 10000) detected at line 114
+[40]
+Underfull \hbox (badness 10000) detected at line 113
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 131
+Underfull \hbox (badness 10000) detected at line 130
 [][][]
  []
 
-[38]) (./classUrbanTerrain.tex <./classUrbanTerrain__inherit__graph.pdf
+) (./classUrbanTerrain.tex <./classUrbanTerrain__inherit__graph.pdf
 
 pdfTeX warning: pdflatex (file ./classUrbanTerrain__inherit__graph.pdf): PDF in
 clusion: multiple pdfs with page group included in a single page
 >
-<classUrbanTerrain__inherit__graph.pdf, id=1352, 187.70125pt x 232.87pt>
+<classUrbanTerrain__inherit__graph.pdf, id=1133, 187.70125pt x 232.87pt>
 File: classUrbanTerrain__inherit__graph.pdf Graphic file (type pdf)
 <use classUrbanTerrain__inherit__graph.pdf>
 Package pdftex.def Info: classUrbanTerrain__inherit__graph.pdf  used on input l
 ine 9.
 (pdftex.def)             Requested size: 187.0pt x 232.01306pt.
- [39] <./classUrbanTerrain__coll__graph.pdf
+ [41] <./classUrbanTerrain__coll__graph.pdf
 
 pdfTeX warning: pdflatex (file ./classUrbanTerrain__coll__graph.pdf): PDF inclu
 sion: multiple pdfs with page group included in a single page
 >
-<classUrbanTerrain__coll__graph.pdf, id=1368, 187.70125pt x 232.87pt>
+<classUrbanTerrain__coll__graph.pdf, id=1145, 187.70125pt x 232.87pt>
 File: classUrbanTerrain__coll__graph.pdf Graphic file (type pdf)
 <use classUrbanTerrain__coll__graph.pdf>
 Package pdftex.def Info: classUrbanTerrain__coll__graph.pdf  used on input line
  18.
 (pdftex.def)             Requested size: 187.0pt x 232.01306pt.
- [40]) [41] [42
-
-]
+) [42]
 Chapter 8.
-(./area_8h.tex <./area_8h__incl.pdf
-
-pdfTeX warning: pdflatex (file ./area_8h__incl.pdf): PDF inclusion: multiple pd
-fs with page group included in a single page
->
-<area_8h__incl.pdf, id=1398, 252.945pt x 269.005pt>
+(./area_8h.tex <./area_8h__incl.pdf>
+<area_8h__incl.pdf, id=1162, 252.945pt x 269.005pt>
 File: area_8h__incl.pdf Graphic file (type pdf)
 <use area_8h__incl.pdf>
-Package pdftex.def Info: area_8h__incl.pdf  used on input line 16.
+Package pdftex.def Info: area_8h__incl.pdf  used on input line 15.
 (pdftex.def)             Requested size: 252.0pt x 268.00688pt.
  <./area_8h__dep__incl.pdf
 
 pdfTeX warning: pdflatex (file ./area_8h__dep__incl.pdf): PDF inclusion: multip
 le pdfs with page group included in a single page
 >
-<area_8h__dep__incl.pdf, id=1413, 208.78pt x 156.585pt>
+<area_8h__dep__incl.pdf, id=1178, 208.78pt x 156.585pt>
 File: area_8h__dep__incl.pdf Graphic file (type pdf)
 <use area_8h__dep__incl.pdf>
-Package pdftex.def Info: area_8h__dep__incl.pdf  used on input line 24.
+Package pdftex.def Info: area_8h__dep__incl.pdf  used on input line 22.
 (pdftex.def)             Requested size: 208.0pt x 156.00879pt.
- [43]
-Underfull \hbox (badness 10000) detected at line 37
-[][][]
- []
+ [43
 
-
-Underfull \hbox (badness 10000) detected at line 40
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 43
-[][][]
- []
-
-) (./area_8h_source.tex) (./areamanager_8h.tex [44] <./areamanager_8h__incl.pdf
->
-<areamanager_8h__incl.pdf, id=1474, 252.945pt x 325.215pt>
+]) (./areamanager_8h.tex <./areamanager_8h__incl.pdf>
+<areamanager_8h__incl.pdf, id=1194, 252.945pt x 325.215pt>
 File: areamanager_8h__incl.pdf Graphic file (type pdf)
 <use areamanager_8h__incl.pdf>
-Package pdftex.def Info: areamanager_8h__incl.pdf  used on input line 14.
+Package pdftex.def Info: areamanager_8h__incl.pdf  used on input line 13.
 (pdftex.def)             Requested size: 252.0pt x 324.00833pt.
-
+ [44])
+(./battle_8h.tex <./battle_8h__incl.pdf>
+<battle_8h__incl.pdf, id=1217, 177.66376pt x 269.005pt>
+File: battle_8h__incl.pdf Graphic file (type pdf)
+<use battle_8h__incl.pdf>
+Package pdftex.def Info: battle_8h__incl.pdf  used on input line 14.
+(pdftex.def)             Requested size: 177.0pt x 268.00688pt.
+ [45]
 Underfull \hbox (badness 10000) detected at line 27
 [][][]
  []
 
-
-Underfull \hbox (badness 10000) detected at line 30
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 33
-[][][]
- []
-
-) (./areamanager_8h_source.tex [45]) (./field_8h.tex <./field_8h__incl.pdf>
-<field_8h__incl.pdf, id=1508, 165.61874pt x 156.585pt>
+) (./field_8h.tex <./field_8h__incl.pdf>
+<field_8h__incl.pdf, id=1240, 165.61874pt x 156.585pt>
 File: field_8h__incl.pdf Graphic file (type pdf)
 <use field_8h__incl.pdf>
 Package pdftex.def Info: field_8h__incl.pdf  used on input line 13.
 (pdftex.def)             Requested size: 165.0pt x 156.0064pt.
- <./field_8h__dep__incl.pdf
-
-pdfTeX warning: pdflatex (file ./field_8h__dep__incl.pdf): PDF inclusion: multi
-ple pdfs with page group included in a single page
->
-<field_8h__dep__incl.pdf, id=1523, 208.78pt x 269.005pt>
+ [46] <./field_8h__dep__incl.pdf>
+<field_8h__dep__incl.pdf, id=1262, 298.11375pt x 269.005pt>
 File: field_8h__dep__incl.pdf Graphic file (type pdf)
 <use field_8h__dep__incl.pdf>
-Package pdftex.def Info: field_8h__dep__incl.pdf  used on input line 21.
-(pdftex.def)             Requested size: 208.0pt x 268.01509pt.
- [46] [47]
-Underfull \hbox (badness 10000) detected at line 67
-[][][]
- []
+Package pdftex.def Info: field_8h__dep__incl.pdf  used on input line 20.
+(pdftex.def)             Requested size: 297.0pt x 268.01509pt.
 
-
-Underfull \hbox (badness 10000) detected at line 70
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 73
-[][][]
- []
-
-) (./field_8h_source.tex [48]) (./units_8h.tex <./units_8h__incl.pdf
-
-pdfTeX warning: pdflatex (file ./units_8h__incl.pdf): PDF inclusion: multiple p
-dfs with page group included in a single page
->
-<units_8h__incl.pdf, id=1645, 168.63pt x 212.795pt>
+[47]
+pdfTeX warning (ext4): destination with the same identifier (name{namespaceTerr
+ain_a55087733e5cca8d6ad346b96e8d97997}) has been already used, duplicate ignore
+d
+<to be read again> 
+                   \relax 
+l.55 ...errain_a55087733e5cca8d6ad346b96e8d97997}}
+                                                  
+pdfTeX warning (ext4): destination with the same identifier (name{namespaceTerr
+ain_a2a3a957decfd6b7350506b724359d4e4}) has been already used, duplicate ignore
+d
+<to be read again> 
+                   \relax 
+l.58 ...errain_a2a3a957decfd6b7350506b724359d4e4}}
+                                                  
+pdfTeX warning (ext4): destination with the same identifier (name{namespaceTerr
+ain_a6244524b78a1a7f12213ae6922f1b47d}) has been already used, duplicate ignore
+d
+<to be read again> 
+                   \relax 
+l.61 ...errain_a6244524b78a1a7f12213ae6922f1b47d}}
+                                                  
+pdfTeX warning (ext4): destination with the same identifier (name{namespaceTerr
+ain_ae0108418c88d0ce50fd0155b337872f2}) has been already used, duplicate ignore
+d
+<to be read again> 
+                   \relax 
+l.64 ...errain_ae0108418c88d0ce50fd0155b337872f2}}
+                                                  ) (./units_8h.tex <./units_8h
+__incl.pdf>
+<units_8h__incl.pdf, id=1300, 168.63pt x 212.795pt>
 File: units_8h__incl.pdf Graphic file (type pdf)
 <use units_8h__incl.pdf>
 Package pdftex.def Info: units_8h__incl.pdf  used on input line 13.
 (pdftex.def)             Requested size: 168.0pt x 212.00543pt.
- [49] <./units_8h__dep__incl.pdf
+ <./units_8h__dep__incl.pdf
 
 pdfTeX warning: pdflatex (file ./units_8h__dep__incl.pdf): PDF inclusion: multi
 ple pdfs with page group included in a single page
 >
-<units_8h__dep__incl.pdf, id=1706, 208.78pt x 212.795pt>
+<units_8h__dep__incl.pdf, id=1316, 298.11375pt x 212.795pt>
 File: units_8h__dep__incl.pdf Graphic file (type pdf)
 <use units_8h__dep__incl.pdf>
-Package pdftex.def Info: units_8h__dep__incl.pdf  used on input line 21.
-(pdftex.def)             Requested size: 208.0pt x 212.01193pt.
- [50]) (./units_8h_source.tex [51] [52]) [53] [54
+Package pdftex.def Info: units_8h__dep__incl.pdf  used on input line 20.
+(pdftex.def)             Requested size: 297.0pt x 212.01193pt.
+ [48]
+pdfTeX warning (ext4): destination with the same identifier (name{namespaceUnit
+Category_a3d68fbf8d985ff2ef88b043b65ac8563}) has been already used, duplicate i
+gnored
+<to be read again> 
+                   \relax 
+l.58 ...tegory_a3d68fbf8d985ff2ef88b043b65ac8563}}
+                                                  
+pdfTeX warning (ext4): destination with the same identifier (name{namespaceUnit
+Category_a485383fde688ad5acab7aad85d49d661}) has been already used, duplicate i
+gnored
+<to be read again> 
+                   \relax 
+l.61 ...tegory_a485383fde688ad5acab7aad85d49d661}}
+                                                  
+pdfTeX warning (ext4): destination with the same identifier (name{namespaceUnit
+Category_a6252c7062e54c34350dd2d39bd8ef575}) has been already used, duplicate i
+gnored
+<to be read again> 
+                   \relax 
+l.64 ...tegory_a6252c7062e54c34350dd2d39bd8ef575}}
+                                                  
+pdfTeX warning (ext4): destination with the same identifier (name{namespaceUnit
+Category_a80538708847ddd392f55fcf50a5f6f6f}) has been already used, duplicate i
+gnored
+<to be read again> 
+                   \relax 
+l.67 ...tegory_a80538708847ddd392f55fcf50a5f6f6f}}
+                                                  
+pdfTeX warning (ext4): destination with the same identifier (name{namespacebase
+Attack_a592dd1bea4163e45ab01c98890160eb4}) has been already used, duplicate ign
+ored
+<to be read again> 
+                   \relax 
+l.70 ...Attack_a592dd1bea4163e45ab01c98890160eb4}}
+                                                  
+pdfTeX warning (ext4): destination with the same identifier (name{namespacebase
+Attack_a17090fcd77e41c9c3fd34c60fa1c0af0}) has been already used, duplicate ign
+ored
+<to be read again> 
+                   \relax 
+l.73 ...Attack_a17090fcd77e41c9c3fd34c60fa1c0af0}}
+                                                  
+pdfTeX warning (ext4): destination with the same identifier (name{namespacebase
+Attack_a662eb62f04fe18aac25d1c019a3ca7e0}) has been already used, duplicate ign
+ored
+<to be read again> 
+                   \relax 
+l.76 ...Attack_a662eb62f04fe18aac25d1c019a3ca7e0}}
+                                                  
+pdfTeX warning (ext4): destination with the same identifier (name{namespacebase
+Attack_a3e702510ec20d1b15c331017e74625d3}) has been already used, duplicate ign
+ored
+<to be read again> 
+                   \relax 
+l.79 ...Attack_a3e702510ec20d1b15c331017e74625d3}}
+                                                  
+pdfTeX warning (ext4): destination with the same identifier (name{namespacebase
+Attack_a652fb5e86c65fae4ef1064b4b508efc3}) has been already used, duplicate ign
+ored
+<to be read again> 
+                   \relax 
+l.82 ...Attack_a652fb5e86c65fae4ef1064b4b508efc3}}
+                                                  ) [49] [50] (./refman.ind
+[51
 
-] (./refman.ind [55
 
 
-] [56
+] [52
 
-])
-(./refman.aux)
+]) (./refman.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package rerunfilecheck Info: File `refman.out' has not changed.
-(rerunfilecheck)             Checksum: 6DF0E0DE5C030B60D7CA6F9F8293CE5A;21413.
+(rerunfilecheck)             Checksum: 7AA2BA24D60D48A12406B052F3DB0589;16795.
  ) 
 Here is how much of TeX's memory you used:
- 18805 strings out of 478051
- 311098 string characters out of 5840943
+ 18611 strings out of 478051
+ 307620 string characters out of 5840943
  1867330 words of memory out of 5000000
- 38072 multiletter control sequences out of 15000+600000
- 569899 words of font info for 101 fonts, out of 8000000 for 9000
+ 38068 multiletter control sequences out of 15000+600000
+ 568446 words of font info for 99 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 101i,16n,117p,440b,738s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 101i,15n,117p,433b,740s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/
@@ -1371,10 +1532,10 @@ rw/courier/ucrro8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/
 uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8ac.pfb>
 </usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/
 texlive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on refman.pdf (62 pages, 397538 bytes).
+Output written on refman.pdf (58 pages, 390140 bytes).
 PDF statistics:
- 2153 PDF objects out of 2487 (max. 8388607)
- 1933 compressed objects within 20 object streams
- 477 named destinations out of 1000 (max. 500000)
- 1058 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1549 PDF objects out of 1728 (max. 8388607)
+ 1327 compressed objects within 14 object streams
+ 293 named destinations out of 1000 (max. 500000)
+ 828 words of extra memory for PDF output out of 10000 (max. 10000000)
 

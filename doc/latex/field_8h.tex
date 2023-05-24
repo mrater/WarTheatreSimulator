@@ -2,7 +2,7 @@
 \label{field_8h}\index{include/field.h@{include/field.h}}
 
 
-File with field classes. \mbox{\hyperlink{classField}{Field}} is characterized with position (q,r, -\/q-\/r) and terrain type (forest, urban etc.)  
+File with field classes.  
 
 
 {\ttfamily \#include $<$utility$>$}\newline
@@ -13,19 +13,18 @@ Include dependency graph for field.\+h\+:\nopagebreak
 \includegraphics[width=165pt]{field_8h__incl}
 \end{center}
 \end{figure}
-This graph shows which files directly or indirectly include this file\+:
-\nopagebreak
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=208pt]{field_8h__dep__incl}
+\includegraphics[width=297pt]{field_8h__dep__incl}
 \end{center}
 \end{figure}
 \doxysubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
 class \mbox{\hyperlink{classPosition}{Position}}
-\begin{DoxyCompactList}\small\item\em Class to store position of a field. Coordinate systems which is going to be used for this hexagonal simulation is q, r for two axes and s for the third (however, s is \char`\"{}artificial\char`\"{} since s = -\/q -\/ r) \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Class to store position of a field. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classFieldType}{Field\+Type}}
 \begin{DoxyCompactList}\small\item\em All fields will give certain punishments for movement and attack thus need to be distinguished. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classForestTerrain}{Forest\+Terrain}}
@@ -44,67 +43,30 @@ namespace \mbox{\hyperlink{namespaceTerrain}{Terrain}}
 \doxysubsection*{Typedefs}
 \begin{DoxyCompactItemize}
 \item 
-typedef int \mbox{\hyperlink{field_8h_a496c6f2af5e0112082a649499236d4fb}{Terrain\+Type}}
+\mbox{\Hypertarget{field_8h_a496c6f2af5e0112082a649499236d4fb}\label{field_8h_a496c6f2af5e0112082a649499236d4fb}} 
+typedef int {\bfseries Terrain\+Type}
 \begin{DoxyCompactList}\small\item\em type for identifiers of terrain \end{DoxyCompactList}\item 
-typedef int \mbox{\hyperlink{field_8h_acbbc44300fc357bd36d61f64d8b35d96}{Field\+ID}}
+\mbox{\Hypertarget{field_8h_acbbc44300fc357bd36d61f64d8b35d96}\label{field_8h_acbbc44300fc357bd36d61f64d8b35d96}} 
+typedef int {\bfseries Field\+ID}
 \begin{DoxyCompactList}\small\item\em unique identifier of a field \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
-const \mbox{\hyperlink{field_8h_a496c6f2af5e0112082a649499236d4fb}{Terrain\+Type}} \mbox{\hyperlink{namespaceTerrain_a55087733e5cca8d6ad346b96e8d97997}{Terrain\+::\+NONE}} = 0
+\mbox{\Hypertarget{namespaceTerrain_a55087733e5cca8d6ad346b96e8d97997}\label{namespaceTerrain_a55087733e5cca8d6ad346b96e8d97997}} 
+const \mbox{\hyperlink{field_8h_a496c6f2af5e0112082a649499236d4fb}{Terrain\+Type}} {\bfseries Terrain\+::\+NONE} = 0
 \item 
-const \mbox{\hyperlink{field_8h_a496c6f2af5e0112082a649499236d4fb}{Terrain\+Type}} \mbox{\hyperlink{namespaceTerrain_a2a3a957decfd6b7350506b724359d4e4}{Terrain\+::\+FOREST}} = 1
+\mbox{\Hypertarget{namespaceTerrain_a2a3a957decfd6b7350506b724359d4e4}\label{namespaceTerrain_a2a3a957decfd6b7350506b724359d4e4}} 
+const \mbox{\hyperlink{field_8h_a496c6f2af5e0112082a649499236d4fb}{Terrain\+Type}} {\bfseries Terrain\+::\+FOREST} = 1
 \item 
-const \mbox{\hyperlink{field_8h_a496c6f2af5e0112082a649499236d4fb}{Terrain\+Type}} \mbox{\hyperlink{namespaceTerrain_a6244524b78a1a7f12213ae6922f1b47d}{Terrain\+::\+URBAN}} = 2
+\mbox{\Hypertarget{namespaceTerrain_a6244524b78a1a7f12213ae6922f1b47d}\label{namespaceTerrain_a6244524b78a1a7f12213ae6922f1b47d}} 
+const \mbox{\hyperlink{field_8h_a496c6f2af5e0112082a649499236d4fb}{Terrain\+Type}} {\bfseries Terrain\+::\+URBAN} = 2
 \item 
-const \mbox{\hyperlink{field_8h_a496c6f2af5e0112082a649499236d4fb}{Terrain\+Type}} \mbox{\hyperlink{namespaceTerrain_ae0108418c88d0ce50fd0155b337872f2}{Terrain\+::\+PLAIN}} = 3
+\mbox{\Hypertarget{namespaceTerrain_ae0108418c88d0ce50fd0155b337872f2}\label{namespaceTerrain_ae0108418c88d0ce50fd0155b337872f2}} 
+const \mbox{\hyperlink{field_8h_a496c6f2af5e0112082a649499236d4fb}{Terrain\+Type}} {\bfseries Terrain\+::\+PLAIN} = 3
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-File with field classes. \mbox{\hyperlink{classField}{Field}} is characterized with position (q,r, -\/q-\/r) and terrain type (forest, urban etc.) 
+File with field classes. 
 
-\begin{DoxyAuthor}{Author}
-Maciej Sikorski 
-\end{DoxyAuthor}
-\begin{DoxyVersion}{Version}
-0.\+1 
-\end{DoxyVersion}
-\begin{DoxyDate}{Date}
-2023-\/05-\/19 
-\end{DoxyDate}
-
-
-Definition in file \mbox{\hyperlink{field_8h_source}{field.\+h}}.
-
-
-
-\doxysubsection{Typedef Documentation}
-\mbox{\Hypertarget{field_8h_acbbc44300fc357bd36d61f64d8b35d96}\label{field_8h_acbbc44300fc357bd36d61f64d8b35d96}} 
-\index{field.h@{field.h}!FieldID@{FieldID}}
-\index{FieldID@{FieldID}!field.h@{field.h}}
-\doxysubsubsection{\texorpdfstring{FieldID}{FieldID}}
-{\footnotesize\ttfamily typedef int \mbox{\hyperlink{field_8h_acbbc44300fc357bd36d61f64d8b35d96}{Field\+ID}}}
-
-
-
-unique identifier of a field 
-
-
-
-Definition at line \mbox{\hyperlink{field_8h_source_l00015}{15}} of file \mbox{\hyperlink{field_8h_source}{field.\+h}}.
-
-\mbox{\Hypertarget{field_8h_a496c6f2af5e0112082a649499236d4fb}\label{field_8h_a496c6f2af5e0112082a649499236d4fb}} 
-\index{field.h@{field.h}!TerrainType@{TerrainType}}
-\index{TerrainType@{TerrainType}!field.h@{field.h}}
-\doxysubsubsection{\texorpdfstring{TerrainType}{TerrainType}}
-{\footnotesize\ttfamily typedef int \mbox{\hyperlink{field_8h_a496c6f2af5e0112082a649499236d4fb}{Terrain\+Type}}}
-
-
-
-type for identifiers of terrain 
-
-
-
-Definition at line \mbox{\hyperlink{field_8h_source_l00012}{12}} of file \mbox{\hyperlink{field_8h_source}{field.\+h}}.
-
+\mbox{\hyperlink{classField}{Field}} is characterized with position (q,r, -\/q-\/r) and terrain type (forest, urban etc.) 

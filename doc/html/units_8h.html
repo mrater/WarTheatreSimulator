@@ -92,7 +92,6 @@ $(document).ready(function(){initNavTree('units_8h.html',''); initResizable(); }
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
-<a href="#typedef-members">Typedefs</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle"><div class="title">units.h File Reference</div></div>
 </div><!--header-->
@@ -100,14 +99,14 @@ $(document).ready(function(){initNavTree('units_8h.html',''); initResizable(); }
 
 <p>This file consists of classes of Units, i.e. <a class="el" href="classInfantry.html">Infantry</a>, <a class="el" href="classTank.html">Tank</a>, <a class="el" href="classArtillery.html">Artillery</a>.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &quot;<a class="el" href="field_8h_source.html">field.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="field_8h.html">field.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for units.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="units_8h__incl.png" border="0" usemap="#ainclude_2units_8h" alt=""/></div>
 <map name="ainclude_2units_8h" id="ainclude_2units_8h">
 <area shape="rect" title="This file consists of classes of Units, i.e. Infantry, Tank, Artillery." alt="" coords="5,5,123,32"/>
-<area shape="rect" href="field_8h.html" title="File with field classes. Field is characterized with position (q,r, &#45;q&#45;r) and terrain type (forest,..." alt="" coords="33,80,95,107"/>
+<area shape="rect" href="field_8h.html" title="File with field classes." alt="" coords="33,80,95,107"/>
 <area shape="rect" title=" " alt="" coords="34,155,94,181"/>
 </map>
 </div>
@@ -116,14 +115,13 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="units_8h__dep__incl.png" border="0" usemap="#ainclude_2units_8hdep" alt=""/></div>
 <map name="ainclude_2units_8hdep" id="ainclude_2units_8hdep">
-<area shape="rect" title="This file consists of classes of Units, i.e. Infantry, Tank, Artillery." alt="" coords="32,5,149,32"/>
-<area shape="rect" href="area_8h.html" title="This class manages whole war area This manages states of a world, including units stats,..." alt="" coords="33,80,148,107"/>
-<area shape="rect" href="areamanager_8h.html" title="This file manages the game area and its metadadata It has no safeguards, so it should not be used in ..." alt="" coords="5,155,176,181"/>
+<area shape="rect" title="This file consists of classes of Units, i.e. Infantry, Tank, Artillery." alt="" coords="103,5,220,32"/>
+<area shape="rect" href="area_8h.html" title="This class manages whole war area." alt="" coords="33,80,148,107"/>
+<area shape="rect" href="battle_8h.html" title="File with classes to resolve battles between two units." alt="" coords="172,80,295,107"/>
+<area shape="rect" href="areamanager_8h.html" title="This file manages the game area and its metadadata This class can be used to It has no safeguards,..." alt="" coords="5,155,176,181"/>
 </map>
 </div>
-</div>
-<p><a href="units_8h_source.html">Go to the source code of this file.</a></p>
-<table class="memberdecls">
+</div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnit.html">Unit</a></td></tr>
@@ -147,89 +145,51 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:af4f4513ffc53c380d3b4bacf2ef6ad60"><td class="memItemLeft" align="right" valign="top">typedef int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="units_8h.html#af4f4513ffc53c380d3b4bacf2ef6ad60">UnitType</a></td></tr>
+<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
+<tr class="memitem:af4f4513ffc53c380d3b4bacf2ef6ad60"><td class="memItemLeft" align="right" valign="top"><a id="af4f4513ffc53c380d3b4bacf2ef6ad60" name="af4f4513ffc53c380d3b4bacf2ef6ad60"></a>
+typedef int&#160;</td><td class="memItemRight" valign="bottom"><b>UnitType</b></td></tr>
 <tr class="separator:af4f4513ffc53c380d3b4bacf2ef6ad60"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae4fe8e0fb888e72a4c035cfb90af2d23"><td class="memItemLeft" align="right" valign="top">typedef int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="units_8h.html#ae4fe8e0fb888e72a4c035cfb90af2d23">UnitID</a></td></tr>
+<tr class="memitem:ae4fe8e0fb888e72a4c035cfb90af2d23"><td class="memItemLeft" align="right" valign="top"><a id="ae4fe8e0fb888e72a4c035cfb90af2d23" name="ae4fe8e0fb888e72a4c035cfb90af2d23"></a>
+typedef int&#160;</td><td class="memItemRight" valign="bottom"><b>UnitID</b></td></tr>
 <tr class="separator:ae4fe8e0fb888e72a4c035cfb90af2d23"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1b2dd22deeb4c3c261d48f0e3d1c2c66"><td class="memItemLeft" align="right" valign="top">typedef int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="units_8h.html#a1b2dd22deeb4c3c261d48f0e3d1c2c66">UnitFactionID</a></td></tr>
+<tr class="memitem:a1b2dd22deeb4c3c261d48f0e3d1c2c66"><td class="memItemLeft" align="right" valign="top"><a id="a1b2dd22deeb4c3c261d48f0e3d1c2c66" name="a1b2dd22deeb4c3c261d48f0e3d1c2c66"></a>
+typedef int&#160;</td><td class="memItemRight" valign="bottom"><b>UnitFactionID</b></td></tr>
 <tr class="separator:a1b2dd22deeb4c3c261d48f0e3d1c2c66"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a3d68fbf8d985ff2ef88b043b65ac8563"><td class="memItemLeft" align="right" valign="top">constexpr UnitType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceUnitCategory.html#a3d68fbf8d985ff2ef88b043b65ac8563">UnitCategory::NONE</a> = 0</td></tr>
+<tr class="memitem:a3d68fbf8d985ff2ef88b043b65ac8563"><td class="memItemLeft" align="right" valign="top"><a id="a3d68fbf8d985ff2ef88b043b65ac8563" name="a3d68fbf8d985ff2ef88b043b65ac8563"></a>
+constexpr UnitType&#160;</td><td class="memItemRight" valign="bottom"><b>UnitCategory::NONE</b> = 0</td></tr>
 <tr class="separator:a3d68fbf8d985ff2ef88b043b65ac8563"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a485383fde688ad5acab7aad85d49d661"><td class="memItemLeft" align="right" valign="top">constexpr UnitType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceUnitCategory.html#a485383fde688ad5acab7aad85d49d661">UnitCategory::INFANTRY</a> = 1</td></tr>
+<tr class="memitem:a485383fde688ad5acab7aad85d49d661"><td class="memItemLeft" align="right" valign="top"><a id="a485383fde688ad5acab7aad85d49d661" name="a485383fde688ad5acab7aad85d49d661"></a>
+constexpr UnitType&#160;</td><td class="memItemRight" valign="bottom"><b>UnitCategory::INFANTRY</b> = 1</td></tr>
 <tr class="separator:a485383fde688ad5acab7aad85d49d661"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6252c7062e54c34350dd2d39bd8ef575"><td class="memItemLeft" align="right" valign="top">constexpr UnitType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceUnitCategory.html#a6252c7062e54c34350dd2d39bd8ef575">UnitCategory::TANK</a> = 2</td></tr>
+<tr class="memitem:a6252c7062e54c34350dd2d39bd8ef575"><td class="memItemLeft" align="right" valign="top"><a id="a6252c7062e54c34350dd2d39bd8ef575" name="a6252c7062e54c34350dd2d39bd8ef575"></a>
+constexpr UnitType&#160;</td><td class="memItemRight" valign="bottom"><b>UnitCategory::TANK</b> = 2</td></tr>
 <tr class="separator:a6252c7062e54c34350dd2d39bd8ef575"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a80538708847ddd392f55fcf50a5f6f6f"><td class="memItemLeft" align="right" valign="top">constexpr UnitType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceUnitCategory.html#a80538708847ddd392f55fcf50a5f6f6f">UnitCategory::ARTILLERY</a> = 3</td></tr>
+<tr class="memitem:a80538708847ddd392f55fcf50a5f6f6f"><td class="memItemLeft" align="right" valign="top"><a id="a80538708847ddd392f55fcf50a5f6f6f" name="a80538708847ddd392f55fcf50a5f6f6f"></a>
+constexpr UnitType&#160;</td><td class="memItemRight" valign="bottom"><b>UnitCategory::ARTILLERY</b> = 3</td></tr>
 <tr class="separator:a80538708847ddd392f55fcf50a5f6f6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a592dd1bea4163e45ab01c98890160eb4"><td class="memItemLeft" align="right" valign="top">constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebaseAttack.html#a592dd1bea4163e45ab01c98890160eb4">baseAttack::ERROR_PAIR</a> = -1</td></tr>
-<tr class="memdesc:a592dd1bea4163e45ab01c98890160eb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">base attack when type of units are wrong  <a href="namespacebaseAttack.html#a592dd1bea4163e45ab01c98890160eb4">More...</a><br /></td></tr>
+<tr class="memitem:a592dd1bea4163e45ab01c98890160eb4"><td class="memItemLeft" align="right" valign="top"><a id="a592dd1bea4163e45ab01c98890160eb4" name="a592dd1bea4163e45ab01c98890160eb4"></a>
+constexpr int&#160;</td><td class="memItemRight" valign="bottom"><b>baseAttack::ERROR_PAIR</b> = -1</td></tr>
+<tr class="memdesc:a592dd1bea4163e45ab01c98890160eb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">base attack when type of units are wrong <br /></td></tr>
 <tr class="separator:a592dd1bea4163e45ab01c98890160eb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a17090fcd77e41c9c3fd34c60fa1c0af0"><td class="memItemLeft" align="right" valign="top">constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebaseAttack.html#a17090fcd77e41c9c3fd34c60fa1c0af0">baseAttack::INFRANTRY_TO_INFANTRY</a> = 60</td></tr>
+<tr class="memitem:a17090fcd77e41c9c3fd34c60fa1c0af0"><td class="memItemLeft" align="right" valign="top"><a id="a17090fcd77e41c9c3fd34c60fa1c0af0" name="a17090fcd77e41c9c3fd34c60fa1c0af0"></a>
+constexpr int&#160;</td><td class="memItemRight" valign="bottom"><b>baseAttack::INFRANTRY_TO_INFANTRY</b> = 60</td></tr>
 <tr class="separator:a17090fcd77e41c9c3fd34c60fa1c0af0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a662eb62f04fe18aac25d1c019a3ca7e0"><td class="memItemLeft" align="right" valign="top">constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebaseAttack.html#a662eb62f04fe18aac25d1c019a3ca7e0">baseAttack::INFANTRY_TO_ARTILLERY</a> = 100</td></tr>
+<tr class="memitem:a662eb62f04fe18aac25d1c019a3ca7e0"><td class="memItemLeft" align="right" valign="top"><a id="a662eb62f04fe18aac25d1c019a3ca7e0" name="a662eb62f04fe18aac25d1c019a3ca7e0"></a>
+constexpr int&#160;</td><td class="memItemRight" valign="bottom"><b>baseAttack::INFANTRY_TO_ARTILLERY</b> = 100</td></tr>
 <tr class="separator:a662eb62f04fe18aac25d1c019a3ca7e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3e702510ec20d1b15c331017e74625d3"><td class="memItemLeft" align="right" valign="top">constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebaseAttack.html#a3e702510ec20d1b15c331017e74625d3">baseAttack::ARTILLERY_TO_ARTILLERY</a> = 100</td></tr>
+<tr class="memitem:a3e702510ec20d1b15c331017e74625d3"><td class="memItemLeft" align="right" valign="top"><a id="a3e702510ec20d1b15c331017e74625d3" name="a3e702510ec20d1b15c331017e74625d3"></a>
+constexpr int&#160;</td><td class="memItemRight" valign="bottom"><b>baseAttack::ARTILLERY_TO_ARTILLERY</b> = 100</td></tr>
 <tr class="separator:a3e702510ec20d1b15c331017e74625d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a652fb5e86c65fae4ef1064b4b508efc3"><td class="memItemLeft" align="right" valign="top">constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebaseAttack.html#a652fb5e86c65fae4ef1064b4b508efc3">baseAttack::ARTILLERY_TO_INFANTRY</a> = 100</td></tr>
+<tr class="memitem:a652fb5e86c65fae4ef1064b4b508efc3"><td class="memItemLeft" align="right" valign="top"><a id="a652fb5e86c65fae4ef1064b4b508efc3" name="a652fb5e86c65fae4ef1064b4b508efc3"></a>
+constexpr int&#160;</td><td class="memItemRight" valign="bottom"><b>baseAttack::ARTILLERY_TO_INFANTRY</b> = 100</td></tr>
 <tr class="separator:a652fb5e86c65fae4ef1064b4b508efc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >This file consists of classes of Units, i.e. <a class="el" href="classInfantry.html">Infantry</a>, <a class="el" href="classTank.html">Tank</a>, <a class="el" href="classArtillery.html">Artillery</a>. </p>
-
-<p class="definition">Definition in file <a class="el" href="units_8h_source.html">units.h</a>.</p>
-</div><h2 class="groupheader">Typedef Documentation</h2>
-<a id="a1b2dd22deeb4c3c261d48f0e3d1c2c66" name="a1b2dd22deeb4c3c261d48f0e3d1c2c66"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1b2dd22deeb4c3c261d48f0e3d1c2c66">&#9670;&nbsp;</a></span>UnitFactionID</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef int UnitFactionID</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="units_8h_source.html#l00010">10</a> of file <a class="el" href="units_8h_source.html">units.h</a>.</p>
-
-</div>
-</div>
-<a id="ae4fe8e0fb888e72a4c035cfb90af2d23" name="ae4fe8e0fb888e72a4c035cfb90af2d23"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae4fe8e0fb888e72a4c035cfb90af2d23">&#9670;&nbsp;</a></span>UnitID</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef int UnitID</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="units_8h_source.html#l00009">9</a> of file <a class="el" href="units_8h_source.html">units.h</a>.</p>
-
-</div>
-</div>
-<a id="af4f4513ffc53c380d3b4bacf2ef6ad60" name="af4f4513ffc53c380d3b4bacf2ef6ad60"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af4f4513ffc53c380d3b4bacf2ef6ad60">&#9670;&nbsp;</a></span>UnitType</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef int UnitType</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="units_8h_source.html#l00008">8</a> of file <a class="el" href="units_8h_source.html">units.h</a>.</p>
-
-</div>
-</div>
-</div><!-- contents -->
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

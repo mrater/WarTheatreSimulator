@@ -1,5 +1,6 @@
 <map id="include/units.h" name="include/units.h">
-<area shape="rect" id="node1" title="This file consists of classes of Units, i.e. Infantry, Tank, Artillery." alt="" coords="32,5,149,32"/>
-<area shape="rect" id="node2" href="$area_8h.html" title="This class manages whole war area This manages states of a world, including units stats,..." alt="" coords="33,80,148,107"/>
-<area shape="rect" id="node3" href="$areamanager_8h.html" title="This file manages the game area and its metadadata It has no safeguards, so it should not be used in ..." alt="" coords="5,155,176,181"/>
+<area shape="rect" id="node1" title="This file consists of classes of Units, i.e. Infantry, Tank, Artillery." alt="" coords="103,5,220,32"/>
+<area shape="rect" id="node2" href="$area_8h.html" title="This class manages whole war area." alt="" coords="33,80,148,107"/>
+<area shape="rect" id="node4" href="$battle_8h.html" title="File with classes to resolve battles between two units." alt="" coords="172,80,295,107"/>
+<area shape="rect" id="node3" href="$areamanager_8h.html" title="This file manages the game area and its metadadata This class can be used to It has no safeguards,..." alt="" coords="5,155,176,181"/>
 </map>

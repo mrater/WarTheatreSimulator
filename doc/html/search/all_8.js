@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['plainterrain_0',['PlainTerrain',['../classPlainTerrain.html',1,'']]],
-  ['position_1',['Position',['../classPosition.html',1,'']]],
-  ['position_2',['position',['../classUnit.html#a27e74ea818f26a5dba884564bc44c7de',1,'Unit']]]
+  ['nextfieldid_0',['nextFieldID',['../classAreaManager.html#af614b33ab54ece0d658dddd21931c15b',1,'AreaManager']]],
+  ['nextunitid_1',['nextUnitID',['../classAreaManager.html#a2db998438c19cc9d276ae45f8f532af0',1,'AreaManager']]]
 ];

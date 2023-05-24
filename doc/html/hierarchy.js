@@ -3,6 +3,7 @@ var hierarchy =
     [ "Area", "classArea.html", [
       [ "AreaManager", "classAreaManager.html", null ]
     ] ],
+    [ "BattleResult", "classBattleResult.html", null ],
     [ "Field", "classField.html", null ],
     [ "FieldType", "classFieldType.html", [
       [ "ForestTerrain", "classForestTerrain.html", null ],

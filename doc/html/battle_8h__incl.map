@@ -1,0 +1,6 @@
+<map id="include/battle.h" name="include/battle.h">
+<area shape="rect" id="node1" title="File with classes to resolve battles between two units." alt="" coords="12,5,135,32"/>
+<area shape="rect" id="node2" href="$units_8h.html" title="This file consists of classes of Units, i.e. Infantry, Tank, Artillery." alt="" coords="5,80,72,107"/>
+<area shape="rect" id="node3" href="$field_8h.html" title="File with field classes." alt="" coords="42,155,105,181"/>
+<area shape="rect" id="node4" title=" " alt="" coords="43,229,103,256"/>
+</map>

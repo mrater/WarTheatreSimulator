@@ -1,5 +1,5 @@
 <map id="include/units.h" name="include/units.h">
 <area shape="rect" id="node1" title="This file consists of classes of Units, i.e. Infantry, Tank, Artillery." alt="" coords="5,5,123,32"/>
-<area shape="rect" id="node2" href="$field_8h.html" title="File with field classes. Field is characterized with position (q,r, &#45;q&#45;r) and terrain type (forest,..." alt="" coords="33,80,95,107"/>
+<area shape="rect" id="node2" href="$field_8h.html" title="File with field classes." alt="" coords="33,80,95,107"/>
 <area shape="rect" id="node3" title=" " alt="" coords="34,155,94,181"/>
 </map>

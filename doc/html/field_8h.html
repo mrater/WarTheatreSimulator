@@ -98,7 +98,7 @@ $(document).ready(function(){initNavTree('field_8h.html',''); initResizable(); }
 </div><!--header-->
 <div class="contents">
 
-<p>File with field classes. <a class="el" href="classField.html">Field</a> is characterized with position (q,r, -q-r) and terrain type (forest, urban etc.)  
+<p>File with field classes.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;utility&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
@@ -106,7 +106,7 @@ Include dependency graph for field.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="field_8h__incl.png" border="0" usemap="#ainclude_2field_8h" alt=""/></div>
 <map name="ainclude_2field_8h" id="ainclude_2field_8h">
-<area shape="rect" title="File with field classes. Field is characterized with position (q,r, &#45;q&#45;r) and terrain type (forest,..." alt="" coords="5,5,119,32"/>
+<area shape="rect" title="File with field classes." alt="" coords="5,5,119,32"/>
 <area shape="rect" title=" " alt="" coords="32,80,92,107"/>
 </map>
 </div>
@@ -115,19 +115,18 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="field_8h__dep__incl.png" border="0" usemap="#ainclude_2field_8hdep" alt=""/></div>
 <map name="ainclude_2field_8hdep" id="ainclude_2field_8hdep">
-<area shape="rect" title="File with field classes. Field is characterized with position (q,r, &#45;q&#45;r) and terrain type (forest,..." alt="" coords="34,5,147,32"/>
-<area shape="rect" href="units_8h.html" title="This file consists of classes of Units, i.e. Infantry, Tank, Artillery." alt="" coords="32,80,149,107"/>
-<area shape="rect" href="area_8h.html" title="This class manages whole war area This manages states of a world, including units stats,..." alt="" coords="33,155,148,181"/>
-<area shape="rect" href="areamanager_8h.html" title="This file manages the game area and its metadadata It has no safeguards, so it should not be used in ..." alt="" coords="5,229,176,256"/>
+<area shape="rect" title="File with field classes." alt="" coords="58,5,171,32"/>
+<area shape="rect" href="battle_8h.html" title="File with classes to resolve battles between two units." alt="" coords="5,155,128,181"/>
+<area shape="rect" href="units_8h.html" title="This file consists of classes of Units, i.e. Infantry, Tank, Artillery." alt="" coords="104,80,221,107"/>
+<area shape="rect" href="area_8h.html" title="This class manages whole war area." alt="" coords="152,155,267,181"/>
+<area shape="rect" href="areamanager_8h.html" title="This file manages the game area and its metadadata This class can be used to It has no safeguards,..." alt="" coords="124,229,295,256"/>
 </map>
 </div>
-</div>
-<p><a href="field_8h_source.html">Go to the source code of this file.</a></p>
-<table class="memberdecls">
+</div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPosition.html">Position</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class to store position of a field. Coordinate systems which is going to be used for this hexagonal simulation is q, r for two axes and s for the third (however, s is "artificial" since s = -q - r)  <a href="classPosition.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class to store position of a field.  <a href="classPosition.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFieldType.html">FieldType</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">All fields will give certain punishments for movement and attack thus need to be distinguished.  <a href="classFieldType.html#details">More...</a><br /></td></tr>
@@ -149,69 +148,34 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:a496c6f2af5e0112082a649499236d4fb"><td class="memItemLeft" align="right" valign="top">typedef int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="field_8h.html#a496c6f2af5e0112082a649499236d4fb">TerrainType</a></td></tr>
-<tr class="memdesc:a496c6f2af5e0112082a649499236d4fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">type for identifiers of terrain  <a href="field_8h.html#a496c6f2af5e0112082a649499236d4fb">More...</a><br /></td></tr>
+<tr class="memitem:a496c6f2af5e0112082a649499236d4fb"><td class="memItemLeft" align="right" valign="top"><a id="a496c6f2af5e0112082a649499236d4fb" name="a496c6f2af5e0112082a649499236d4fb"></a>
+typedef int&#160;</td><td class="memItemRight" valign="bottom"><b>TerrainType</b></td></tr>
+<tr class="memdesc:a496c6f2af5e0112082a649499236d4fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">type for identifiers of terrain <br /></td></tr>
 <tr class="separator:a496c6f2af5e0112082a649499236d4fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acbbc44300fc357bd36d61f64d8b35d96"><td class="memItemLeft" align="right" valign="top">typedef int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="field_8h.html#acbbc44300fc357bd36d61f64d8b35d96">FieldID</a></td></tr>
-<tr class="memdesc:acbbc44300fc357bd36d61f64d8b35d96"><td class="mdescLeft">&#160;</td><td class="mdescRight">unique identifier of a field  <a href="field_8h.html#acbbc44300fc357bd36d61f64d8b35d96">More...</a><br /></td></tr>
+<tr class="memitem:acbbc44300fc357bd36d61f64d8b35d96"><td class="memItemLeft" align="right" valign="top"><a id="acbbc44300fc357bd36d61f64d8b35d96" name="acbbc44300fc357bd36d61f64d8b35d96"></a>
+typedef int&#160;</td><td class="memItemRight" valign="bottom"><b>FieldID</b></td></tr>
+<tr class="memdesc:acbbc44300fc357bd36d61f64d8b35d96"><td class="mdescLeft">&#160;</td><td class="mdescRight">unique identifier of a field <br /></td></tr>
 <tr class="separator:acbbc44300fc357bd36d61f64d8b35d96"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a55087733e5cca8d6ad346b96e8d97997"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="field_8h.html#a496c6f2af5e0112082a649499236d4fb">TerrainType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceTerrain.html#a55087733e5cca8d6ad346b96e8d97997">Terrain::NONE</a> = 0</td></tr>
+<tr class="memitem:a55087733e5cca8d6ad346b96e8d97997"><td class="memItemLeft" align="right" valign="top"><a id="a55087733e5cca8d6ad346b96e8d97997" name="a55087733e5cca8d6ad346b96e8d97997"></a>
+const <a class="el" href="field_8h.html#a496c6f2af5e0112082a649499236d4fb">TerrainType</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Terrain::NONE</b> = 0</td></tr>
 <tr class="separator:a55087733e5cca8d6ad346b96e8d97997"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2a3a957decfd6b7350506b724359d4e4"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="field_8h.html#a496c6f2af5e0112082a649499236d4fb">TerrainType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceTerrain.html#a2a3a957decfd6b7350506b724359d4e4">Terrain::FOREST</a> = 1</td></tr>
+<tr class="memitem:a2a3a957decfd6b7350506b724359d4e4"><td class="memItemLeft" align="right" valign="top"><a id="a2a3a957decfd6b7350506b724359d4e4" name="a2a3a957decfd6b7350506b724359d4e4"></a>
+const <a class="el" href="field_8h.html#a496c6f2af5e0112082a649499236d4fb">TerrainType</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Terrain::FOREST</b> = 1</td></tr>
 <tr class="separator:a2a3a957decfd6b7350506b724359d4e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6244524b78a1a7f12213ae6922f1b47d"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="field_8h.html#a496c6f2af5e0112082a649499236d4fb">TerrainType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceTerrain.html#a6244524b78a1a7f12213ae6922f1b47d">Terrain::URBAN</a> = 2</td></tr>
+<tr class="memitem:a6244524b78a1a7f12213ae6922f1b47d"><td class="memItemLeft" align="right" valign="top"><a id="a6244524b78a1a7f12213ae6922f1b47d" name="a6244524b78a1a7f12213ae6922f1b47d"></a>
+const <a class="el" href="field_8h.html#a496c6f2af5e0112082a649499236d4fb">TerrainType</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Terrain::URBAN</b> = 2</td></tr>
 <tr class="separator:a6244524b78a1a7f12213ae6922f1b47d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae0108418c88d0ce50fd0155b337872f2"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="field_8h.html#a496c6f2af5e0112082a649499236d4fb">TerrainType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceTerrain.html#ae0108418c88d0ce50fd0155b337872f2">Terrain::PLAIN</a> = 3</td></tr>
+<tr class="memitem:ae0108418c88d0ce50fd0155b337872f2"><td class="memItemLeft" align="right" valign="top"><a id="ae0108418c88d0ce50fd0155b337872f2" name="ae0108418c88d0ce50fd0155b337872f2"></a>
+const <a class="el" href="field_8h.html#a496c6f2af5e0112082a649499236d4fb">TerrainType</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Terrain::PLAIN</b> = 3</td></tr>
 <tr class="separator:ae0108418c88d0ce50fd0155b337872f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p >File with field classes. <a class="el" href="classField.html">Field</a> is characterized with position (q,r, -q-r) and terrain type (forest, urban etc.) </p>
-<dl class="section author"><dt>Author</dt><dd>Maciej Sikorski </dd></dl>
-<dl class="section version"><dt>Version</dt><dd>0.1 </dd></dl>
-<dl class="section date"><dt>Date</dt><dd>2023-05-19 </dd></dl>
-
-<p class="definition">Definition in file <a class="el" href="field_8h_source.html">field.h</a>.</p>
-</div><h2 class="groupheader">Typedef Documentation</h2>
-<a id="acbbc44300fc357bd36d61f64d8b35d96" name="acbbc44300fc357bd36d61f64d8b35d96"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acbbc44300fc357bd36d61f64d8b35d96">&#9670;&nbsp;</a></span>FieldID</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef int <a class="el" href="field_8h.html#acbbc44300fc357bd36d61f64d8b35d96">FieldID</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>unique identifier of a field </p>
-
-<p class="definition">Definition at line <a class="el" href="field_8h_source.html#l00015">15</a> of file <a class="el" href="field_8h_source.html">field.h</a>.</p>
-
-</div>
-</div>
-<a id="a496c6f2af5e0112082a649499236d4fb" name="a496c6f2af5e0112082a649499236d4fb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a496c6f2af5e0112082a649499236d4fb">&#9670;&nbsp;</a></span>TerrainType</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef int <a class="el" href="field_8h.html#a496c6f2af5e0112082a649499236d4fb">TerrainType</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>type for identifiers of terrain </p>
-
-<p class="definition">Definition at line <a class="el" href="field_8h_source.html#l00012">12</a> of file <a class="el" href="field_8h_source.html">field.h</a>.</p>
-
-</div>
-</div>
-</div><!-- contents -->
+<div class="textblock"><p >File with field classes. </p>
+<p ><a class="el" href="classField.html">Field</a> is characterized with position (q,r, -q-r) and terrain type (forest, urban etc.) </p>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

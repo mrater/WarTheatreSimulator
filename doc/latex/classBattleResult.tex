@@ -1,0 +1,109 @@
+\hypertarget{classBattleResult}{}\doxysection{Battle\+Result Class Reference}
+\label{classBattleResult}\index{BattleResult@{BattleResult}}
+
+
+Class containing information regarding battle results.  
+
+
+
+
+{\ttfamily \#include $<$battle.\+h$>$}
+
+
+
+Collaboration diagram for Battle\+Result\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=259pt]{classBattleResult__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{field_8h_acbbc44300fc357bd36d61f64d8b35d96}{Field\+ID}} \mbox{\hyperlink{classBattleResult_a237cbf1463013e80c89dd1af02874ecd}{get\+Defender\+Field}} ()
+\begin{DoxyCompactList}\small\item\em get field of defender \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classBattleResult_a4922476a32383f21dfff8cd77af38613}{calculate\+Damage}} ()
+\begin{DoxyCompactList}\small\item\em Calculate damage dealt to defender. Damage is equivalent to organization loss of defender. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classBattleResult_aa225719d8a068023d02e0a47fd866f5c}{calculate\+Backslash\+Damage}} ()
+\begin{DoxyCompactList}\small\item\em Calculate damage dealt to attacker. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classBattleResult_a7bf625ed20703fb2156963c086a079a5}{calculate\+Attacker\+Supply\+Loss}} ()
+\begin{DoxyCompactList}\small\item\em Calculate attacker loss in equipment. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classBattleResult_a9dd0bc434368011fa40f02b910f9b8f1}{calculate\+Defender\+Supply\+Loss}} ()
+\begin{DoxyCompactList}\small\item\em Calculate defender loss in equipment. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class containing information regarding battle results. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classBattleResult_a7bf625ed20703fb2156963c086a079a5}\label{classBattleResult_a7bf625ed20703fb2156963c086a079a5}} 
+\index{BattleResult@{BattleResult}!calculateAttackerSupplyLoss@{calculateAttackerSupplyLoss}}
+\index{calculateAttackerSupplyLoss@{calculateAttackerSupplyLoss}!BattleResult@{BattleResult}}
+\doxysubsubsection{\texorpdfstring{calculateAttackerSupplyLoss()}{calculateAttackerSupplyLoss()}}
+{\footnotesize\ttfamily int Battle\+Result\+::calculate\+Attacker\+Supply\+Loss (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Calculate attacker loss in equipment. 
+
+\begin{DoxyReturn}{Returns}
+loss of supply level of attacker 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBattleResult_aa225719d8a068023d02e0a47fd866f5c}\label{classBattleResult_aa225719d8a068023d02e0a47fd866f5c}} 
+\index{BattleResult@{BattleResult}!calculateBackslashDamage@{calculateBackslashDamage}}
+\index{calculateBackslashDamage@{calculateBackslashDamage}!BattleResult@{BattleResult}}
+\doxysubsubsection{\texorpdfstring{calculateBackslashDamage()}{calculateBackslashDamage()}}
+{\footnotesize\ttfamily int Battle\+Result\+::calculate\+Backslash\+Damage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Calculate damage dealt to attacker. 
+
+\begin{DoxyReturn}{Returns}
+organization loss of attacker 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBattleResult_a4922476a32383f21dfff8cd77af38613}\label{classBattleResult_a4922476a32383f21dfff8cd77af38613}} 
+\index{BattleResult@{BattleResult}!calculateDamage@{calculateDamage}}
+\index{calculateDamage@{calculateDamage}!BattleResult@{BattleResult}}
+\doxysubsubsection{\texorpdfstring{calculateDamage()}{calculateDamage()}}
+{\footnotesize\ttfamily int Battle\+Result\+::calculate\+Damage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Calculate damage dealt to defender. Damage is equivalent to organization loss of defender. 
+
+\begin{DoxyReturn}{Returns}
+organization loss of defender 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBattleResult_a9dd0bc434368011fa40f02b910f9b8f1}\label{classBattleResult_a9dd0bc434368011fa40f02b910f9b8f1}} 
+\index{BattleResult@{BattleResult}!calculateDefenderSupplyLoss@{calculateDefenderSupplyLoss}}
+\index{calculateDefenderSupplyLoss@{calculateDefenderSupplyLoss}!BattleResult@{BattleResult}}
+\doxysubsubsection{\texorpdfstring{calculateDefenderSupplyLoss()}{calculateDefenderSupplyLoss()}}
+{\footnotesize\ttfamily int Battle\+Result\+::calculate\+Defender\+Supply\+Loss (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Calculate defender loss in equipment. 
+
+\begin{DoxyReturn}{Returns}
+loss of supply level of defender 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBattleResult_a237cbf1463013e80c89dd1af02874ecd}\label{classBattleResult_a237cbf1463013e80c89dd1af02874ecd}} 
+\index{BattleResult@{BattleResult}!getDefenderField@{getDefenderField}}
+\index{getDefenderField@{getDefenderField}!BattleResult@{BattleResult}}
+\doxysubsubsection{\texorpdfstring{getDefenderField()}{getDefenderField()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{field_8h_acbbc44300fc357bd36d61f64d8b35d96}{Field\+ID}} Battle\+Result\+::get\+Defender\+Field (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+get field of defender 
+
+\begin{DoxyReturn}{Returns}
+id of defended field 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{battle_8h}{battle.\+h}}\end{DoxyCompactItemize}

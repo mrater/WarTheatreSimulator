@@ -2,8 +2,7 @@
 \label{classAreaManager}\index{AreaManager@{AreaManager}}
 
 
-Inheritance diagram for Area\+Manager\+:
-\nopagebreak
+Inheritance diagram for Area\+Manager\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -12,21 +11,102 @@ Inheritance diagram for Area\+Manager\+:
 \end{figure}
 
 
-Collaboration diagram for Area\+Manager\+:
-\nopagebreak
+Collaboration diagram for Area\+Manager\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=204pt]{classAreaManager__coll__graph}
 \end{center}
 \end{figure}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classAreaManager_acf9cde3ac28391bcbd64473df4930f19}{create\+Unit}} (const \mbox{\hyperlink{classPosition}{Position}} \&position, const \mbox{\hyperlink{classUnit}{Unit}} \&unit)
+\begin{DoxyCompactList}\small\item\em Spawn unit on a given position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classAreaManager_a4b9c9f838f9c3f446b67259b41c3e674}{remove\+Unit}} (const Unit\+ID \&unit\+ID)
+\begin{DoxyCompactList}\small\item\em Remove unit from area. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classAreaManager_abfcce02d6c4f5dbc061e991c8e0293c8}{move\+Unit}} (const Unit\+ID \&Unit\+ID, const \mbox{\hyperlink{classPosition}{Position}} \&position)
+\begin{DoxyCompactList}\small\item\em Move unit to position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classAreaManager_aed9a7abe1db1c0a0ddf23960fd9b3f39}{create\+Field}} (const \mbox{\hyperlink{classFieldType}{Field\+Type}} \&field\+Type, const \mbox{\hyperlink{classPosition}{Position}} \&position)
+\begin{DoxyCompactList}\small\item\em Create new field of given type and position. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classAreaManager_a2db998438c19cc9d276ae45f8f532af0}\label{classAreaManager_a2db998438c19cc9d276ae45f8f532af0}} 
+Unit\+ID {\bfseries next\+Unit\+ID} = 1
+\begin{DoxyCompactList}\small\item\em next unique identifier of a unit. Should increase when unit is created. Should not ever be decreased \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classAreaManager_af614b33ab54ece0d658dddd21931c15b}\label{classAreaManager_af614b33ab54ece0d658dddd21931c15b}} 
+\mbox{\hyperlink{field_8h_acbbc44300fc357bd36d61f64d8b35d96}{Field\+ID}} {\bfseries next\+Field\+ID} = 1
+\begin{DoxyCompactList}\small\item\em next unique identifier of a field. Should increase for each new field. Should not ever be decreased \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\doxysubsection{Detailed Description}
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classAreaManager_aed9a7abe1db1c0a0ddf23960fd9b3f39}\label{classAreaManager_aed9a7abe1db1c0a0ddf23960fd9b3f39}} 
+\index{AreaManager@{AreaManager}!createField@{createField}}
+\index{createField@{createField}!AreaManager@{AreaManager}}
+\doxysubsubsection{\texorpdfstring{createField()}{createField()}}
+{\footnotesize\ttfamily void Area\+Manager\+::create\+Field (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classFieldType}{Field\+Type}} \&}]{field\+Type,  }\item[{const \mbox{\hyperlink{classPosition}{Position}} \&}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
 
 
-Definition at line \mbox{\hyperlink{areamanager_8h_source_l00013}{13}} of file \mbox{\hyperlink{areamanager_8h_source}{areamanager.\+h}}.
 
+Create new field of given type and position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em field\+Type} & type of terrain of the field \\
+\hline
+{\em position} & position of the new field \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classAreaManager_acf9cde3ac28391bcbd64473df4930f19}\label{classAreaManager_acf9cde3ac28391bcbd64473df4930f19}} 
+\index{AreaManager@{AreaManager}!createUnit@{createUnit}}
+\index{createUnit@{createUnit}!AreaManager@{AreaManager}}
+\doxysubsubsection{\texorpdfstring{createUnit()}{createUnit()}}
+{\footnotesize\ttfamily void Area\+Manager\+::create\+Unit (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classPosition}{Position}} \&}]{position,  }\item[{const \mbox{\hyperlink{classUnit}{Unit}} \&}]{unit }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Spawn unit on a given position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & \mbox{\hyperlink{classPosition}{Position}} of a unit \\
+\hline
+{\em unit} & -\/ unit to be spawned \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classAreaManager_abfcce02d6c4f5dbc061e991c8e0293c8}\label{classAreaManager_abfcce02d6c4f5dbc061e991c8e0293c8}} 
+\index{AreaManager@{AreaManager}!moveUnit@{moveUnit}}
+\index{moveUnit@{moveUnit}!AreaManager@{AreaManager}}
+\doxysubsubsection{\texorpdfstring{moveUnit()}{moveUnit()}}
+{\footnotesize\ttfamily void Area\+Manager\+::move\+Unit (\begin{DoxyParamCaption}\item[{const Unit\+ID \&}]{Unit\+ID,  }\item[{const \mbox{\hyperlink{classPosition}{Position}} \&}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Move unit to position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Unit\+ID} & ID of unit to be moved \\
+\hline
+{\em position} & position to be reached by unit \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classAreaManager_a4b9c9f838f9c3f446b67259b41c3e674}\label{classAreaManager_a4b9c9f838f9c3f446b67259b41c3e674}} 
+\index{AreaManager@{AreaManager}!removeUnit@{removeUnit}}
+\index{removeUnit@{removeUnit}!AreaManager@{AreaManager}}
+\doxysubsubsection{\texorpdfstring{removeUnit()}{removeUnit()}}
+{\footnotesize\ttfamily void Area\+Manager\+::remove\+Unit (\begin{DoxyParamCaption}\item[{const Unit\+ID \&}]{unit\+ID }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Remove unit from area. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em unit\+ID} & ID of removed unit \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
