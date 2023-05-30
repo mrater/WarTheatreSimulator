@@ -1,8 +1,18 @@
 #include "field.h"
 
-Position Field::getPosition()
+const float Field::getBonus()
+{
+    return Terrain::TERRAIN_BONUS[fieldType.getTerrainType()];
+}
+
+const Position Field::getPosition() const
 {
     return this->position;
+}
+
+const TerrainType Field::getTerrainType()
+{
+    return this->fieldType.getTerrainType();
 }
 
 const int Position::s()
@@ -10,7 +20,20 @@ const int Position::s()
     return -this->q - this->r;
 }
 
-Position::Position(const int &_q, const int &_r) : q(_q), r(_r) {};
+Position::Position(const int &_q, const int &_r) : q(_q), r(_r) {}
+
+Position::Position(){
+    
+}
+
+bool Position::operator==(const Position &anotherPosition) const
+{
+    return this->q == anotherPosition.q && this->r == anotherPosition.r;
+}
+void Position::operator=(const Position &anotherPosition){
+    this->q = anotherPosition.q;
+    this->r = anotherPosition.r;
+}
 
 const TerrainType ForestTerrain::getTerrainType()
 {

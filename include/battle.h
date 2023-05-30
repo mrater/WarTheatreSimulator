@@ -5,22 +5,32 @@
  */
 
 #include "units.h"
-#include "field.h"
+
+/// @brief importance of each parameters  
+namespace IMPORTANCE{
+    const float ATTACKER_ORG = 0.05;
+    const float ATTACKER_SUPPLY = 0.4;
+    const float DEFENDER_SUPPLY = 0.3;
+    const float DEFENDER_ORG = 0.25;
+};
 
 /**
  * @brief Class containing information regarding battle results
  */
 class BattleResult{
-    /// @brief ID of attacking unit
-    UnitID attackerID;
+    /// @brief attacking unit
+    Unit &attacker;
 
-    /// @brief ID of defending unit
-    UnitID defenderID;
+    /// @brief defending unit
+    Unit &defender;
+
+    /// @brief field of defender
+    Field& defenderField;
 
     public:
         /// @brief get field of defender
         /// @return id of defended field
-        const FieldID getDefenderField();
+        const Field &getDefenderField();
 
         /// @brief Calculate damage dealt to defender.
         /// Damage is equivalent to organization loss of defender
@@ -29,8 +39,7 @@ class BattleResult{
 
         /// @brief Calculate damage dealt to attacker
         /// @return organization loss of attacker
-        int calculateBackslashDamage();
-
+        int calculateBacklashDamage();
 
         /// @brief Calculate attacker loss in equipment. 
         /// @return loss of supply level of attacker
@@ -39,5 +48,8 @@ class BattleResult{
         /// @brief Calculate defender loss in equipment
         /// @return loss of supply level of defender
         int calculateDefenderSupplyLoss();
+
+        /// @brief provide information about battle
+        void loadBattle(const Unit &attackerUnit, const Unit &defenderUnit, const Field &fieldOfDefender);
 
 };

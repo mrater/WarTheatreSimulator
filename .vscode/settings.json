@@ -44,5 +44,6 @@
         "ostream": "cpp",
         "stdexcept": "cpp",
         "typeinfo": "cpp"
-    }
+    },
+    "prettier.tabWidth": 4
 }

@@ -1,4 +1,3 @@
+/home/maciej/Dokumenty/wts/build/CMakeFiles/wts.dir
 /home/maciej/Dokumenty/wts/build/CMakeFiles/edit_cache.dir
 /home/maciej/Dokumenty/wts/build/CMakeFiles/rebuild_cache.dir
-/home/maciej/Dokumenty/wts/build/src/CMakeFiles/edit_cache.dir
-/home/maciej/Dokumenty/wts/build/src/CMakeFiles/rebuild_cache.dir

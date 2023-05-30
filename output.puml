@@ -1,0 +1,180 @@
+@startuml
+
+
+
+
+
+/' Objects '/
+
+class Area {
+	+getUnit(const UnitID& unitID) : Unit&
+	+getUnitOnPosition(const Position& position) : Unit&
+	+isRealPosition(const Position& position) : bool
+	#fields : std::map<FieldID, Field>
+	#units : std::map<UnitID, Unit>
+	+getUnitsOfFaction(const UnitFactionID& unitFactionID) : std::vector<UnitID> {query}
+}
+
+
+class AreaManager {
+	#nextFieldID : FieldID
+	#nextUnitID : UnitID
+	#roundNumber : unsigned int
+	#createField(const FieldType& fieldType, const Position& position) : void
+	#createUnit(const Position& position, const Unit& unit) : void
+	#moveUnit(const UnitID& UnitID, const Position& position) : void
+	#removeUnit(const UnitID& unitID) : void
+}
+
+
+class Artillery {
+	+getType() : UnitType
+	+getBaseAttack(const UnitID& unitType) : int
+}
+
+
+class BattleResult {
+	+getDefenderField() : FieldID
+	-attackerID : UnitID
+	-defenderID : UnitID
+	+calculateAttackerSupplyLoss() : int
+	+calculateBackslashDamage() : int
+	+calculateDamage() : int
+	+calculateDefenderSupplyLoss() : int
+}
+
+
+class Field {
+	-fieldID : FieldID
+	#fieldType : FieldType
+	+getTerrainType() : FieldType
+	+getPosition() : Position
+	-position : Position
+}
+
+
+class FieldType {
+	+getTerrainType() : TerrainType
+}
+
+
+class ForestTerrain {
+	-getTerrainType() : TerrainType
+}
+
+
+class Infantry {
+	+getType() : UnitType
+	+getBaseAttack(const UnitID& unitType) : int
+}
+
+
+class PlainTerrain {
+	-getTerrainType() : TerrainType
+}
+
+
+class Position {
+	+Position(const int& _q, const int& _r)
+	-q : int
+	-r : int
+	-s() : int
+}
+
+
+class Tank {
+	+getType() : UnitType
+	+getBaseAttack(const UnitID& unitType) : int
+}
+
+
+class TheatreController {
+	+attackFromDistance(const FieldID& fieldID) : bool
+	+moveAndAttack(const FieldID& fieldID) : bool
+	+generateMap(const unsigned int& size) : void
+	+handleBotTurn() : void
+	+handlePlayerTurn() : void
+	+startNextTurn() : void
+}
+
+
+class Unit {
+	+getPosition() : Position {query}
+	#position : Position
+	+getUnitFactionID() : UnitFactionID {query}
+	#unitFactionId : UnitFactionID
+	#ID : UnitID
+	+getType() : UnitType
+	#baseStrength : int
+	+getBaseAttack(const UnitType& unitType) : int
+	#movementPoints : int
+	#organization : int
+	#supplyLevel : int
+	#unitRange : int
+	+changeUnitPosition(const Position& position) : void
+}
+
+
+class UrbanTerrain {
+	-getTerrainType() : TerrainType
+}
+
+
+
+
+
+/' Inheritance relationships '/
+
+Area <|-- AreaManager
+
+
+AreaManager <|-- TheatreController
+
+
+FieldType <|-- ForestTerrain
+
+
+FieldType <|-- PlainTerrain
+
+
+FieldType <|-- UrbanTerrain
+
+
+Unit <|-- Artillery
+
+
+Unit <|-- Infantry
+
+
+Unit <|-- Tank
+
+
+
+
+
+/' Aggregation relationships '/
+
+Area *-- Field
+
+
+Area *-- Unit
+
+
+Field *-- FieldType
+
+
+Field *-- Position
+
+
+Unit *-- Position
+
+
+
+
+
+
+/' Nested objects '/
+
+
+
+@enduml

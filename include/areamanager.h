@@ -7,7 +7,7 @@
 
 #include "area.h"
 
-class AreaManager : Area{
+class AreaManager : public Area{
 
     protected:
         /// @brief next unique identifier of a unit. Should increase when unit is created. Should not ever be decreased
@@ -15,6 +15,8 @@ class AreaManager : Area{
 
         /// @brief next unique identifier of a field. Should increase for each new field. Should not ever be decreased
         FieldID nextFieldID = 1;
+
+        unsigned int roundNumber = 1;
 
         /// @brief Spawn unit on a given position
         /// @param position Position of a unit 

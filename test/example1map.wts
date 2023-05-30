@@ -1,0 +1,23 @@
+# this file contains instruction on both terrain and unit positions 
+MAP
+# we use Q R TYPE format
+-1 -1 PLAIN
+0 -1 FOREST
+1 -1 PLAIN
+-1 0 PLAIN
+0 0 FOREST
+1 0 FOREST
+-2 1 PLAIN
+-1 1 FOREST
+0 1 FOREST
+FINISH
+
+#the following means that we're creating two factions numerated 1, 2
+FACTIONS 2
+
+#we then declare units Q R TYPE FACTION
+UNITS
+-1 1 INFANTRY 1
+1 -1 ARTILLERY 2
+0 1 INFANTRY 
+

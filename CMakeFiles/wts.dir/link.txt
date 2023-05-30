@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/wts.dir/src/area.cpp.o CMakeFiles/wts.dir/src/battle.cpp.o CMakeFiles/wts.dir/src/field.cpp.o CMakeFiles/wts.dir/src/main.cpp.o CMakeFiles/wts.dir/src/units.cpp.o -o wts 
