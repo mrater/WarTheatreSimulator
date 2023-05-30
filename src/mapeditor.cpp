@@ -6,10 +6,12 @@ Area MapEditor::generateArea()
     return resultArea;
 }
 
-void MapEditor::addUnit(const int &q, const int &r, const UnitType unitType)
+void MapEditor::addUnit(const int &q, const int &r, const UnitType &unitType)
 {
+    this->units[globalUnitIndex++] = Unit(Position(q,r), unitType, ) 
 }
 
-void MapEditor::addField(const int &q, const int &r, const TerrainType terrainType)
+void MapEditor::addField(const int &q, const int &r, const TerrainType &terrainType)
 {
+    this->fields[globalFieldIndex++] = Field(globalFieldIndex, q, r, terrainType);
 }

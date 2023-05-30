@@ -1,6 +1,9 @@
 #include "theatrecontroller.h"
+#include "mapeditor.h"
+
 #include <iostream>
 int main()
 {
-    std::cout << "...\n";
+    MapEditor mapEditor;
+    mapEditor.addField(-1, -1, Terrain::PLAIN);
 }

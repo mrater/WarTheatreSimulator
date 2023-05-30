@@ -45,6 +45,15 @@ namespace baseAttack{
         {0,0,0,0}
     };
 }
+namespace baseMovementPoints{
+    constexpr int INFANTRY = 1;
+    constexpr int MATRIX[] = {1,INFANTRY,1,1};
+}
+
+namespace base{
+    constexpr int ORGANIZATION = 100;
+    constexpr int SUPPLY_LEVEL = 100;
+}
 /**
  * @brief Basic class for all unit types
  * 

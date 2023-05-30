@@ -2,7 +2,14 @@
 
 const float Field::getBonus()
 {
-    return Terrain::TERRAIN_BONUS[fieldType.getTerrainType()];
+    return Terrain::TERRAIN_BONUS[fieldType];
+}
+
+Field::Field(const FieldID &fieldID, const int &q, const int &r, const TerrainType &terrainType)
+{
+    this->fieldID = fieldID;
+    this->position = Position(q,r);
+    this->fieldType = terrainType;
 }
 
 const Position Field::getPosition() const
@@ -12,7 +19,7 @@ const Position Field::getPosition() const
 
 const TerrainType Field::getTerrainType()
 {
-    return this->fieldType.getTerrainType();
+    return this->fieldType;
 }
 
 const int Position::s()
@@ -35,17 +42,17 @@ void Position::operator=(const Position &anotherPosition){
     this->r = anotherPosition.r;
 }
 
-const TerrainType ForestTerrain::getTerrainType()
-{
-    return Terrain::FOREST;
-}
+// const TerrainType ForestTerrain::getTerrainType()
+// {
+//     return Terrain::FOREST;
+// }
 
-const TerrainType UrbanTerrain::getTerrainType()
-{
-    return Terrain::URBAN;
-}
+// const TerrainType UrbanTerrain::getTerrainType()
+// {
+//     return Terrain::URBAN;
+// }
 
-const TerrainType PlainTerrain::getTerrainType()
-{
-    return Terrain::PLAIN;
-}
+// const TerrainType PlainTerrain::getTerrainType()
+// {
+//     return Terrain::PLAIN;
+// }

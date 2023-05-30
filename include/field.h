@@ -87,6 +87,7 @@ protected:
     
 
 public:
+    Field(const FieldID &fieldID, const int &q, const int &r, const TerrainType &terrainType);
     /**
      * @brief get position of a field
      * @returns position as (q,r,s)
@@ -96,5 +97,5 @@ public:
     /**
      * @returns type of terrain of the field
      */
-    virtual const TerrainType getTerrainType();
+    const TerrainType getTerrainType();
 };

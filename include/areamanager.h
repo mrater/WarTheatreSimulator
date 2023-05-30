@@ -35,5 +35,5 @@ class AreaManager : public Area{
         /// @brief Create new field of given type and position
         /// @param fieldType type of terrain of the field
         /// @param position position of the new field
-        void createField(const FieldType &fieldType, const Position &position);
+        void createField(const TerrainType &fieldType, const Position &position);
 };

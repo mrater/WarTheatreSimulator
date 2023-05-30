@@ -3,7 +3,11 @@
 Unit::Unit(const Position &newPosition, const UnitType &unitType, const UnitFactionID &unitFactionID)
 {
     this->position = Position(newPosition.q, newPosition.r);
-
+    this->unitType = unitType;
+    this->unitFactionId = unitFactionID;
+    this->movementPoints = baseMovementPoints::MATRIX[unitType];
+    this->organization = base::ORGANIZATION;
+    this->supplyLevel = base::SUPPLY_LEVEL;
 }
 
 Unit::Unit()
