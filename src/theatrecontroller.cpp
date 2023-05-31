@@ -26,11 +26,14 @@ void TheatreController::generateMap(const unsigned int &size)
 
 }
 
-void TheatreController::loadMap(const Area &area)
+void TheatreController::loadMap(const Area &area, const std::vector<UnitFactionID> &humanFactions, const std::vector<UnitFactionID> &botFactions)
 {
     this->fields = area.fields;
     this->units = area.units;
+    this->humanPlayers = humanFactions;
+    this->botPlayers = botFactions;
 }
+
 
 void TheatreController::printUnitInfo(const UnitID &unitID)
 {

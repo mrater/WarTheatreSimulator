@@ -9,10 +9,9 @@ namespace FACTION{
     const UnitFactionID PLAYER = 1;
     const UnitFactionID ENEMY = 2;
 }
-int main()
-{
-    MapEditor mapEditor;
 
+MapEditor mapEditor;
+inline TheatreController prepareExampleBoard(){
     const std::pair<int,int> plain_fields[] = {{-1,-1}, {-1, 0}, {-2, 1}, {1, -1}};
     const std::pair<int,int> forest_fields[] = {{0, -1}, {0, 0}, {1, 0}, {-1, 1}, {0, 1}};
     
@@ -31,9 +30,11 @@ int main()
     mapEditor.addUnit(1, -1, UnitCategory::ARTILLERY, FACTION::ENEMY);
     
     TheatreController game = TheatreController();
-    game.loadMap(mapEditor.generateArea());
-
-    game.printUnitsInfo();
-    
-
+    game.loadMap(mapEditor.generateArea(), {1}, {2});
+    return game;
+}
+int main()
+{
+    TheatreController game = prepareExampleBoard();
+    game.startInteractive();
 }
