@@ -5,7 +5,7 @@
  */
 #pragma once
 #include <utility>
-
+#include <set>
 /// @brief  type for identifiers of terrain
 typedef int TerrainType;
 
@@ -42,6 +42,10 @@ public:
     // Position();
     bool operator==(const Position &anotherPosition) const;
     void operator=(const Position &anotherPosition);
+    bool operator<(const Position &anotherPosition) const; //temporary solution to satisfy set requirements
+    public:
+        std::set<Position> getPotentialAdjacentPositions() const;
+        int distanceTo(const Position &anotherPosition) const;
 };
 
 // /// @brief All fields will give certain punishments for movement and attack thus need to be distinguished
@@ -100,4 +104,7 @@ public:
      * @returns type of terrain of the field
      */
     const TerrainType getTerrainType() const;
+    
+    
+    
 };

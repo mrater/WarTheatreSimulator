@@ -1,4 +1,6 @@
 #include "field.h"
+#include <set>
+#include <iostream>
 
 const float Field::getBonus()
 {
@@ -24,10 +26,17 @@ const TerrainType Field::getTerrainType() const
     return this->fieldType;
 }
 
+int Position::distanceTo(const Position &anotherPosition) const
+{
+    std::cerr << "Warning: distanceTo() returns constant 1\n";
+    return 1;
+}
+
 const int Position::s()
 {
     return -this->q - this->r;
 }
+
 
 Position::Position(const int &_q, const int &_r) : q(_q), r(_r) {}
 
@@ -44,17 +53,20 @@ void Position::operator=(const Position &anotherPosition){
     this->r = anotherPosition.r;
 }
 
-// const TerrainType ForestTerrain::getTerrainType()
-// {
-//     return Terrain::FOREST;
-// }
+bool Position::operator<(const Position &anotherPosition) const
+{
+    //this could be anything
+    return this->q < anotherPosition.q;
+}
 
-// const TerrainType UrbanTerrain::getTerrainType()
-// {
-//     return Terrain::URBAN;
-// }
-
-// const TerrainType PlainTerrain::getTerrainType()
-// {
-//     return Terrain::PLAIN;
-// }
+std::set<Position> Position::getPotentialAdjacentPositions() const
+{
+    std::set<Position> result;
+    result.insert(Position(q - 1,r));
+    result.insert(Position(q + 1, r));
+    result.insert(Position(q, r - 1));
+    result.insert(Position(q, r + 1));
+    result.insert(Position(q + 1, r - 1));
+    result.insert(Position(q - 1, r + 1));
+    return result;
+}

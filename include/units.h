@@ -129,7 +129,13 @@ class Unit{
 
         const UnitID getUnitID() const;
 
+        void resetMovement();
 
+        const int getMovementPoints() const;
+
+        void setPosition(const Position &position);
+
+        void decreaseMovementPoints(const int &loss);
 };
 
 // class Infantry : public Unit {

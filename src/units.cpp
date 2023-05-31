@@ -50,3 +50,22 @@ const UnitID Unit::getUnitID() const
 {
     return ID;
 }
+
+void Unit::resetMovement()
+{
+    this->movementPoints = baseMovementPoints::MATRIX[this->getType()];
+}
+
+const int Unit::getMovementPoints() const
+{
+    return movementPoints;
+}
+
+void Unit::setPosition(const Position &position)
+{
+    this->position = position;
+}
+
+void Unit::decreaseMovementPoints(const int &loss){
+    this->movementPoints -= loss;
+}

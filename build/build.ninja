@@ -51,49 +51,49 @@ build cmake_object_order_depends_target_wts: phony || CMakeFiles/wts.dir
 
 build CMakeFiles/wts.dir/src/area.cpp.o: CXX_COMPILER__wts_Debug /home/maciej/Dokumenty/wts/src/area.cpp || cmake_object_order_depends_target_wts
   DEP_FILE = CMakeFiles/wts.dir/src/area.cpp.o.d
-  FLAGS = -g -Wall -Wextra -pedantic -O2 -Wshadow -Wformat=2 -Wfloat-equal -Wconversion -Wlogical-op -Wshift-overflow=2 -Wduplicated-cond -Wcast-qual -Wcast-align -D_GLIBCXX_DEBUG
+  FLAGS = -g -Wall -Wextra -pedantic -O2 -Wshadow -Wformat=2 -Wfloat-equal -Wconversion -Wlogical-op -Wshift-overflow=2 -Wduplicated-cond -Wcast-qual -Wcast-align -D_GLIBCXX_DEBUG -std=gnu++20
   INCLUDES = -I/home/maciej/Dokumenty/wts/include
   OBJECT_DIR = CMakeFiles/wts.dir
   OBJECT_FILE_DIR = CMakeFiles/wts.dir/src
 
 build CMakeFiles/wts.dir/src/battle.cpp.o: CXX_COMPILER__wts_Debug /home/maciej/Dokumenty/wts/src/battle.cpp || cmake_object_order_depends_target_wts
   DEP_FILE = CMakeFiles/wts.dir/src/battle.cpp.o.d
-  FLAGS = -g -Wall -Wextra -pedantic -O2 -Wshadow -Wformat=2 -Wfloat-equal -Wconversion -Wlogical-op -Wshift-overflow=2 -Wduplicated-cond -Wcast-qual -Wcast-align -D_GLIBCXX_DEBUG
+  FLAGS = -g -Wall -Wextra -pedantic -O2 -Wshadow -Wformat=2 -Wfloat-equal -Wconversion -Wlogical-op -Wshift-overflow=2 -Wduplicated-cond -Wcast-qual -Wcast-align -D_GLIBCXX_DEBUG -std=gnu++20
   INCLUDES = -I/home/maciej/Dokumenty/wts/include
   OBJECT_DIR = CMakeFiles/wts.dir
   OBJECT_FILE_DIR = CMakeFiles/wts.dir/src
 
 build CMakeFiles/wts.dir/src/field.cpp.o: CXX_COMPILER__wts_Debug /home/maciej/Dokumenty/wts/src/field.cpp || cmake_object_order_depends_target_wts
   DEP_FILE = CMakeFiles/wts.dir/src/field.cpp.o.d
-  FLAGS = -g -Wall -Wextra -pedantic -O2 -Wshadow -Wformat=2 -Wfloat-equal -Wconversion -Wlogical-op -Wshift-overflow=2 -Wduplicated-cond -Wcast-qual -Wcast-align -D_GLIBCXX_DEBUG
+  FLAGS = -g -Wall -Wextra -pedantic -O2 -Wshadow -Wformat=2 -Wfloat-equal -Wconversion -Wlogical-op -Wshift-overflow=2 -Wduplicated-cond -Wcast-qual -Wcast-align -D_GLIBCXX_DEBUG -std=gnu++20
   INCLUDES = -I/home/maciej/Dokumenty/wts/include
   OBJECT_DIR = CMakeFiles/wts.dir
   OBJECT_FILE_DIR = CMakeFiles/wts.dir/src
 
 build CMakeFiles/wts.dir/src/main.cpp.o: CXX_COMPILER__wts_Debug /home/maciej/Dokumenty/wts/src/main.cpp || cmake_object_order_depends_target_wts
   DEP_FILE = CMakeFiles/wts.dir/src/main.cpp.o.d
-  FLAGS = -g -Wall -Wextra -pedantic -O2 -Wshadow -Wformat=2 -Wfloat-equal -Wconversion -Wlogical-op -Wshift-overflow=2 -Wduplicated-cond -Wcast-qual -Wcast-align -D_GLIBCXX_DEBUG
+  FLAGS = -g -Wall -Wextra -pedantic -O2 -Wshadow -Wformat=2 -Wfloat-equal -Wconversion -Wlogical-op -Wshift-overflow=2 -Wduplicated-cond -Wcast-qual -Wcast-align -D_GLIBCXX_DEBUG -std=gnu++20
   INCLUDES = -I/home/maciej/Dokumenty/wts/include
   OBJECT_DIR = CMakeFiles/wts.dir
   OBJECT_FILE_DIR = CMakeFiles/wts.dir/src
 
 build CMakeFiles/wts.dir/src/mapeditor.cpp.o: CXX_COMPILER__wts_Debug /home/maciej/Dokumenty/wts/src/mapeditor.cpp || cmake_object_order_depends_target_wts
   DEP_FILE = CMakeFiles/wts.dir/src/mapeditor.cpp.o.d
-  FLAGS = -g -Wall -Wextra -pedantic -O2 -Wshadow -Wformat=2 -Wfloat-equal -Wconversion -Wlogical-op -Wshift-overflow=2 -Wduplicated-cond -Wcast-qual -Wcast-align -D_GLIBCXX_DEBUG
+  FLAGS = -g -Wall -Wextra -pedantic -O2 -Wshadow -Wformat=2 -Wfloat-equal -Wconversion -Wlogical-op -Wshift-overflow=2 -Wduplicated-cond -Wcast-qual -Wcast-align -D_GLIBCXX_DEBUG -std=gnu++20
   INCLUDES = -I/home/maciej/Dokumenty/wts/include
   OBJECT_DIR = CMakeFiles/wts.dir
   OBJECT_FILE_DIR = CMakeFiles/wts.dir/src
 
 build CMakeFiles/wts.dir/src/units.cpp.o: CXX_COMPILER__wts_Debug /home/maciej/Dokumenty/wts/src/units.cpp || cmake_object_order_depends_target_wts
   DEP_FILE = CMakeFiles/wts.dir/src/units.cpp.o.d
-  FLAGS = -g -Wall -Wextra -pedantic -O2 -Wshadow -Wformat=2 -Wfloat-equal -Wconversion -Wlogical-op -Wshift-overflow=2 -Wduplicated-cond -Wcast-qual -Wcast-align -D_GLIBCXX_DEBUG
+  FLAGS = -g -Wall -Wextra -pedantic -O2 -Wshadow -Wformat=2 -Wfloat-equal -Wconversion -Wlogical-op -Wshift-overflow=2 -Wduplicated-cond -Wcast-qual -Wcast-align -D_GLIBCXX_DEBUG -std=gnu++20
   INCLUDES = -I/home/maciej/Dokumenty/wts/include
   OBJECT_DIR = CMakeFiles/wts.dir
   OBJECT_FILE_DIR = CMakeFiles/wts.dir/src
 
 build CMakeFiles/wts.dir/src/theatrecontroller.cpp.o: CXX_COMPILER__wts_Debug /home/maciej/Dokumenty/wts/src/theatrecontroller.cpp || cmake_object_order_depends_target_wts
   DEP_FILE = CMakeFiles/wts.dir/src/theatrecontroller.cpp.o.d
-  FLAGS = -g -Wall -Wextra -pedantic -O2 -Wshadow -Wformat=2 -Wfloat-equal -Wconversion -Wlogical-op -Wshift-overflow=2 -Wduplicated-cond -Wcast-qual -Wcast-align -D_GLIBCXX_DEBUG
+  FLAGS = -g -Wall -Wextra -pedantic -O2 -Wshadow -Wformat=2 -Wfloat-equal -Wconversion -Wlogical-op -Wshift-overflow=2 -Wduplicated-cond -Wcast-qual -Wcast-align -D_GLIBCXX_DEBUG -std=gnu++20
   INCLUDES = -I/home/maciej/Dokumenty/wts/include
   OBJECT_DIR = CMakeFiles/wts.dir
   OBJECT_FILE_DIR = CMakeFiles/wts.dir/src

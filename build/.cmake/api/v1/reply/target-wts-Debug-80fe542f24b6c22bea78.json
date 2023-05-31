@@ -106,6 +106,9 @@
 				{
 					"backtrace" : 2,
 					"fragment" : "-D_GLIBCXX_DEBUG"
+				},
+				{
+					"fragment" : "-std=gnu++20"
 				}
 			],
 			"includes" : 
@@ -116,6 +119,14 @@
 				}
 			],
 			"language" : "CXX",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					1
+				],
+				"standard" : "20"
+			},
 			"sourceIndexes" : 
 			[
 				0,

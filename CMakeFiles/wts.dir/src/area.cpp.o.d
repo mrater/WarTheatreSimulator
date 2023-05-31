@@ -20,12 +20,17 @@ CMakeFiles/wts.dir/src/area.cpp.o: \
  /usr/include/c++/12/ext/numeric_traits.h \
  /usr/include/c++/12/bits/stl_pair.h /usr/include/c++/12/type_traits \
  /usr/include/c++/12/bits/move.h /usr/include/c++/12/bits/utility.h \
+ /usr/include/c++/12/compare /usr/include/c++/12/concepts \
  /usr/include/c++/12/bits/stl_iterator_base_types.h \
+ /usr/include/c++/12/bits/iterator_concepts.h \
+ /usr/include/c++/12/bits/ptr_traits.h \
+ /usr/include/c++/12/bits/ranges_cmp.h \
  /usr/include/c++/12/bits/stl_iterator_base_funcs.h \
  /usr/include/c++/12/bits/concept_check.h \
  /usr/include/c++/12/debug/assertions.h \
- /usr/include/c++/12/bits/stl_iterator.h \
- /usr/include/c++/12/bits/ptr_traits.h \
+ /usr/include/c++/12/bits/stl_iterator.h /usr/include/c++/12/new \
+ /usr/include/c++/12/bits/exception.h \
+ /usr/include/c++/12/bits/stl_construct.h \
  /usr/include/c++/12/debug/stl_iterator.h \
  /usr/include/c++/12/debug/helper_functions.h \
  /usr/include/c++/12/debug/debug.h /usr/include/c++/12/debug/macros.h \
@@ -33,14 +38,12 @@ CMakeFiles/wts.dir/src/area.cpp.o: \
  /usr/include/c++/12/bits/stl_function.h \
  /usr/include/c++/12/backward/binders.h \
  /usr/include/c++/12/debug/formatter.h /usr/include/c++/12/typeinfo \
- /usr/include/c++/12/bits/exception.h \
  /usr/include/c++/12/bits/hash_bytes.h \
  /usr/include/c++/12/bits/predefined_ops.h \
  /usr/include/c++/12/bits/allocator.h \
  /usr/include/x86_64-linux-gnu/c++/12/bits/c++allocator.h \
- /usr/include/c++/12/bits/new_allocator.h /usr/include/c++/12/new \
+ /usr/include/c++/12/bits/new_allocator.h \
  /usr/include/c++/12/bits/memoryfwd.h \
- /usr/include/c++/12/bits/stl_construct.h \
  /usr/include/c++/12/bits/stl_uninitialized.h \
  /usr/include/c++/12/ext/alloc_traits.h \
  /usr/include/c++/12/bits/alloc_traits.h \
@@ -103,6 +106,9 @@ CMakeFiles/wts.dir/src/area.cpp.o: \
  /usr/include/c++/12/bits/stl_multimap.h \
  /usr/include/c++/12/bits/erase_if.h /usr/include/c++/12/debug/map \
  /usr/include/c++/12/debug/map.h /usr/include/c++/12/debug/multimap.h \
+ /usr/include/c++/12/set /usr/include/c++/12/bits/stl_set.h \
+ /usr/include/c++/12/bits/stl_multiset.h /usr/include/c++/12/debug/set \
+ /usr/include/c++/12/debug/set.h /usr/include/c++/12/debug/multiset.h \
  /home/maciej/Dokumenty/wts/include/units.h \
  /home/maciej/Dokumenty/wts/include/field.h /usr/include/c++/12/utility \
  /usr/include/c++/12/bits/stl_relops.h

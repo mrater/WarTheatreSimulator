@@ -7,6 +7,7 @@
 #pragma once
 #include <vector>
 #include <map>
+#include <set>
 #include "units.h"
 class Area{
     private:
@@ -18,6 +19,7 @@ class Area{
         /// @brief Units present in arrea
         std::map<UnitID, Unit> units;
 
+
         Area();
     public:
         int numberOfFactions;
@@ -26,6 +28,10 @@ class Area{
         /// @param position checked position
         /// @return true if field of given position exists
         bool isRealPosition(const Position &position) const;
+
+        FieldID getFieldByPosition(const Position &position) const;
+
+        bool existsPosition(const Position &position) const;
 
         /// @brief get unit on position
         /// @param position position to search unit on
@@ -37,6 +43,12 @@ class Area{
         /// @return vector of units that belong to faction
         std::vector<UnitID> getUnitsOfFaction(const UnitFactionID &unitFactionID);
 
+        const bool isUnitOnPosition(const Position &position) const;
+
+        bool isUnitOnField(const FieldID &field);
+
+        bool fieldHasUnit(const FieldID &field);
+
         /// @brief get unit of certain ID
         /// @param unitID ID of wanted unit
         /// @return constant pointer to unit or NULL if not found
@@ -44,6 +56,13 @@ class Area{
 
         const Field &getFieldWithUnit(const UnitID &unitID) const;
 
+        void fillNeighbours(const Position &fromPosition, const int &range, std::set<FieldID> &fields);
+
+        std::set<FieldID> getFieldsWithinRange(const Position &fromPosition, const int &range);
+
+        std::set<FieldID> getFieldsSuitableToMove(const Position &position, const int &range);
+        
+        
         // std::map<UnitID, Unit> getUnits;
         // std::map<
 };
