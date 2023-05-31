@@ -12,6 +12,8 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/maciej/Dokumenty/wts/src/battle.cpp" "CMakeFiles/wts.dir/src/battle.cpp.o" "gcc" "CMakeFiles/wts.dir/src/battle.cpp.o.d"
   "/home/maciej/Dokumenty/wts/src/field.cpp" "CMakeFiles/wts.dir/src/field.cpp.o" "gcc" "CMakeFiles/wts.dir/src/field.cpp.o.d"
   "/home/maciej/Dokumenty/wts/src/main.cpp" "CMakeFiles/wts.dir/src/main.cpp.o" "gcc" "CMakeFiles/wts.dir/src/main.cpp.o.d"
+  "/home/maciej/Dokumenty/wts/src/mapeditor.cpp" "CMakeFiles/wts.dir/src/mapeditor.cpp.o" "gcc" "CMakeFiles/wts.dir/src/mapeditor.cpp.o.d"
+  "/home/maciej/Dokumenty/wts/src/theatrecontroller.cpp" "CMakeFiles/wts.dir/src/theatrecontroller.cpp.o" "gcc" "CMakeFiles/wts.dir/src/theatrecontroller.cpp.o.d"
   "/home/maciej/Dokumenty/wts/src/units.cpp" "CMakeFiles/wts.dir/src/units.cpp.o" "gcc" "CMakeFiles/wts.dir/src/units.cpp.o.d"
   )
 

@@ -3,6 +3,7 @@
  * @brief This file consists of classes of Units, i.e. Infantry, Tank, Artillery
  * \{
  */
+#pragma once
 #include"field.h"
 
 
@@ -16,7 +17,10 @@ namespace UnitCategory{
     constexpr UnitType INFANTRY = 1;
     constexpr UnitType ARTILLERY = 2;
     constexpr UnitType TANK = 3;
+    const char* const LITERAL[] = {"NONE", "INFANTRY", "ARTILLERY", "TANK"};
+    // const int a[] = {1,2};
 };
+
 
 /// @brief namespace with constants of X_Y attack.
 /// X_Y means that X attacks Y with this basic damage
@@ -96,11 +100,11 @@ class Unit{
         int movementPoints;
 
     public:
-        Unit(const Position &newPosition, const UnitType &unitType, const UnitFactionID &unitFactionID);
+        Unit(const Position &newPosition, const UnitType &unitType, const UnitFactionID &unitFactionID, const UnitID &unitID);
         Unit();
         /// @brief get type ID of a unit
         /// @return ID of unit type
-        const UnitType getType();
+        const UnitType getType() const;
 
         /// @return Position of unit
         const Position getPosition() const;
@@ -118,10 +122,12 @@ class Unit{
         // void changeUnitPosition(const Position &position);
 
         /// @brief get level of supply of unit
-        const int getSupplyLevel();
+        const int getSupplyLevel() const;
 
         /// @brief get organisation
-        const int getOrganization();
+        const int getOrganization() const;
+
+        const UnitID getUnitID() const;
 
 
 };

@@ -81,12 +81,12 @@ clean: CMakeFiles/wts.dir/clean
 CMakeFiles/wts.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/wts.dir/build.make CMakeFiles/wts.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/wts.dir/build.make CMakeFiles/wts.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/maciej/Dokumenty/wts/CMakeFiles --progress-num=1,2,3,4,5,6 "Built target wts"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/maciej/Dokumenty/wts/CMakeFiles --progress-num=1,2,3,4,5,6,7,8 "Built target wts"
 .PHONY : CMakeFiles/wts.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/wts.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/maciej/Dokumenty/wts/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/maciej/Dokumenty/wts/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/wts.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/maciej/Dokumenty/wts/CMakeFiles 0
 .PHONY : CMakeFiles/wts.dir/rule

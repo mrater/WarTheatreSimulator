@@ -3,7 +3,7 @@
  * @author Maciej Sikorski
  * @brief File with classes to resolve battles between two units
  */
-
+#pragma once
 #include "units.h"
 
 /// @brief importance of each parameters  

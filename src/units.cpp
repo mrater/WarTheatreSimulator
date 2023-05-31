@@ -1,7 +1,8 @@
 #include "units.h"
 #include <iostream>
-Unit::Unit(const Position &newPosition, const UnitType &unitType, const UnitFactionID &unitFactionID)
+Unit::Unit(const Position &newPosition, const UnitType &unitType, const UnitFactionID &unitFactionID, const UnitID &unitID)
 {
+    this->ID = unitID;
     this->position = Position(newPosition.q, newPosition.r);
     this->unitType = unitType;
     this->unitFactionId = unitFactionID;
@@ -12,10 +13,10 @@ Unit::Unit(const Position &newPosition, const UnitType &unitType, const UnitFact
 
 Unit::Unit()
 {
-    std::cerr << "Why am I even here?\n";
+    // std::cerr << "Why am I even here?\n";
 }
 
-const UnitType Unit::getType()
+const UnitType Unit::getType() const
 {
     return this->unitType;
 }
@@ -35,12 +36,17 @@ const UnitFactionID Unit::getUnitFactionID() const
     return this->unitFactionId;
 }
 
-const int Unit::getSupplyLevel()
+const int Unit::getSupplyLevel() const
 {
     return this->supplyLevel;
 }
 
-const int Unit::getOrganization()
+const int Unit::getOrganization() const
 {
     return this->organization;
+}
+
+const UnitID Unit::getUnitID() const
+{
+    return ID;
 }

@@ -12,12 +12,14 @@ Field::Field(const FieldID &fieldID, const int &q, const int &r, const TerrainTy
     this->fieldType = terrainType;
 }
 
+Field::Field(){}
+
 const Position Field::getPosition() const
 {
     return this->position;
 }
 
-const TerrainType Field::getTerrainType()
+const TerrainType Field::getTerrainType() const
 {
     return this->fieldType;
 }

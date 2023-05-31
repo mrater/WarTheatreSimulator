@@ -1,4 +1,11 @@
 #include "area.h"
+#include "map"
+
+Area::Area()
+{
+    fields.clear();
+    units.clear();
+}
 
 Area::Area(std::map<FieldID, Field> newFields, std::map<UnitID, Unit> newUnits)
 {
@@ -40,4 +47,13 @@ std::vector<UnitID> Area::getUnitsOfFaction(const UnitFactionID &unitFactionID)
 Unit Area::getUnit(const UnitID &unitID)
 {
     return units[unitID];
+}
+const Field &Area::getFieldWithUnit(const UnitID &unitID) const
+{
+    const Position &unitPosition = units.at(unitID).getPosition();
+    for (const auto &field : fields)
+    {
+        if (field.second.getPosition() == unitPosition) return field.second;
+    }
+    return fields.end()->second;
 }

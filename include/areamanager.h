@@ -4,7 +4,7 @@
  * This class can be used to 
  * It has no safeguards, so it should not be used in top-level UI.
  */
-
+#pragma once
 #include "area.h"
 
 class AreaManager : public Area{

@@ -4,19 +4,23 @@
  * @details This manages states of a world, including units stats, fields, their terrain types etc.
  * It DOES NOT handle changes of such world.
  */
-
+#pragma once
 #include <vector>
 #include <map>
 #include "units.h"
 class Area{
-
+    private:
+        friend class TheatreController;
     protected:
         /// @brief Array with fields of the area
         std::map<FieldID, Field> fields;
 
         /// @brief Units present in arrea
         std::map<UnitID, Unit> units;
+
+        Area();
     public:
+        int numberOfFactions;
         Area(std::map<FieldID, Field> newFields, std::map<UnitID, Unit> newUnits);
         /// @brief Check if given position exists in the area
         /// @param position checked position
@@ -38,6 +42,8 @@ class Area{
         /// @return constant pointer to unit or NULL if not found
         Unit getUnit(const UnitID &unitID);
 
-        
-    
+        const Field &getFieldWithUnit(const UnitID &unitID) const;
+
+        // std::map<UnitID, Unit> getUnits;
+        // std::map<
 };

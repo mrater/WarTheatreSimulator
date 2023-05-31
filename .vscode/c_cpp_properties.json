@@ -6,7 +6,8 @@
                 "${workspaceFolder}/**",
                 "${workspaceFolder}/include"
             ],
-            "defines": []
+            "defines": [],
+            "cppStandard": "c++20"
         }
     ],
     "version": 4

@@ -125,10 +125,24 @@ CMakeFiles/wts.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/wts.dir/src/main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maciej/Dokumenty/wts/src/main.cpp -o CMakeFiles/wts.dir/src/main.cpp.s
 
+CMakeFiles/wts.dir/src/mapeditor.cpp.o: CMakeFiles/wts.dir/flags.make
+CMakeFiles/wts.dir/src/mapeditor.cpp.o: src/mapeditor.cpp
+CMakeFiles/wts.dir/src/mapeditor.cpp.o: CMakeFiles/wts.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maciej/Dokumenty/wts/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/wts.dir/src/mapeditor.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/wts.dir/src/mapeditor.cpp.o -MF CMakeFiles/wts.dir/src/mapeditor.cpp.o.d -o CMakeFiles/wts.dir/src/mapeditor.cpp.o -c /home/maciej/Dokumenty/wts/src/mapeditor.cpp
+
+CMakeFiles/wts.dir/src/mapeditor.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/wts.dir/src/mapeditor.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maciej/Dokumenty/wts/src/mapeditor.cpp > CMakeFiles/wts.dir/src/mapeditor.cpp.i
+
+CMakeFiles/wts.dir/src/mapeditor.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/wts.dir/src/mapeditor.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maciej/Dokumenty/wts/src/mapeditor.cpp -o CMakeFiles/wts.dir/src/mapeditor.cpp.s
+
 CMakeFiles/wts.dir/src/units.cpp.o: CMakeFiles/wts.dir/flags.make
 CMakeFiles/wts.dir/src/units.cpp.o: src/units.cpp
 CMakeFiles/wts.dir/src/units.cpp.o: CMakeFiles/wts.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maciej/Dokumenty/wts/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/wts.dir/src/units.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maciej/Dokumenty/wts/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/wts.dir/src/units.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/wts.dir/src/units.cpp.o -MF CMakeFiles/wts.dir/src/units.cpp.o.d -o CMakeFiles/wts.dir/src/units.cpp.o -c /home/maciej/Dokumenty/wts/src/units.cpp
 
 CMakeFiles/wts.dir/src/units.cpp.i: cmake_force
@@ -139,13 +153,29 @@ CMakeFiles/wts.dir/src/units.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/wts.dir/src/units.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maciej/Dokumenty/wts/src/units.cpp -o CMakeFiles/wts.dir/src/units.cpp.s
 
+CMakeFiles/wts.dir/src/theatrecontroller.cpp.o: CMakeFiles/wts.dir/flags.make
+CMakeFiles/wts.dir/src/theatrecontroller.cpp.o: src/theatrecontroller.cpp
+CMakeFiles/wts.dir/src/theatrecontroller.cpp.o: CMakeFiles/wts.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/maciej/Dokumenty/wts/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/wts.dir/src/theatrecontroller.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/wts.dir/src/theatrecontroller.cpp.o -MF CMakeFiles/wts.dir/src/theatrecontroller.cpp.o.d -o CMakeFiles/wts.dir/src/theatrecontroller.cpp.o -c /home/maciej/Dokumenty/wts/src/theatrecontroller.cpp
+
+CMakeFiles/wts.dir/src/theatrecontroller.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/wts.dir/src/theatrecontroller.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/maciej/Dokumenty/wts/src/theatrecontroller.cpp > CMakeFiles/wts.dir/src/theatrecontroller.cpp.i
+
+CMakeFiles/wts.dir/src/theatrecontroller.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/wts.dir/src/theatrecontroller.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/maciej/Dokumenty/wts/src/theatrecontroller.cpp -o CMakeFiles/wts.dir/src/theatrecontroller.cpp.s
+
 # Object files for target wts
 wts_OBJECTS = \
 "CMakeFiles/wts.dir/src/area.cpp.o" \
 "CMakeFiles/wts.dir/src/battle.cpp.o" \
 "CMakeFiles/wts.dir/src/field.cpp.o" \
 "CMakeFiles/wts.dir/src/main.cpp.o" \
-"CMakeFiles/wts.dir/src/units.cpp.o"
+"CMakeFiles/wts.dir/src/mapeditor.cpp.o" \
+"CMakeFiles/wts.dir/src/units.cpp.o" \
+"CMakeFiles/wts.dir/src/theatrecontroller.cpp.o"
 
 # External object files for target wts
 wts_EXTERNAL_OBJECTS =
@@ -154,10 +184,12 @@ wts: CMakeFiles/wts.dir/src/area.cpp.o
 wts: CMakeFiles/wts.dir/src/battle.cpp.o
 wts: CMakeFiles/wts.dir/src/field.cpp.o
 wts: CMakeFiles/wts.dir/src/main.cpp.o
+wts: CMakeFiles/wts.dir/src/mapeditor.cpp.o
 wts: CMakeFiles/wts.dir/src/units.cpp.o
+wts: CMakeFiles/wts.dir/src/theatrecontroller.cpp.o
 wts: CMakeFiles/wts.dir/build.make
 wts: CMakeFiles/wts.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/maciej/Dokumenty/wts/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable wts"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/maciej/Dokumenty/wts/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable wts"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/wts.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

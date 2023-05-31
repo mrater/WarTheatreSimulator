@@ -225,6 +225,54 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/wts.dir/build.make CMakeFiles/wts.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/mapeditor.o: src/mapeditor.cpp.o
+.PHONY : src/mapeditor.o
+
+# target to build an object file
+src/mapeditor.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/wts.dir/build.make CMakeFiles/wts.dir/src/mapeditor.cpp.o
+.PHONY : src/mapeditor.cpp.o
+
+src/mapeditor.i: src/mapeditor.cpp.i
+.PHONY : src/mapeditor.i
+
+# target to preprocess a source file
+src/mapeditor.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/wts.dir/build.make CMakeFiles/wts.dir/src/mapeditor.cpp.i
+.PHONY : src/mapeditor.cpp.i
+
+src/mapeditor.s: src/mapeditor.cpp.s
+.PHONY : src/mapeditor.s
+
+# target to generate assembly for a file
+src/mapeditor.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/wts.dir/build.make CMakeFiles/wts.dir/src/mapeditor.cpp.s
+.PHONY : src/mapeditor.cpp.s
+
+src/theatrecontroller.o: src/theatrecontroller.cpp.o
+.PHONY : src/theatrecontroller.o
+
+# target to build an object file
+src/theatrecontroller.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/wts.dir/build.make CMakeFiles/wts.dir/src/theatrecontroller.cpp.o
+.PHONY : src/theatrecontroller.cpp.o
+
+src/theatrecontroller.i: src/theatrecontroller.cpp.i
+.PHONY : src/theatrecontroller.i
+
+# target to preprocess a source file
+src/theatrecontroller.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/wts.dir/build.make CMakeFiles/wts.dir/src/theatrecontroller.cpp.i
+.PHONY : src/theatrecontroller.cpp.i
+
+src/theatrecontroller.s: src/theatrecontroller.cpp.s
+.PHONY : src/theatrecontroller.s
+
+# target to generate assembly for a file
+src/theatrecontroller.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/wts.dir/build.make CMakeFiles/wts.dir/src/theatrecontroller.cpp.s
+.PHONY : src/theatrecontroller.cpp.s
+
 src/units.o: src/units.cpp.o
 .PHONY : src/units.o
 
@@ -270,6 +318,12 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/mapeditor.o"
+	@echo "... src/mapeditor.i"
+	@echo "... src/mapeditor.s"
+	@echo "... src/theatrecontroller.o"
+	@echo "... src/theatrecontroller.i"
+	@echo "... src/theatrecontroller.s"
 	@echo "... src/units.o"
 	@echo "... src/units.i"
 	@echo "... src/units.s"

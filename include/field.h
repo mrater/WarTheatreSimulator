@@ -3,7 +3,7 @@
  * @brief File with field classes.
  * @details Field is characterized with position (q,r, -q-r) and terrain type (forest, urban etc.)
  */
-
+#pragma once
 #include <utility>
 
 /// @brief  type for identifiers of terrain
@@ -21,6 +21,7 @@ namespace Terrain
     constexpr TerrainType FOREST = 3;
     
     constexpr float TERRAIN_BONUS[] = {-1, 1.0, 0.6, 0.4};
+    const char* const LITERAL[] = {"NONE", "PLAIN", "URBAN", "FOREST"};
 }
 
 /**
@@ -88,6 +89,7 @@ protected:
 
 public:
     Field(const FieldID &fieldID, const int &q, const int &r, const TerrainType &terrainType);
+    Field();
     /**
      * @brief get position of a field
      * @returns position as (q,r,s)
@@ -97,5 +99,5 @@ public:
     /**
      * @returns type of terrain of the field
      */
-    const TerrainType getTerrainType();
+    const TerrainType getTerrainType() const;
 };
