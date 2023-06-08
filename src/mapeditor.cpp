@@ -16,7 +16,7 @@ Area MapEditor::generateArea()
     return resultArea;
 }
 
-void MapEditor::addUnit(const int &q, const int &r, const UnitType &unitType, const UnitFactionID &unitFactionID, const UnitID &unitID)
+void MapEditor::addUnit(const int &q, const int &r, const UnitType &unitType, const FactionID &unitFactionID, const UnitID &unitID)
 {
     if (unitFactionID > this->numberOfFactions or unitFactionID < 1){
         throw std::invalid_argument("ID of this faction is wrong");
@@ -26,7 +26,7 @@ void MapEditor::addUnit(const int &q, const int &r, const UnitType &unitType, co
     this->units[unitID] = Unit(Position(q,r), unitType, unitFactionID, unitID); 
 }
 
-void MapEditor::addUnit(const int &q, const int &r, const UnitType &unitType, const UnitFactionID &unitFactionID)
+void MapEditor::addUnit(const int &q, const int &r, const UnitType &unitType, const FactionID &unitFactionID)
 {
     addUnit(q,r,unitType, unitFactionID, globalUnitIndex++);
 }

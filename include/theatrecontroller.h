@@ -11,10 +11,10 @@ class TheatreController : public Area {
         bool simulationStarted = false;
 
         //factions controlled by humans
-        std::vector<UnitFactionID> humanPlayers;
+        std::vector<FactionID> humanPlayers;
 
         //factions controlled by bots
-        std::vector<UnitFactionID> botPlayers;
+        std::vector<FactionID> botPlayers;
         
         void resetAllUnitsMovementPoints();
     protected:
@@ -22,6 +22,7 @@ class TheatreController : public Area {
         TheatreController();
         bool isAttackPossible(const UnitID &unitID, const FieldID &fieldID);
         bool attack(const UnitID &unitID, const FieldID &fieldID);
+        bool attack(const UnitID &attackerID, const Position &position);
         void removeUnitIfDead(const UnitID &unitID);
         // bool attackFromDistance(const FieldID &fieldID);
 
@@ -35,18 +36,16 @@ class TheatreController : public Area {
 
         bool move(const UnitID &unitID, const Position &position);
         // bool move(const UnitID &unitID, const Field &Field);
-        bool isHuman(const UnitFactionID &faction) const;
-        bool isBot(const UnitFactionID &faction) const;
+        bool isHuman(const FactionID &faction) const;
+        bool isBot(const FactionID &faction) const;
         void startNextRound();
         void handlePlayerTurn();
         void handleBotTurn();
         void generateMap(const unsigned int &size);
-        void loadMap(const Area &area, const std::vector<UnitFactionID> &humanFactions, const std::vector<UnitFactionID> &botFactions);
+        void loadMap(const Area &area, const std::vector<FactionID> &humanFactions, const std::vector<FactionID> &botFactions);
         void printUnitInfo(const UnitID &unitID);
         void printUnitsInfo();
         const int countFactions() const;
 
-        const Unit& getUnit(const UnitID &unitID) const;
-        Unit &getUnit(const UnitID &unitID);
         const bool existsUnit(const UnitID &unitID) const;
 };

@@ -61,6 +61,12 @@ bool TheatreController::attack(const UnitID &attackerID, const FieldID &fieldID)
     //remove units from the board if their org is below 1
     removeUnitIfDead(attackerID);
     removeUnitIfDead(defenderID);
+    return true;
+}
+bool TheatreController::attack(const UnitID &attackerID, const Position &position)
+{
+    FieldID targetField = getFieldByPosition(position);
+    return attack(attackerID, targetField);
 }
 
 void TheatreController::removeUnitIfDead(const UnitID &unitID)
@@ -71,11 +77,6 @@ void TheatreController::removeUnitIfDead(const UnitID &unitID)
         units.erase(unitID);
     }
 }
-
-// bool TheatreController::moveAndAttack(const UnitID &unitID, const FieldID &fieldID)
-// {
-
-// }
 
 bool TheatreController::move(const UnitID &unitID, const Position &position)
 {
@@ -88,11 +89,11 @@ bool TheatreController::move(const UnitID &unitID, const Position &position)
     return true;    
 }
 
-bool TheatreController::isHuman(const UnitFactionID &faction) const
+bool TheatreController::isHuman(const FactionID &faction) const
 {
     return std::count(this->humanPlayers.begin(), this->humanPlayers.end(), faction) != 0;
 }
-bool TheatreController::isBot(const UnitFactionID &faction) const
+bool TheatreController::isBot(const FactionID &faction) const
 {
     return std::count(this->botPlayers.begin(), this->botPlayers.end(), faction) != 0;
 }
@@ -104,13 +105,13 @@ void TheatreController::startNextRound()
     resetAllUnitsMovementPoints();
 
     //determine order of turns by the following random permutation
-    std::vector<UnitFactionID> turnOrderPermutation(this->humanPlayers.size() + this->botPlayers.size());
+    std::vector<FactionID> turnOrderPermutation(this->humanPlayers.size() + this->botPlayers.size());
     std::iota(turnOrderPermutation.begin(), turnOrderPermutation.end(), 1);
     std::random_device rd;
     std::mt19937 g(rd());
     std::shuffle(turnOrderPermutation.begin(), turnOrderPermutation.end(), g);
  
-    for (UnitFactionID faction = 1; faction <= countFactions(); faction++)
+    for (FactionID faction = 1; faction <= countFactions(); faction++)
     {
         if (isBot(faction))
         {
@@ -143,19 +144,24 @@ void TheatreController::handlePlayerTurn()
                 if (!move(commandedUnit, targetPosition))
                 {
                         std::cout << "This field is occupied, does not exist or not within range of this unit\n";
-                } else endTurn = true;
+                }
                 break;
             }
             case 'x':
-                // attackFromDistance()
-
+                UnitID commandedUnit;
+                Position targetPosition;
+                if (!attack(commandedUnit, targetPosition)){
+                    std::cout << "This attack is not possible.\n";
+                }
                 break;
                 
             case 'h':
                 std::cout << "h - print this help message\n";
                 std::cout << "m UNIT_ID Q R - move unit to position (Q,R)\n";
                 std::cout << "p - print information about all units\n";
-                std::cout << "x UNIT_ID Q R - order unit to attack this field\n";
+                std::cout << "x UNIT_ID Q R - order unit to attack this position\n";
+                std::cout << "s UNIT_ID - skip every other action of this unit\n";
+                std::cout << "e - skip all remaining unit actions and proceed to next turn\n";
                 break;
             default:
                 std::cout << "Command unrecognized. Enter h for help\n";
@@ -165,7 +171,7 @@ void TheatreController::handlePlayerTurn()
     }
 }
 
-void TheatreController::loadMap(const Area &area, const std::vector<UnitFactionID> &humanFactions, const std::vector<UnitFactionID> &botFactions)
+void TheatreController::loadMap(const Area &area, const std::vector<FactionID> &humanFactions, const std::vector<FactionID> &botFactions)
 {
     this->fields = area.fields;
     this->units = area.units;
@@ -195,15 +201,6 @@ void TheatreController::printUnitsInfo()
 const int TheatreController::countFactions() const
 {
     return this->botPlayers.size() + this->humanPlayers.size();
-}
-
-const Unit& TheatreController::getUnit(const UnitID &unitID) const
-{
-    return units.at(unitID);
-}
-Unit& TheatreController::getUnit(const UnitID &unitID)
-{
-    return units[unitID];
 }
 const bool TheatreController::existsUnit(const UnitID &unitID) const {
     return units.count(unitID) > 0;

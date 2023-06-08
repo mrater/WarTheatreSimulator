@@ -1,6 +1,6 @@
 #include "units.h"
 #include <iostream>
-Unit::Unit(const Position &newPosition, const UnitType &unitType, const UnitFactionID &unitFactionID, const UnitID &unitID)
+Unit::Unit(const Position &newPosition, const UnitType &unitType, const FactionID &unitFactionID, const UnitID &unitID)
 {
     this->ID = unitID;
     this->position = Position(newPosition.q, newPosition.r);
@@ -31,7 +31,7 @@ const int Unit::getBaseAttack(const UnitType &enemyUnitType) const
     return baseAttack::DAMAGE_MATRIX[this->getType()][enemyUnitType];
 }
 
-const UnitFactionID Unit::getUnitFactionID() const
+const FactionID Unit::getUnitFactionID() const
 {
     return this->unitFactionId;
 }

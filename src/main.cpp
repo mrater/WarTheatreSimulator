@@ -6,8 +6,8 @@
 
 
 namespace FACTION{
-    const UnitFactionID PLAYER = 1;
-    const UnitFactionID ENEMY = 2;
+    const FactionID PLAYER = 1;
+    const FactionID ENEMY = 2;
 }
 
 MapEditor mapEditor;
