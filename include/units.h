@@ -18,7 +18,6 @@ namespace UnitCategory{
     constexpr UnitType ARTILLERY = 2;
     constexpr UnitType TANK = 3;
     const char* const LITERAL[] = {"NONE", "INFANTRY", "ARTILLERY", "TANK"};
-    // const int a[] = {1,2};
 };
 
 
@@ -159,48 +158,9 @@ class Unit{
         //true if movement points and supply level are sufficient for an attack
         const bool canAttack() const;
 
-
         void resetMovement();
         void setPosition(const Position &position);
 
         void dealDamage(const int &receivedDamage);
         void dealSupplyLoss(const int &supplyLoss);
 };
-
-// class Infantry : public Unit {
-//     public:
-//         /// @return UnitCategory::INFANTRY
-//         const UnitType getType();
-
-//         /// @brief get Base attack of infantry
-//         /// @param unitType type of enemy unit
-//         /// @return base attack for infantry when dealing with certain enemy
-//         const int getBaseAttack(const UnitID &unitType);
-// };
-
-// class Tank : public Unit {
-//     public:
-//         /// @return UnitCategory::TANK
-//         const UnitType getType(){
-//             return UnitCategory::TANK;
-//         }
-
-//         /// @brief get Base attack of tank
-//         /// @param unitType type of enemy unit
-//         /// @return base attack for tank when dealing with certain enemy
-//         const int getBaseAttack(const UnitID &unitType);
-        
-// };
-
-// class Artillery : public Unit{
-//     public:
-//         /// @return UnitCategory::ARTILLERY
-//         const UnitType getType(){
-//             return UnitCategory::ARTILLERY;
-//         }
-        
-//         /// @brief get Base attack of artillery
-//         /// @param unitType type of enemy unit
-//         /// @return base attack for artillery when dealing with certain enemy
-//         const int getBaseAttack(const UnitID &unitType);
-// };

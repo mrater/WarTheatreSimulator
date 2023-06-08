@@ -71,7 +71,4 @@ class Area{
 
         /// @return sum of movement points of all units in faction 
         int getTotalMovementPointsOfFaction(const FactionID &factionID) const;
-        
-        // std::map<UnitID, Unit> getUnits;
-        // std::map<
 };

@@ -24,24 +24,12 @@ class TheatreController : public Area {
         bool attack(const UnitID &unitID, const FieldID &fieldID);
         bool attack(const UnitID &attackerID, const Position &position);
         void removeUnitIfDead(const UnitID &unitID);
-        // bool attackFromDistance(const FieldID &fieldID);
-
-        /// @brief move unit to this field. Attack if something is there. 
-        /// Function doesn't perform illegal operations
-        /// Note that artillery cannot move and attack at the same time
-        /// @param unitID unit to be moved
-        /// @param fieldID target field
-        /// @return false if operation cannot be done
-        bool moveAndAttack(const UnitID &unitID, const FieldID &fieldID);
-
         bool move(const UnitID &unitID, const Position &position);
-        // bool move(const UnitID &unitID, const Field &Field);
         bool isHuman(const FactionID &faction) const;
         bool isBot(const FactionID &faction) const;
         void startNextRound();
         void handlePlayerTurn();
         void handleBotTurn();
-        void generateMap(const unsigned int &size);
         void loadMap(const Area &area, const std::vector<FactionID> &humanFactions, const std::vector<FactionID> &botFactions);
         void printUnitInfo(const UnitID &unitID);
         void printUnitsInfo();
