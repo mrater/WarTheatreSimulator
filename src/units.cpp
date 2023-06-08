@@ -76,7 +76,13 @@ void Unit::dealSupplyLoss(const int &supplyLoss)
     this->supplyLevel = std::max(supplyLevel - supplyLevel, 0);
 }
 
-void Unit::decreaseMovementPoints(const int &loss){
+const int Unit::getBaseMovementPoints() const
+{
+    return baseMovementPoints::MATRIX[getType()];
+}
+
+void Unit::decreaseMovementPoints(const int &loss)
+{
     this->movementPoints -= loss;
 }
 

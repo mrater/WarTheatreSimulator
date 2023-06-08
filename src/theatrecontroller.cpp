@@ -129,6 +129,7 @@ void TheatreController::startNextRound()
 void TheatreController::handlePlayerTurn()
 {
     bool endTurn = false;
+    resetAllUnitsMovementPoints();
     while (true)
     {
         std::cout << "Enter command~\n";
@@ -136,6 +137,7 @@ void TheatreController::handlePlayerTurn()
         std::cin >> command;        
         switch(command)
         {
+            //move
             case 'm':
             {   
                 UnitID commandedUnit;
@@ -143,10 +145,11 @@ void TheatreController::handlePlayerTurn()
                 std::cin >> commandedUnit >> targetPosition.q >> targetPosition.r;
                 if (!move(commandedUnit, targetPosition))
                 {
-                        std::cout << "This field is occupied, does not exist or not within range of this unit\n";
+                    std::cout << "This field is occupied, does not exist or not within range of this unit\n";
                 }
                 break;
             }
+            //attack
             case 'x':
                 UnitID commandedUnit;
                 Position targetPosition;
@@ -154,7 +157,12 @@ void TheatreController::handlePlayerTurn()
                     std::cout << "This attack is not possible.\n";
                 }
                 break;
-                
+
+            //print info about all units
+            case 'p':
+                printUnitsInfo();
+                break;
+
             case 'h':
                 std::cout << "h - print this help message\n";
                 std::cout << "m UNIT_ID Q R - move unit to position (Q,R)\n";
@@ -188,6 +196,7 @@ void TheatreController::printUnitInfo(const UnitID &unitID)
     std::cout << "ORGANIZATION:" << unit.getOrganization() << "\n";
     std::cout << "SUPPLY LEVEL:" << unit.getSupplyLevel() << "\n====\n";
     std::cout << "TYPE OF FIELD:" << Terrain::LITERAL[getFieldWithUnit(unit.getUnitID()).getTerrainType()] << "\n";
+    std::cout << "REMAINING MOVEMENT POINTS: " << unit.getMovementPoints() << "/" << unit.getBaseMovementPoints() << "\n";
 }
 
 void TheatreController::printUnitsInfo()

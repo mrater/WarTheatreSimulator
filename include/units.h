@@ -147,6 +147,8 @@ class Unit{
 
         const int getMovementPoints() const;
 
+        /// \return initial movement points of this unit's type 
+        const int getBaseMovementPoints() const;
 
         void decreaseMovementPoints(const int &loss);
 
