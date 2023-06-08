@@ -50,14 +50,29 @@ namespace baseAttack{
     };
 }
 namespace baseMovementPoints{
-    constexpr int INFANTRY = 1;
-    constexpr int MATRIX[] = {1,INFANTRY,1,1};
+    constexpr int INFANTRY = 2;
+    constexpr int ARTILLERY = 1;
+    constexpr int TANK = 2;
+    constexpr int MATRIX[] = {0,INFANTRY,ARTILLERY,TANK};
 }
 
 namespace base{
     constexpr int ORGANIZATION = 100;
     constexpr int SUPPLY_LEVEL = 100;
 }
+
+//unit can attack iff has supply lvl >= this value
+constexpr int BASIC_ATTACK_SUPPLY_REQUIREMENT = 25;
+
+/// @brief contains info about attack range of every unit type 
+namespace attackRange{
+    constexpr int INFANTRY = 1;
+    constexpr int ARTILLERY = 2;
+    constexpr int TANK = 1;
+
+    constexpr int MATRIX[] = {0, INFANTRY, ARTILLERY, TANK};
+}
+
 /**
  * @brief Basic class for all unit types
  * 
@@ -112,7 +127,7 @@ class Unit{
         /// @brief  Get base attack, a value that might be unique for every pair (UNIT_TYPE, DEFENDER_UNIT_TYPE)
         /// @param unitType type of enemy unit that we deal with
         /// @return base attack of this unit type
-        virtual const int getBaseAttack(const UnitType &enemyUnitType);
+        virtual const int getBaseAttack(const UnitType &enemyUnitType) const;
 
         /// @brief get ID of unit faction
         /// @return ID of a faction of unit
@@ -129,13 +144,25 @@ class Unit{
 
         const UnitID getUnitID() const;
 
-        void resetMovement();
 
         const int getMovementPoints() const;
 
-        void setPosition(const Position &position);
 
         void decreaseMovementPoints(const int &loss);
+
+        const int getAttackRange() const;
+        const int distanceTo(const Unit &anotherUnit) const;
+        const int distanceTo(const Position &position) const;
+
+        //true if movement points and supply level are sufficient for an attack
+        const bool canAttack() const;
+
+
+        void resetMovement();
+        void setPosition(const Position &position);
+
+        void dealDamage(const int &receivedDamage);
+        void dealSupplyLoss(const int &supplyLoss);
 };
 
 // class Infantry : public Unit {

@@ -26,7 +26,7 @@ const Position Unit::getPosition() const
     return this->position;
 }
 
-const int Unit::getBaseAttack(const UnitType &enemyUnitType)
+const int Unit::getBaseAttack(const UnitType &enemyUnitType) const
 {
     return baseAttack::DAMAGE_MATRIX[this->getType()][enemyUnitType];
 }
@@ -66,6 +66,35 @@ void Unit::setPosition(const Position &position)
     this->position = position;
 }
 
+void Unit::dealDamage(const int &receivedDamage)
+{
+    this->organization -= receivedDamage;
+}
+
+void Unit::dealSupplyLoss(const int &supplyLoss)
+{
+    this->supplyLevel = std::max(supplyLevel - supplyLevel, 0);
+}
+
 void Unit::decreaseMovementPoints(const int &loss){
     this->movementPoints -= loss;
+}
+
+const int Unit::getAttackRange() const
+{
+    return attackRange::MATRIX[this->getType()];
+}
+const int Unit::distanceTo(const Unit &anotherUnit) const
+{
+    return position.distanceTo(anotherUnit.getPosition());
+}
+
+const int Unit::distanceTo(const Position &position) const
+{
+    return this->position.distanceTo(position);
+}
+
+const bool Unit::canAttack() const
+{
+    return movementPoints >= 1 && getSupplyLevel() >= BASIC_ATTACK_SUPPLY_REQUIREMENT;
 }

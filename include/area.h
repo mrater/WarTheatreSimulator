@@ -38,6 +38,8 @@ class Area{
         /// @return pointer to unit on a given position. returns -1 if unavailable
         UnitID getUnitOnPosition(const Position &position) const;
 
+        UnitID getUnitOnField(const FieldID &field) const;
+
         /// @brief get units of faction
         /// @param unitFactionID faction of unit
         /// @return vector of units that belong to faction

@@ -1,8 +1,4 @@
 #include "theatrecontroller.h"
-#include <iostream>
-#include <numeric>
-#include <algorithm>
-#include <random>
 
 void TheatreController::resetAllUnitsMovementPoints()
 {
@@ -17,21 +13,78 @@ TheatreController::TheatreController()
 
 }
 
-bool TheatreController::attackFromDistance(const FieldID &fieldID)
+
+bool TheatreController::isAttackPossible(const UnitID &unitID, const FieldID &fieldID)
 {
-    return false;
+    const Field &targetField = fields[fieldID];
+    const Unit &attacker = getUnit(unitID);
+    const Unit &defender = getUnit(getUnitOnField(fieldID));
+    
+    //field doesn't exist
+    if (!fields.count(fieldID)) return false;
+
+    //attacker doesn't exist
+    if (!existsUnit(unitID)) return false;
+    
+    //field is empty
+    if (!fieldHasUnit(fieldID)) return false;
+
+    //both units are from the same team
+    if (defender.getUnitFactionID() == attacker.getUnitFactionID()) return false;
+
+    // range not sufficient enough for an attack
+    if (attacker.getAttackRange() < attacker.distanceTo(targetField.getPosition())) return false;
+
+    //finally return true if unit itself (regardless of position, enemy etc.) can attack enemies
+    return attacker.canAttack();
+}
+bool TheatreController::attack(const UnitID &attackerID, const FieldID &fieldID)
+{
+    if (!isAttackPossible(attackerID, fieldID)) return false;
+
+    const Field &targetField = fields[fieldID];
+    Unit &attacker = getUnit(attackerID);
+    const UnitID defenderID = getUnitOnField(fieldID);
+    Unit &defender = getUnit(defenderID);
+
+    //calculate battle results
+    BattleResult battleReults = BattleResult(attacker, defender, targetField);
+
+    //change org of units
+    defender.dealDamage(battleReults.calculateDamage());
+    attacker.dealDamage(battleReults.calculateBacklashDamage());
+
+    //change supply level of units
+    defender.dealSupplyLoss(battleReults.calculateDefenderSupplyLoss());
+    attacker.dealSupplyLoss(battleReults.calculateAttackerSupplyLoss());
+    
+    //remove units from the board if their org is below 1
+    removeUnitIfDead(attackerID);
+    removeUnitIfDead(defenderID);
 }
 
-bool TheatreController::moveAndAttack(const FieldID &fieldID)
+void TheatreController::removeUnitIfDead(const UnitID &unitID)
 {
-    return false;
+    if (getUnit(unitID).getOrganization() <= 0)
+    {
+        //it is dead
+        units.erase(unitID);
+    }
 }
+
+// bool TheatreController::moveAndAttack(const UnitID &unitID, const FieldID &fieldID)
+// {
+
+// }
 
 bool TheatreController::move(const UnitID &unitID, const Position &position)
 {
     int distanceToPosition = units[unitID].getPosition().distanceTo(position);
     if (!isRealPosition(position) or units[unitID].getMovementPoints() < distanceToPosition) return false;
+    if (isUnitOnPosition(position)) return false;
+
     units[unitID].setPosition(position);
+    units[unitID].decreaseMovementPoints(distanceToPosition);
     return true;    
 }
 
@@ -142,4 +195,16 @@ void TheatreController::printUnitsInfo()
 const int TheatreController::countFactions() const
 {
     return this->botPlayers.size() + this->humanPlayers.size();
+}
+
+const Unit& TheatreController::getUnit(const UnitID &unitID) const
+{
+    return units.at(unitID);
+}
+Unit& TheatreController::getUnit(const UnitID &unitID)
+{
+    return units[unitID];
+}
+const bool TheatreController::existsUnit(const UnitID &unitID) const {
+    return units.count(unitID) > 0;
 }
