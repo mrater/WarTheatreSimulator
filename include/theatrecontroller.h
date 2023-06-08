@@ -28,7 +28,7 @@ class TheatreController : public Area {
         bool isHuman(const FactionID &faction) const;
         bool isBot(const FactionID &faction) const;
         void startNextRound();
-        void handlePlayerTurn();
+        void handlePlayerTurn(const FactionID &thisFactionID);
         void handleBotTurn();
         void loadMap(const Area &area, const std::vector<FactionID> &humanFactions, const std::vector<FactionID> &botFactions);
         void printUnitInfo(const UnitID &unitID);

@@ -45,11 +45,9 @@ class Area{
         /// @return vector of units that belong to faction
         std::vector<UnitID> getUnitsOfFaction(const FactionID &unitFactionID) const;
 
-        const bool isUnitOnPosition(const Position &position) const;
+        bool isUnitOnPosition(const Position &position) const;
 
-        bool isUnitOnField(const FieldID &field);
-
-        bool fieldHasUnit(const FieldID &field);
+        bool isUnitOnField(const FieldID &field) const;
 
         /// @brief get unit of certain ID
         /// @param unitID ID of wanted unit

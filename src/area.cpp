@@ -1,6 +1,4 @@
 #include "area.h"
-#include <map>
-#include <set>
 
 Area::Area()
 {
@@ -69,15 +67,15 @@ std::vector<UnitID> Area::getUnitsOfFaction(const FactionID &unitFactionID) cons
     }
     return result;
 }
-const bool Area::isUnitOnPosition(const Position &position) const
+bool Area::isUnitOnPosition(const Position &position) const
 {
     return getUnitOnPosition(position) != -1;
 }
-bool Area::isUnitOnField(const FieldID &field)
+bool Area::isUnitOnField(const FieldID &field) const
 {
-    return isUnitOnPosition(fields[field].getPosition());
+    return isUnitOnPosition(fields.at(field).getPosition());
 }
-const Unit& Area::getUnit(const UnitID &unitID) const
+const Unit &Area::getUnit(const UnitID &unitID) const
 {
     return units.at(unitID);
 }
@@ -124,6 +122,7 @@ std::set<FieldID> Area::getFieldsSuitableToMove(const Position &position, const 
     auto fieldHasUnit = [&](const FieldID &fieldID) {return isUnitOnField(fieldID);};
     std::set<FieldID> properFields = getFieldsWithinRange(position, range);
     std::erase_if(properFields, fieldHasUnit);
+    return properFields;
 }
 
 int Area::getTotalMovementPointsOfFaction(const FactionID &factionID) const {

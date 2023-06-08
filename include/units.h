@@ -5,7 +5,7 @@
  */
 #pragma once
 #include"field.h"
-
+#include <iostream>
 
 typedef int UnitType;
 typedef int UnitID;
@@ -118,7 +118,7 @@ class Unit{
         Unit();
         /// @brief get type ID of a unit
         /// @return ID of unit type
-        const UnitType getType() const;
+        UnitType getType() const;
 
         /// @return Position of unit
         const Position getPosition() const;
@@ -126,37 +126,41 @@ class Unit{
         /// @brief  Get base attack, a value that might be unique for every pair (UNIT_TYPE, DEFENDER_UNIT_TYPE)
         /// @param unitType type of enemy unit that we deal with
         /// @return base attack of this unit type
-        virtual const int getBaseAttack(const UnitType &enemyUnitType) const;
+        virtual int getBaseAttack(const UnitType &enemyUnitType) const;
 
         /// @brief get ID of unit faction
         /// @return ID of a faction of unit
-        const FactionID getUnitFactionID() const; 
+        FactionID getUnitFactionID() const; 
 
         /// @brief change position of a unit
         // void changeUnitPosition(const Position &position);
 
         /// @brief get level of supply of unit
-        const int getSupplyLevel() const;
+        int getSupplyLevel() const;
 
         /// @brief get organisation
-        const int getOrganization() const;
+        int getOrganization() const;
 
-        const UnitID getUnitID() const;
+        UnitID getUnitID() const;
 
 
-        const int getMovementPoints() const;
+        int getMovementPoints() const;
 
         /// \return initial movement points of this unit's type 
-        const int getBaseMovementPoints() const;
+        int getBaseMovementPoints() const;
 
         void decreaseMovementPoints(const int &loss);
 
-        const int getAttackRange() const;
-        const int distanceTo(const Unit &anotherUnit) const;
-        const int distanceTo(const Position &position) const;
+        int getAttackRange() const;
+        int distanceTo(const Unit &anotherUnit) const;
+        int distanceTo(const Position &position) const;
 
         //true if movement points and supply level are sufficient for an attack
-        const bool canAttack() const;
+        bool canAttack() const;
+
+
+        //skips movement (sets movementPoints to 0)
+        void skipMovement();
 
         void resetMovement();
         void setPosition(const Position &position);

@@ -1,15 +1,13 @@
 #include "field.h"
-#include <set>
-#include <iostream>
 
-const float Field::getBonus()
+double Field::getBonus()
 {
     return Terrain::TERRAIN_BONUS[fieldType];
 }
 
-Field::Field(const FieldID &fieldID, const int &q, const int &r, const TerrainType &terrainType)
+Field::Field(const FieldID &newFieldID, const int &q, const int &r, const TerrainType &terrainType)
 {
-    this->fieldID = fieldID;
+    this->fieldID = newFieldID;
     this->position = Position(q,r);
     this->fieldType = terrainType;
 }
@@ -21,7 +19,7 @@ const Position Field::getPosition() const
     return this->position;
 }
 
-const TerrainType Field::getTerrainType() const
+TerrainType Field::getTerrainType() const
 {
     return this->fieldType;
 }
@@ -32,7 +30,7 @@ int Position::distanceTo(const Position &anotherPosition) const
     return 1;
 }
 
-const int Position::s()
+int Position::s()
 {
     return -this->q - this->r;
 }

@@ -6,6 +6,8 @@
 #pragma once
 #include <utility>
 #include <set>
+#include <iostream>
+
 /// @brief  type for identifiers of terrain
 typedef int TerrainType;
 
@@ -20,7 +22,7 @@ namespace Terrain
     constexpr TerrainType URBAN = 2;
     constexpr TerrainType FOREST = 3;
     
-    constexpr float TERRAIN_BONUS[] = {-1, 1.0, 0.6, 0.4};
+    constexpr double TERRAIN_BONUS[] = {-1, 1.0, 0.6, 0.4};
     const char* const LITERAL[] = {"NONE", "PLAIN", "URBAN", "FOREST"};
 }
 
@@ -36,7 +38,7 @@ public:
 
     /// @brief calculate third s coordinate
     /// @return s, which equals -q - r
-    const int s();
+    int s();
     Position();
     Position(const int &_q, const int &_r);
     // Position();
@@ -87,12 +89,12 @@ protected:
 
     /// @brief get terrain bonus
     /// greater the bonus, easier it is to attack and harder to defend 
-    const float getBonus();
+    double getBonus();
 
     
 
 public:
-    Field(const FieldID &fieldID, const int &q, const int &r, const TerrainType &terrainType);
+    Field(const FieldID &newFieldID, const int &q, const int &r, const TerrainType &terrainType);
     Field();
     /**
      * @brief get position of a field
@@ -103,8 +105,5 @@ public:
     /**
      * @returns type of terrain of the field
      */
-    const TerrainType getTerrainType() const;
-    
-    
-    
+    TerrainType getTerrainType() const;  
 };

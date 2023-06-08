@@ -2,6 +2,8 @@
 #include "area.h"
 #include "units.h"
 #include "field.h"
+#include <exception>
+#include <iostream>
 
 class MapEditor{
     private:

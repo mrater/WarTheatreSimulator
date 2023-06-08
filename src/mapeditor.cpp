@@ -1,6 +1,4 @@
 #include "mapeditor.h"
-#include <exception>
-#include <iostream>
 
 MapEditor::MapEditor()
 {

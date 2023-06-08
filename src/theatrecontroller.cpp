@@ -27,7 +27,7 @@ bool TheatreController::isAttackPossible(const UnitID &unitID, const FieldID &fi
     if (!existsUnit(unitID)) return false;
     
     //field is empty
-    if (!fieldHasUnit(fieldID)) return false;
+    if (!isUnitOnField(fieldID)) return false;
 
     //both units are from the same team
     if (defender.getUnitFactionID() == attacker.getUnitFactionID()) return false;
@@ -111,25 +111,24 @@ void TheatreController::startNextRound()
     std::mt19937 g(rd());
     std::shuffle(turnOrderPermutation.begin(), turnOrderPermutation.end(), g);
  
-    for (FactionID faction = 1; faction <= countFactions(); faction++)
+    for (const FactionID &factionID : turnOrderPermutation)
     {
-        if (isBot(faction))
+        if (isBot(factionID))
         {
             throw "Bots not supported.";
             //TODO: add bot behaviour here
         } else
         {
             //handle human (interactive) decisions
-            handlePlayerTurn();
+            handlePlayerTurn(factionID);
         }
     }
     
 }
 
-void TheatreController::handlePlayerTurn()
+void TheatreController::handlePlayerTurn(const FactionID &thisFactionID)
 {
     bool endTurn = false;
-    resetAllUnitsMovementPoints();
     while (true)
     {
         std::cout << "Enter command~\n";
@@ -143,7 +142,12 @@ void TheatreController::handlePlayerTurn()
                 UnitID commandedUnit;
                 Position targetPosition;
                 std::cin >> commandedUnit >> targetPosition.q >> targetPosition.r;
-                if (!move(commandedUnit, targetPosition))
+
+                if (getUnit(commandedUnit).getUnitFactionID() != thisFactionID)
+                {
+                    std::cout << "This is not our unit!\n";
+                }
+                else if (!move(commandedUnit, targetPosition))
                 {
                     std::cout << "This field is occupied, does not exist or not within range of this unit\n";
                 }
@@ -151,17 +155,41 @@ void TheatreController::handlePlayerTurn()
             }
             //attack
             case 'x':
+            {
                 UnitID commandedUnit;
                 Position targetPosition;
-                if (!attack(commandedUnit, targetPosition)){
+                
+                if (getUnit(commandedUnit).getUnitFactionID() != thisFactionID)
+                {
+                    std::cout << "This is not our unit!\n";
+                }
+                else if (!attack(commandedUnit, targetPosition)){
                     std::cout << "This attack is not possible.\n";
                 }
                 break;
+            }
 
             //print info about all units
             case 'p':
                 printUnitsInfo();
                 break;
+
+            //skip movement
+            case 's':
+            {
+                UnitID unitID;
+                std::cin >> unitID;
+                if (getUnit(unitID).getUnitFactionID() != thisFactionID)
+                {
+                    std::cout << "This is not our unit!\n";
+                }
+                else getUnit(unitID).skipMovement();
+                break;
+            }
+
+            //end turn
+            case 'e':
+                return;
 
             case 'h':
                 std::cout << "h - print this help message\n";
@@ -174,7 +202,6 @@ void TheatreController::handlePlayerTurn()
             default:
                 std::cout << "Command unrecognized. Enter h for help\n";
                 break;
-            
         }
     }
 }
