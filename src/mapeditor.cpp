@@ -6,7 +6,6 @@ MapEditor::MapEditor()
 {
     units.clear();
     fields.clear();
-    // std::cout << "OK";
 }
 
 Area MapEditor::generateArea()
@@ -21,8 +20,6 @@ void MapEditor::addUnit(const int &q, const int &r, const UnitType &unitType, co
     if (unitFactionID > this->numberOfFactions or unitFactionID < 1){
         throw std::invalid_argument("ID of this faction is wrong");
     }
-
-    // std::cout << globalUnitIndex <<"<---";
     this->units[unitID] = Unit(Position(q,r), unitType, unitFactionID, unitID); 
 }
 
