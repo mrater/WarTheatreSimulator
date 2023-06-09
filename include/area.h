@@ -50,7 +50,7 @@ class Area{
 
         std::vector<UnitID> getUnitsOfFaction(const FactionID &unitFactionID) const;
 
-        const bool isUnitOnPosition(const Position &position) const;
+        bool isUnitOnPosition(const Position &position) const;
 
         bool isUnitOnField(const FieldID &field);
 

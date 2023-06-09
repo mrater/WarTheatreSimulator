@@ -69,7 +69,7 @@ std::vector<UnitID> Area::getUnitsOfFaction(const FactionID &unitFactionID) cons
     }
     return result;
 }
-const bool Area::isUnitOnPosition(const Position &position) const
+bool Area::isUnitOnPosition(const Position &position) const
 {
     return getUnitOnPosition(position) != -1;
 }
@@ -124,6 +124,7 @@ std::set<FieldID> Area::getFieldsSuitableToMove(const Position &position, const 
     auto fieldHasUnit = [&](const FieldID &fieldID) {return isUnitOnField(fieldID);};
     std::set<FieldID> properFields = getFieldsWithinRange(position, range);
     std::erase_if(properFields, fieldHasUnit);
+    return properFields;
 }
 
 int Area::getTotalMovementPointsOfFaction(const FactionID &factionID) const {

@@ -20,7 +20,7 @@ namespace Terrain
     constexpr TerrainType URBAN = 2;
     constexpr TerrainType FOREST = 3;
     
-    constexpr float TERRAIN_BONUS[] = {-1, 1.0, 0.6, 0.4};
+    constexpr double TERRAIN_BONUS[] = {-1, 1.0, 0.6, 0.4};
     const char* const LITERAL[] = {"NONE", "PLAIN", "URBAN", "FOREST"};
 }
 
@@ -36,7 +36,7 @@ public:
 
     /// @brief calculate third s coordinate
     /// @return s, which equals -q - r
-    const int s();
+    int s();
     Position();
     Position(const int &_q, const int &_r);
     // Position();
@@ -47,34 +47,6 @@ public:
         std::set<Position> getPotentialAdjacentPositions() const;
         int distanceTo(const Position &anotherPosition) const;
 };
-
-// /// @brief All fields will give certain punishments for movement and attack thus need to be distinguished
-// class FieldType
-// {
-// public:
-//     /// @brief get ID of terrain type of this field
-//     /// @return ID of terrain type for this field
-//     virtual const TerrainType getTerrainType();
-// };
-
-// class ForestTerrain : public FieldType
-// {
-//     /// @brief get ID of forest terrain
-//     /// @return Terrain::FOREST
-//     const TerrainType getTerrainType();
-// };
-// class UrbanTerrain : public FieldType
-// {
-//     /// @brief get ID of urban terrain
-//     /// @return Terrain::URBAN
-//     const TerrainType getTerrainType();
-// };
-// class PlainTerrain : public FieldType
-// {
-//     /// @brief get ID of plain terrain
-//     /// @return Terrain::PLAIN
-//     const TerrainType getTerrainType();
-// };
 
 class Field
 {
@@ -87,7 +59,7 @@ protected:
 
     /// @brief get terrain bonus
     /// greater the bonus, easier it is to attack and harder to defend 
-    const float getBonus();
+    double getBonus();
 
     
 
@@ -103,7 +75,7 @@ public:
     /**
      * @returns type of terrain of the field
      */
-    const TerrainType getTerrainType() const;
+    TerrainType getTerrainType() const;
     
     
     

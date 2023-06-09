@@ -27,7 +27,7 @@ bool TheatreController::isAttackPossible(const UnitID &unitID, const FieldID &fi
     if (!existsUnit(unitID)) return false;
     
     //field is empty
-    if (!fieldHasUnit(fieldID)) return false;
+    if (!isUnitOnField(fieldID)) return false;
 
     //both units are from the same team
     if (defender.getUnitFactionID() == attacker.getUnitFactionID()) return false;
@@ -150,18 +150,19 @@ void TheatreController::handlePlayerTurn()
                 break;
             }
             //attack
-            case 'x':
+            case 'x':{
                 UnitID commandedUnit;
                 Position targetPosition;
                 if (!attack(commandedUnit, targetPosition)){
                     std::cout << "This attack is not possible.\n";
                 }
                 break;
-
+            }
             //print info about all units
-            case 'p':
+            case 'p':{
                 printUnitsInfo();
                 break;
+            }
 
             case 'h':
                 std::cout << "h - print this help message\n";
@@ -207,10 +208,10 @@ void TheatreController::printUnitsInfo()
     }
 }
 
-const int TheatreController::countFactions() const
+size_t TheatreController::countFactions() const
 {
     return this->botPlayers.size() + this->humanPlayers.size();
 }
-const bool TheatreController::existsUnit(const UnitID &unitID) const {
+bool TheatreController::existsUnit(const UnitID &unitID) const {
     return units.count(unitID) > 0;
 }

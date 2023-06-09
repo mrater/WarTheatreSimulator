@@ -2,7 +2,7 @@
 #include <set>
 #include <iostream>
 
-const float Field::getBonus()
+double Field::getBonus()
 {
     return Terrain::TERRAIN_BONUS[fieldType];
 }
@@ -21,7 +21,7 @@ const Position Field::getPosition() const
     return this->position;
 }
 
-const TerrainType Field::getTerrainType() const
+TerrainType Field::getTerrainType() const
 {
     return this->fieldType;
 }
@@ -32,7 +32,7 @@ int Position::distanceTo(const Position &anotherPosition) const
     return 1;
 }
 
-const int Position::s()
+int Position::s()
 {
     return -this->q - this->r;
 }
