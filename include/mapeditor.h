@@ -19,8 +19,8 @@ class MapEditor{
     public:
         MapEditor();
         Area generateArea();
-        void addUnit(const int &q, const int &r, const UnitType &unitType, const UnitFactionID &unitFactionID, const UnitID &unitID);
-        void addUnit(const int &q, const int &r, const UnitType &unitType, const UnitFactionID &unitFactionID);
+        void addUnit(const int &q, const int &r, const UnitType &unitType, const FactionID &unitFactionID, const UnitID &unitID);
+        void addUnit(const int &q, const int &r, const UnitType &unitType, const FactionID &unitFactionID);
         void addField(const int &q, const int &r, const TerrainType &terrainType, const FieldID &fieldID);
         void addField(const int &q, const int &r, const TerrainType &terrainType);
         void setFactionsNumber(const int &numberOfFactions);

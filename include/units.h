@@ -9,7 +9,7 @@
 
 typedef int UnitType;
 typedef int UnitID;
-typedef int UnitFactionID;
+typedef int FactionID;
 
 /// @brief namespace with unit types category IDs
 namespace UnitCategory{
@@ -90,7 +90,7 @@ class Unit{
         Position position;
 
         /// @brief ID of faction that owns the unit`
-        UnitFactionID unitFactionId;
+        FactionID unitFactionId;
 
         /// @brief range of an attack of a unit
         /// unitRange = X means that every enemy unit in (manhattan distance) X of our unit can be attacked
@@ -100,7 +100,7 @@ class Unit{
         int movementPoints;
 
     public:
-        Unit(const Position &newPosition, const UnitType &unitType, const UnitFactionID &unitFactionID, const UnitID &unitID);
+        Unit(const Position &newPosition, const UnitType &unitType, const FactionID &unitFactionID, const UnitID &unitID);
         Unit();
         /// @brief get type ID of a unit
         /// @return ID of unit type
@@ -116,7 +116,7 @@ class Unit{
 
         /// @brief get ID of unit faction
         /// @return ID of a faction of unit
-        const UnitFactionID getUnitFactionID() const; 
+        const FactionID getUnitFactionID() const; 
 
         /// @brief change position of a unit
         // void changeUnitPosition(const Position &position);

@@ -53,7 +53,7 @@ UnitID Area::getUnitOnPosition(const Position &position) const
     return -1;
 }
 
-std::vector<UnitID> Area::getUnitsOfFaction(const UnitFactionID &unitFactionID)
+std::vector<UnitID> Area::getUnitsOfFaction(const FactionID &unitFactionID)
 {
     std::vector<UnitID> result;
     for (const auto &unit : units)

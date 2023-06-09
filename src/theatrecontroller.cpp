@@ -35,11 +35,11 @@ bool TheatreController::move(const UnitID &unitID, const Position &position)
     return true;    
 }
 
-bool TheatreController::isHuman(const UnitFactionID &faction) const
+bool TheatreController::isHuman(const FactionID &faction) const
 {
     return std::count(this->humanPlayers.begin(), this->humanPlayers.end(), faction) != 0;
 }
-bool TheatreController::isBot(const UnitFactionID &faction) const
+bool TheatreController::isBot(const FactionID &faction) const
 {
     return std::count(this->botPlayers.begin(), this->botPlayers.end(), faction) != 0;
 }
@@ -51,13 +51,13 @@ void TheatreController::startNextRound()
     resetAllUnitsMovementPoints();
 
     //determine order of turns by the following random permutation
-    std::vector<UnitFactionID> turnOrderPermutation(this->humanPlayers.size() + this->botPlayers.size());
+    std::vector<FactionID> turnOrderPermutation(this->humanPlayers.size() + this->botPlayers.size());
     std::iota(turnOrderPermutation.begin(), turnOrderPermutation.end(), 1);
     std::random_device rd;
     std::mt19937 g(rd());
     std::shuffle(turnOrderPermutation.begin(), turnOrderPermutation.end(), g);
  
-    for (UnitFactionID faction = 1; faction <= countFactions(); faction++)
+    for (FactionID faction = 1; faction <= countFactions(); faction++)
     {
         if (isBot(faction))
         {
@@ -112,7 +112,7 @@ void TheatreController::handlePlayerTurn()
     }
 }
 
-void TheatreController::loadMap(const Area &area, const std::vector<UnitFactionID> &humanFactions, const std::vector<UnitFactionID> &botFactions)
+void TheatreController::loadMap(const Area &area, const std::vector<FactionID> &humanFactions, const std::vector<FactionID> &botFactions)
 {
     this->fields = area.fields;
     this->units = area.units;
