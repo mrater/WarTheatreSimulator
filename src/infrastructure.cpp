@@ -1,8 +1,8 @@
 #include "infrastructure.h"
 
-int FuelDepot::getSupplyRenewal() const
+int FuelDepot::getTotalSupplyPoints() const
 {
-    return this->supplyRenewal;
+    return this->totalSupplyPoints;
 }
 
 int FuelDepot::getRange() const

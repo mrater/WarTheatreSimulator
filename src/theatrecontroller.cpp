@@ -1,4 +1,5 @@
 #include "theatrecontroller.h"
+#include "utilities.h"
 
 void TheatreController::resetAllUnitsMovementPoints()
 {
@@ -105,13 +106,10 @@ void TheatreController::startNextRound()
     resetAllUnitsMovementPoints();
 
     //determine order of turns by the following random permutation
-    std::vector<FactionID> turnOrderPermutation(this->humanPlayers.size() + this->botPlayers.size());
-    std::iota(turnOrderPermutation.begin(), turnOrderPermutation.end(), 1);
-    std::random_device rd;
-    std::mt19937 g(rd());
-    std::shuffle(turnOrderPermutation.begin(), turnOrderPermutation.end(), g);
+    std::vector<FactionID> turnOrderPermutation = generateRandomPermutation(botPlayers.size() + humanPlayers.size());
  
-    for (FactionID faction = 1; faction <= countFactions(); faction++)
+    resupplyAllUnits();
+    for (const FactionID &faction : turnOrderPermutation)
     {
         if (isBot(faction))
         {
@@ -214,4 +212,13 @@ size_t TheatreController::countFactions() const
 }
 bool TheatreController::existsUnit(const UnitID &unitID) const {
     return units.count(unitID) > 0;
+}
+
+void TheatreController::resupplyFrom(const FacilityID &fuelDepotID)
+{
+
+}
+void TheatreController::resupplyAllUnits()
+{
+    
 }

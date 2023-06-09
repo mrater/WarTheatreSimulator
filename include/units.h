@@ -105,7 +105,7 @@ class Unit{
         Position position;
 
         /// @brief ID of faction that owns the unit`
-        FactionID unitFactionId;
+        FactionID unitFactionId = 0;
 
         /// @brief range of an attack of a unit
         /// unitRange = X means that every enemy unit in (manhattan distance) X of our unit can be attacked
@@ -159,6 +159,10 @@ class Unit{
         //true if movement points and supply level are sufficient for an attack
         bool canAttack() const;
 
+        /// @brief increase supply level of unit but not exceed 100
+        /// @param supplyGain amount of supply level to add
+        /// @return supply points really needed (i.e. 100 - currentSupply)
+        int gainSupply(const int &supplyGain);
 
         void resetMovement();
         void setPosition(const Position &position);

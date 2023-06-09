@@ -7,6 +7,7 @@
 #pragma once
 #include <vector>
 #include <map>
+#include <assert.h>
 #include <set>
 #include "units.h"
 #include "infrastructure.h"
@@ -64,6 +65,9 @@ class Area{
         /// @return reference to unit or NULL if not found    
         Unit &getUnit(const UnitID &unitID);
 
+        FuelDepot &getFuelDepot(const FacilityID &facilityID);
+        const FuelDepot &getFuelDepot(const FacilityID &facilityID) const;
+
         const Field &getFieldWithUnit(const UnitID &unitID) const;
 
         void fillNeighbours(const Position &fromPosition, const int &range, std::set<FieldID> &fields);
@@ -75,6 +79,5 @@ class Area{
         /// @return sum of movement points of all units in faction 
         int getTotalMovementPointsOfFaction(const FactionID &factionID) const;
         
-        // std::map<UnitID, Unit> getUnits;
-        // std::map<
+        std::set<UnitID> getFriendlyUnitsWithinRange(const Position &fromPosition, const int &range, const FactionID &faction);
 };

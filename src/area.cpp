@@ -85,6 +85,14 @@ Unit& Area::getUnit(const UnitID &unitID)
 {
     return units[unitID];
 }
+FuelDepot& Area::getFuelDepot(const FacilityID &facilityID)
+{
+    return fuelMagazines[facilityID];
+}
+const FuelDepot &Area::getFuelDepot(const FacilityID &facilityID) const
+{
+    return fuelMagazines.at(facilityID);
+}
 const Field &Area::getFieldWithUnit(const UnitID &unitID) const
 {
     const Position &unitPosition = units.at(unitID).getPosition();
@@ -135,4 +143,22 @@ int Area::getTotalMovementPointsOfFaction(const FactionID &factionID) const {
         result += getUnit(unitID).getMovementPoints();
     }
     return result;
+}
+
+std::set<UnitID> Area::getFriendlyUnitsWithinRange(const Position &fromPosition, const int &range, const FactionID &faction)
+{
+    std::set<FieldID> fieldsWithingRange = getFieldsWithinRange(fromPosition, range);
+    assert(!fieldsWithingRange.empty());
+
+    std::set<UnitID> friendlyUnits;
+
+    for (FieldID fieldID : fieldsWithingRange)
+    {
+        const Unit &unit = getUnit(getUnitOnField(fieldID));
+        if (unit.getUnitFactionID() == faction)
+        {
+            friendlyUnits.insert(unit.getUnitID());
+        }
+    }
+    return friendlyUnits;
 }
