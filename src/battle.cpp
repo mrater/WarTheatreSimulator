@@ -20,22 +20,21 @@ int BattleResult::calculateDamage()
 
 int BattleResult::calculateBacklashDamage()
 {
-    return 0;
+    if (attacker.getType() != UnitCategory::INFANTRY) return 0;
+    //TODO: calculate backlash
+    return 1;
 }
 
 int BattleResult::calculateAttackerSupplyLoss()
 {
-    return 0;
+    //TODO: make this more interesting
+    return 25;
 }
 
 int BattleResult::calculateDefenderSupplyLoss()
 {
-    return 0;
+    //TODO: make this more intereting
+    return 15;
 }
-
-void BattleResult::loadBattle(const Unit &attackerUnit, const Unit &defenderUnit, const Field &fieldOfDefender)
-{
-    this->attacker = attackerUnit;
-    this->defender = defenderUnit;
-    this->defenderField = fieldOfDefender;
-}
+BattleResult::BattleResult(const Unit &attackerUnit, const Unit &defenderUnit, const Field &fieldOfDefender) : attacker(attackerUnit),
+    defender(defenderUnit), defenderField(fieldOfDefender){}

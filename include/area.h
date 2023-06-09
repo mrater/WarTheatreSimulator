@@ -42,10 +42,13 @@ class Area{
         /// @return pointer to unit on a given position. returns -1 if unavailable
         UnitID getUnitOnPosition(const Position &position) const;
 
+        UnitID getUnitOnField(const FieldID &field) const;
+
         /// @brief get units of faction
         /// @param unitFactionID faction of unit
         /// @return vector of units that belong to faction
-        std::vector<UnitID> getUnitsOfFaction(const FactionID &unitFactionID);
+
+        std::vector<UnitID> getUnitsOfFaction(const FactionID &unitFactionID) const;
 
         const bool isUnitOnPosition(const Position &position) const;
 
@@ -54,7 +57,12 @@ class Area{
         /// @brief get unit of certain ID
         /// @param unitID ID of wanted unit
         /// @return constant pointer to unit or NULL if not found
-        Unit getUnit(const UnitID &unitID);
+        const Unit& getUnit(const UnitID &unitID) const;
+        
+        /// @brief get unit of certain ID
+        /// @param unitID ID of wanted unit
+        /// @return reference to unit or NULL if not found    
+        Unit &getUnit(const UnitID &unitID);
 
         const Field &getFieldWithUnit(const UnitID &unitID) const;
 
@@ -63,7 +71,9 @@ class Area{
         std::set<FieldID> getFieldsWithinRange(const Position &fromPosition, const int &range);
 
         std::set<FieldID> getFieldsSuitableToMove(const Position &position, const int &range);
-        
+
+        /// @return sum of movement points of all units in faction 
+        int getTotalMovementPointsOfFaction(const FactionID &factionID) const;
         
         // std::map<UnitID, Unit> getUnits;
         // std::map<

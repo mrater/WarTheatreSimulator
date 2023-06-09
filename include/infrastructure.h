@@ -20,4 +20,3 @@ class FuelDepot{
     FactionID getFactionID() const;
     int getRange() const;
     const Position getPosition() const;
-};

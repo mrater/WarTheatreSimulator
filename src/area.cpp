@@ -53,7 +53,13 @@ UnitID Area::getUnitOnPosition(const Position &position) const
     return -1;
 }
 
-std::vector<UnitID> Area::getUnitsOfFaction(const FactionID &unitFactionID)
+UnitID Area::getUnitOnField(const FieldID &field) const
+{
+    if (!fields.count(field)) return -1;
+    return getUnitOnPosition(fields.at(field).getPosition());
+}
+
+std::vector<UnitID> Area::getUnitsOfFaction(const FactionID &unitFactionID) const
 {
     std::vector<UnitID> result;
     for (const auto &unit : units)
@@ -71,7 +77,11 @@ bool Area::isUnitOnField(const FieldID &field)
 {
     return isUnitOnPosition(fields[field].getPosition());
 }
-Unit Area::getUnit(const UnitID &unitID)
+const Unit& Area::getUnit(const UnitID &unitID) const
+{
+    return units.at(unitID);
+}
+Unit& Area::getUnit(const UnitID &unitID)
 {
     return units[unitID];
 }
@@ -114,4 +124,14 @@ std::set<FieldID> Area::getFieldsSuitableToMove(const Position &position, const 
     auto fieldHasUnit = [&](const FieldID &fieldID) {return isUnitOnField(fieldID);};
     std::set<FieldID> properFields = getFieldsWithinRange(position, range);
     std::erase_if(properFields, fieldHasUnit);
+}
+
+int Area::getTotalMovementPointsOfFaction(const FactionID &factionID) const {
+    std::vector<UnitID> unitsOfFaction =  getUnitsOfFaction(factionID);
+    int result = 0;
+    for (const UnitID &unitID : unitsOfFaction)
+    {
+        result += getUnit(unitID).getMovementPoints();
+    }
+    return result;
 }

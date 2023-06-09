@@ -19,13 +19,13 @@ namespace IMPORTANCE{
  */
 class BattleResult{
     /// @brief attacking unit
-    Unit &attacker;
+    const Unit &attacker;
 
     /// @brief defending unit
-    Unit &defender;
+    const Unit &defender;
 
     /// @brief field of defender
-    Field& defenderField;
+    const Field &defenderField;
 
     public:
         /// @brief get field of defender
@@ -49,7 +49,5 @@ class BattleResult{
         /// @return loss of supply level of defender
         int calculateDefenderSupplyLoss();
 
-        /// @brief provide information about battle
-        void loadBattle(const Unit &attackerUnit, const Unit &defenderUnit, const Field &fieldOfDefender);
-
+        BattleResult(const Unit &attackerUnit, const Unit &defenderUnit, const Field &fieldOfDefender);
 };

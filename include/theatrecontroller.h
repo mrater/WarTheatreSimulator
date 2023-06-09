@@ -1,5 +1,10 @@
 #pragma once
 #include "area.h"
+#include "battle.h"
+#include <iostream>
+#include <numeric>
+#include <algorithm>
+#include <random>
 
 class TheatreController : public Area {
     private:
@@ -15,8 +20,20 @@ class TheatreController : public Area {
     protected:
     public:
         TheatreController();
-        bool attackFromDistance(const FieldID &fieldID);
-        bool moveAndAttack(const FieldID &fieldID);
+        bool isAttackPossible(const UnitID &unitID, const FieldID &fieldID);
+        bool attack(const UnitID &unitID, const FieldID &fieldID);
+        bool attack(const UnitID &attackerID, const Position &position);
+        void removeUnitIfDead(const UnitID &unitID);
+        // bool attackFromDistance(const FieldID &fieldID);
+
+        /// @brief move unit to this field. Attack if something is there. 
+        /// Function doesn't perform illegal operations
+        /// Note that artillery cannot move and attack at the same time
+        /// @param unitID unit to be moved
+        /// @param fieldID target field
+        /// @return false if operation cannot be done
+        bool moveAndAttack(const UnitID &unitID, const FieldID &fieldID);
+
         bool move(const UnitID &unitID, const Position &position);
         // bool move(const UnitID &unitID, const Field &Field);
         bool isHuman(const FactionID &faction) const;
@@ -29,4 +46,6 @@ class TheatreController : public Area {
         void printUnitInfo(const UnitID &unitID);
         void printUnitsInfo();
         const int countFactions() const;
+
+        const bool existsUnit(const UnitID &unitID) const;
 };
