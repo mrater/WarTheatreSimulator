@@ -9,6 +9,8 @@
 #include <map>
 #include <set>
 #include "units.h"
+#include "infrastructure.h"
+
 class Area{
     private:
         friend class TheatreController;
@@ -19,6 +21,8 @@ class Area{
         /// @brief Units present in arrea
         std::map<UnitID, Unit> units;
 
+        /// @brief magazines of fuel on the map
+        std::map<FacilityID, FuelDepot> fuelMagazines;
 
         Area();
     public:
@@ -43,13 +47,12 @@ class Area{
         /// @brief get units of faction
         /// @param unitFactionID faction of unit
         /// @return vector of units that belong to faction
+
         std::vector<UnitID> getUnitsOfFaction(const FactionID &unitFactionID) const;
 
         const bool isUnitOnPosition(const Position &position) const;
 
         bool isUnitOnField(const FieldID &field);
-
-        bool fieldHasUnit(const FieldID &field);
 
         /// @brief get unit of certain ID
         /// @param unitID ID of wanted unit
