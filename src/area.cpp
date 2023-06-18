@@ -69,7 +69,7 @@ std::vector<UnitID> Area::getUnitsOfFaction(const FactionID &unitFactionID) cons
     }
     return result;
 }
-const bool Area::isUnitOnPosition(const Position &position) const
+bool Area::isUnitOnPosition(const Position &position) const
 {
     return getUnitOnPosition(position) != -1;
 }
@@ -134,4 +134,14 @@ int Area::getTotalMovementPointsOfFaction(const FactionID &factionID) const {
         result += getUnit(unitID).getMovementPoints();
     }
     return result;
+}
+
+bool Area::existsUnit(const UnitID &unitID) const {
+    return units.count(unitID) > 0;
+}
+bool Area::skipMovement(const UnitID &unitID)
+{
+    if (!existsUnit(unitID)) return false;
+    getUnit(unitID).setMovementPoints(0);
+    return true;
 }

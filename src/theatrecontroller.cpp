@@ -27,7 +27,7 @@ bool TheatreController::isAttackPossible(const UnitID &unitID, const FieldID &fi
     if (!existsUnit(unitID)) return false;
     
     //field is empty
-    if (!fieldHasUnit(fieldID)) return false;
+    if (!isUnitOnField(fieldID)) return false;
 
     //both units are from the same team
     if (defender.getUnitFactionID() == attacker.getUnitFactionID()) return false;
@@ -80,6 +80,8 @@ void TheatreController::removeUnitIfDead(const UnitID &unitID)
 
 bool TheatreController::move(const UnitID &unitID, const Position &position)
 {
+    // check if unit with this id exists
+    if (!existsUnit(unitID)) return false;
     int distanceToPosition = units[unitID].getPosition().distanceTo(position);
     if (!isRealPosition(position) or units[unitID].getMovementPoints() < distanceToPosition) return false;
     if (isUnitOnPosition(position)) return false;
@@ -111,8 +113,9 @@ void TheatreController::startNextRound()
     std::mt19937 g(rd());
     std::shuffle(turnOrderPermutation.begin(), turnOrderPermutation.end(), g);
  
-    for (FactionID faction = 1; faction <= countFactions(); faction++)
+    for (const FactionID &faction : turnOrderPermutation)
     {
+        std::cout << "Faction #" << faction << " to move\n"; 
         if (isBot(faction))
         {
             throw "Bots not supported.";
@@ -120,19 +123,19 @@ void TheatreController::startNextRound()
         } else
         {
             //handle human (interactive) decisions
-            handlePlayerTurn();
+            handlePlayerTurn(faction);
         }
     }
     
 }
 
-void TheatreController::handlePlayerTurn()
+void TheatreController::handlePlayerTurn(const FactionID &faction)
 {
     bool endTurn = false;
     resetAllUnitsMovementPoints();
     while (true)
     {
-        std::cout << "Enter command~\n";
+        std::cout << "Enter command:\n~";
         char command;
         std::cin >> command;        
         switch(command)
@@ -143,25 +146,50 @@ void TheatreController::handlePlayerTurn()
                 UnitID commandedUnit;
                 Position targetPosition;
                 std::cin >> commandedUnit >> targetPosition.q >> targetPosition.r;
+                if (getUnit(commandedUnit).getUnitFactionID() != faction)
+                {
+                    std::cout << "This unit is not from this faction\n";
+                } else 
                 if (!move(commandedUnit, targetPosition))
                 {
                     std::cout << "This field is occupied, does not exist or not within range of this unit\n";
-                }
+                } else std::cout << "Done.\n";
                 break;
             }
             //attack
-            case 'x':
+            case 'x':{
                 UnitID commandedUnit;
+                if (getUnit(commandedUnit).getUnitFactionID() != faction){
+                    std::cout << "Unit not from your faction\n";
+                }
                 Position targetPosition;
                 if (!attack(commandedUnit, targetPosition)){
                     std::cout << "This attack is not possible.\n";
-                }
+                } else std::cout << "Done.\n";
                 break;
+            }
 
             //print info about all units
-            case 'p':
+            case 'p':{
                 printUnitsInfo();
                 break;
+            }
+
+            case 's':{
+                UnitID unitID;
+                std::cin >> unitID;
+                if (getUnit(unitID).getUnitFactionID() != faction){
+                    std::cout << "Unit not from your faction\n";
+                } else 
+                if (!skipMovement(unitID))
+                {
+                    std::cout << "Unit doesn't exists\n"; 
+                } else std::cout << "Done.\n";
+
+                break;
+            }
+            case 'e':{
+            }
 
             case 'h':
                 std::cout << "h - print this help message\n";
@@ -207,10 +235,16 @@ void TheatreController::printUnitsInfo()
     }
 }
 
-const int TheatreController::countFactions() const
+int TheatreController::countFactions() const
 {
     return this->botPlayers.size() + this->humanPlayers.size();
 }
-const bool TheatreController::existsUnit(const UnitID &unitID) const {
-    return units.count(unitID) > 0;
+void TheatreController::startInteractive()
+{
+    int rounds = 0;
+    while (rounds++ <= 10)
+    {
+        std::cout << "Round #" << rounds << "\n";
+        startNextRound();
+    }
 }

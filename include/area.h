@@ -45,11 +45,11 @@ class Area{
         /// @return vector of units that belong to faction
         std::vector<UnitID> getUnitsOfFaction(const FactionID &unitFactionID) const;
 
-        const bool isUnitOnPosition(const Position &position) const;
+        bool isUnitOnPosition(const Position &position) const;
 
         bool isUnitOnField(const FieldID &field);
 
-        bool fieldHasUnit(const FieldID &field);
+        // bool fieldHasUnit(const FieldID &field);
 
         /// @brief get unit of certain ID
         /// @param unitID ID of wanted unit
@@ -71,6 +71,12 @@ class Area{
 
         /// @return sum of movement points of all units in faction 
         int getTotalMovementPointsOfFaction(const FactionID &factionID) const;
+
+        //check if unit with given id exists
+        bool existsUnit(const UnitID &unitID) const;
+
+        // set movement points to 0 in order to proceed without moving or attacking
+        bool skipMovement(const UnitID &unitID);
         
         // std::map<UnitID, Unit> getUnits;
         // std::map<

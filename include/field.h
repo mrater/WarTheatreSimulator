@@ -36,7 +36,7 @@ public:
 
     /// @brief calculate third s coordinate
     /// @return s, which equals -q - r
-    const int s();
+    int s();
     Position();
     Position(const int &_q, const int &_r);
     // Position();
@@ -103,7 +103,7 @@ public:
     /**
      * @returns type of terrain of the field
      */
-    const TerrainType getTerrainType() const;
+    TerrainType getTerrainType() const;
     
     
     
