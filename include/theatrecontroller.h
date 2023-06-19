@@ -45,8 +45,10 @@ class TheatreController : public Area {
         void loadMap(const Area &area, const std::vector<FactionID> &humanFactions, const std::vector<FactionID> &botFactions);
         void printUnitInfo(const UnitID &unitID);
         void printUnitsInfo();
-        int countFactions() const;
+
+        size_t countFactions() const;
 
         bool existsUnit(const UnitID &unitID) const;
-        void startInteractive();
+        void resupplyFrom(const FacilityID &fuelDepotID);
+        void resupplyAllUnits();
 };

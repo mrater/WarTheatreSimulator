@@ -7,8 +7,11 @@
 #pragma once
 #include <vector>
 #include <map>
+#include <assert.h>
 #include <set>
 #include "units.h"
+#include "infrastructure.h"
+
 class Area{
     private:
         friend class TheatreController;
@@ -19,6 +22,8 @@ class Area{
         /// @brief Units present in arrea
         std::map<UnitID, Unit> units;
 
+        /// @brief magazines of fuel on the map
+        std::map<FacilityID, FuelDepot> fuelMagazines;
 
         Area();
     public:
@@ -43,13 +48,12 @@ class Area{
         /// @brief get units of faction
         /// @param unitFactionID faction of unit
         /// @return vector of units that belong to faction
+
         std::vector<UnitID> getUnitsOfFaction(const FactionID &unitFactionID) const;
 
         bool isUnitOnPosition(const Position &position) const;
 
         bool isUnitOnField(const FieldID &field);
-
-        // bool fieldHasUnit(const FieldID &field);
 
         /// @brief get unit of certain ID
         /// @param unitID ID of wanted unit
@@ -60,6 +64,9 @@ class Area{
         /// @param unitID ID of wanted unit
         /// @return reference to unit or NULL if not found    
         Unit &getUnit(const UnitID &unitID);
+
+        FuelDepot &getFuelDepot(const FacilityID &facilityID);
+        const FuelDepot &getFuelDepot(const FacilityID &facilityID) const;
 
         const Field &getFieldWithUnit(const UnitID &unitID) const;
 
@@ -78,6 +85,5 @@ class Area{
         // set movement points to 0 in order to proceed without moving or attacking
         bool skipMovement(const UnitID &unitID);
         
-        // std::map<UnitID, Unit> getUnits;
-        // std::map<
+        std::set<UnitID> getFriendlyUnitsWithinRange(const Position &fromPosition, const int &range, const FactionID &faction);
 };
