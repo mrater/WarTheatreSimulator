@@ -81,6 +81,8 @@ void TheatreController::removeUnitIfDead(const UnitID &unitID)
 
 bool TheatreController::move(const UnitID &unitID, const Position &position)
 {
+    // check if unit with this id exists
+    if (!existsUnit(unitID)) return false;
     int distanceToPosition = units[unitID].getPosition().distanceTo(position);
     if (!isRealPosition(position) or units[unitID].getMovementPoints() < distanceToPosition) return false;
     if (isUnitOnPosition(position)) return false;
@@ -108,9 +110,11 @@ void TheatreController::startNextRound()
     //determine order of turns by the following random permutation
     std::vector<FactionID> turnOrderPermutation = generateRandomPermutation(botPlayers.size() + humanPlayers.size());
  
+
     resupplyAllUnits();
     for (const FactionID &faction : turnOrderPermutation)
     {
+        std::cout << "Faction #" << faction << " to move\n"; 
         if (isBot(faction))
         {
             throw "Bots not supported.";
@@ -118,19 +122,19 @@ void TheatreController::startNextRound()
         } else
         {
             //handle human (interactive) decisions
-            handlePlayerTurn();
+            handlePlayerTurn(faction);
         }
     }
     
 }
 
-void TheatreController::handlePlayerTurn()
+void TheatreController::handlePlayerTurn(const FactionID &faction)
 {
     bool endTurn = false;
     resetAllUnitsMovementPoints();
     while (true)
     {
-        std::cout << "Enter command~\n";
+        std::cout << "Enter command:\n~";
         char command;
         std::cin >> command;        
         switch(command)
@@ -141,26 +145,51 @@ void TheatreController::handlePlayerTurn()
                 UnitID commandedUnit;
                 Position targetPosition;
                 std::cin >> commandedUnit >> targetPosition.q >> targetPosition.r;
+                if (getUnit(commandedUnit).getUnitFactionID() != faction)
+                {
+                    std::cout << "This unit is not from this faction\n";
+                } else 
                 if (!move(commandedUnit, targetPosition))
                 {
                     std::cout << "This field is occupied, does not exist or not within range of this unit\n";
-                }
+                } else std::cout << "Done.\n";
                 break;
             }
             //attack
             case 'x':{
                 UnitID commandedUnit;
+                if (getUnit(commandedUnit).getUnitFactionID() != faction){
+                    std::cout << "Unit not from your faction\n";
+                }
                 Position targetPosition;
                 if (!attack(commandedUnit, targetPosition)){
                     std::cout << "This attack is not possible.\n";
-                }
+                } else std::cout << "Done.\n";
                 break;
             }
+            
             //print info about all units
             case 'p':{
                 printUnitsInfo();
                 break;
             }
+
+            case 's':{
+                UnitID unitID;
+                std::cin >> unitID;
+                if (getUnit(unitID).getUnitFactionID() != faction){
+                    std::cout << "Unit not from your faction\n";
+                } else 
+                if (!skipMovement(unitID))
+                {
+                    std::cout << "Unit doesn't exists\n"; 
+                } else std::cout << "Done.\n";
+
+                break;
+            }
+            case 'e':{
+            }
+
 
             case 'h':
                 std::cout << "h - print this help message\n";
@@ -206,6 +235,15 @@ void TheatreController::printUnitsInfo()
     }
 }
 
+void TheatreController::startInteractive()
+{
+    int rounds = 0;
+    while (rounds++ <= 10)
+    {
+        std::cout << "Round #" << rounds << "\n";
+        startNextRound();
+    }
+}
 size_t TheatreController::countFactions() const
 {
     return this->botPlayers.size() + this->humanPlayers.size();
@@ -216,9 +254,9 @@ bool TheatreController::existsUnit(const UnitID &unitID) const {
 
 void TheatreController::resupplyFrom(const FacilityID &fuelDepotID)
 {
-
+  //TODO 
 }
 void TheatreController::resupplyAllUnits()
 {
-    
+    //TODO
 }

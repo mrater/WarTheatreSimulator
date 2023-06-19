@@ -111,3 +111,8 @@ bool Unit::canAttack() const
 {
     return movementPoints >= 1 && getSupplyLevel() >= BASIC_ATTACK_SUPPLY_REQUIREMENT;
 }
+
+void Unit::setMovementPoints(const int &newMovementPoints)
+{
+    this->movementPoints = newMovementPoints;
+}

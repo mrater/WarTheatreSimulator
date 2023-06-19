@@ -159,6 +159,9 @@ class Unit{
         //true if movement points and supply level are sufficient for an attack
         bool canAttack() const;
 
+
+        void setMovementPoints(const int &newMovementPoints);
+
         /// @brief increase supply level of unit but not exceed 100
         /// @param supplyGain amount of supply level to add
         /// @return supply points really needed (i.e. 100 - currentSupply)
@@ -170,41 +173,3 @@ class Unit{
         void dealDamage(const int &receivedDamage);
         void dealSupplyLoss(const int &supplyLoss);
 };
-
-// class Infantry : public Unit {
-//     public:
-//         /// @return UnitCategory::INFANTRY
-//         const UnitType getType();
-
-//         /// @brief get Base attack of infantry
-//         /// @param unitType type of enemy unit
-//         /// @return base attack for infantry when dealing with certain enemy
-//         const int getBaseAttack(const UnitID &unitType);
-// };
-
-// class Tank : public Unit {
-//     public:
-//         /// @return UnitCategory::TANK
-//         const UnitType getType(){
-//             return UnitCategory::TANK;
-//         }
-
-//         /// @brief get Base attack of tank
-//         /// @param unitType type of enemy unit
-//         /// @return base attack for tank when dealing with certain enemy
-//         const int getBaseAttack(const UnitID &unitType);
-        
-// };
-
-// class Artillery : public Unit{
-//     public:
-//         /// @return UnitCategory::ARTILLERY
-//         const UnitType getType(){
-//             return UnitCategory::ARTILLERY;
-//         }
-        
-//         /// @brief get Base attack of artillery
-//         /// @param unitType type of enemy unit
-//         /// @return base attack for artillery when dealing with certain enemy
-//         const int getBaseAttack(const UnitID &unitType);
-// };

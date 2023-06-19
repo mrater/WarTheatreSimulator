@@ -36,5 +36,5 @@ inline TheatreController prepareExampleBoard(){
 int main()
 {
     TheatreController game = prepareExampleBoard();
-    // game.startInteractive();
+    game.startInteractive();
 }

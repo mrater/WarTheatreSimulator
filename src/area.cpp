@@ -145,6 +145,17 @@ int Area::getTotalMovementPointsOfFaction(const FactionID &factionID) const {
     return result;
 }
 
+
+bool Area::existsUnit(const UnitID &unitID) const {
+    return units.count(unitID) > 0;
+}
+bool Area::skipMovement(const UnitID &unitID)
+{
+    if (!existsUnit(unitID)) return false;
+    getUnit(unitID).setMovementPoints(0);
+    return true;
+}
+
 std::set<UnitID> Area::getFriendlyUnitsWithinRange(const Position &fromPosition, const int &range, const FactionID &faction)
 {
     std::set<FieldID> fieldsWithingRange = getFieldsWithinRange(fromPosition, range);

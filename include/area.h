@@ -78,6 +78,12 @@ class Area{
 
         /// @return sum of movement points of all units in faction 
         int getTotalMovementPointsOfFaction(const FactionID &factionID) const;
+
+        //check if unit with given id exists
+        bool existsUnit(const UnitID &unitID) const;
+
+        // set movement points to 0 in order to proceed without moving or attacking
+        bool skipMovement(const UnitID &unitID);
         
         std::set<UnitID> getFriendlyUnitsWithinRange(const Position &fromPosition, const int &range, const FactionID &faction);
 };
