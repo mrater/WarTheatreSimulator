@@ -30,26 +30,26 @@ class BattleResult{
     public:
         /// @brief get field of defender
         /// @return id of defended field
-        const Field &getDefenderField();
+        const Field &getDefenderField() const;
 
         /// @brief Calculate damage dealt to defender.
         /// Damage is equivalent to organization loss of defender
         /// @return organization loss of defender
-        int calculateDamage();
+        int calculateDamage() const;
 
         /// @brief Calculate damage dealt to attacker
         /// @return organization loss of attacker
-        int calculateBacklashDamage();
+        int calculateBacklashDamage() const;
 
         /// @brief Calculate attacker loss in equipment. 
         /// @return loss of supply level of attacker
-        int calculateAttackerSupplyLoss();
+        int calculateAttackerSupplyLoss() const;
 
         /// @brief Calculate defender loss in equipment
         /// @return loss of supply level of defender
-        int calculateDefenderSupplyLoss();
+        int calculateDefenderSupplyLoss() const;
 
-        void briefBattleResult();
+        void briefBattleResult() const;
 
         BattleResult(const Unit &attackerUnit, const Unit &defenderUnit, const Field &fieldOfDefender);
 };

@@ -21,8 +21,8 @@ class TheatreController : public Area {
     public:
         TheatreController();
         bool isAttackPossible(const UnitID &unitID, const FieldID &fieldID);
-        bool attack(const UnitID &unitID, const FieldID &fieldID);
-        bool attack(const UnitID &attackerID, const Position &position);
+        BattleResult attack(const UnitID &unitID, const FieldID &fieldID);
+        BattleResult attack(const UnitID &attackerID, const Position &position);
         void removeUnitIfDead(const UnitID &unitID);
         // bool attackFromDistance(const FieldID &fieldID);
 

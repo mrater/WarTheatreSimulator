@@ -39,32 +39,33 @@ bool TheatreController::isAttackPossible(const UnitID &unitID, const FieldID &fi
     //finally return true if unit itself (regardless of position, enemy etc.) can attack enemies
     return attacker.canAttack();
 }
-bool TheatreController::attack(const UnitID &attackerID, const FieldID &fieldID)
-{
-    if (!isAttackPossible(attackerID, fieldID)) return false;
 
-    const Field &targetField = fields[fieldID];
+///@brief get battle results and apply them to the battlefield
+///@warning need assumption that attack is possible. Might break otherwise
+BattleResult TheatreController::attack(const UnitID &attackerID, const FieldID &fieldID)
+{
+    const Field &targetField = fields.at(fieldID);
     Unit &attacker = getUnit(attackerID);
     const UnitID defenderID = getUnitOnField(fieldID);
     Unit &defender = getUnit(defenderID);
 
     //calculate battle results
-    BattleResult battleReults = BattleResult(attacker, defender, targetField);
+    BattleResult battleResult = BattleResult(attacker, defender, targetField);
 
     //change org of units
-    defender.dealDamage(battleReults.calculateDamage());
-    attacker.dealDamage(battleReults.calculateBacklashDamage());
+    defender.dealDamage(battleResult.calculateDamage());
+    attacker.dealDamage(battleResult.calculateBacklashDamage());
 
     //change supply level of units
-    defender.dealSupplyLoss(battleReults.calculateDefenderSupplyLoss());
-    attacker.dealSupplyLoss(battleReults.calculateAttackerSupplyLoss());
+    defender.dealSupplyLoss(battleResult.calculateDefenderSupplyLoss());
+    attacker.dealSupplyLoss(battleResult.calculateAttackerSupplyLoss());
     
     //remove units from the board if their org is below 1
     removeUnitIfDead(attackerID);
     removeUnitIfDead(defenderID);
-    return true;
+    return battleResult;
 }
-bool TheatreController::attack(const UnitID &attackerID, const Position &position)
+BattleResult TheatreController::attack(const UnitID &attackerID, const Position &position)
 {
     FieldID targetField = getFieldByPosition(position);
     return attack(attackerID, targetField);
@@ -164,9 +165,13 @@ void TheatreController::handlePlayerTurn(const FactionID &faction)
 
                     std::cout << "Unit not from your faction\n";
                 } else {
-                    if (!attack(commandedUnit, targetPosition)){
+                    
+                    if (!isAttackPossible(commandedUnit, getFieldByPosition(targetPosition))) {
                         std::cout << "This attack is not possible.\n";
-                    } else std::cout << "Done.\n";
+                    } else {
+                        BattleResult battle = attack(commandedUnit, targetPosition);
+                        battle.briefBattleResult();
+                    }
                 }
                 break;
             }

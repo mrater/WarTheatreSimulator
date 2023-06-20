@@ -170,7 +170,7 @@ bool Area::skipAllMovementOfFaction(const FactionID &faction)
     }
 
     return true;
-
+}
 std::set<UnitID> Area::getFriendlyUnitsWithinRange(const Position &fromPosition, const int &range, const FactionID &faction)
 {
     std::set<FieldID> fieldsWithingRange = getFieldsWithinRange(fromPosition, range);

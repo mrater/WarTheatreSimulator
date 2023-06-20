@@ -1,11 +1,11 @@
 #include "battle.h"
 
-const Field& BattleResult::getDefenderField()
+const Field& BattleResult::getDefenderField() const
 {
     return this->defenderField;
 }
 
-int BattleResult::calculateDamage()
+int BattleResult::calculateDamage() const
 {
     const int baseAttack = attacker.getBaseAttack(defender.getType());
     const int terrainType = defenderField.getTerrainType();
@@ -18,26 +18,25 @@ int BattleResult::calculateDamage()
     return resultDamage;
 }
 
-int BattleResult::calculateBacklashDamage()
+int BattleResult::calculateBacklashDamage() const
 {
     if (attacker.getType() != UnitCategory::INFANTRY) return 0;
     //TODO: calculate backlash
     return 25;
 }
 
-int BattleResult::calculateAttackerSupplyLoss()
+int BattleResult::calculateAttackerSupplyLoss() const
 {
     //TODO: make this more interesting
     return 25;
 }
-int BattleResult::calculateResultingAttackerSupply
 
-int BattleResult::calculateDefenderSupplyLoss()
+int BattleResult::calculateDefenderSupplyLoss() const
 {
     //TODO: make this more intereting
     return 15;
 }
-void BattleResult::briefBattleResult()
+void BattleResult::briefBattleResult() const
 {
     std::cout << "Result of this attack:\n";
     std::cout << "Attacker: Unit #" << attacker.getUnitID() << "(" << attacker.getUnitFactionID() << "), " << UnitCategory::LITERAL[attacker.getType()] << ":\n";
@@ -53,9 +52,10 @@ void BattleResult::briefBattleResult()
     {
         std::cout << "DEFENDER UNIT DESTROYED.\n";
     } else {
-        std::cout << "ORG: " << defender.getOrganization() - calculateDamage() << "/ 100 (-" << calcula() << ")\n";
+        std::cout << "ORG: " << defender.getOrganization() - calculateDamage() << "/ 100 (-" << calculateDefenderSupplyLoss() << ")\n";
         std::cout << "SUPPLY : " << defender.getSupplyLevel() << " / 100\n";
     }
 }
+
 BattleResult::BattleResult(const Unit &attackerUnit, const Unit &defenderUnit, const Field &fieldOfDefender) : attacker(attackerUnit),
                                                                                                                defender(defenderUnit), defenderField(fieldOfDefender) {}
