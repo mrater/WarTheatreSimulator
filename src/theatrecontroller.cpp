@@ -71,7 +71,7 @@ bool TheatreController::attack(const UnitID &attackerID, const Position &positio
 
 void TheatreController::removeUnitIfDead(const UnitID &unitID)
 {
-    if (getUnit(unitID).getOrganization() <= 0)
+    if (getUnitConstantReference(unitID).getOrganization() <= 0)
     {
         //it is dead
         units.erase(unitID);
@@ -118,7 +118,7 @@ void TheatreController::startNextRound()
         std::cout << "Faction #" << faction << " to move\n"; 
         if (isBot(faction))
         {
-            throw "Bots not supported.";
+            throw std::invalid_argument("Bots not supported.");
             //TODO: add bot behaviour here
         } else
         {
@@ -131,7 +131,7 @@ void TheatreController::startNextRound()
 
 void TheatreController::handlePlayerTurn(const FactionID &faction)
 {
-    bool endTurn = false;
+    // bool endTurn = false;
     resetAllUnitsMovementPoints();
     while (true)
     {
@@ -146,26 +146,28 @@ void TheatreController::handlePlayerTurn(const FactionID &faction)
                 UnitID commandedUnit;
                 Position targetPosition;
                 std::cin >> commandedUnit >> targetPosition.q >> targetPosition.r;
-                if (getUnit(commandedUnit).getUnitFactionID() != faction)
+                if (getUnitConstantReference(commandedUnit).getUnitFactionID() != faction)
                 {
                     std::cout << "This unit is not from this faction\n";
                 } else 
                 if (!move(commandedUnit, targetPosition))
                 {
-                    std::cout << "This field is occupied, does not exist or not within range of this unit\n";
+                    std::cout << "This field is occupied, does not exist, not within range or unit out of needed movement points\n";
                 } else std::cout << "Done.\n";
                 break;
             }
             //attack
             case 'x':{
                 UnitID commandedUnit;
-                if (getUnit(commandedUnit).getUnitFactionID() != faction){
-                    std::cout << "Unit not from your faction\n";
-                }
                 Position targetPosition;
-                if (!attack(commandedUnit, targetPosition)){
-                    std::cout << "This attack is not possible.\n";
-                } else std::cout << "Done.\n";
+                std::cin >> commandedUnit >> targetPosition.q >> targetPosition.r;
+                if (getUnitConstantReference(commandedUnit).getUnitFactionID() != faction){
+                    std::cout << "Unit not from your faction\n";
+                } else {
+                    if (!attack(commandedUnit, targetPosition)){
+                        std::cout << "This attack is not possible.\n";
+                    } else std::cout << "Done.\n";
+                }
                 break;
             }
 
@@ -178,10 +180,13 @@ void TheatreController::handlePlayerTurn(const FactionID &faction)
             case 's':{
                 UnitID unitID;
                 std::cin >> unitID;
-                if (getUnit(unitID).getUnitFactionID() != faction){
+                if (!existsUnit(unitID)){
+                    std::cout << "Unit doesn't exists.\n";
+                }
+                else if (getUnitConstantReference(unitID).getUnitFactionID() != faction){
                     std::cout << "Unit not from your faction\n";
-                } else 
-                if (!skipMovement(unitID))
+                } 
+                else if (!skipMovement(unitID))
                 {
                     std::cout << "Unit doesn't exists\n"; 
                 } else std::cout << "Done.\n";
@@ -189,6 +194,8 @@ void TheatreController::handlePlayerTurn(const FactionID &faction)
                 break;
             }
             case 'e':{
+                skipAllMovementOfFaction(faction);
+                break;
             }
 
             case 'h':
@@ -222,9 +229,10 @@ void TheatreController::printUnitInfo(const UnitID &unitID)
     std::cout << "Unit #" << unitID << " of faction #" << unit.getUnitFactionID() << " ("  << UnitCategory::LITERAL[unit.getType()] << ")\n";
     std::cout << "POSITION: " << unit.getPosition().q << ", " << unit.getPosition().r << "\n";
     std::cout << "ORGANIZATION:" << unit.getOrganization() << "\n";
-    std::cout << "SUPPLY LEVEL:" << unit.getSupplyLevel() << "\n====\n";
-    std::cout << "TYPE OF FIELD:" << Terrain::LITERAL[getFieldWithUnit(unit.getUnitID()).getTerrainType()] << "\n";
+    std::cout << "SUPPLY LEVEL:" << unit.getSupplyLevel() << "\n";
     std::cout << "REMAINING MOVEMENT POINTS: " << unit.getMovementPoints() << "/" << unit.getBaseMovementPoints() << "\n";
+    std::cout << "TYPE OF FIELD:" << Terrain::LITERAL[getFieldWithUnit(unit.getUnitID()).getTerrainType()] << "\n";
+    std::cout << "==================\n";
 }
 
 void TheatreController::printUnitsInfo()
@@ -235,7 +243,7 @@ void TheatreController::printUnitsInfo()
     }
 }
 
-int TheatreController::countFactions() const
+size_t TheatreController::countFactions() const
 {
     return this->botPlayers.size() + this->humanPlayers.size();
 }

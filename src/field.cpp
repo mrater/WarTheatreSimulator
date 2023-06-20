@@ -1,15 +1,16 @@
 #include "field.h"
 #include <set>
 #include <iostream>
+#include <assert.h>
 
-const float Field::getBonus()
+double Field::getBonus() const
 {
     return Terrain::TERRAIN_BONUS[fieldType];
 }
 
-Field::Field(const FieldID &fieldID, const int &q, const int &r, const TerrainType &terrainType)
+Field::Field(const FieldID &_fieldID, const int &q, const int &r, const TerrainType &terrainType)
 {
-    this->fieldID = fieldID;
+    this->fieldID = _fieldID;
     this->position = Position(q,r);
     this->fieldType = terrainType;
 }
@@ -28,8 +29,13 @@ TerrainType Field::getTerrainType() const
 
 int Position::distanceTo(const Position &anotherPosition) const
 {
-    std::cerr << "Warning: distanceTo() returns constant 1\n";
     return 1;
+    int l = abs(this->q - anotherPosition.q) 
+        + abs(this->q + this->r - anotherPosition.q - anotherPosition.r)
+        + abs(this->r - anotherPosition.r);
+    std::cerr << "Warning: distanceTo() returns " << l << "\n";
+    assert((l & 1) == 0);
+    return l / 2;
 }
 
 int Position::s()
@@ -47,10 +53,6 @@ Position::Position(){
 bool Position::operator==(const Position &anotherPosition) const
 {
     return this->q == anotherPosition.q && this->r == anotherPosition.r;
-}
-void Position::operator=(const Position &anotherPosition){
-    this->q = anotherPosition.q;
-    this->r = anotherPosition.r;
 }
 
 bool Position::operator<(const Position &anotherPosition) const

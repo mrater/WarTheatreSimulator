@@ -1,10 +1,10 @@
 #include "units.h"
 #include <iostream>
-Unit::Unit(const Position &newPosition, const UnitType &unitType, const FactionID &unitFactionID, const UnitID &unitID)
+Unit::Unit(const Position &newPosition, const UnitType &_unitType, const FactionID &unitFactionID, const UnitID &unitID)
 {
     this->ID = unitID;
     this->position = Position(newPosition.q, newPosition.r);
-    this->unitType = unitType;
+    this->unitType = _unitType;
     this->unitFactionId = unitFactionID;
     this->movementPoints = baseMovementPoints::MATRIX[unitType];
     this->organization = base::ORGANIZATION;
@@ -73,7 +73,7 @@ void Unit::dealDamage(const int &receivedDamage)
 
 void Unit::dealSupplyLoss(const int &supplyLoss)
 {
-    this->supplyLevel = std::max(supplyLevel - supplyLevel, 0);
+    this->supplyLevel = std::max(supplyLevel - supplyLoss, 0);
 }
 
 int Unit::getBaseMovementPoints() const
@@ -95,9 +95,9 @@ int Unit::distanceTo(const Unit &anotherUnit) const
     return position.distanceTo(anotherUnit.getPosition());
 }
 
-int Unit::distanceTo(const Position &position) const
+int Unit::distanceTo(const Position &_position) const
 {
-    return this->position.distanceTo(position);
+    return this->position.distanceTo(_position);
 }
 
 bool Unit::canAttack() const

@@ -30,7 +30,7 @@ inline TheatreController prepareExampleBoard(){
     mapEditor.addUnit(1, -1, UnitCategory::ARTILLERY, FACTION::ENEMY);
     
     TheatreController game = TheatreController();
-    game.loadMap(mapEditor.generateArea(), {1}, {2});
+    game.loadMap(mapEditor.generateArea(), {1, 2}, {});
     return game;
 }
 int main()

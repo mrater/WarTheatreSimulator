@@ -77,7 +77,7 @@ bool Area::isUnitOnField(const FieldID &field)
 {
     return isUnitOnPosition(fields[field].getPosition());
 }
-const Unit& Area::getUnit(const UnitID &unitID) const
+const Unit& Area::getUnitConstantReference(const UnitID &unitID) const
 {
     return units.at(unitID);
 }
@@ -124,6 +124,7 @@ std::set<FieldID> Area::getFieldsSuitableToMove(const Position &position, const 
     auto fieldHasUnit = [&](const FieldID &fieldID) {return isUnitOnField(fieldID);};
     std::set<FieldID> properFields = getFieldsWithinRange(position, range);
     std::erase_if(properFields, fieldHasUnit);
+    return properFields;
 }
 
 int Area::getTotalMovementPointsOfFaction(const FactionID &factionID) const {
@@ -131,7 +132,7 @@ int Area::getTotalMovementPointsOfFaction(const FactionID &factionID) const {
     int result = 0;
     for (const UnitID &unitID : unitsOfFaction)
     {
-        result += getUnit(unitID).getMovementPoints();
+        result += getUnitConstantReference(unitID).getMovementPoints();
     }
     return result;
 }
@@ -139,9 +140,25 @@ int Area::getTotalMovementPointsOfFaction(const FactionID &factionID) const {
 bool Area::existsUnit(const UnitID &unitID) const {
     return units.count(unitID) > 0;
 }
+bool Area::existsFaction(const FactionID &faction) const
+{
+    return !getUnitsOfFaction(faction).empty();
+}
 bool Area::skipMovement(const UnitID &unitID)
 {
     if (!existsUnit(unitID)) return false;
     getUnit(unitID).setMovementPoints(0);
+    return true;
+}
+
+bool Area::skipAllMovementOfFaction(const FactionID &faction)
+{
+    const auto unitsOfFaction = getUnitsOfFaction(faction);
+    if (unitsOfFaction.empty()) return false;
+    for (const auto unit : unitsOfFaction)
+    {
+        getUnit(unit).resetMovement();
+    }
+
     return true;
 }
