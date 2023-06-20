@@ -27,13 +27,11 @@ int BattleResult::calculateBacklashDamage() const
 
 int BattleResult::calculateAttackerSupplyLoss() const
 {
-    //TODO: make this more interesting
     return 25;
 }
 
 int BattleResult::calculateDefenderSupplyLoss() const
 {
-    //TODO: make this more intereting
     return 15;
 }
 void BattleResult::briefBattleResult() const
@@ -45,15 +43,15 @@ void BattleResult::briefBattleResult() const
         std::cout << "ATTACKER UNIT DESTROYED.\n";
     } else {
         std::cout << "ORG: " << attacker.getOrganization() - calculateBacklashDamage() << "/ 100 (-" << calculateBacklashDamage() << ")\n";
-        std::cout << "SUPPLY : " << attacker.getSupplyLevel() << " / 100\n";
+        std::cout << "SUPPLY : " << attacker.getSupplyLevel() - calculateAttackerSupplyLoss() << " / 100 (-" << calculateAttackerSupplyLoss() << ")\n";
     }
     std::cout << "Defender: Unit #" << defender.getUnitID() << "(" << defender.getUnitFactionID() << "), " << UnitCategory::LITERAL[defender.getType()] << ":\n";
     if (defender.getOrganization() - calculateDamage() <= 0)
     {
         std::cout << "DEFENDER UNIT DESTROYED.\n";
     } else {
-        std::cout << "ORG: " << defender.getOrganization() - calculateDamage() << "/ 100 (-" << calculateDefenderSupplyLoss() << ")\n";
-        std::cout << "SUPPLY : " << defender.getSupplyLevel() << " / 100\n";
+        std::cout << "ORG: " << defender.getOrganization() - calculateDamage() << "/ 100 (-" << calculateDamage() << ")\n";
+        std::cout << "SUPPLY : " << defender.getSupplyLevel() - calculateDefenderSupplyLoss() << " / 100 (-" << calculateDefenderSupplyLoss() << ")\n";
     }
 }
 

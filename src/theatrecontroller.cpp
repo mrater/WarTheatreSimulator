@@ -63,6 +63,8 @@ BattleResult TheatreController::attack(const UnitID &attackerID, const FieldID &
     //remove units from the board if their org is below 1
     removeUnitIfDead(attackerID);
     removeUnitIfDead(defenderID);
+
+    attacker.setMovementPoints(0);
     return battleResult;
 }
 BattleResult TheatreController::attack(const UnitID &attackerID, const Position &position)
@@ -130,7 +132,6 @@ void TheatreController::startNextRound()
 
 void TheatreController::handlePlayerTurn(const FactionID &faction)
 {
-    // bool endTurn = false;
     resetAllUnitsMovementPoints();
     while (true)
     {
@@ -199,6 +200,7 @@ void TheatreController::handlePlayerTurn(const FactionID &faction)
                 break;
             }
             case 'e':{
+                std::cout << "All remaining movement skipped.\n";
                 skipAllMovementOfFaction(faction);
                 break;
             }
@@ -217,6 +219,7 @@ void TheatreController::handlePlayerTurn(const FactionID &faction)
                 break;
             
         }
+        if (getTotalMovementPointsOfFaction(faction) == 0) return;
     }
 }
 
@@ -234,10 +237,9 @@ void TheatreController::printUnitInfo(const UnitID &unitID)
     const Unit &unit = this->units[unitID];
     std::cout << "Unit #" << unitID << " of faction #" << unit.getUnitFactionID() << " ("  << UnitCategory::LITERAL[unit.getType()] << ")\n";
     std::cout << "POSITION: " << unit.getPosition().q << ", " << unit.getPosition().r << "\n";
-    std::cout << "ORGANIZATION:" << unit.getOrganization() << "\n";
-    std::cout << "SUPPLY LEVEL:" << unit.getSupplyLevel() << "\n";
-    std::cout << "REMAINING MOVEMENT POINTS: " << unit.getMovementPoints() << "/" << unit.getBaseMovementPoints() << "\n";
-    std::cout << "TYPE OF FIELD:" << Terrain::LITERAL[getFieldWithUnit(unit.getUnitID()).getTerrainType()] << "\n";
+    std::cout << "ORG:" << unit.getOrganization() << ", " << "SUPPLY LVL:" << unit.getSupplyLevel() << "\n";
+    std::cout << "MOVEMENT POINTS: " << unit.getMovementPoints() << "/" << unit.getBaseMovementPoints() << "\n";
+    std::cout << "TERRAIN:" << Terrain::LITERAL[getFieldWithUnit(unit.getUnitID()).getTerrainType()] << "\n";
     std::cout << "==================\n";
 }
 
@@ -247,12 +249,6 @@ void TheatreController::printUnitsInfo()
     {
         printUnitInfo(unit.first);
     }
-}
-
-
-size_t TheatreController::countFactions() const
-{
-    return this->botPlayers.size() + this->humanPlayers.size();
 }
 
 void TheatreController::startInteractive()
@@ -272,11 +268,10 @@ bool TheatreController::existsUnit(const UnitID &unitID) const {
     return units.count(unitID) > 0;
 }
 
-void TheatreController::resupplyFrom(const FacilityID &fuelDepotID)
-{
-  //TODO 
-}
 void TheatreController::resupplyAllUnits()
 {
-    //TODO
+    for (auto &unit : units)
+    {
+        unit.second.gainSupply(15);
+    }
 }

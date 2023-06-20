@@ -166,7 +166,7 @@ bool Area::skipAllMovementOfFaction(const FactionID &faction)
     if (unitsOfFaction.empty()) return false;
     for (const auto unit : unitsOfFaction)
     {
-        getUnit(unit).resetMovement();
+        getUnit(unit).setMovementPoints(0);
     }
 
     return true;
