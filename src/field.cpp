@@ -2,7 +2,7 @@
 #include <set>
 #include <iostream>
 
-const float Field::getBonus()
+double Field::getBonus()
 {
     return Terrain::TERRAIN_BONUS[fieldType];
 }

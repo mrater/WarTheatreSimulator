@@ -8,10 +8,10 @@
 #include <iostream>
 /// @brief importance of each parameters  
 namespace IMPORTANCE{
-    const float ATTACKER_ORG = 0.05;
-    const float ATTACKER_SUPPLY = 0.4;
-    const float DEFENDER_SUPPLY = 0.3;
-    const float DEFENDER_ORG = 0.25;
+    const double ATTACKER_ORG = 0.05;
+    const double ATTACKER_SUPPLY = 0.4;
+    const double DEFENDER_SUPPLY = 0.3;
+    const double DEFENDER_ORG = 0.25;
 };
 
 /**
