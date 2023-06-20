@@ -6,8 +6,8 @@
 
 
 namespace FACTION{
-    const FactionID PLAYER = 1;
-    const FactionID ENEMY = 2;
+    const FactionID HUMAN1 = 1;
+    const FactionID HUMAN2 = 2;
 }
 
 MapEditor mapEditor;
@@ -23,14 +23,13 @@ inline TheatreController prepareExampleBoard(){
         mapEditor.addField(position.first, position.second, Terrain::FOREST);
     }
 
-
     mapEditor.setFactionsNumber(2);
-    mapEditor.addUnit(-1, -1, UnitCategory::INFANTRY, FACTION::PLAYER);
-    mapEditor.addUnit(0, 1, UnitCategory::INFANTRY, FACTION::PLAYER);
-    mapEditor.addUnit(1, -1, UnitCategory::ARTILLERY, FACTION::ENEMY);
+    mapEditor.addUnit(-1, -1, UnitCategory::INFANTRY, FACTION::HUMAN1);
+    mapEditor.addUnit(0, 1, UnitCategory::INFANTRY, FACTION::HUMAN1);
+    mapEditor.addUnit(1, -1, UnitCategory::ARTILLERY, FACTION::HUMAN2);
     
     TheatreController game = TheatreController();
-    game.loadMap(mapEditor.generateArea(), {1}, {2});
+    game.loadMap(mapEditor.generateArea(), {1, 2}, {});
     return game;
 }
 int main()
