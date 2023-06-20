@@ -3,6 +3,7 @@
 #include <iostream>
 #include <assert.h>
 
+
 double Field::getBonus() const
 {
     return Terrain::TERRAIN_BONUS[fieldType];

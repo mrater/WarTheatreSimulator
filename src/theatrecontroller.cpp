@@ -1,4 +1,5 @@
 #include "theatrecontroller.h"
+#include "utilities.h"
 
 void TheatreController::resetAllUnitsMovementPoints()
 {
@@ -107,12 +108,9 @@ void TheatreController::startNextRound()
     resetAllUnitsMovementPoints();
 
     //determine order of turns by the following random permutation
-    std::vector<FactionID> turnOrderPermutation(this->humanPlayers.size() + this->botPlayers.size());
-    std::iota(turnOrderPermutation.begin(), turnOrderPermutation.end(), 1);
-    std::random_device rd;
-    std::mt19937 g(rd());
-    std::shuffle(turnOrderPermutation.begin(), turnOrderPermutation.end(), g);
- 
+    std::vector<FactionID> turnOrderPermutation = generateRandomPermutation(botPlayers.size() + humanPlayers.size());
+
+    resupplyAllUnits();
     for (const FactionID &faction : turnOrderPermutation)
     {
         std::cout << "Faction #" << faction << " to move\n"; 
@@ -160,8 +158,10 @@ void TheatreController::handlePlayerTurn(const FactionID &faction)
             case 'x':{
                 UnitID commandedUnit;
                 Position targetPosition;
+
                 std::cin >> commandedUnit >> targetPosition.q >> targetPosition.r;
                 if (getUnitConstantReference(commandedUnit).getUnitFactionID() != faction){
+
                     std::cout << "Unit not from your faction\n";
                 } else {
                     if (!attack(commandedUnit, targetPosition)){
@@ -170,7 +170,7 @@ void TheatreController::handlePlayerTurn(const FactionID &faction)
                 }
                 break;
             }
-
+            
             //print info about all units
             case 'p':{
                 printUnitsInfo();
@@ -197,6 +197,7 @@ void TheatreController::handlePlayerTurn(const FactionID &faction)
                 skipAllMovementOfFaction(faction);
                 break;
             }
+
 
             case 'h':
                 std::cout << "h - print this help message\n";
@@ -243,10 +244,12 @@ void TheatreController::printUnitsInfo()
     }
 }
 
+
 size_t TheatreController::countFactions() const
 {
     return this->botPlayers.size() + this->humanPlayers.size();
 }
+
 void TheatreController::startInteractive()
 {
     int rounds = 0;
@@ -255,4 +258,20 @@ void TheatreController::startInteractive()
         std::cout << "Round #" << rounds << "\n";
         startNextRound();
     }
+}
+size_t TheatreController::countFactions() const
+{
+    return this->botPlayers.size() + this->humanPlayers.size();
+}
+bool TheatreController::existsUnit(const UnitID &unitID) const {
+    return units.count(unitID) > 0;
+}
+
+void TheatreController::resupplyFrom(const FacilityID &fuelDepotID)
+{
+  //TODO 
+}
+void TheatreController::resupplyAllUnits()
+{
+    //TODO
 }

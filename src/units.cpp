@@ -21,7 +21,7 @@ UnitType Unit::getType() const
     return this->unitType;
 }
 
-const Position Unit::getPosition() const
+Position Unit::getPosition() const
 {
     return this->position;
 }
@@ -49,6 +49,13 @@ int Unit::getOrganization() const
 UnitID Unit::getUnitID() const
 {
     return ID;
+}
+
+int Unit::gainSupply(const int &supplyGain)
+{
+    int result = 100 - this->getSupplyLevel();
+    supplyLevel = std::min(100, supplyLevel + supplyGain);
+    return result;
 }
 
 void Unit::resetMovement()

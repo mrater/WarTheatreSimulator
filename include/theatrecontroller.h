@@ -46,7 +46,9 @@ class TheatreController : public Area {
         void printUnitInfo(const UnitID &unitID);
         void printUnitsInfo();
         size_t countFactions() const;
-
-        // bool existsUnit(const UnitID &unitID) const;
         void startInteractive();
+        bool existsUnit(const UnitID &unitID) const;
+        void resupplyFrom(const FacilityID &fuelDepotID);
+        void resupplyAllUnits();
+
 };

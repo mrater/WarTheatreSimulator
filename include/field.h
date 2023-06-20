@@ -48,34 +48,6 @@ public:
         int distanceTo(const Position &anotherPosition) const;
 };
 
-// /// @brief All fields will give certain punishments for movement and attack thus need to be distinguished
-// class FieldType
-// {
-// public:
-//     /// @brief get ID of terrain type of this field
-//     /// @return ID of terrain type for this field
-//     virtual const TerrainType getTerrainType();
-// };
-
-// class ForestTerrain : public FieldType
-// {
-//     /// @brief get ID of forest terrain
-//     /// @return Terrain::FOREST
-//     const TerrainType getTerrainType();
-// };
-// class UrbanTerrain : public FieldType
-// {
-//     /// @brief get ID of urban terrain
-//     /// @return Terrain::URBAN
-//     const TerrainType getTerrainType();
-// };
-// class PlainTerrain : public FieldType
-// {
-//     /// @brief get ID of plain terrain
-//     /// @return Terrain::PLAIN
-//     const TerrainType getTerrainType();
-// };
-
 class Field
 {
 private:
