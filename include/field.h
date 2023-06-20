@@ -20,7 +20,7 @@ namespace Terrain
     constexpr TerrainType URBAN = 2;
     constexpr TerrainType FOREST = 3;
     
-    constexpr float TERRAIN_BONUS[] = {-1, 1.0, 0.6, 0.4};
+    constexpr double TERRAIN_BONUS[] = {-1, 1.0, 0.6, 0.4};
     const char* const LITERAL[] = {"NONE", "PLAIN", "URBAN", "FOREST"};
 }
 
@@ -41,7 +41,7 @@ public:
     Position(const int &_q, const int &_r);
     // Position();
     bool operator==(const Position &anotherPosition) const;
-    void operator=(const Position &anotherPosition);
+    // void operator=(const Position &anotherPosition);
     bool operator<(const Position &anotherPosition) const; //temporary solution to satisfy set requirements
     public:
         std::set<Position> getPotentialAdjacentPositions() const;
@@ -87,7 +87,7 @@ protected:
 
     /// @brief get terrain bonus
     /// greater the bonus, easier it is to attack and harder to defend 
-    const float getBonus();
+    double getBonus() const;
 
     
 
