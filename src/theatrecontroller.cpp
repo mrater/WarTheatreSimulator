@@ -113,12 +113,12 @@ void TheatreController::startNextRound()
     std::mt19937 g(rd());
     std::shuffle(turnOrderPermutation.begin(), turnOrderPermutation.end(), g);
  
-    for (const FactionID &faction : turnOrderPermutation)
+    for (const auto &faction : turnOrderPermutation)
     {
         std::cout << "Faction #" << faction << " to move\n"; 
         if (isBot(faction))
         {
-            throw "Bots not supported.";
+            throw std::invalid_argument("Bots not supported.");
             //TODO: add bot behaviour here
         } else
         {
@@ -159,10 +159,11 @@ void TheatreController::handlePlayerTurn(const FactionID &faction)
             //attack
             case 'x':{
                 UnitID commandedUnit;
+                Position targetPosition;
+                std::cin >> commandedUnit >> targetPosition.q >> targetPosition.r; 
                 if (getUnit(commandedUnit).getUnitFactionID() != faction){
                     std::cout << "Unit not from your faction\n";
                 }
-                Position targetPosition;
                 if (!attack(commandedUnit, targetPosition)){
                     std::cout << "This attack is not possible.\n";
                 } else std::cout << "Done.\n";
@@ -222,7 +223,7 @@ void TheatreController::printUnitInfo(const UnitID &unitID)
     std::cout << "Unit #" << unitID << " of faction #" << unit.getUnitFactionID() << " ("  << UnitCategory::LITERAL[unit.getType()] << ")\n";
     std::cout << "POSITION: " << unit.getPosition().q << ", " << unit.getPosition().r << "\n";
     std::cout << "ORGANIZATION:" << unit.getOrganization() << "\n";
-    std::cout << "SUPPLY LEVEL:" << unit.getSupplyLevel() << "\n====\n";
+    std::cout << "SUPPLY LEVEL:" << unit.getSupplyLevel() << "\n";
     std::cout << "TYPE OF FIELD:" << Terrain::LITERAL[getFieldWithUnit(unit.getUnitID()).getTerrainType()] << "\n";
     std::cout << "REMAINING MOVEMENT POINTS: " << unit.getMovementPoints() << "/" << unit.getBaseMovementPoints() << "\n";
 }

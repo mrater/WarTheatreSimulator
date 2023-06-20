@@ -5,7 +5,7 @@
  */
 #pragma once
 #include "units.h"
-
+#include <iostream>
 /// @brief importance of each parameters  
 namespace IMPORTANCE{
     const float ATTACKER_ORG = 0.05;
@@ -48,6 +48,8 @@ class BattleResult{
         /// @brief Calculate defender loss in equipment
         /// @return loss of supply level of defender
         int calculateDefenderSupplyLoss();
+
+        void briefBattleResult();
 
         BattleResult(const Unit &attackerUnit, const Unit &defenderUnit, const Field &fieldOfDefender);
 };

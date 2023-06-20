@@ -47,6 +47,5 @@ class TheatreController : public Area {
         void printUnitsInfo();
         int countFactions() const;
 
-        bool existsUnit(const UnitID &unitID) const;
         void startInteractive();
 };
