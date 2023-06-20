@@ -41,7 +41,7 @@ public:
     Position(const int &_q, const int &_r);
     // Position();
     bool operator==(const Position &anotherPosition) const;
-    void operator=(const Position &anotherPosition);
+    // void operator=(const Position &anotherPosition);
     bool operator<(const Position &anotherPosition) const; //temporary solution to satisfy set requirements
     public:
         std::set<Position> getPotentialAdjacentPositions() const;
@@ -59,7 +59,7 @@ protected:
 
     /// @brief get terrain bonus
     /// greater the bonus, easier it is to attack and harder to defend 
-    double getBonus();
+    double getBonus() const;
 
     
 

@@ -39,7 +39,7 @@ void MapEditor::addField(const int &q, const int &r, const TerrainType &terrainT
 {
     addField(q,r,terrainType, globalFieldIndex++);
 }
-void MapEditor::setFactionsNumber(const int &numberOfFactions)
+void MapEditor::setFactionsNumber(const int &_numberOfFactions)
 {
-    this->numberOfFactions = numberOfFactions;
+    this->numberOfFactions = _numberOfFactions;
 }

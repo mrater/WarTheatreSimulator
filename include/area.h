@@ -58,7 +58,7 @@ class Area{
         /// @brief get unit of certain ID
         /// @param unitID ID of wanted unit
         /// @return constant pointer to unit or NULL if not found
-        const Unit& getUnit(const UnitID &unitID) const;
+        const Unit& getUnitConstantReference(const UnitID &unitID) const;
         
         /// @brief get unit of certain ID
         /// @param unitID ID of wanted unit
@@ -82,8 +82,17 @@ class Area{
         //check if unit with given id exists
         bool existsUnit(const UnitID &unitID) const;
 
+        //check if faction exists
+        bool existsFaction(const FactionID &faction) const;
+
         // set movement points to 0 in order to proceed without moving or attacking
+        /// @return false if operation is impossible
         bool skipMovement(const UnitID &unitID);
+
+        // skip all movement of faction
+        /// @return false if operation impossible
+        bool skipAllMovementOfFaction(const FactionID &faction);
+
         
         std::set<UnitID> getFriendlyUnitsWithinRange(const Position &fromPosition, const int &range, const FactionID &faction);
 };
