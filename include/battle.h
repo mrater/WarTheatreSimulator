@@ -19,13 +19,13 @@ namespace IMPORTANCE{
  */
 class BattleResult{
     /// @brief attacking unit
-    const Unit &attacker;
+    const Unit attacker;
 
     /// @brief defending unit
-    const Unit &defender;
+    const Unit defender;
 
     /// @brief field of defender
-    const Field &defenderField;
+    const Field defenderField;
 
     public:
         /// @brief get field of defender
