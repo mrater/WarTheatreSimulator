@@ -21,7 +21,6 @@ int BattleResult::calculateDamage() const
 int BattleResult::calculateBacklashDamage() const
 {
     if (attacker.getType() != UnitCategory::INFANTRY) return 0;
-    //TODO: calculate backlash
     return 25;
 }
 

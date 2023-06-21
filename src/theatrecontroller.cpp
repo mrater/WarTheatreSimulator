@@ -120,7 +120,6 @@ void TheatreController::startNextRound()
         if (isBot(faction))
         {
             throw std::invalid_argument("Bots not supported.");
-            //TODO: add bot behaviour here
         } else
         {
             //handle human (interactive) decisions
@@ -220,6 +219,7 @@ void TheatreController::handlePlayerTurn(const FactionID &faction)
             
         }
         if (getTotalMovementPointsOfFaction(faction) == 0) return;
+        if (countFactions() < 2) return;
     }
 }
 
@@ -254,10 +254,21 @@ void TheatreController::printUnitsInfo()
 void TheatreController::startInteractive()
 {
     int rounds = 0;
-    while (rounds++ <= 10)
+    while (countFactions() > 1)
     {
         std::cout << "Round #" << rounds << "\n";
         startNextRound();
+    }
+    std::cout << "Simulation finished. ";
+    if (countFactions() == 0) std::cout << "No factions persisted\n";
+    else {
+        std::cout << "Remaining factions: ";
+        const std::set<FactionID> remainingFactions = getAllFactions();
+        for (auto const &factionID : remainingFactions)
+        {
+            std::cout << factionID << " ";
+        }
+        std::cout << "\n";
     }
 }
 size_t TheatreController::countFactions() const

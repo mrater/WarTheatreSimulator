@@ -95,4 +95,8 @@ class Area{
 
         
         std::set<UnitID> getFriendlyUnitsWithinRange(const Position &fromPosition, const int &range, const FactionID &faction);
+
+        /// @brief get all factions that exists
+        /// @return set of FactionIDs of existing factions (i.e. ones who have at least one unit)
+        std::set<FactionID> getAllFactions();
 };

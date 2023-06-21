@@ -188,3 +188,13 @@ std::set<UnitID> Area::getFriendlyUnitsWithinRange(const Position &fromPosition,
     }
     return friendlyUnits;
 }
+
+std::set<FactionID> Area::getAllFactions()
+{
+    std::set<FactionID> result;
+    for (const auto &unit : units)
+    {
+        result.insert(unit.second.getUnitFactionID());
+    }
+    return result;
+}
