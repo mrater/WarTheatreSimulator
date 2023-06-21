@@ -10,7 +10,7 @@
 #include <assert.h>
 #include <set>
 #include "units.h"
-#include "infrastructure.h"
+// #include "infrastructure.h"
 
 class Area{
     private:
@@ -23,7 +23,7 @@ class Area{
         std::map<UnitID, Unit> units;
 
         /// @brief magazines of fuel on the map
-        std::map<FacilityID, FuelDepot> fuelMagazines;
+        // std::map<FacilityID, FuelDepot> fuelMagazines;
 
         Area();
     public:
@@ -65,8 +65,8 @@ class Area{
         /// @return reference to unit or NULL if not found    
         Unit &getUnit(const UnitID &unitID);
 
-        FuelDepot &getFuelDepot(const FacilityID &facilityID);
-        const FuelDepot &getFuelDepot(const FacilityID &facilityID) const;
+        // FuelDepot &getFuelDepot(const FacilityID &facilityID);
+        // const FuelDepot &getFuelDepot(const FacilityID &facilityID) const;
 
         const Field &getFieldWithUnit(const UnitID &unitID) const;
 

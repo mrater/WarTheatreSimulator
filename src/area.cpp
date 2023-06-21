@@ -85,14 +85,14 @@ Unit& Area::getUnit(const UnitID &unitID)
 {
     return units[unitID];
 }
-FuelDepot& Area::getFuelDepot(const FacilityID &facilityID)
-{
-    return fuelMagazines[facilityID];
-}
-const FuelDepot &Area::getFuelDepot(const FacilityID &facilityID) const
-{
-    return fuelMagazines.at(facilityID);
-}
+// FuelDepot& Area::getFuelDepot(const FacilityID &facilityID)
+// {
+//     return fuelMagazines[facilityID];
+// }
+// const FuelDepot &Area::getFuelDepot(const FacilityID &facilityID) const
+// {
+//     return fuelMagazines.at(facilityID);
+// }
 const Field &Area::getFieldWithUnit(const UnitID &unitID) const
 {
     const Position &unitPosition = units.at(unitID).getPosition();
