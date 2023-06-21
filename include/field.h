@@ -77,6 +77,7 @@ public:
      */
     TerrainType getTerrainType() const;
     
+    FieldID getFieldID() const;
     
     
 };

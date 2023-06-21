@@ -15,26 +15,27 @@ TheatreController::TheatreController()
 }
 
 
-bool TheatreController::isAttackPossible(const UnitID &unitID, const FieldID &fieldID)
+bool TheatreController::isAttackPossible(const UnitID &unitID, const Position &position) const
 {
-    const Field &targetField = fields[fieldID];
-    const Unit &attacker = getUnit(unitID);
-    const Unit &defender = getUnit(getUnitOnField(fieldID));
-    
+    // std::cerr << fields.at(getFieldByPosition(position)).getFieldID() << "<---";
+    // Field targetField = fields.at(getFieldByPosition(position));
+
     //field doesn't exist
-    if (!fields.count(fieldID)) return false;
+    if (!existsPosition(position)) return false;
 
     //attacker doesn't exist
     if (!existsUnit(unitID)) return false;
     
     //field is empty
-    if (!isUnitOnField(fieldID)) return false;
+    if (!isUnitOnField(getFieldByPosition(position))) return false;
 
+    const Unit &attacker = getUnitConstantReference(unitID);
+    const Unit &defender = getUnitConstantReference(getUnitOnPosition(position));
     //both units are from the same team
     if (defender.getUnitFactionID() == attacker.getUnitFactionID()) return false;
 
     // range not sufficient enough for an attack
-    if (attacker.getAttackRange() < attacker.distanceTo(targetField.getPosition())) return false;
+    if (attacker.getAttackRange() < attacker.distanceTo(position)) return false;
 
     //finally return true if unit itself (regardless of position, enemy etc.) can attack enemies
     return attacker.canAttack();
@@ -165,8 +166,9 @@ void TheatreController::handlePlayerTurn(const FactionID &faction)
 
                     std::cout << "Unit not from your faction\n";
                 } else {
-                    
-                    if (!isAttackPossible(commandedUnit, getFieldByPosition(targetPosition))) {
+                    // const auto &targetFieldID = getFieldByPosition(targetPosition);
+                    // std::cerr << targetFieldID << "to be attacked\n";
+                    if (!isAttackPossible(commandedUnit, targetPosition)) {
                         std::cout << "This attack is not possible.\n";
                     } else {
                         BattleResult battle = attack(commandedUnit, targetPosition);
@@ -218,6 +220,7 @@ void TheatreController::handlePlayerTurn(const FactionID &faction)
                 break;
             
         }
+        // std::cerr << "total movpo" << getTotalMovementPointsOfFaction(faction);
         if (getTotalMovementPointsOfFaction(faction) == 0) return;
         if (countFactions() < 2) return;
     }
@@ -256,8 +259,10 @@ void TheatreController::startInteractive()
     int rounds = 0;
     while (countFactions() > 1)
     {
-        std::cout << "Round #" << rounds << "\n";
+        std::cout << "Round #" << ++rounds << "\n";
         startNextRound();
+
+        // std::cerr << countFactions() << "<-----\n";
     }
     std::cout << "Simulation finished. ";
     if (countFactions() == 0) std::cout << "No factions persisted\n";
@@ -273,7 +278,12 @@ void TheatreController::startInteractive()
 }
 size_t TheatreController::countFactions() const
 {
-    return this->botPlayers.size() + this->humanPlayers.size();
+    std::set<FactionID> existingFactions;
+    for(const auto &unit : units)
+    {
+        existingFactions.insert(unit.second.getUnitFactionID());
+    }
+    return existingFactions.size();
 }
 bool TheatreController::existsUnit(const UnitID &unitID) const {
     return units.count(unitID) > 0;

@@ -28,6 +28,11 @@ TerrainType Field::getTerrainType() const
     return this->fieldType;
 }
 
+FieldID Field::getFieldID() const
+{
+    return fieldID;
+}
+
 int Position::distanceTo(const Position &anotherPosition) const
 {
     return 1;

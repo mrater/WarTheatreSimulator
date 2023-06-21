@@ -20,7 +20,8 @@ class TheatreController : public Area {
     protected:
     public:
         TheatreController();
-        bool isAttackPossible(const UnitID &unitID, const FieldID &fieldID);
+        bool isAttackPossible(const UnitID &unitID, const Position &position) const;
+        bool isAttackPossible(const UnitID &unitID, const FieldID &fieldID) const;
         BattleResult attack(const UnitID &unitID, const FieldID &fieldID);
         BattleResult attack(const UnitID &attackerID, const Position &position);
         void removeUnitIfDead(const UnitID &unitID);

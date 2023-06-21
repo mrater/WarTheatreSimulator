@@ -1,7 +1,7 @@
 #include "area.h"
 #include <map>
 #include <set>
-
+#include <iostream>
 Area::Area()
 {
     fields.clear();
@@ -26,6 +26,7 @@ bool Area::isRealPosition(const Position &position) const
 
 FieldID Area::getFieldByPosition(const Position &position) const
 {
+    // assert(0);
     for (const auto &field : this->fields)
     {
         if (field.second.getPosition() == position) return field.first;
@@ -59,13 +60,16 @@ UnitID Area::getUnitOnField(const FieldID &field) const
     return getUnitOnPosition(fields.at(field).getPosition());
 }
 
-std::vector<UnitID> Area::getUnitsOfFaction(const FactionID &unitFactionID) const
+std::set<UnitID> Area::getUnitsOfFaction(const FactionID &unitFactionID) const
 {
-    std::vector<UnitID> result;
+    // std::cerr << "faction=" << unitFactionID << "\n";
+    std::set<UnitID> result;
     for (const auto &unit : units)
     {
         if (unit.second.getUnitFactionID() == unitFactionID)
-            result.push_back(unitFactionID);
+            {
+                result.insert(unit.second.getUnitID());
+            }
     }
     return result;
 }
@@ -73,9 +77,9 @@ bool Area::isUnitOnPosition(const Position &position) const
 {
     return getUnitOnPosition(position) != -1;
 }
-bool Area::isUnitOnField(const FieldID &field)
+bool Area::isUnitOnField(const FieldID &field) const
 {
-    return isUnitOnPosition(fields[field].getPosition());
+    return isUnitOnPosition(fields.at(field).getPosition());
 }
 const Unit& Area::getUnitConstantReference(const UnitID &unitID) const
 {
@@ -136,10 +140,11 @@ std::set<FieldID> Area::getFieldsSuitableToMove(const Position &position, const 
 }
 
 int Area::getTotalMovementPointsOfFaction(const FactionID &factionID) const {
-    std::vector<UnitID> unitsOfFaction =  getUnitsOfFaction(factionID);
+    std::set<UnitID> unitsOfFaction =  getUnitsOfFaction(factionID);
     int result = 0;
     for (const UnitID &unitID : unitsOfFaction)
     {
+        // std::cerr << "unit of faction=" << unitID <<" \n";
         result += getUnitConstantReference(unitID).getMovementPoints();
     }
     return result;
