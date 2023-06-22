@@ -30,9 +30,15 @@ namespace baseAttack{
 
     constexpr int INFRANTRY_TO_INFANTRY = 60;
     constexpr int INFANTRY_TO_ARTILLERY = 100;
+    constexpr int INFANTRY_TO_TANK = 20;
     
     constexpr int ARTILLERY_TO_ARTILLERY = 100;
     constexpr int ARTILLERY_TO_INFANTRY = 100;
+    constexpr int ARTILLERY_TO_TANK = 100;
+
+    constexpr int TANK_TO_INFANTRY = 30;
+    constexpr int TANK_TO_ARTILLERY = 100;
+    constexpr int TANK_TO_TANK = 70;
 
     /// @brief [X][Y] - how X attacks Y
     constexpr int DAMAGE_MATRIX[][4] = {
@@ -46,7 +52,7 @@ namespace baseAttack{
         {ERROR_PAIR, ARTILLERY_TO_INFANTRY, ARTILLERY_TO_ARTILLERY, 0},
 
         //type TANK
-        {0,0,0,0}
+        {ERROR_PAIR,TANK_TO_INFANTRY,TANK_TO_ARTILLERY,TANK_TO_TANK}
     };
 }
 namespace baseMovementPoints{

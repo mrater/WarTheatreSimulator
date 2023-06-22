@@ -15,56 +15,60 @@ TheatreController::TheatreController()
 }
 
 
-bool TheatreController::isAttackPossible(const UnitID &unitID, const FieldID &fieldID)
+bool TheatreController::isAttackPossible(const UnitID &unitID, const Position &position) const
 {
-    const Field &targetField = fields[fieldID];
-    const Unit &attacker = getUnit(unitID);
-    const Unit &defender = getUnit(getUnitOnField(fieldID));
-    
+    // std::cerr << fields.at(getFieldByPosition(position)).getFieldID() << "<---";
+    // Field targetField = fields.at(getFieldByPosition(position));
+
     //field doesn't exist
-    if (!fields.count(fieldID)) return false;
+    if (!existsPosition(position)) return false;
 
     //attacker doesn't exist
     if (!existsUnit(unitID)) return false;
     
     //field is empty
-    if (!isUnitOnField(fieldID)) return false;
+    if (!isUnitOnField(getFieldByPosition(position))) return false;
 
+    const Unit &attacker = getUnitConstantReference(unitID);
+    const Unit &defender = getUnitConstantReference(getUnitOnPosition(position));
     //both units are from the same team
     if (defender.getUnitFactionID() == attacker.getUnitFactionID()) return false;
 
     // range not sufficient enough for an attack
-    if (attacker.getAttackRange() < attacker.distanceTo(targetField.getPosition())) return false;
+    if (attacker.getAttackRange() < attacker.distanceTo(position)) return false;
 
     //finally return true if unit itself (regardless of position, enemy etc.) can attack enemies
     return attacker.canAttack();
 }
-bool TheatreController::attack(const UnitID &attackerID, const FieldID &fieldID)
-{
-    if (!isAttackPossible(attackerID, fieldID)) return false;
 
-    const Field &targetField = fields[fieldID];
+///@brief get battle results and apply them to the battlefield
+///@warning need assumption that attack is possible. Might break otherwise
+BattleResult TheatreController::attack(const UnitID &attackerID, const FieldID &fieldID)
+{
+    const Field &targetField = fields.at(fieldID);
     Unit &attacker = getUnit(attackerID);
     const UnitID defenderID = getUnitOnField(fieldID);
     Unit &defender = getUnit(defenderID);
 
     //calculate battle results
-    BattleResult battleReults = BattleResult(attacker, defender, targetField);
+    BattleResult battleResult = BattleResult(attacker, defender, targetField);
 
     //change org of units
-    defender.dealDamage(battleReults.calculateDamage());
-    attacker.dealDamage(battleReults.calculateBacklashDamage());
+    defender.dealDamage(battleResult.calculateDamage());
+    attacker.dealDamage(battleResult.calculateBacklashDamage());
 
     //change supply level of units
-    defender.dealSupplyLoss(battleReults.calculateDefenderSupplyLoss());
-    attacker.dealSupplyLoss(battleReults.calculateAttackerSupplyLoss());
+    defender.dealSupplyLoss(battleResult.calculateDefenderSupplyLoss());
+    attacker.dealSupplyLoss(battleResult.calculateAttackerSupplyLoss());
     
     //remove units from the board if their org is below 1
     removeUnitIfDead(attackerID);
     removeUnitIfDead(defenderID);
-    return true;
+
+    attacker.setMovementPoints(0);
+    return battleResult;
 }
-bool TheatreController::attack(const UnitID &attackerID, const Position &position)
+BattleResult TheatreController::attack(const UnitID &attackerID, const Position &position)
 {
     FieldID targetField = getFieldByPosition(position);
     return attack(attackerID, targetField);
@@ -117,7 +121,6 @@ void TheatreController::startNextRound()
         if (isBot(faction))
         {
             throw std::invalid_argument("Bots not supported.");
-            //TODO: add bot behaviour here
         } else
         {
             //handle human (interactive) decisions
@@ -129,7 +132,6 @@ void TheatreController::startNextRound()
 
 void TheatreController::handlePlayerTurn(const FactionID &faction)
 {
-    // bool endTurn = false;
     resetAllUnitsMovementPoints();
     while (true)
     {
@@ -164,9 +166,14 @@ void TheatreController::handlePlayerTurn(const FactionID &faction)
 
                     std::cout << "Unit not from your faction\n";
                 } else {
-                    if (!attack(commandedUnit, targetPosition)){
+                    // const auto &targetFieldID = getFieldByPosition(targetPosition);
+                    // std::cerr << targetFieldID << "to be attacked\n";
+                    if (!isAttackPossible(commandedUnit, targetPosition)) {
                         std::cout << "This attack is not possible.\n";
-                    } else std::cout << "Done.\n";
+                    } else {
+                        BattleResult battle = attack(commandedUnit, targetPosition);
+                        battle.briefBattleResult();
+                    }
                 }
                 break;
             }
@@ -194,6 +201,7 @@ void TheatreController::handlePlayerTurn(const FactionID &faction)
                 break;
             }
             case 'e':{
+                std::cout << "All remaining movement skipped.\n";
                 skipAllMovementOfFaction(faction);
                 break;
             }
@@ -212,6 +220,9 @@ void TheatreController::handlePlayerTurn(const FactionID &faction)
                 break;
             
         }
+        // std::cerr << "total movpo" << getTotalMovementPointsOfFaction(faction);
+        if (getTotalMovementPointsOfFaction(faction) == 0) return;
+        if (countFactions() < 2) return;
     }
 }
 
@@ -229,10 +240,9 @@ void TheatreController::printUnitInfo(const UnitID &unitID)
     const Unit &unit = this->units[unitID];
     std::cout << "Unit #" << unitID << " of faction #" << unit.getUnitFactionID() << " ("  << UnitCategory::LITERAL[unit.getType()] << ")\n";
     std::cout << "POSITION: " << unit.getPosition().q << ", " << unit.getPosition().r << "\n";
-    std::cout << "ORGANIZATION:" << unit.getOrganization() << "\n";
-    std::cout << "SUPPLY LEVEL:" << unit.getSupplyLevel() << "\n";
-    std::cout << "REMAINING MOVEMENT POINTS: " << unit.getMovementPoints() << "/" << unit.getBaseMovementPoints() << "\n";
-    std::cout << "TYPE OF FIELD:" << Terrain::LITERAL[getFieldWithUnit(unit.getUnitID()).getTerrainType()] << "\n";
+    std::cout << "ORG:" << unit.getOrganization() << ", " << "SUPPLY LVL:" << unit.getSupplyLevel() << "\n";
+    std::cout << "MOVEMENT POINTS: " << unit.getMovementPoints() << "/" << unit.getBaseMovementPoints() << "\n";
+    std::cout << "TERRAIN:" << Terrain::LITERAL[getFieldWithUnit(unit.getUnitID()).getTerrainType()] << "\n";
     std::cout << "==================\n";
 }
 
@@ -244,34 +254,45 @@ void TheatreController::printUnitsInfo()
     }
 }
 
-
-size_t TheatreController::countFactions() const
-{
-    return this->botPlayers.size() + this->humanPlayers.size();
-}
-
 void TheatreController::startInteractive()
 {
     int rounds = 0;
-    while (rounds++ <= 10)
+    while (countFactions() > 1)
     {
-        std::cout << "Round #" << rounds << "\n";
+        std::cout << "Round #" << ++rounds << "\n";
         startNextRound();
+
+        // std::cerr << countFactions() << "<-----\n";
+    }
+    std::cout << "Simulation finished. ";
+    if (countFactions() == 0) std::cout << "No factions persisted\n";
+    else {
+        std::cout << "Remaining factions: ";
+        const std::set<FactionID> remainingFactions = getAllFactions();
+        for (auto const &factionID : remainingFactions)
+        {
+            std::cout << factionID << " ";
+        }
+        std::cout << "\n";
     }
 }
 size_t TheatreController::countFactions() const
 {
-    return this->botPlayers.size() + this->humanPlayers.size();
+    std::set<FactionID> existingFactions;
+    for(const auto &unit : units)
+    {
+        existingFactions.insert(unit.second.getUnitFactionID());
+    }
+    return existingFactions.size();
 }
 bool TheatreController::existsUnit(const UnitID &unitID) const {
     return units.count(unitID) > 0;
 }
 
-void TheatreController::resupplyFrom(const FacilityID &fuelDepotID)
-{
-  //TODO 
-}
 void TheatreController::resupplyAllUnits()
 {
-    //TODO
+    for (auto &unit : units)
+    {
+        unit.second.gainSupply(15);
+    }
 }

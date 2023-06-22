@@ -10,10 +10,12 @@ set(SOURCES
     "src/area.cpp"
     "src/battle.cpp"
     "src/field.cpp"
-    "src/main.cpp"
     "src/mapeditor.cpp"
     "src/units.cpp"
     "src/theatrecontroller.cpp"
+    "src/utilities.cpp"
 )
 add_executable(wts ${SOURCES})
+add_executable(example1 ${SOURCES} "test/example1.cpp")
 target_include_directories(wts PRIVATE "include/")
+target_include_directories(example1 PRIVATE "include/")

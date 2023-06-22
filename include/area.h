@@ -10,7 +10,7 @@
 #include <assert.h>
 #include <set>
 #include "units.h"
-#include "infrastructure.h"
+// #include "infrastructure.h"
 
 class Area{
     private:
@@ -23,7 +23,7 @@ class Area{
         std::map<UnitID, Unit> units;
 
         /// @brief magazines of fuel on the map
-        std::map<FacilityID, FuelDepot> fuelMagazines;
+        // std::map<FacilityID, FuelDepot> fuelMagazines;
 
         Area();
     public:
@@ -48,12 +48,13 @@ class Area{
         /// @brief get units of faction
         /// @param unitFactionID faction of unit
         /// @return vector of units that belong to faction
+        std::set<UnitID> getUnitsOfFaction(const FactionID &unitFactionID) const;
 
-        std::vector<UnitID> getUnitsOfFaction(const FactionID &unitFactionID) const;
+        // std::vector<UnitID> getUnitsOfFaction(const FactionID &unitFactionID) const;
 
         bool isUnitOnPosition(const Position &position) const;
 
-        bool isUnitOnField(const FieldID &field);
+        bool isUnitOnField(const FieldID &field) const;
 
         /// @brief get unit of certain ID
         /// @param unitID ID of wanted unit
@@ -65,8 +66,8 @@ class Area{
         /// @return reference to unit or NULL if not found    
         Unit &getUnit(const UnitID &unitID);
 
-        FuelDepot &getFuelDepot(const FacilityID &facilityID);
-        const FuelDepot &getFuelDepot(const FacilityID &facilityID) const;
+        // FuelDepot &getFuelDepot(const FacilityID &facilityID);
+        // const FuelDepot &getFuelDepot(const FacilityID &facilityID) const;
 
         const Field &getFieldWithUnit(const UnitID &unitID) const;
 
@@ -95,4 +96,10 @@ class Area{
 
         
         std::set<UnitID> getFriendlyUnitsWithinRange(const Position &fromPosition, const int &range, const FactionID &faction);
+
+        /// @brief get all factions that exists
+        /// @return set of FactionIDs of existing factions (i.e. ones who have at least one unit)
+        std::set<FactionID> getAllFactions();
+
+        // const &Field getFieldConstantReference() const;
 };

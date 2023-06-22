@@ -106,7 +106,8 @@ CMakeFiles/wts.dir/src/area.cpp.o: \
  /usr/include/c++/12/bits/stl_multimap.h \
  /usr/include/c++/12/bits/erase_if.h /usr/include/c++/12/debug/map \
  /usr/include/c++/12/debug/map.h /usr/include/c++/12/debug/multimap.h \
- /usr/include/c++/12/set /usr/include/c++/12/bits/stl_set.h \
+ /usr/include/assert.h /usr/include/c++/12/set \
+ /usr/include/c++/12/bits/stl_set.h \
  /usr/include/c++/12/bits/stl_multiset.h /usr/include/c++/12/debug/set \
  /usr/include/c++/12/debug/set.h /usr/include/c++/12/debug/multiset.h \
  /home/maciej/Dokumenty/wts/include/units.h \

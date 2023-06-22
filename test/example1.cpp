@@ -1,10 +1,6 @@
 #include "theatrecontroller.h"
 #include "mapeditor.h"
 
-#include <iostream>
-
-
-
 namespace FACTION{
     const FactionID HUMAN1 = 1;
     const FactionID HUMAN2 = 2;

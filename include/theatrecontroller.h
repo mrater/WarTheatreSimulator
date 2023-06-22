@@ -20,9 +20,10 @@ class TheatreController : public Area {
     protected:
     public:
         TheatreController();
-        bool isAttackPossible(const UnitID &unitID, const FieldID &fieldID);
-        bool attack(const UnitID &unitID, const FieldID &fieldID);
-        bool attack(const UnitID &attackerID, const Position &position);
+        bool isAttackPossible(const UnitID &unitID, const Position &position) const;
+        bool isAttackPossible(const UnitID &unitID, const FieldID &fieldID) const;
+        BattleResult attack(const UnitID &unitID, const FieldID &fieldID);
+        BattleResult attack(const UnitID &attackerID, const Position &position);
         void removeUnitIfDead(const UnitID &unitID);
         // bool attackFromDistance(const FieldID &fieldID);
 
@@ -48,7 +49,7 @@ class TheatreController : public Area {
         size_t countFactions() const;
         void startInteractive();
         bool existsUnit(const UnitID &unitID) const;
-        void resupplyFrom(const FacilityID &fuelDepotID);
+        // void resupplyFrom(const FacilityID &fuelDepotID);
         void resupplyAllUnits();
 
 };

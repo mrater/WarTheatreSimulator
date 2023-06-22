@@ -1,7 +1,7 @@
 #include "area.h"
 #include <map>
 #include <set>
-
+#include <iostream>
 Area::Area()
 {
     fields.clear();
@@ -26,6 +26,7 @@ bool Area::isRealPosition(const Position &position) const
 
 FieldID Area::getFieldByPosition(const Position &position) const
 {
+    // assert(0);
     for (const auto &field : this->fields)
     {
         if (field.second.getPosition() == position) return field.first;
@@ -59,13 +60,16 @@ UnitID Area::getUnitOnField(const FieldID &field) const
     return getUnitOnPosition(fields.at(field).getPosition());
 }
 
-std::vector<UnitID> Area::getUnitsOfFaction(const FactionID &unitFactionID) const
+std::set<UnitID> Area::getUnitsOfFaction(const FactionID &unitFactionID) const
 {
-    std::vector<UnitID> result;
+    // std::cerr << "faction=" << unitFactionID << "\n";
+    std::set<UnitID> result;
     for (const auto &unit : units)
     {
         if (unit.second.getUnitFactionID() == unitFactionID)
-            result.push_back(unitFactionID);
+            {
+                result.insert(unit.second.getUnitID());
+            }
     }
     return result;
 }
@@ -73,9 +77,9 @@ bool Area::isUnitOnPosition(const Position &position) const
 {
     return getUnitOnPosition(position) != -1;
 }
-bool Area::isUnitOnField(const FieldID &field)
+bool Area::isUnitOnField(const FieldID &field) const
 {
-    return isUnitOnPosition(fields[field].getPosition());
+    return isUnitOnPosition(fields.at(field).getPosition());
 }
 const Unit& Area::getUnitConstantReference(const UnitID &unitID) const
 {
@@ -85,14 +89,14 @@ Unit& Area::getUnit(const UnitID &unitID)
 {
     return units[unitID];
 }
-FuelDepot& Area::getFuelDepot(const FacilityID &facilityID)
-{
-    return fuelMagazines[facilityID];
-}
-const FuelDepot &Area::getFuelDepot(const FacilityID &facilityID) const
-{
-    return fuelMagazines.at(facilityID);
-}
+// FuelDepot& Area::getFuelDepot(const FacilityID &facilityID)
+// {
+//     return fuelMagazines[facilityID];
+// }
+// const FuelDepot &Area::getFuelDepot(const FacilityID &facilityID) const
+// {
+//     return fuelMagazines.at(facilityID);
+// }
 const Field &Area::getFieldWithUnit(const UnitID &unitID) const
 {
     const Position &unitPosition = units.at(unitID).getPosition();
@@ -136,10 +140,11 @@ std::set<FieldID> Area::getFieldsSuitableToMove(const Position &position, const 
 }
 
 int Area::getTotalMovementPointsOfFaction(const FactionID &factionID) const {
-    std::vector<UnitID> unitsOfFaction =  getUnitsOfFaction(factionID);
+    std::set<UnitID> unitsOfFaction =  getUnitsOfFaction(factionID);
     int result = 0;
     for (const UnitID &unitID : unitsOfFaction)
     {
+        // std::cerr << "unit of faction=" << unitID <<" \n";
         result += getUnitConstantReference(unitID).getMovementPoints();
     }
     return result;
@@ -166,11 +171,11 @@ bool Area::skipAllMovementOfFaction(const FactionID &faction)
     if (unitsOfFaction.empty()) return false;
     for (const auto unit : unitsOfFaction)
     {
-        getUnit(unit).resetMovement();
+        getUnit(unit).setMovementPoints(0);
     }
 
     return true;
-
+}
 std::set<UnitID> Area::getFriendlyUnitsWithinRange(const Position &fromPosition, const int &range, const FactionID &faction)
 {
     std::set<FieldID> fieldsWithingRange = getFieldsWithinRange(fromPosition, range);
@@ -187,4 +192,14 @@ std::set<UnitID> Area::getFriendlyUnitsWithinRange(const Position &fromPosition,
         }
     }
     return friendlyUnits;
+}
+
+std::set<FactionID> Area::getAllFactions()
+{
+    std::set<FactionID> result;
+    for (const auto &unit : units)
+    {
+        result.insert(unit.second.getUnitFactionID());
+    }
+    return result;
 }
