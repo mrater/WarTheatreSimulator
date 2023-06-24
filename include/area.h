@@ -107,5 +107,9 @@ class Area{
 
         // export fields to csv
         void exportFieldsToCSV(const std::string &filename) const;
-};
         
+        /// @brief export data about fields and units to csv
+        /// @param fieldsFilename filename of fields data
+        /// @param unitsFilename filename of units data
+        void exportAllToCSV(const std::string &fieldsFilename, const std::string &unitsFilename);
+};

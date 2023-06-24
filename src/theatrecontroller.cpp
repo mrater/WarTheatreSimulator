@@ -207,6 +207,12 @@ void TheatreController::handlePlayerTurn(const FactionID &faction)
                 skipAllMovementOfFaction(faction);
                 break;
             }
+            case 'w':{
+                std::string unitsFilename, fieldsFilename;
+                std::cin >> fieldsFilename >> unitsFilename;
+                exportAllToCSV(fieldsFilename + ".csv", unitsFilename + ".csv");
+                break;
+            }
 
 
             case 'h':
@@ -216,6 +222,7 @@ void TheatreController::handlePlayerTurn(const FactionID &faction)
                 std::cout << "x UNIT_ID Q R - order unit to attack this position\n";
                 std::cout << "s UNIT_ID - skip every other action of this unit\n";
                 std::cout << "e - skip all remaining unit actions and proceed to next turn\n";
+                std::cout << "w FIELDS UNITS - export csv with fields info to FIELDS.csv and units info to UNITS.csv";
                 break;
             default:
                 std::cout << "Command unrecognized. Enter h for help\n";

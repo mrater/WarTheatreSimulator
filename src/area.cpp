@@ -230,3 +230,8 @@ void Area::exportFieldsToCSV(const std::string &filename) const
     }
     file.close();
 }
+void Area::exportAllToCSV(const std::string &fieldsFilename, const std::string &unitsFilename)
+{
+    exportFieldsToCSV(fieldsFilename);
+    exportUnitsToCSV(unitsFilename);
+}
