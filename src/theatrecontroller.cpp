@@ -153,7 +153,7 @@ void TheatreController::handlePlayerTurn(const FactionID &faction)
                 if (!move(commandedUnit, targetPosition))
                 {
                     std::cout << "This field is occupied, does not exist, not within range or unit out of needed movement points\n";
-                } else 
+                } else
                 {
                     std::cout << "Unit #" << commandedUnit << " is now on (" << targetPosition.q << ", " << targetPosition.r << ")\n";
                 }
@@ -222,14 +222,13 @@ void TheatreController::handlePlayerTurn(const FactionID &faction)
                 std::cout << "x UNIT_ID Q R - order unit to attack this position\n";
                 std::cout << "s UNIT_ID - skip every other action of this unit\n";
                 std::cout << "e - skip all remaining unit actions and proceed to next turn\n";
-                std::cout << "w FIELDS UNITS - export csv with fields info to FIELDS.csv and units info to UNITS.csv";
+                std::cout << "w FIELDS UNITS - export csv with fields info to FIELDS.csv and units info to UNITS.csv\n";
                 break;
             default:
                 std::cout << "Command unrecognized. Enter h for help\n";
                 break;
             
         }
-        // std::cerr << "total movpo" << getTotalMovementPointsOfFaction(faction);
         if (getTotalMovementPointsOfFaction(faction) == 0) return;
         if (countFactions() < 2) return;
     }
