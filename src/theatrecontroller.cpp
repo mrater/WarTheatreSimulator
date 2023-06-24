@@ -93,7 +93,7 @@ bool TheatreController::move(const UnitID &unitID, const Position &position)
 
     units[unitID].setPosition(position);
     units[unitID].decreaseMovementPoints(distanceToPosition);
-    return true;    
+    return true;
 }
 
 bool TheatreController::isHuman(const FactionID &faction) const
@@ -153,7 +153,10 @@ void TheatreController::handlePlayerTurn(const FactionID &faction)
                 if (!move(commandedUnit, targetPosition))
                 {
                     std::cout << "This field is occupied, does not exist, not within range or unit out of needed movement points\n";
-                } else std::cout << "Done.\n";
+                } else 
+                {
+                    std::cout << "Unit #" << commandedUnit << " is now on (" << targetPosition.q << ", " << targetPosition.r << ")\n";
+                }
                 break;
             }
             //attack
@@ -163,7 +166,6 @@ void TheatreController::handlePlayerTurn(const FactionID &faction)
 
                 std::cin >> commandedUnit >> targetPosition.q >> targetPosition.r;
                 if (getUnitConstantReference(commandedUnit).getUnitFactionID() != faction){
-
                     std::cout << "Unit not from your faction\n";
                 } else {
                     // const auto &targetFieldID = getFieldByPosition(targetPosition);

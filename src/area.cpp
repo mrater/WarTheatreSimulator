@@ -2,6 +2,8 @@
 #include <map>
 #include <set>
 #include <iostream>
+#include <fstream>
+
 Area::Area()
 {
     fields.clear();
@@ -202,4 +204,29 @@ std::set<FactionID> Area::getAllFactions()
         result.insert(unit.second.getUnitFactionID());
     }
     return result;
+}
+void Area::exportUnitsToCSV(const std::string &filename) const
+{
+    std::ofstream file;
+    file.open(filename);
+    file << "unitID, factionID, organisation, supply, movementPoints, type, q, r\n";
+    for (const auto &unitPair : units)
+    {
+        const auto &unit =  unitPair.second;
+        file << unit.getUnitID() << ", " << unit.getUnitFactionID() << ", " << unit.getOrganization() << ", " << unit.getSupplyLevel() << ", " << 
+            unit.getMovementPoints() << ", " << UnitCategory::LITERAL[unit.getType()] << ", " << unit.getPosition().q << ", " << unit.getPosition().r << "\n";
+    }
+    file.close();    
+}
+void Area::exportFieldsToCSV(const std::string &filename) const
+{
+    std::ofstream file;
+    file.open(filename);
+    file << "fieldID, fieldType, q, r\n";
+    for (const auto &fieldPair : fields)
+    {
+        const auto &field = fieldPair.second;
+        file << field.getFieldID() << ", " << Terrain::LITERAL[field.getTerrainType()] << ", " << field.getPosition().q << ", " << field.getPosition().r << "\n";
+    }
+    file.close();
 }

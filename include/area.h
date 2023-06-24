@@ -10,6 +10,7 @@
 #include <assert.h>
 #include <set>
 #include "units.h"
+#include <string>
 // #include "infrastructure.h"
 
 class Area{
@@ -101,5 +102,10 @@ class Area{
         /// @return set of FactionIDs of existing factions (i.e. ones who have at least one unit)
         std::set<FactionID> getAllFactions();
 
-        // const &Field getFieldConstantReference() const;
+        // export units to csv of type (unitID, factionID, organisation, supply level, movement points, type, position.Q, position.R)
+        void exportUnitsToCSV(const std::string &filename) const;
+
+        // export fields to csv
+        void exportFieldsToCSV(const std::string &filename) const;
 };
+        
