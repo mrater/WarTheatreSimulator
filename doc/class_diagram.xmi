@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?><XMI xmlns:UML="href://org.omg/UML/1.3" xmi.version="1.1">
+    <XMI.header>
+        <XMI.metamodel xmi.name="UML" xmi.version="1.3"/>
+    </XMI.header>
+    <XMI.content>
+        <UML:Model name="PlantUML" xmi.id="model1">
+            <UML:Namespace.ownedElement>
+                <UML:Class name="Area" namespace="model1" xmi.id="cl0002">
+                    <UML:Classifier.feature>
+                        <UML:Attribute name="numberOfFactions : int" visibility="public" xmi.id="att18"/>
+                        <UML:Attribute name="fields : std::map&lt;FieldID, Field&gt;" visibility="protected" xmi.id="att19"/>
+                        <UML:Attribute name="units : std::map&lt;UnitID, Unit&gt;" visibility="protected" xmi.id="att20"/>
+                        <UML:Operation name="Area(std::map&lt;FieldID, Field&gt; newFields, std::map&lt;UnitID, Unit&gt; newUnits)" visibility="public" xmi.id="att21"/>
+                        <UML:Operation name="Area()" visibility="protected" xmi.id="att22"/>
+                        <UML:Operation name="getFieldWithUnit(const UnitID&amp; unitID) : Field&amp; {query}" visibility="public" xmi.id="att23"/>
+                        <UML:Operation name="getFieldByPosition(const Position&amp; position) : FieldID {query}" visibility="public" xmi.id="att24"/>
+                        <UML:Operation name="getUnit(const UnitID&amp; unitID) : Unit&amp;" visibility="public" xmi.id="att25"/>
+                        <UML:Operation name="getUnitConstantReference(const UnitID&amp; unitID) : Unit&amp; {query}" visibility="public" xmi.id="att26"/>
+                        <UML:Operation name="getUnitOnField(const FieldID&amp; field) : UnitID {query}" visibility="public" xmi.id="att27"/>
+                        <UML:Operation name="getUnitOnPosition(const Position&amp; position) : UnitID {query}" visibility="public" xmi.id="att28"/>
+                        <UML:Operation name="existsFaction(const FactionID&amp; faction) : bool {query}" visibility="public" xmi.id="att29"/>
+                        <UML:Operation name="existsPosition(const Position&amp; position) : bool {query}" visibility="public" xmi.id="att30"/>
+                        <UML:Operation name="existsUnit(const UnitID&amp; unitID) : bool {query}" visibility="public" xmi.id="att31"/>
+                        <UML:Operation name="isRealPosition(const Position&amp; position) : bool {query}" visibility="public" xmi.id="att32"/>
+                        <UML:Operation name="isUnitOnField(const FieldID&amp; field) : bool {query}" visibility="public" xmi.id="att33"/>
+                        <UML:Operation name="isUnitOnPosition(const Position&amp; position) : bool {query}" visibility="public" xmi.id="att34"/>
+                        <UML:Operation name="skipAllMovementOfFaction(const FactionID&amp; faction) : bool" visibility="public" xmi.id="att35"/>
+                        <UML:Operation name="skipMovement(const UnitID&amp; unitID) : bool" visibility="public" xmi.id="att36"/>
+                        <UML:Operation name="getTotalMovementPointsOfFaction(const FactionID&amp; factionID) : int {query}" visibility="public" xmi.id="att37"/>
+                        <UML:Operation name="getAllFactions() : std::set&lt;FactionID&gt;" visibility="public" xmi.id="att38"/>
+                        <UML:Operation name="getFieldsSuitableToMove(const Position&amp; position, const int&amp; range) : std::set&lt;FieldID&gt;" visibility="public" xmi.id="att39"/>
+                        <UML:Operation name="getFieldsWithinRange(const Position&amp; fromPosition, const int&amp; range) : std::set&lt;FieldID&gt;" visibility="public" xmi.id="att40"/>
+                        <UML:Operation name="getFriendlyUnitsWithinRange(const Position&amp; fromPosition, const int&amp; range, const FactionID&amp; faction) : std::set&lt;UnitID&gt;" visibility="public" xmi.id="att41"/>
+                        <UML:Operation name="getUnitsOfFaction(const FactionID&amp; unitFactionID) : std::set&lt;UnitID&gt; {query}" visibility="public" xmi.id="att42"/>
+                        <UML:Operation name="exportAllToCSV(const std::string&amp; fieldsFilename, const std::string&amp; unitsFilename) : void" visibility="public" xmi.id="att43"/>
+                        <UML:Operation name="exportFieldsToCSV(const std::string&amp; filename) : void {query}" visibility="public" xmi.id="att44"/>
+                        <UML:Operation name="exportUnitsToCSV(const std::string&amp; filename) : void {query}" visibility="public" xmi.id="att45"/>
+                        <UML:Operation name="fillNeighbours(const Position&amp; fromPosition, const int&amp; range, std::set&lt;FieldID&gt;&amp; fields) : void" visibility="public" xmi.id="att46"/>
+                    </UML:Classifier.feature>
+                </UML:Class>
+                <UML:Class name="BattleResult" namespace="model1" xmi.id="cl0003">
+                    <UML:Classifier.feature>
+                        <UML:Attribute name="defenderField : const Field" visibility="private" xmi.id="att47"/>
+                        <UML:Attribute name="attacker : const Unit" visibility="private" xmi.id="att48"/>
+                        <UML:Attribute name="defender : const Unit" visibility="private" xmi.id="att49"/>
+                        <UML:Operation name="BattleResult(const Unit&amp; attackerUnit, const Unit&amp; defenderUnit, const Field&amp; fieldOfDefender)" visibility="public" xmi.id="att50"/>
+                        <UML:Operation name="getDefenderField() : Field&amp; {query}" visibility="public" xmi.id="att51"/>
+                        <UML:Operation name="calculateAttackerSupplyLoss() : int {query}" visibility="public" xmi.id="att52"/>
+                        <UML:Operation name="calculateBacklashDamage() : int {query}" visibility="public" xmi.id="att53"/>
+                        <UML:Operation name="calculateDamage() : int {query}" visibility="public" xmi.id="att54"/>
+                        <UML:Operation name="calculateDefenderSupplyLoss() : int {query}" visibility="public" xmi.id="att55"/>
+                        <UML:Operation name="briefBattleResult() : void {query}" visibility="public" xmi.id="att56"/>
+                    </UML:Classifier.feature>
+                </UML:Class>
+                <UML:Class name="Field" namespace="model1" xmi.id="cl0004">
+                    <UML:Classifier.feature>
+                        <UML:Attribute name="fieldID : FieldID" visibility="private" xmi.id="att57"/>
+                        <UML:Attribute name="position : Position" visibility="private" xmi.id="att58"/>
+                        <UML:Attribute name="fieldType : TerrainType" visibility="protected" xmi.id="att59"/>
+                        <UML:Operation name="Field(const FieldID&amp; fieldID, const int&amp; q, const int&amp; r, const TerrainType&amp; terrainType)" visibility="public" xmi.id="att60"/>
+                        <UML:Operation name="Field()" visibility="public" xmi.id="att61"/>
+                        <UML:Operation name="getFieldID() : FieldID {query}" visibility="public" xmi.id="att62"/>
+                        <UML:Operation name="getPosition() : Position {query}" visibility="public" xmi.id="att63"/>
+                        <UML:Operation name="getTerrainType() : TerrainType {query}" visibility="public" xmi.id="att64"/>
+                        <UML:Operation name="getBonus() : double {query}" visibility="protected" xmi.id="att65"/>
+                    </UML:Classifier.feature>
+                </UML:Class>
+                <UML:Class name="MapEditor" namespace="model1" xmi.id="cl0005">
+                    <UML:Classifier.feature>
+                        <UML:Attribute name="globalFieldIndex : FieldID" visibility="private" xmi.id="att66"/>
+                        <UML:Attribute name="globalUnitIndex : UnitID" visibility="private" xmi.id="att67"/>
+                        <UML:Attribute name="numberOfFactions : int" visibility="private" xmi.id="att68"/>
+                        <UML:Attribute name="fields : std::map&lt;FieldID, Field&gt;" visibility="private" xmi.id="att69"/>
+                        <UML:Attribute name="units : std::map&lt;UnitID, Unit&gt;" visibility="private" xmi.id="att70"/>
+                        <UML:Operation name="MapEditor()" visibility="public" xmi.id="att71"/>
+                        <UML:Operation name="generateArea() : Area" visibility="public" xmi.id="att72"/>
+                        <UML:Operation name="addField(const int&amp; q, const int&amp; r, const TerrainType&amp; terrainType, const FieldID&amp; fieldID) : void" visibility="public" xmi.id="att73"/>
+                        <UML:Operation name="addField(const int&amp; q, const int&amp; r, const TerrainType&amp; terrainType) : void" visibility="public" xmi.id="att74"/>
+                        <UML:Operation name="addUnit(const int&amp; q, const int&amp; r, const UnitType&amp; unitType, const FactionID&amp; unitFactionID, const UnitID&amp; unitID) : void" visibility="public" xmi.id="att75"/>
+                        <UML:Operation name="addUnit(const int&amp; q, const int&amp; r, const UnitType&amp; unitType, const FactionID&amp; unitFactionID) : void" visibility="public" xmi.id="att76"/>
+                        <UML:Operation name="setFactionsNumber(const int&amp; numberOfFactions) : void" visibility="public" xmi.id="att77"/>
+                    </UML:Classifier.feature>
+                </UML:Class>
+                <UML:Class name="Position" namespace="model1" xmi.id="cl0006">
+                    <UML:Classifier.feature>
+                        <UML:Attribute name="q : int" visibility="public" xmi.id="att78"/>
+                        <UML:Attribute name="r : int" visibility="public" xmi.id="att79"/>
+                        <UML:Operation name="Position()" visibility="public" xmi.id="att80"/>
+                        <UML:Operation name="Position(const int&amp; _q, const int&amp; _r)" visibility="public" xmi.id="att81"/>
+                        <UML:Operation name="operator&lt;(const Position&amp; anotherPosition) : bool {query}" visibility="public" xmi.id="att82"/>
+                        <UML:Operation name="operator==(const Position&amp; anotherPosition) : bool {query}" visibility="public" xmi.id="att83"/>
+                        <UML:Operation name="distanceTo(const Position&amp; anotherPosition) : int {query}" visibility="public" xmi.id="att84"/>
+                        <UML:Operation name="s() : int" visibility="public" xmi.id="att85"/>
+                        <UML:Operation name="getPotentialAdjacentPositions() : std::set&lt;Position&gt; {query}" visibility="public" xmi.id="att86"/>
+                    </UML:Classifier.feature>
+                </UML:Class>
+                <UML:Class name="TheatreController" namespace="model1" xmi.id="cl0007">
+                    <UML:Classifier.feature>
+                        <UML:Attribute name="simulationStarted : bool" visibility="private" xmi.id="att87"/>
+                        <UML:Attribute name="botPlayers : std::vector&lt;FactionID&gt;" visibility="private" xmi.id="att88"/>
+                        <UML:Attribute name="humanPlayers : std::vector&lt;FactionID&gt;" visibility="private" xmi.id="att89"/>
+                        <UML:Operation name="TheatreController()" visibility="public" xmi.id="att90"/>
+                        <UML:Operation name="attack(const UnitID&amp; unitID, const FieldID&amp; fieldID) : BattleResult" visibility="public" xmi.id="att91"/>
+                        <UML:Operation name="attack(const UnitID&amp; attackerID, const Position&amp; position) : BattleResult" visibility="public" xmi.id="att92"/>
+                        <UML:Operation name="existsUnit(const UnitID&amp; unitID) : bool {query}" visibility="public" xmi.id="att93"/>
+                        <UML:Operation name="isAttackPossible(const UnitID&amp; unitID, const Position&amp; position) : bool {query}" visibility="public" xmi.id="att94"/>
+                        <UML:Operation name="isAttackPossible(const UnitID&amp; unitID, const FieldID&amp; fieldID) : bool {query}" visibility="public" xmi.id="att95"/>
+                        <UML:Operation name="isBot(const FactionID&amp; faction) : bool {query}" visibility="public" xmi.id="att96"/>
+                        <UML:Operation name="isHuman(const FactionID&amp; faction) : bool {query}" visibility="public" xmi.id="att97"/>
+                        <UML:Operation name="move(const UnitID&amp; unitID, const Position&amp; position) : bool" visibility="public" xmi.id="att98"/>
+                        <UML:Operation name="moveAndAttack(const UnitID&amp; unitID, const FieldID&amp; fieldID) : bool" visibility="public" xmi.id="att99"/>
+                        <UML:Operation name="countFactions() : size_t {query}" visibility="public" xmi.id="att100"/>
+                        <UML:Operation name="generateMap(const unsigned int&amp; size) : void" visibility="public" xmi.id="att101"/>
+                        <UML:Operation name="handleBotTurn() : void" visibility="public" xmi.id="att102"/>
+                        <UML:Operation name="handlePlayerTurn(const FactionID&amp; faction) : void" visibility="public" xmi.id="att103"/>
+                        <UML:Operation name="loadMap(const Area&amp; area, const std::vector&lt;FactionID&gt;&amp; humanFactions, const std::vector&lt;FactionID&gt;&amp; botFactions) : void" visibility="public" xmi.id="att104"/>
+                        <UML:Operation name="printUnitInfo(const UnitID&amp; unitID) : void" visibility="public" xmi.id="att105"/>
+                        <UML:Operation name="printUnitsInfo() : void" visibility="public" xmi.id="att106"/>
+                        <UML:Operation name="removeUnitIfDead(const UnitID&amp; unitID) : void" visibility="public" xmi.id="att107"/>
+                        <UML:Operation name="resetAllUnitsMovementPoints() : void" visibility="private" xmi.id="att108"/>
+                        <UML:Operation name="resupplyAllUnits() : void" visibility="public" xmi.id="att109"/>
+                        <UML:Operation name="startInteractive() : void" visibility="public" xmi.id="att110"/>
+                        <UML:Operation name="startNextRound() : void" visibility="public" xmi.id="att111"/>
+                    </UML:Classifier.feature>
+                </UML:Class>
+                <UML:Class name="Unit" namespace="model1" xmi.id="cl0008">
+                    <UML:Classifier.feature>
+                        <UML:Attribute name="unitFactionId : FactionID" visibility="protected" xmi.id="att112"/>
+                        <UML:Attribute name="position : Position" visibility="protected" xmi.id="att113"/>
+                        <UML:Attribute name="ID : UnitID" visibility="protected" xmi.id="att114"/>
+                        <UML:Attribute name="unitType : UnitType" visibility="protected" xmi.id="att115"/>
+                        <UML:Attribute name="movementPoints : int" visibility="protected" xmi.id="att116"/>
+                        <UML:Attribute name="organization : int" visibility="protected" xmi.id="att117"/>
+                        <UML:Attribute name="supplyLevel : int" visibility="protected" xmi.id="att118"/>
+                        <UML:Operation name="Unit(const Position&amp; newPosition, const UnitType&amp; unitType, const FactionID&amp; unitFactionID, const UnitID&amp; unitID)" visibility="public" xmi.id="att119"/>
+                        <UML:Operation name="Unit()" visibility="public" xmi.id="att120"/>
+                        <UML:Operation name="getUnitFactionID() : FactionID {query}" visibility="public" xmi.id="att121"/>
+                        <UML:Operation name="getPosition() : Position {query}" visibility="public" xmi.id="att122"/>
+                        <UML:Operation name="getUnitID() : UnitID {query}" visibility="public" xmi.id="att123"/>
+                        <UML:Operation name="getType() : UnitType {query}" visibility="public" xmi.id="att124"/>
+                        <UML:Operation name="canAttack() : bool {query}" visibility="public" xmi.id="att125"/>
+                        <UML:Operation name="distanceTo(const Unit&amp; anotherUnit) : int {query}" visibility="public" xmi.id="att126"/>
+                        <UML:Operation name="distanceTo(const Position&amp; position) : int {query}" visibility="public" xmi.id="att127"/>
+                        <UML:Operation name="gainSupply(const int&amp; supplyGain) : int" visibility="public" xmi.id="att128"/>
+                        <UML:Operation name="getAttackRange() : int {query}" visibility="public" xmi.id="att129"/>
+                        <UML:Operation name="getBaseAttack(const UnitType&amp; enemyUnitType) : int {query}" visibility="public" xmi.id="att130"/>
+                        <UML:Operation name="getBaseMovementPoints() : int {query}" visibility="public" xmi.id="att131"/>
+                        <UML:Operation name="getMovementPoints() : int {query}" visibility="public" xmi.id="att132"/>
+                        <UML:Operation name="getOrganization() : int {query}" visibility="public" xmi.id="att133"/>
+                        <UML:Operation name="getSupplyLevel() : int {query}" visibility="public" xmi.id="att134"/>
+                        <UML:Operation name="dealDamage(const int&amp; receivedDamage) : void" visibility="public" xmi.id="att135"/>
+                        <UML:Operation name="dealSupplyLoss(const int&amp; supplyLoss) : void" visibility="public" xmi.id="att136"/>
+                        <UML:Operation name="decreaseMovementPoints(const int&amp; loss) : void" visibility="public" xmi.id="att137"/>
+                        <UML:Operation name="resetMovement() : void" visibility="public" xmi.id="att138"/>
+                        <UML:Operation name="setMovementPoints(const int&amp; newMovementPoints) : void" visibility="public" xmi.id="att139"/>
+                        <UML:Operation name="setPosition(const Position&amp; position) : void" visibility="public" xmi.id="att140"/>
+                    </UML:Classifier.feature>
+                </UML:Class>
+                <UML:Generalization child="cl0007" name="" namespace="model1" parent="cl0002" xmi.id="ass141"/>
+                <UML:Association namespace="model1" xmi.id="ass142">
+                    <UML:Association.connection>
+                        <UML:AssociationEnd aggregation="composite" association="ass142" type="cl0002" xmi.id="end143">
+                            <UML:AssociationEnd.participant/>
+                        </UML:AssociationEnd>
+                        <UML:AssociationEnd association="ass142" type="cl0004" xmi.id="end144">
+                            <UML:AssociationEnd.participant/>
+                        </UML:AssociationEnd>
+                    </UML:Association.connection>
+                </UML:Association>
+                <UML:Association namespace="model1" xmi.id="ass145">
+                    <UML:Association.connection>
+                        <UML:AssociationEnd aggregation="composite" association="ass145" type="cl0002" xmi.id="end146">
+                            <UML:AssociationEnd.participant/>
+                        </UML:AssociationEnd>
+                        <UML:AssociationEnd association="ass145" type="cl0008" xmi.id="end147">
+                            <UML:AssociationEnd.participant/>
+                        </UML:AssociationEnd>
+                    </UML:Association.connection>
+                </UML:Association>
+                <UML:Association namespace="model1" xmi.id="ass148">
+                    <UML:Association.connection>
+                        <UML:AssociationEnd aggregation="composite" association="ass148" type="cl0003" xmi.id="end149">
+                            <UML:AssociationEnd.participant/>
+                        </UML:AssociationEnd>
+                        <UML:AssociationEnd association="ass148" type="cl0004" xmi.id="end150">
+                            <UML:AssociationEnd.participant/>
+                        </UML:AssociationEnd>
+                    </UML:Association.connection>
+                </UML:Association>
+                <UML:Association namespace="model1" xmi.id="ass151">
+                    <UML:Association.connection>
+                        <UML:AssociationEnd aggregation="composite" association="ass151" name="2" type="cl0003" xmi.id="end152">
+                            <UML:AssociationEnd.participant/>
+                        </UML:AssociationEnd>
+                        <UML:AssociationEnd association="ass151" type="cl0008" xmi.id="end153">
+                            <UML:AssociationEnd.participant/>
+                        </UML:AssociationEnd>
+                    </UML:Association.connection>
+                </UML:Association>
+                <UML:Association namespace="model1" xmi.id="ass154">
+                    <UML:Association.connection>
+                        <UML:AssociationEnd aggregation="composite" association="ass154" type="cl0004" xmi.id="end155">
+                            <UML:AssociationEnd.participant/>
+                        </UML:AssociationEnd>
+                        <UML:AssociationEnd association="ass154" type="cl0006" xmi.id="end156">
+                            <UML:AssociationEnd.participant/>
+                        </UML:AssociationEnd>
+                    </UML:Association.connection>
+                </UML:Association>
+                <UML:Association namespace="model1" xmi.id="ass157">
+                    <UML:Association.connection>
+                        <UML:AssociationEnd aggregation="composite" association="ass157" type="cl0005" xmi.id="end158">
+                            <UML:AssociationEnd.participant/>
+                        </UML:AssociationEnd>
+                        <UML:AssociationEnd association="ass157" type="cl0004" xmi.id="end159">
+                            <UML:AssociationEnd.participant/>
+                        </UML:AssociationEnd>
+                    </UML:Association.connection>
+                </UML:Association>
+                <UML:Association namespace="model1" xmi.id="ass160">
+                    <UML:Association.connection>
+                        <UML:AssociationEnd aggregation="composite" association="ass160" type="cl0005" xmi.id="end161">
+                            <UML:AssociationEnd.participant/>
+                        </UML:AssociationEnd>
+                        <UML:AssociationEnd association="ass160" type="cl0008" xmi.id="end162">
+                            <UML:AssociationEnd.participant/>
+                        </UML:AssociationEnd>
+                    </UML:Association.connection>
+                </UML:Association>
+                <UML:Association namespace="model1" xmi.id="ass163">
+                    <UML:Association.connection>
+                        <UML:AssociationEnd aggregation="composite" association="ass163" type="cl0008" xmi.id="end164">
+                            <UML:AssociationEnd.participant/>
+                        </UML:AssociationEnd>
+                        <UML:AssociationEnd association="ass163" type="cl0006" xmi.id="end165">
+                            <UML:AssociationEnd.participant/>
+                        </UML:AssociationEnd>
+                    </UML:Association.connection>
+                </UML:Association>
+            </UML:Namespace.ownedElement>
+        </UML:Model>
+    </XMI.content>
+</XMI>

@@ -1,0 +1,123 @@
+@startuml
+
+map TheatreController{
+  humanPlayers => {1, 2}
+  botPlayers => {}
+}
+  
+map "Position" as unit1Position{
+  q => -1
+  r => -1
+}
+map "Position" as field1Position{
+  q => -1
+  r => -1
+}
+map "Position" as unit2Position{
+  q => 0
+  r => 1
+}
+map "Position" as field9Position{
+  q => 0
+  r => 1
+}
+map "Position" as unit3Position{
+  q => 1
+  r => -1
+}
+
+map "Position" as field4Position{
+  q => 1
+  r => -1
+}
+
+map "Field" as field1{
+  fieldID => 1
+  position *-> field1Position
+  fieldType => PLAIN
+}
+map "Field" as field9{
+  fieldID => 9
+  position *-> field9Position
+  fieldType => FOREST
+}
+map "Field" as field4{
+  fieldID => 4
+  position *-> field4Position
+  fieldType => PLAIN
+}
+
+map "Unit" as unit1 {
+  ID => 1
+  unitFactionID => 1
+  position => 
+  unitType => INFANTRY
+  movementPoints => 2
+  organization => 100
+  supplyLevel => 100
+}
+map "Unit" as unit2 {
+  ID => 2
+  unitFactionID => 1
+  position => 
+  unitType => INFANTRY
+  movementPoints => 2
+  organization => 100
+  supplyLevel => 100
+}
+map "Unit" as unit3 {
+  ID => 3
+  unitFactionID => 2
+  position =>
+  unitType => ARTILLERY
+  movementPoints => 1
+  organization => 100
+  supplyLevel => 100
+}
+map "fields std::map<FieldID, Field>" as fields {
+  1 =>
+  4 =>
+  9 =>
+}
+
+map "units std::map<UnitID, Unit>" as units {
+  1 => 
+  2 =>
+  3 =>
+}
+
+map Area {
+ fields => 
+ units => 
+}
+
+units::1 -- unit1
+units::2 -- unit2
+units::3 -- unit3
+
+unit1::position -- unit1Position
+unit2::position -- unit2Position
+unit3::position -- unit3Position
+
+Area::fields -- fields
+Area::units -- units
+
+fields::1 -- field1
+fields::4 -- field4
+fields::9 -- field9
+TheatreController <|-- Area
+
+
+
+/' Aggregation relationships '/
+
+
+
+
+
+
+/' Nested objects '/
+
+
+
+@enduml

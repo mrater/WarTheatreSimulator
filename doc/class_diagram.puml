@@ -1,0 +1,205 @@
+@startuml
+
+
+
+
+
+/' Objects '/
+
+class Area {
+	+Area(std::map<FieldID, Field> newFields, std::map<UnitID, Unit> newUnits)
+	#Area()
+	+getFieldWithUnit(const UnitID& unitID) : Field& {query}
+	+getFieldByPosition(const Position& position) : FieldID {query}
+	+getUnit(const UnitID& unitID) : Unit&
+	+getUnitConstantReference(const UnitID& unitID) : Unit& {query}
+	+getUnitOnField(const FieldID& field) : UnitID {query}
+	+getUnitOnPosition(const Position& position) : UnitID {query}
+	+existsFaction(const FactionID& faction) : bool {query}
+	+existsPosition(const Position& position) : bool {query}
+	+existsUnit(const UnitID& unitID) : bool {query}
+	+isRealPosition(const Position& position) : bool {query}
+	+isUnitOnField(const FieldID& field) : bool {query}
+	+isUnitOnPosition(const Position& position) : bool {query}
+	+skipAllMovementOfFaction(const FactionID& faction) : bool
+	+skipMovement(const UnitID& unitID) : bool
+	+getTotalMovementPointsOfFaction(const FactionID& factionID) : int {query}
+	+numberOfFactions : int
+	#fields : std::map<FieldID, Field>
+	#units : std::map<UnitID, Unit>
+	+getAllFactions() : std::set<FactionID>
+	+getFieldsSuitableToMove(const Position& position, const int& range) : std::set<FieldID>
+	+getFieldsWithinRange(const Position& fromPosition, const int& range) : std::set<FieldID>
+	+getFriendlyUnitsWithinRange(const Position& fromPosition, const int& range, const FactionID& faction) : std::set<UnitID>
+	+getUnitsOfFaction(const FactionID& unitFactionID) : std::set<UnitID> {query}
+	+exportAllToCSV(const std::string& fieldsFilename, const std::string& unitsFilename) : void
+	+exportFieldsToCSV(const std::string& filename) : void {query}
+	+exportUnitsToCSV(const std::string& filename) : void {query}
+	+fillNeighbours(const Position& fromPosition, const int& range, std::set<FieldID>& fields) : void
+}
+
+
+class BattleResult {
+	+BattleResult(const Unit& attackerUnit, const Unit& defenderUnit, const Field& fieldOfDefender)
+	+getDefenderField() : Field& {query}
+	-defenderField : const Field
+	-attacker : const Unit
+	-defender : const Unit
+	+calculateAttackerSupplyLoss() : int {query}
+	+calculateBacklashDamage() : int {query}
+	+calculateDamage() : int {query}
+	+calculateDefenderSupplyLoss() : int {query}
+	+briefBattleResult() : void {query}
+}
+
+
+class Field {
+	+Field(const FieldID& fieldID, const int& q, const int& r, const TerrainType& terrainType)
+	+Field()
+	-fieldID : FieldID
+	+getFieldID() : FieldID {query}
+	+getPosition() : Position {query}
+	-position : Position
+	#fieldType : TerrainType
+	+getTerrainType() : TerrainType {query}
+	#getBonus() : double {query}
+}
+
+
+class MapEditor {
+	+MapEditor()
+	+generateArea() : Area
+	-globalFieldIndex : FieldID
+	-globalUnitIndex : UnitID
+	-numberOfFactions : int
+	-fields : std::map<FieldID, Field>
+	-units : std::map<UnitID, Unit>
+	+addField(const int& q, const int& r, const TerrainType& terrainType, const FieldID& fieldID) : void
+	+addField(const int& q, const int& r, const TerrainType& terrainType) : void
+	+addUnit(const int& q, const int& r, const UnitType& unitType, const FactionID& unitFactionID, const UnitID& unitID) : void
+	+addUnit(const int& q, const int& r, const UnitType& unitType, const FactionID& unitFactionID) : void
+	+setFactionsNumber(const int& numberOfFactions) : void
+}
+
+
+class Position {
+	+Position()
+	+Position(const int& _q, const int& _r)
+	+operator<(const Position& anotherPosition) : bool {query}
+	+operator==(const Position& anotherPosition) : bool {query}
+	+distanceTo(const Position& anotherPosition) : int {query}
+	+q : int
+	+r : int
+	+s() : int
+	+getPotentialAdjacentPositions() : std::set<Position> {query}
+}
+
+
+class TheatreController {
+	+TheatreController()
+	+attack(const UnitID& unitID, const FieldID& fieldID) : BattleResult
+	+attack(const UnitID& attackerID, const Position& position) : BattleResult
+	+existsUnit(const UnitID& unitID) : bool {query}
+	+isAttackPossible(const UnitID& unitID, const Position& position) : bool {query}
+	+isAttackPossible(const UnitID& unitID, const FieldID& fieldID) : bool {query}
+	+isBot(const FactionID& faction) : bool {query}
+	+isHuman(const FactionID& faction) : bool {query}
+	+move(const UnitID& unitID, const Position& position) : bool
+	+moveAndAttack(const UnitID& unitID, const FieldID& fieldID) : bool
+	-simulationStarted : bool
+	+countFactions() : size_t {query}
+	-botPlayers : std::vector<FactionID>
+	-humanPlayers : std::vector<FactionID>
+	+generateMap(const unsigned int& size) : void
+	+handleBotTurn() : void
+	+handlePlayerTurn(const FactionID& faction) : void
+	+loadMap(const Area& area, const std::vector<FactionID>& humanFactions, const std::vector<FactionID>& botFactions) : void
+	+printUnitInfo(const UnitID& unitID) : void
+	+printUnitsInfo() : void
+	+removeUnitIfDead(const UnitID& unitID) : void
+	-resetAllUnitsMovementPoints() : void
+	+resupplyAllUnits() : void
+	+startInteractive() : void
+	+startNextRound() : void
+}
+
+
+class Unit {
+	+Unit(const Position& newPosition, const UnitType& unitType, const FactionID& unitFactionID, const UnitID& unitID)
+	+Unit()
+	+getUnitFactionID() : FactionID {query}
+	#unitFactionId : FactionID
+	+getPosition() : Position {query}
+	#position : Position
+	#ID : UnitID
+	+getUnitID() : UnitID {query}
+	+getType() : UnitType {query}
+	#unitType : UnitType
+	+canAttack() : bool {query}
+	+distanceTo(const Unit& anotherUnit) : int {query}
+	+distanceTo(const Position& position) : int {query}
+	+gainSupply(const int& supplyGain) : int
+	+getAttackRange() : int {query}
+	+getBaseAttack(const UnitType& enemyUnitType) : int {query}
+	+getBaseMovementPoints() : int {query}
+	+getMovementPoints() : int {query}
+	+getOrganization() : int {query}
+	+getSupplyLevel() : int {query}
+	#movementPoints : int
+	#organization : int
+	#supplyLevel : int
+	+dealDamage(const int& receivedDamage) : void
+	+dealSupplyLoss(const int& supplyLoss) : void
+	+decreaseMovementPoints(const int& loss) : void
+	+resetMovement() : void
+	+setMovementPoints(const int& newMovementPoints) : void
+	+setPosition(const Position& position) : void
+}
+
+
+
+
+
+/' Inheritance relationships '/
+
+.Area <|-- .TheatreController
+
+
+
+
+
+/' Aggregation relationships '/
+
+.Area *-- .Field
+
+
+.Area *-- .Unit
+
+
+.BattleResult *-- .Field
+
+
+.BattleResult "2" *-- .Unit
+
+
+.Field *-- .Position
+
+
+.MapEditor *-- .Field
+
+
+.MapEditor *-- .Unit
+
+
+.Unit *-- .Position
+
+
+
+
+
+
+/' Nested objects '/
+
+
+
+@enduml
